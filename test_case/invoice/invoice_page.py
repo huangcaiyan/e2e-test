@@ -15,6 +15,7 @@ class InvoicePage:
 
     def __init__(self, driver):
         self.driver = driver
+        self.date_button_xpath = '//*[@id="datePiker"]/span/span[2]'
 
     # 进入账套
     def goToCompany(self, companyName):
@@ -113,7 +114,7 @@ class InvoicePage:
 
     #普票-设置收票的记账日期，发票类型，对方信息 publicInvoice 是一个list,[记账日期，发票类型，对方信息]
     def setCommonPublicInvoice(self,commonPublicInvoice):
-        SetDate(self.driver,commonPublicInvoice[0])
+        SetDate(self.driver,self.date_button_xpath,commonPublicInvoice[0])
         self.setIncomeInvoiceType(commonPublicInvoice[1])
         self.setOtherInfo(commonPublicInvoice[2])
 
@@ -134,7 +135,7 @@ class InvoicePage:
 
     #专票-设置收票的记账日期，发票类型，对方信息，发票号码 publicInvoice 是一个list,[记账日期，发票类型，对方信息，发票号码]
     def setSpecialPublicInvoice(self,publicInvoice,invoiceNum):
-        SetDate(self.driver,publicInvoice[0])
+        SetDate(self.driver,self.date_button_xpath,publicInvoice[0])
         self.setIncomeInvoiceType(publicInvoice[1])
         self.setOtherInfo(publicInvoice[2])
         self.setInvoiceNum(invoiceNum)

@@ -21,6 +21,8 @@ class TransactionPage:
         self.account_button_xpath = '//*[@id="body"]/list/div/div[2]/div/ol/li[3]/div/button[1]'
         # 选择账户下拉菜单按钮
         self.account_dropdown_xpath = '//*[@id="body"]/list/div/div[2]/div/ol/li[3]/div/button[2]'
+        #日历控件按钮
+        self.date_button_xpath = '//*[@id="body"]/detail/outcome/div/div[2]/form/div[1]/div/p-calendar/span/span[2]'
 
     # 进入账套
     def goToCompany(self, companyName):
@@ -72,10 +74,10 @@ class TransactionPage:
         else:
             categoryButton = '//*[@id="body"]/detail/' + self.classify + '/div/div[3]/div/table/tbody[1]/tr[' + itemNum + ']/th/ng-select/div/div[2]/span'
         self.driver.find_element_by_xpath(categoryButton).click()
-        time.sleep(3) 
+        time.sleep(5) 
         firstXpath = '//*[@id="body"]/detail/' + self.classify + '/div/div[3]/div/table/tbody[1]/tr/th/ng-select/div/div[2]/ul/li[' + category[0] + ']/div/div[1]'
         self.driver.find_element_by_xpath(firstXpath).click()
-        time.sleep(3)
+        time.sleep(5)
         self.driver.find_element_by_link_text(category[1]).click()
 
     #设置金额
@@ -116,7 +118,7 @@ class TransactionPage:
 
     #设置收支的记账日期，交易账户，对方信息 publicTransaction 是一个list,[记账日期，交易账户，对方信息]
     def setPublicTransaction(self,publicTransaction):
-        SetDate(self.driver,publicTransaction[0])
+        SetDate(self.driver,self.date_button_xpath,publicTransaction[0])
         self.setAccount(publicTransaction[1])
         self.setOtherInfo(publicTransaction[2])
 

@@ -33,7 +33,11 @@ class LoginPage:
         #delay
         time.sleep(30)
 
-        # if self.driver.find_element_by_xpath('//*[@id="page-wrapper"]/navbar/div/nav/div[2]/h3/div').text == None:
+        # if self.driver.current_url == self.url + '/app/home-page/accounting':
+        #     print('Accountant login success !')
+        # elif self.driver.current_url == self.url + '/app/home-page/assist':
+        #     print('Assist login success !')
+        # else:
         #     print('login failed !')
      
 

@@ -17,11 +17,11 @@ class TransactionVoucherSpec(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.baseUrl = 'https://web-gyz-stage.guanplus.com'
+        self.baseUrl = 'http://guanplus-app-accountingfirm-web-test.cn-north-1.eb.amazonaws.com.cn'
         login_page = LoginPage(self.baseUrl, self.driver)
         login_page.login('18514509382', 'qq123456')
         transaction_page = TransactionPage(self.driver,'outcome')
-        transaction_page.goToCompany('test3')
+        transaction_page.goToCompany('2206一般纳税人')
         transaction_page.goToTransactionModule(self.baseUrl)
         transaction_page.goToTransactionPage('记支出')
 

@@ -8,7 +8,7 @@ from collections import Iterator
 from HTMLTestRunner import HTMLTestRunner
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../'))
 from test_case.login.login_page import LoginPage
-from invoice_page import InvoicePage
+from .invoice_page import InvoicePage
 from test_data.record_income_invoice_data import *
 
 
@@ -23,20 +23,19 @@ class RecordIncomeInvoiceSpec(unittest.TestCase):
         login_page = LoginPage(self.baseUrl, self.driver)
         login_page.login('18514509382', 'qq123456')
         self.invoice_page = InvoicePage(self.driver)
-        self.invoice_page.goToCompany('2206一般纳税人')
+        self.invoice_page.goToCompany('一般纳税人07251419')
         self.invoice_page.goToInvoice(self.baseUrl,'input')
 
-    # def test1(self):
-    #     '''记录所有类别的收票-普票'''
+    def test1(self):
+        '''记录所有类别的收票-普票'''
 
-    #     commonPublicInvoice = ['1','普票','内部代表']
-    #     for commonItems in commonIncomeInvoiceCategory:
-    #         self.invoice_page.recordCommonIncomeInvoice(commonPublicInvoice,commonItems)
-    #         self.invoice_page.goToInvoice(self.baseUrl,'input')
+        commonPublicInvoice = ['1','普票','内部代表']
+        for commonItems in commonIncomeInvoiceCategory:
+            self.invoice_page.recordCommonIncomeInvoice(commonPublicInvoice,commonItems)
+            self.invoice_page.goToInvoice(self.baseUrl,'input')
 
     def test2(self):
         '''记所有类别的收票-专票'''
-
         specialPublicInvoice = ['1','专票','内部代表']
         invoiceNumList = []
         for i in range(0,33):
