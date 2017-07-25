@@ -31,7 +31,10 @@ class LoginPage:
         #click login button
         login_button.click()
         #delay
-        time.sleep(20)
+        time.sleep(30)
+
+        # if self.driver.find_element_by_xpath('//*[@id="page-wrapper"]/navbar/div/nav/div[2]/h3/div').text == None:
+        #     print('login failed !')
      
 
 

@@ -4,8 +4,13 @@ from HTMLTestRunner import HTMLTestRunner
 
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
-    testSuite.addTest(RecordOutcomeSpec('test1'))
-    testSuite.addTest(RecordOutcomeSpec('test2'))
+    # testSuite.addTest(RecordOutcomeSpec('test1'))
+    # testSuite.addTest(RecordOutcomeSpec('test2'))
+    # testSuite.addTest(RecordOutcomeSpec('test3'))
+    # testSuite.addTest(RecordOutcomeSpec('test4'))
+    # testSuite.addTest(RecordOutcomeSpec('test5'))
+    # testSuite.addTest(RecordOutcomeSpec('test6'))
+    testSuite.addTest(RecordOutcomeSpec('test7'))
     testReport = open('./report/result.html','wb')
     runner = HTMLTestRunner(stream = testReport,title = "记收支测试报告",description='测试用例执行情况：')
     runner.run(testSuite)
