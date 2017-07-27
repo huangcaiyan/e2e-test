@@ -9,120 +9,90 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../'))
 from test_case.login.login_page import LoginPage
 from .transaction_page import TransactionPage
 from test_data.record_outcome_data import *
+from util.enter_company_util import EnterCompany
+from config import *
 
 
-#前置条件：新账套
 class RecordOutcomeSpec(unittest.TestCase):
     ''' 记支出测试 '''
 
     def setUp(self):
         self.driver = webdriver.Chrome()
-        self.driver.maximize_window()
-        self.baseUrl = 'http://guanplus-app-accountingfirm-web-test.cn-north-1.eb.amazonaws.com.cn'
-        login_page = LoginPage(self.baseUrl, self.driver)
-        login_page.login('18514509382', 'qq123456')
-        transaction_page = TransactionPage(self.driver,'outcome')
-        transaction_page.goToCompany('2206一般纳税人')
-        transaction_page.goToTransactionModule(self.baseUrl)
-        transaction_page.goToTransactionPage('记支出')
+        EnterCompany(self.driver,Environment)
+        self.transaction_page = TransactionPage(self.driver,'outcome')
+        self.transaction_page.goToTransactionModule(BaseUrl)
+        self.transaction_page.goToTransactionPage('记支出')
 
     def test1(self):
         '''全空校验'''
 
-        transaction_page = TransactionPage(self.driver,'outcome')
-        transaction_page.clickSaveButton()
+        self.transaction_page.clickSaveButton()
         self.assertEqual('请填写交易账户！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/outcome/div/div[1]/alert/div').text[-8:])
 
     def test2(self):
         '''交易账户-空校验'''
 
-        transaction_page = TransactionPage(self.driver,'outcome')
-        transaction_page.setCategory('1',['1','银行费用'])  
-        transaction_page.setMoney('123')
-        transaction_page.clickSaveButton()
+        self.transaction_page.setCategory('1',['1','1'])  
+        self.transaction_page.setMoney('123')
+        self.transaction_page.clickSaveButton()
         self.assertEqual('请填写交易账户！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/outcome/div/div[1]/alert/div').text[-8:])
 
     def test3(self):
         '''类别-空校验'''
 
-        transaction_page = TransactionPage(self.driver,'outcome')
-        transaction_page.setItemsNum('1')
-        transaction_page.setAccount('现金')
-        transaction_page.setMoney('111')  
-        transaction_page.clickSaveButton()
+        self.transaction_page.setItemsNum('1')
+        self.transaction_page.setAccount('现金')
+        self.transaction_page.setMoney('111')  
+        self.transaction_page.clickSaveButton()
         self.assertEqual('请填写完整！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/outcome/div/div[1]/alert/div').text[-6:])
 
     def test4(self):
         '''金额-空校验'''
 
-        transaction_page = TransactionPage(self.driver,'outcome')
-        transaction_page.setCategory('1',['1','银行费用'])  
-        transaction_page.setAccount('现金')
-        transaction_page.clickSaveButton()
+        self.transaction_page.setCategory('1',['1','1'])  
+        self.transaction_page.setAccount('现金')
+        self.transaction_page.clickSaveButton()
         self.assertEqual('金额不能为0！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/outcome/div/div[1]/alert/div').text[-7:])
 
     def test5(self):
         '''金额为0测试'''
 
-        transaction_page = TransactionPage(self.driver,'outcome')
-        transaction_page.setCategory('1',['1','银行费用'])  
-        transaction_page.setAccount('现金')
-        transaction_page.setMoney('0')
-        transaction_page.clickSaveButton()
+        self.transaction_page.setCategory('1',['1','1'])  
+        self.transaction_page.setAccount('现金')
+        self.transaction_page.setMoney('0')
+        self.transaction_page.clickSaveButton()
         self.assertEqual('金额不能为0！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/outcome/div/div[1]/alert/div').text[-7:])
 
     def test6(self):
         '''成功记一笔支出测试'''
 
-        transaction_page = TransactionPage(self.driver,'outcome')
         transaction = ['1','现金','内部代表']
-        items1 = ['1',['1','银行费用'],'111','行政支出']
-        transaction_page.recordTransaction(transaction,items1)
-        self.assertEqual(self.baseUrl + '/app/transaction/list',self.driver.current_url)
+        items1 = ['1',['1','1'],'111','行政支出']
+        self.transaction_page.recordTransaction(transaction,items1)
+        self.assertEqual('保存成功',self.driver.find_element_by_xpath('//*[@id="body"]/detail/outcome/div/div[1]/alert/div').text[-4:])
 
     def test7(self):
         '''成功记两笔明细支出测试'''
 
-        transaction_page = TransactionPage(self.driver,'outcome')
         publicTransaction = ['1','现金','内部代表']   
-        items1 = ['1',['1','银行费用'],'111','行政支出']
-        items2 = ['2',['2','临时借出资金'],'211','资金往来']     
-        transaction_page.setPublicTransaction(publicTransaction)
-        transaction_page.setTransactionItems(items1)
-        transaction_page.clickAddItems()
-        transaction_page.setTransactionItems(items2)
-        transaction_page.clickSaveButton()
-        self.assertEqual(self.baseUrl + '/app/transaction/list',self.driver.current_url)
+        items1 = ['1',['1','1'],'111','行政支出']
+        items2 = ['2',['2','1'],'211','资金往来']     
+        self.transaction_page.setPublicTransaction(publicTransaction)
+        self.transaction_page.setTransactionItems(items1)
+        self.transaction_page.clickAddItems()
+        self.transaction_page.setTransactionItems(items2)
+        self.transaction_page.clickSaveButton()
+        self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)
 
     def test8(self):
         '''成功记所有类别支出测试'''
-
+    
         transaction = ['1','现金','内部代表']
         transaction_page = TransactionPage(self.driver,'outcome')
-        for outcome in recordOutcomeData:
+        for outcome in RecordOutcomeData:
             transaction_page.recordTransaction(transaction,outcome)
-            transaction_page.goToTransactionPage('记支出')
-        self.assertEqual(self.baseUrl + '/app/transaction/list',self.driver.current_url)
-
-    # def test8(self):
-    #     '''记支出-生成凭证测试'''
-
-    #     n = 0
-    #     transaction = ['1','现金','内部代表']
-    #     transaction_page = TransactionPage(self.driver,'outcome')
-    #     for outcome,vocherFirst in zip(recordOutcomeData,outcomeVoucherFirst):
-    #         n = n + 1
-    #         transaction_page.recordTransaction(transaction,outcome)
-    #         transaction_page.goToVoucherPage(self.baseUrl)
-    #         voucherFirstXpath = '//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody[' + str(n) + ']/tr[1]/td[4]'
-    #         self.assertEqual(vocherFirst[0],self.driver.find_element_by_xpath(voucherFirstXpath).text)
-    #         transaction_page.goToTransactionModule(self.baseUrl)
-    #         transaction_page.goToTransactionPage('记支出')
-    #         if 10 == n:
-    #             self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[2]/div/pagination/ul/li[4]/a').click()
-    #             n = 0
-    #     transaction_page.goToTransactionModule(self.baseUrl)
-    #     self.assertEqual('支出合计： 4,359.00',self.driver.find_element_by_xpath('//*[@id="body"]/list/div/div[5]/div[2]/span').text)
+        transaction_page.goToTransactionModule(BaseUrl)
+        self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)
 
     def tearDown(self):
         self.driver.quit()

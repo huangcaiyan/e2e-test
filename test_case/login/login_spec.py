@@ -19,8 +19,7 @@ class LoginTest(unittest.TestCase):
 
     def test_login(self):
         loginPage = LoginPage(self.url, self.driver)
-        loginPage.login(self.pythonData['username'],
-                        self.pythonData['password'])       
+        loginPage.login(['18514509382','qq123456'])       
         self.assertEqual("杨春红",self.driver.find_element_by_xpath('//*[@id="personalInfoDropdownMenu"]/span').text)
 
     def tearDown(self):
