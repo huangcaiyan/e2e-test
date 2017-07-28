@@ -65,7 +65,7 @@ class RecordTransterSpec(unittest.TestCase):
 
         self.transaction_page.setFundFlow('招商银行','现金')
         self.transaction_page.transferClickSaveButton()
-        self.assertEqual('金额不能为0！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[1]/alert/div').text[-7:])
+        self.assertEqual('金额不能为0',self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[1]/alert/div').text[-6:])
 
     def test7(self):
         '''成功记一笔账户互转测试'''
@@ -74,15 +74,15 @@ class RecordTransterSpec(unittest.TestCase):
         self.transaction_page.recordTransfer(transferPara)
         self.assertEqual('保存成功',self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[1]/alert/div').text[-4:])
 
-    # def test8(self):
-    #     '''成功记所有类别支出测试'''
+    def test8(self):
+        '''成功15笔账户互转测试'''
     
-    #     transaction = ['1','现金','内部代表']
-    #     transaction_page = TransactionPage(self.driver,'outcome')
-    #     for outcome in RecordOutcomeData:
-    #         transaction_page.recordTransaction(transaction,outcome)
-    #     transaction_page.goToTransactionModule(BaseUrl)
-    #     self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)
+        # transferPara = ['1','现金','招商银行','1','现金-招商银行1']
+        # self.transaction_page.recordTransfer(transferPara)
+        for transferPara in RecordTransferData:
+            self.transaction_page.recordTransfer(transferPara)
+        self.transaction_page.goToTransactionModule(BaseUrl)
+        self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)
 
     def tearDown(self):
         self.driver.quit()

@@ -94,6 +94,11 @@ class RecordOutcomeSpec(unittest.TestCase):
         transaction_page.goToTransactionModule(BaseUrl)
         self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)
 
+    def test9(self):
+        '''测试玩'''
+
+        ls = self.driver.find_elements_by_class_name('ui-select-placeholder pull-left text-muted')
+        print('find:' + str(len(ls)) )
     def tearDown(self):
         self.driver.quit()
         

@@ -4,6 +4,7 @@ import os
 import logging
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 from util.set_date_util import SetDate
+from util.is_element_exit_util import IsElementExit
 
 
 class TransactionPage:
@@ -122,7 +123,7 @@ class TransactionPage:
         self.setAccount(publicTransaction[1])
         self.setOtherInfo(publicTransaction[2])
 
-    # 记收支-> 点击保存并新增按钮循环记收支
+    # 记收支-> 点击保存并新增按钮记收支
     def recordTransaction(self,publicTransaction,items):
         self.setPublicTransaction(publicTransaction)
         self.setTransactionItems(items)
@@ -131,16 +132,25 @@ class TransactionPage:
     #####################################################账户互转##############################################################################
     # 设置转出账户
     def setTransferOut(self,accountOutName):
-        self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[1]/div/div[2]/span').click()
-        time.sleep(2)
-        self.driver.find_element_by_link_text(accountOutName)        
+        isEelementExit = IsElementExit(self.driver)
+        if isEelementExit.is_element_exit_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[1]/div/div[2]/span'):
+            print('sdsf:'+ str(isEelementExit.is_element_exit_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[1]/div/div[2]/span')))
+            self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[1]/div/div[2]/span').click()
+            time.sleep(2)
+            self.driver.find_element_by_link_text(accountOutName).click() 
+        else:
+            print('====================================转出账户可能不存在==============================================')        
 
     #设置转入账户
     def setTransferIn(self,accountInName):
-        self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[2]/div/div[2]/span').click()
-        time.sleep(2)
-        self.driver.find_element_by_link_text(accountInName)    
-
+        isEelementExit = IsElementExit(self.driver)
+        if isEelementExit.is_element_exit_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[2]/div/div[2]/span'):
+            self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[2]/div/div[2]/span').click()
+            time.sleep(2)
+            self.driver.find_element_by_link_text(accountInName).click()    
+        else:
+            print('====================================转入账户可能不存在==============================================')  
+            
     #设置资金流向  accountNames[转出账户，转入账户]
     def setFundFlow(self,accountOutName,accountInName):
         self.setTransferOut(accountOutName)
@@ -154,7 +164,7 @@ class TransactionPage:
     #账户互转-设置备注
     def setTransferRemark(self,remark=None):
         self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[4]/input').clear()
-        self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[4]/input').send_keys(money)
+        self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[4]/input').send_keys(remark)
 
     #账户互转-点击保存按钮
     def transferClickSaveButton(self):

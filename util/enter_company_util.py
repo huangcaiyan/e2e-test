@@ -34,3 +34,12 @@ class EnterCompany(object):
         except Exception as e:
             print('===============================进入账套失败喽喽喽……==================================')
             logging.exception(e)
+
+    #创建公司-手动
+    # def createCompany(self,)
+    #     createCompanyLocater = '//*[@id="body"]/company-list/div[1]/div[3]/div[2]/button[1]'
+    #     self.driver.find_element_by_xpath(createCompanyButtonLocater).click()
+    #     time.sleep(3)
+    #     manualCreateLocator = '//*[@id="manual-link"]'
+    #     self.driver.find_element_by_xpath(manualCreateLocator).click()
+    #     time.sleep(3)

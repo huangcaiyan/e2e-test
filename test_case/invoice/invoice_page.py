@@ -35,7 +35,7 @@ class InvoicePage:
         self.driver.find_element_by_xpath(invoice_type_xpath).click()
         time.sleep(2)
         self.driver.find_element_by_link_text(invoiceClass).click()
-        time.sleep(2)
+        time.sleep(3)
 
     # 设置对方信息
     def setOtherInfo(self, otherInfo):
