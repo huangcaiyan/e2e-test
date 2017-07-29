@@ -13,7 +13,7 @@ class EnterCompany(object):
         self.driver.get(environment[0])
         self.login(environment[1])
        
-    #account [账户，密码，公司名]
+    #accountCom [账户，密码，公司名]
     def login(self,accountCom):
         self.driver.find_element_by_id('usernameInput').clear()
         self.driver.find_element_by_id('usernameInput').send_keys(accountCom[0])
@@ -35,11 +35,6 @@ class EnterCompany(object):
             print('===============================进入账套失败喽喽喽……==================================')
             logging.exception(e)
 
-    #创建公司-手动
-    # def createCompany(self,)
-    #     createCompanyLocater = '//*[@id="body"]/company-list/div[1]/div[3]/div[2]/button[1]'
-    #     self.driver.find_element_by_xpath(createCompanyButtonLocater).click()
-    #     time.sleep(3)
-    #     manualCreateLocator = '//*[@id="manual-link"]'
-    #     self.driver.find_element_by_xpath(manualCreateLocator).click()
-    #     time.sleep(3)
+
+
+    

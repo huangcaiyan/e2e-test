@@ -20,7 +20,6 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordOutcomeSpec('test6'))
     # testSuite.addTest(RecordOutcomeSpec('test7'))
     # testSuite.addTest(RecordOutcomeSpec('test8'))
-    testSuite.addTest(RecordOutcomeSpec('test9'))
 
 
     # #记收入测试
@@ -52,7 +51,7 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordOutputInvoiceSpec('test2'))
 
     #生成凭证测试 *【注意】需要新增招商银行且没有流水记录
-    # testSuite.addTest(GenerateVoucherSpec('test1'))
+    testSuite.addTest(GenerateVoucherSpec('test1'))
     # testSuite.addTest(GenerateVoucherSpec('test2'))
     # testSuite.addTest(GenerateVoucherSpec('test3'))
 
