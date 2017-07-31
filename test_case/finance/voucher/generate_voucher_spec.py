@@ -10,6 +10,7 @@ from config import *
 from transaction.transaction_page import TransactionPage
 from test_data.generate_voucher_data import *
 from util.enter_company_util import EnterCompany
+from util.voucher_check_util import VoucherCheck
 
 class GenerateVoucherSpec(unittest.TestCase):
     '''生成凭证测试'''
@@ -23,7 +24,7 @@ class GenerateVoucherSpec(unittest.TestCase):
     def test1(self):
         '''记一笔收入-凭证测试'''
         
-        # recordIncome = TransactionPage(self.driver,'income')
+        recordIncome = TransactionPage(self.driver,'income')
         # recordIncome.goToTransactionModule(BaseUrl)
         # recordIncome.goToTransactionPage('记收入')
         # recordIncomePublicData = ['1','现金','内部代表']
@@ -31,47 +32,25 @@ class GenerateVoucherSpec(unittest.TestCase):
         # recordIncome.recordTransaction(recordIncomePublicData,recordIncomeItemsData)
         # time.sleep(3)
         # recordIncome.goToVoucherPage(BaseUrl)
-        # firstLines = ['2017年2月现金收款','100101—RMB','111.00']
-        # firstRows = ['3','4','5']
-        # for firstLine,firsrRow in zip(firstLines,firstRows):
-        #     firstRowLocator = '//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody/tr[1]/td['+ firsrRow +']'
-        #     self.assertEqual(firstLine,self.driver.find_element_by_xpath(firstRowLocator).text)
-        # secondLines = ['现金-内部代表-利息收入-利息收入 111','560301—利息费用','-111.00']
-        # secondRows = ['1','2','3']
-        # for secondLine,secondRow in zip(secondLines,secondRows):
-        #     secondRowLocator = '//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody/tr[2]/td['+ secondRow +']'
-        #     self.assertEqual(secondLine,self.driver.find_element_by_xpath(secondRowLocator).text)
-
-        recordIncome = TransactionPage(self.driver,'income')
-        # recordIncome.goToTransactionModule(BaseUrl)
-        # recordIncome.goToTransactionPage('记收入')
-        # for recordIncomePublicData,recordIncomeItemsData in zip(RecordIncomePublicData,RecordIncomeItemsData):
-        #     recordIncome.recordTransaction(recordIncomePublicData,recordIncomeItemsData)
         recordIncome.goToVoucherPage(BaseUrl)
-        voucherSumList = self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table').find_elements_by_tag_name('tbody')
-        print('voucherSumList:' + str(len(voucherSumList)))
-        for tbody,incomeVoucherData in zip(range(0,len(voucherSumList)),IncomeVoucherData):
-            trsVoucher = voucherSumList[tbody].find_elements_by_tag_name('tr')
-            print('trsVoucher:' + str(len(trsVoucher)))
-            for tr,incomeVoucherLine in zip(range(0,len(trsVoucher)),range(0,len(incomeVoucherData))):
-                tdsVoucher = trsVoucher[tr].find_elements_by_tag_name('td')
-                if 9 == len(tdsVoucher):
-                    for td1,voucherCheck1 in zip(range(2,6),range(0,len(incomeVoucherLine))):
-                        self.assertEqual(incomeVoucherLine[voucherCheck1],tdsVoucher[td1].text)
-                elif 4 == len(tdsVoucher):
-                    for  td2,voucherCheck2 in zip(range(0,4),range(0,len(incomeVoucherLine))):
-                        self.assertEqual(incomeVoucherLine[voucherCheck2],tdsVoucher[td2])
 
-                elif 5 == len(tdsVoucher):
-                    for td3,voucherCheck3 in zip(range(2,4),range(0,len(incomeVoucherLine))):
-                        self.assertEqual(incomeVoucherLine[voucherCheck3],tdsVoucher[td3])
-            # for tr in range(0,len(trsVoucher)):
-            #     tdsVoucher = trsVoucher[tr].find_elements_by_tag_name('td')
-            #     print('tdsVoucher:' + str(len(tdsVoucher)))
-            #     for td,voucherCheck in zip(range(0,len(tdsVoucher))[2:6],[0,1,2,3]):
-            #         self.assertEqual(voucherCheck,tdsVoucher[td].text)
-            
-        
+        #运行通过的                                           
+        # tbodyLists = self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table').find_elements_by_tag_name('tbody')
+        # for tbody,voucherData in zip(tbodyLists,IncomeVoucherData):
+        #     trLists = tbody.find_elements_by_tag_name('tr')
+        #     for tr,lineVoucherData in zip(trLists,voucherData):
+        #        tdLists = tr.find_elements_by_tag_name('td') 
+        #        if 9 == len(tdLists):  
+        #             for td,voucherFieldData in zip(tdLists[2:6],lineVoucherData):
+        #                 self.assertEqual(voucherFieldData,td.text)
+        #        if 4 == len(tdLists):
+        #             for td,voucherFieldData in zip(tdLists,lineVoucherData):
+        #                 self.assertEqual(voucherFieldData,td.text)
+        #        if 5 == len(tdLists):
+        #             for td,voucherFieldData in zip(tdLists[2:4],lineVoucherData):
+        #                 self.assertEqual(voucherFieldData,td.text)
+        vc = VoucherCheck(self.driver)
+        vc.voucherCheck(IncomeVoucherData)
 
     def test2(self):
         '''记一笔支出-凭证测试'''
