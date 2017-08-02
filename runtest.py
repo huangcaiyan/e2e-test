@@ -31,6 +31,7 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordIncomeSpec('test6'))
     # testSuite.addTest(RecordIncomeSpec('test7'))
     # testSuite.addTest(RecordIncomeSpec('test8'))
+    testSuite.addTest(RecordIncomeSpec('test9'))
 
     # #记账户互转 *注意：需要新增招商银行账户
     # testSuite.addTest(RecordTransterSpec('test1'))
@@ -51,7 +52,7 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordOutputInvoiceSpec('test2'))
 
     #生成凭证测试 *【注意】需要新增招商银行且没有流水记录
-    testSuite.addTest(GenerateVoucherSpec('test1'))
+    # testSuite.addTest(GenerateVoucherSpec('test1'))
     # testSuite.addTest(GenerateVoucherSpec('test2'))
     # testSuite.addTest(GenerateVoucherSpec('test3'))
 

@@ -55,7 +55,7 @@ class TransactionPage:
         self.driver.find_element_by_link_text(otherInfo).click()
 
     #设置类别 【itemNum】 明细行号
-    def setCategory(self,itemNum,category):
+    def setCategory(self,category,itemNum=1):
         global itemsNumber 
         itemsNumber = itemNum
         categoryButton = ''
@@ -111,10 +111,10 @@ class TransactionPage:
         
     #设置明细：类别，金额，备注 items 是一个list [类别，金额，备注]
     def setTransactionItems(self,items):
-        category = items[1]
-        self.setCategory(items[0],items[1])
-        self.setMoney(items[2])
-        self.setRemark(items[3])
+        category = items[0]
+        self.setCategory(items[0])
+        self.setMoney(items[1])
+        self.setRemark(items[2])
 
     #设置收支的记账日期，交易账户，对方信息 publicTransaction 是一个list,[记账日期，交易账户，对方信息]
     def setPublicTransaction(self,publicTransaction):
@@ -134,7 +134,6 @@ class TransactionPage:
     def setTransferOut(self,accountOutName):
         isEelementExit = IsElementExit(self.driver)
         if isEelementExit.is_element_exit_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[1]/div/div[2]/span'):
-            print('sdsf:'+ str(isEelementExit.is_element_exit_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[1]/div/div[2]/span')))
             self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[2]/ng-select[1]/div/div[2]/span').click()
             time.sleep(2)
             self.driver.find_element_by_link_text(accountOutName).click() 

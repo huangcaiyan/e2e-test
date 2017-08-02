@@ -10,7 +10,9 @@ from test_case.login.login_page import LoginPage
 from .transaction_page import TransactionPage
 from test_data.record_income_data import *
 from util.enter_company_util import EnterCompany
+from util.category_map_util import CategoryMap
 from config import *
+import xlrd
 
 
 #前置条件：新账套
@@ -97,15 +99,20 @@ class RecordIncomeSpec(unittest.TestCase):
     def test8(self):
         '''成功记所有类别收入测试'''
     
-        transaction = ['1','现金','内部代表']
         transaction_page = TransactionPage(self.driver,'income')
-        for income in RecordIncomeData:
-            transaction_page.recordTransaction(transaction,income)
+        wb = xlrd.open_workbook(os.path.dirname(__file__) + '/' + '../../test_data/' + '收支.xlsx')
+        sh = wb.sheet_by_name(u'记收入测试数据')
+        for i in range(1,sh.nrows):
+            sourceRowList = sh.row_values(i)
+            targetList = CategoryMap().incomeCategoryMapList(sourceRowList)
+            transaction_page.recordTransaction(targetList[:3],targetList[3:])
+        
         transaction_page.goToTransactionModule(BaseUrl)
         self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)
 
     def tearDown(self):
         self.driver.quit()
+
         
 
 if __name__ == '__main__':

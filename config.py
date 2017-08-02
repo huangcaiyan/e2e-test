@@ -11,14 +11,14 @@ BaseUrl = 'https://firms.guanplus.com'
 # AccountCompany = ['18201215366','qq123456','一般纳税人07251510'] 
 
 #stage环境:账户->账套 [账户，密码，公司名]
-# AccountCompany = ['18514509382','qq123456','一般纳税人07261137']
+AccountCompany = ['18514509382','qq123456','一般纳税人08011640']
 # AccountCompany = ['18201215366','qq123456','钰一般纳税人07271520'] 
 # AccountCompany = ['15201072356','qq123456','一般纳税人07261454']
 # AccountCompany = ['13546465643','qq123456','一般纳税人07261454']
 
 #pro环境测试：账户->账套 [账户，密码，公司名]
 # AccountCompany = ['18514509382','qq123456','一般纳税人07272015'] 
-AccountCompany = ['18514509382','qq123456','一般纳税人07291642'] 
+# AccountCompany = ['18514509382','qq123456','美乐家'] 
 
 Environment = [BaseUrl,AccountCompany]
 
