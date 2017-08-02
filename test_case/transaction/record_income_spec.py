@@ -29,15 +29,17 @@ class RecordIncomeSpec(unittest.TestCase):
     def test1(self):
         '''全空校验'''
 
+    
         transaction_page = TransactionPage(self.driver,'income')
-        transaction_page.clickSaveButton()                                   
-        self.assertEqual('请填写交易账户！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-8:])
+        transaction_page.gg = '2'
+        # transaction_page.clickSaveButton()                                   
+        # self.assertEqual('请填写交易账户！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-8:])
 
     def test2(self):
         '''交易账户-空校验'''
 
         transaction_page = TransactionPage(self.driver,'income')
-        transaction_page.setCategory('1',['1','1'])  
+        transaction_page.setCategory(['1','1'])  
         transaction_page.setMoney('123')
         transaction_page.clickSaveButton()
         self.assertEqual('请填写交易账户！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-8:])
@@ -46,7 +48,6 @@ class RecordIncomeSpec(unittest.TestCase):
         '''类别-空校验'''
 
         transaction_page = TransactionPage(self.driver,'income')
-        transaction_page.setItemsNum('1')
         transaction_page.setAccount('现金')
         transaction_page.setMoney('111')  
         transaction_page.clickSaveButton()
@@ -56,7 +57,7 @@ class RecordIncomeSpec(unittest.TestCase):
         '''金额-空校验'''
 
         transaction_page = TransactionPage(self.driver,'income')
-        transaction_page.setCategory('1',['1','1'])  
+        transaction_page.setCategory(['1','1'])  
         transaction_page.setAccount('现金')
         transaction_page.clickSaveButton()
         self.assertEqual('金额不能为0！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-7:])
@@ -66,7 +67,7 @@ class RecordIncomeSpec(unittest.TestCase):
         '''金额为0测试'''
 
         transaction_page = TransactionPage(self.driver,'income')
-        transaction_page.setCategory('1',['1','1'])  
+        transaction_page.setCategory(['1','1'])  
         transaction_page.setAccount('现金')
         transaction_page.setMoney('0')
         transaction_page.clickSaveButton()
@@ -78,7 +79,7 @@ class RecordIncomeSpec(unittest.TestCase):
 
         transaction_page = TransactionPage(self.driver,'income')
         transaction = ['1','现金','内部代表']
-        items1 = ['1',['1','1'],'111','利息收入']
+        items1 = [['1','1'],'111','利息收入']
         transaction_page.recordTransaction(transaction,items1)
         self.assertEqual('保存成功',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-4:])
 
@@ -87,11 +88,12 @@ class RecordIncomeSpec(unittest.TestCase):
 
         transaction_page = TransactionPage(self.driver,'income')
         publicTransaction = ['1','现金','内部代表']   
-        items1 = ['1',['1','1'],'111','利息收入']
-        items2 = ['2',['2','1'],'121','资金往来']     
+        items1 = [['1','1'],'111','利息收入']
+        items2 = [['2','1'],'121','资金往来']     
         transaction_page.setPublicTransaction(publicTransaction)
         transaction_page.setTransactionItems(items1)
         transaction_page.clickAddItems()
+        transaction_page.setItemsNumber('2')
         transaction_page.setTransactionItems(items2)
         transaction_page.clickSaveButton()
         self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)

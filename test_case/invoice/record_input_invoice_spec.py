@@ -11,7 +11,8 @@ from .invoice_page import InvoicePage
 from test_data.record_input_invoice_data import *
 from util.enter_company_util import EnterCompany
 from config import *
-
+from util.category_map_util import CategoryMap
+import xlrd
 
 class RecordInputInvoiceSpec(unittest.TestCase):
     ''' 记收票测试 '''
@@ -26,9 +27,13 @@ class RecordInputInvoiceSpec(unittest.TestCase):
         '''记录所有类别的收票-普票'''
 
         invoice_page = InvoicePage(self.driver,'input')
-        commonPublicInvoice = ['1','普票','内部代表']
-        for commonItems in RecordCommonInputInvoiceData:
-            invoice_page.recordCommonIncomeInvoice(commonPublicInvoice,commonItems)
+        wb = xlrd.open_workbook(os.path.dirname(__file__) + '/' + '../../test_data/' + '发票.xlsx')
+        sh = wb.sheet_by_name(u'记收普票测试数据')
+        for i in range(1,sh.nrows):
+            sourceRowList = sh.row_values(i)
+            targetList = CategoryMap().inputInvoiceCategeoryCommMapList(sourceRowList)
+            invoice_page.recordCommonIncomeInvoice(targetList[:3],targetList[3:])
+
         invoice_page.goToInvoiceList(BaseUrl)
         self.assertEqual(BaseUrl + '/app/invoice/input-invoice',self.driver.current_url)
 
@@ -36,13 +41,23 @@ class RecordInputInvoiceSpec(unittest.TestCase):
         '''记所有类别的收票-专票'''
 
         invoice_page = InvoicePage(self.driver,'input')
-        specialPublicInvoice = ['1','专票','内部代表']
         invoiceNumList = []
-        for i in range(0,33):
+        for i in range(0,68):
             invoiceNumList.append(self.invoiceNum())
 
-        for specialItems,invoiceNum in zip(RecordSpecialInputInvoiceData,invoiceNumList):
-             invoice_page.recordSpecialIncomeInvoice(specialPublicInvoice,invoiceNum,specialItems)
+        wb = xlrd.open_workbook(os.path.dirname(__file__) + '/' + '../../test_data/' + '发票.xlsx')
+        sh = wb.sheet_by_name(u'记收专票测试数据')
+        for i,invoiceNum in zip(range(1,sh.nrows),invoiceNumList):
+            sourceRowList = sh.row_values(i)
+            targetList = CategoryMap().inputInvoiceCategeorySpecMapList(sourceRowList)
+            invoice_page.recordSpecialIncomeInvoice(targetList[:3],invoiceNum,targetList[3:])
+        # specialPublicInvoice = ['1','专票','内部代表']
+        # invoiceNumList = []
+        # for i in range(0,33):
+        #     invoiceNumList.append(self.invoiceNum())
+
+        # for specialItems,invoiceNum in zip(RecordSpecialInputInvoiceData,invoiceNumList):
+        #      invoice_page.recordSpecialIncomeInvoice(specialPublicInvoice,invoiceNum,specialItems)
         invoice_page.goToInvoiceList(BaseUrl)
         self.assertEqual(BaseUrl + '/app/invoice/input-invoice',self.driver.current_url)   
 

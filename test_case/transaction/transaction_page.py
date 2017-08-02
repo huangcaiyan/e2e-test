@@ -8,15 +8,17 @@ from util.is_element_exit_util import IsElementExit
 
 
 class TransactionPage:
-    itemsNumber = ''
-
-    def setItemsNum(self,itemsNum):
-        global itemsNumber 
-        itemsNumber = itemsNum
 
     def __init__(self, driver,transactionType):
         self.driver = driver
         self.transactionType = transactionType
+        self.itemsNumber = '1'
+
+    def setItemsNumber(self,itemsNum='1'):
+        self.itemsNumber = itemsNum
+
+    def getItemsNumber(self):
+        return self.itemsNumber
 
     # 进入收支列表
     def goToTransactionModule(self,baseUrl):
@@ -55,13 +57,13 @@ class TransactionPage:
         self.driver.find_element_by_link_text(otherInfo).click()
 
     #设置类别 【itemNum】 明细行号
-    def setCategory(self,category,itemNum=1):
-        global itemsNumber 
-        itemsNumber = itemNum
+    def setCategory(self,category):
+        itemNum = self.getItemsNumber()
         categoryButton = ''
         if int(itemNum) < 2:
             categoryButton = '//*[@id="body"]/detail/' + self.transactionType  + '/div/div[3]/div/table/tbody[1]/tr/th/ng-select/div/div[2]/span'
         else:
+            print('sfsdfsfsdfsdfsfd')
             categoryButton = '//*[@id="body"]/detail/' + self.transactionType + '/div/div[3]/div/table/tbody[1]/tr[' + itemNum + ']/th/ng-select/div/div[2]/span'
         self.driver.find_element_by_xpath(categoryButton).click()
         time.sleep(3) 
@@ -76,19 +78,19 @@ class TransactionPage:
 
     #设置金额
     def setMoney(self,money):
-        if int(itemsNumber) < 2:
+        if int(self.itemsNumber) < 2:
             moneyXpath = '//*[@id="body"]/detail/'+ self.transactionType + '/div/div[3]/div/table/tbody[1]/tr/td[1]/bp-input/input'
         else:
-            moneyXpath = '//*[@id="body"]/detail/'+ self.transactionType + '/div/div[3]/div/table/tbody[1]/tr[' + itemsNumber + ']/td[1]/bp-input/input'
+            moneyXpath = '//*[@id="body"]/detail/'+ self.transactionType + '/div/div[3]/div/table/tbody[1]/tr[' + self.itemsNumber + ']/td[1]/bp-input/input'
         self.driver.find_element_by_xpath(moneyXpath).clear()
         self.driver.find_element_by_xpath(moneyXpath).send_keys(money)
 
     #设置备注
     def setRemark(self,remark=None):
-        if int(itemsNumber) < 2:
+        if int(self.itemsNumber) < 2:
             remarkXpath = '//*[@id="body"]/detail/' + self.transactionType + '/div/div[3]/div/table/tbody[1]/tr/td[2]/input'
         else:
-            remarkXpath = '//*[@id="body"]/detail/' + self.transactionType + '/div/div[3]/div/table/tbody[1]/tr[' + itemsNumber + ']/td[2]/input'
+            remarkXpath = '//*[@id="body"]/detail/' + self.transactionType + '/div/div[3]/div/table/tbody[1]/tr[' + self.itemsNumber + ']/td[2]/input'
         self.driver.find_element_by_xpath(remarkXpath).clear()
         self.driver.find_element_by_xpath(remarkXpath).send_keys(remark)
 
@@ -111,7 +113,6 @@ class TransactionPage:
         
     #设置明细：类别，金额，备注 items 是一个list [类别，金额，备注]
     def setTransactionItems(self,items):
-        category = items[0]
         self.setCategory(items[0])
         self.setMoney(items[1])
         self.setRemark(items[2])

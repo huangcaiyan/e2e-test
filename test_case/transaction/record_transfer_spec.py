@@ -10,6 +10,8 @@ from .transaction_page import TransactionPage
 from test_data.record_transfer_data import *
 from util.enter_company_util import EnterCompany
 from config import *
+from util.category_map_util import CategoryMap
+import xlrd
 
 #前提条件：有一个【招商银行】账户
 class RecordTransterSpec(unittest.TestCase):
@@ -75,12 +77,17 @@ class RecordTransterSpec(unittest.TestCase):
         self.assertEqual('保存成功',self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[1]/alert/div').text[-4:])
 
     def test8(self):
-        '''成功15笔账户互转测试'''
+        '''成功12笔账户互转测试[现金，银行，微信，支付宝]'''
     
-        # transferPara = ['1','现金','招商银行','1','现金-招商银行1']
-        # self.transaction_page.recordTransfer(transferPara)
-        for transferPara in RecordTransferData:
-            self.transaction_page.recordTransfer(transferPara)
+        # for transferPara in RecordTransferData:
+        #     self.transaction_page.recordTransfer(transferPara)
+        # self.transaction_page.goToTransactionModule(BaseUrl)
+        # self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)
+        wb = xlrd.open_workbook(os.path.dirname(__file__) + '/' + '../../test_data/' + '收支.xlsx')
+        sh = wb.sheet_by_name(u'记账户互转测试数据')
+        for i in range(1,sh.nrows):
+            sourceRowList = sh.row_values(i)
+            self.transaction_page.recordTransfer(sourceRowList)
         self.transaction_page.goToTransactionModule(BaseUrl)
         self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)
 
