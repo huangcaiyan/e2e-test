@@ -28,10 +28,9 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordIncomeSpec('test3'))
     # testSuite.addTest(RecordIncomeSpec('test4'))
     # testSuite.addTest(RecordIncomeSpec('test5'))
-    # testSuite.addTest(RecordIncomeSpec('test6'))
-    # testSuite.addTest(RecordIncomeSpec('test7'))
+    testSuite.addTest(RecordIncomeSpec('test6'))
+    testSuite.addTest(RecordIncomeSpec('test7'))
     # testSuite.addTest(RecordIncomeSpec('test8'))
-    testSuite.addTest(RecordIncomeSpec('test9'))
 
     # #记账户互转 *注意：需要新增招商银行账户
     # testSuite.addTest(RecordTransterSpec('test1'))
