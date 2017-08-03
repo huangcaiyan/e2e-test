@@ -59,23 +59,31 @@ class GenerateVoucherSpec(unittest.TestCase):
         vc = VoucherCheck(self.driver)
         vc.voucherCheck(OutcomeVoucherData)
 
-    # def test3(self):
-    #     '''记一笔账户互转-凭证测试'''
+    def test3(self):
+        '''记多笔账户互转-凭证测试'''
 
-    #     recordTransfer = TransactionPage(self.driver,'accounttransfers')
-    #     recordTransfer.goToTransactionModule(BaseUrl)
-    #     recordTransfer.goToTransactionPage('记账户互转')
-    #     recordTransfer.recordTransfer(RecordOutcomePublicData,RecordOutputItemsData)
-    #     time.sleep(3)
-    #     recordTransfer.goToVoucherPage(BaseUrl)
-    #     self.assertEqual('100101—RMB',self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody[3]/tr[1]/td[4]').text)
-    #     self.assertEqual('711.00',self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody[3]/tr[1]/td[5]').text)
-    #     self.assertEqual('100201—银行',self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody[3]/tr[2]/td[2]').text)
-    #     self.assertEqual('711.00',self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody[3]/tr[2]/td[4]').text)
+        recordTransfer = TransactionPage(self.driver,'accounttransfers')
+        recordTransfer.goToTransactionModule(BaseUrl)
+        recordTransfer.goToTransactionPage('记账户互转')
+        recordTransfer.recordTransfer(RecordOutcomePublicData,RecordOutputItemsData)
+        time.sleep(3)
+        recordTransfer.goToVoucherPage(BaseUrl)
+        self.assertEqual('100101—RMB',self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody[3]/tr[1]/td[4]').text)
+        self.assertEqual('711.00',self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody[3]/tr[1]/td[5]').text)
+        self.assertEqual('100201—银行',self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody[3]/tr[2]/td[2]').text)
+        self.assertEqual('711.00',self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/voucher/div[1]/div[3]/div[1]/div/table/tbody[3]/tr[2]/td[4]').text)
 
-    # def test4(self):
-    #     '''记一笔收票-普票-凭证测试'''
-    #     pass
+    def test4(self):
+        '''记多笔收票-普票-凭证测试'''
+        pass
+
+    def test5(self):
+        '''记多笔收票-专票-凭证测试'''
+        pass
+
+    def test6(self):
+        '''记多笔开票-凭证测试'''
+        pass
 
     def tearDown(self):
         self.driver.quit()

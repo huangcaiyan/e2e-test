@@ -43,7 +43,6 @@ class RecordOutputInvoiceSpec(unittest.TestCase):
         sh = wb.sheet_by_name(u'记开票测试数据')
         for i,invoiceNum in zip(range(1,sh.nrows),invoiceNumList):
             sourceRowList = sh.row_values(i)
-            print(str(i) +":" + str(sourceRowList))
             targetList = CategoryMap().outputInvoiceCategeoryMapList(sourceRowList)
             invoice_page.recordOutputInvoice(targetList[:4],invoiceNum,targetList[4:])
 

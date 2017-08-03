@@ -7,6 +7,9 @@ from test_case.transaction.outcome_voucher_spec import OutcomeVoucherSpec
 from test_case.invoice.record_input_invoice_spec import RecordInputInvoiceSpec
 from test_case.invoice.record_output_invoice_spec import RecordOutputInvoiceSpec
 from test_case.finance.voucher.generate_voucher_spec import GenerateVoucherSpec
+from test_case.fixedassets.record_fixed_spec import RecordFixedSpec
+from test_case.fixedassets.record_intangible_spec import RecordIntangibleSpec
+
 
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
@@ -44,11 +47,20 @@ if __name__ == '__main__':
 
     # #记收票测试
     # testSuite.addTest(RecordInputInvoiceSpec('test1'))
-    testSuite.addTest(RecordInputInvoiceSpec('test2'))
+    # testSuite.addTest(RecordInputInvoiceSpec('test2'))
 
     # #记开票测试
     # testSuite.addTest(RecordOutputInvoiceSpec('test1'))
     # testSuite.addTest(RecordOutputInvoiceSpec('test2'))
+
+    #记固定资产
+    # testSuite.addTest(RecordFixedSpec('test1'))
+    # testSuite.addTest(RecordFixedSpec('test2'))
+
+    #记无形资产
+    testSuite.addTest(RecordIntangibleSpec('test1'))
+    testSuite.addTest(RecordIntangibleSpec('test2'))
+
 
     #生成凭证测试 *【注意】需要新增招商银行且没有流水记录
     # testSuite.addTest(GenerateVoucherSpec('test1'))
