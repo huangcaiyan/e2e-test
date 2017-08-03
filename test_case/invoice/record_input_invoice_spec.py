@@ -51,13 +51,6 @@ class RecordInputInvoiceSpec(unittest.TestCase):
             sourceRowList = sh.row_values(i)
             targetList = CategoryMap().inputInvoiceCategeorySpecMapList(sourceRowList)
             invoice_page.recordSpecialIncomeInvoice(targetList[:3],invoiceNum,targetList[3:])
-        # specialPublicInvoice = ['1','专票','内部代表']
-        # invoiceNumList = []
-        # for i in range(0,33):
-        #     invoiceNumList.append(self.invoiceNum())
-
-        # for specialItems,invoiceNum in zip(RecordSpecialInputInvoiceData,invoiceNumList):
-        #      invoice_page.recordSpecialIncomeInvoice(specialPublicInvoice,invoiceNum,specialItems)
         invoice_page.goToInvoiceList(BaseUrl)
         self.assertEqual(BaseUrl + '/app/invoice/input-invoice',self.driver.current_url)   
 

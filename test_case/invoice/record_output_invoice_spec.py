@@ -10,7 +10,8 @@ from .invoice_page import InvoicePage
 from test_data.record_output_invoice_data import *
 from util.enter_company_util import EnterCompany
 from config import *
-
+from util.category_map_util import CategoryMap
+import xlrd
 
 class RecordOutputInvoiceSpec(unittest.TestCase):
     ''' 记开票测试 '''
@@ -18,8 +19,8 @@ class RecordOutputInvoiceSpec(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         EnterCompany(self.driver,Environment)
-        self.invoice_page = InvoicePage(self.driver,'output')
-        self.invoice_page.goToInvoice(BaseUrl)
+        invoice_page = InvoicePage(self.driver,'output')
+        invoice_page.goToInvoice(BaseUrl)
 
     def test1(self):
         '''成功记录一笔开票-普票-税控自开测试'''
@@ -27,18 +28,26 @@ class RecordOutputInvoiceSpec(unittest.TestCase):
         outputInvoicePublic = ['1','普票','税控自开','内部代表']
         outputInvoiceNum = '00000000'
         outputInvoiceItems = [['1','1'],'管理部门','5%','41111','普票-税控自开-商品销售-5%-管理部门41111']
-        self.invoice_page.recordOutputInvoice(outputInvoicePublic,outputInvoiceNum,outputInvoiceItems)
+        invoice_page = InvoicePage(self.driver,'output')
+        invoice_page.recordOutputInvoice(outputInvoicePublic,outputInvoiceNum,outputInvoiceItems)
 
     def test2(self):
         '''成功记录多笔开票记录测试'''
 
+        invoice_page = InvoicePage(self.driver,'output')
         invoiceNumList = []
-        for i in range(0,10):
+        for i in range(0,12):
             invoiceNumList.append(self.invoiceNum())
-        outputInvoicePublic = ['1','普票','税控自开','内部代表']
-        for outputInvoiceItems,outputInvoiceNum in zip(RecordCommonOutputInvoiceSelfData,invoiceNumList):
-            self.invoice_page.recordOutputInvoice(outputInvoicePublic,outputInvoiceNum,outputInvoiceItems)
-        self.invoice_page.goToInvoiceList(BaseUrl)
+
+        wb = xlrd.open_workbook(os.path.dirname(__file__) + '/' + '../../test_data/' + '发票.xlsx')
+        sh = wb.sheet_by_name(u'记开票测试数据')
+        for i,invoiceNum in zip(range(1,sh.nrows),invoiceNumList):
+            sourceRowList = sh.row_values(i)
+            print(str(i) +":" + str(sourceRowList))
+            targetList = CategoryMap().outputInvoiceCategeoryMapList(sourceRowList)
+            invoice_page.recordOutputInvoice(targetList[:4],invoiceNum,targetList[4:])
+
+        invoice_page.goToInvoiceList(BaseUrl)
         self.assertEqual(BaseUrl + '/app/invoice/output-invoice',self.driver.current_url)
 
     # def test2(self):

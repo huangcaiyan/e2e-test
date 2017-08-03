@@ -136,3 +136,8 @@ class CategoryMap(object):
                                     '商品销售':['1','1'],
                                     '服务收入':['2','1']
                                  }
+        for key,value in zip(outputInvoiceCategeory.keys(),outputInvoiceCategeory.values()):
+            if key == sourceList[4]:
+                sourceList[4] = value
+
+        return sourceList
