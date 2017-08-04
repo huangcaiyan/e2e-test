@@ -11,5 +11,5 @@ class IsElementExit(object):
             self.driver.find_element_by_xpath(locator)
             return True
         except Exception as e:
-            logging.exception(e)
+            # logging.exception(e)
             return False

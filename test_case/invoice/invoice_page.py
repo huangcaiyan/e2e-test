@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 from util.set_date_util import SetDate
 
 
-class InvoicePage:
+class InvoicePage(object):
     itemsNumber = ''
     invoiceClassfiy = ''
 
