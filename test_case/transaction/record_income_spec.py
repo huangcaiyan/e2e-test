@@ -20,7 +20,8 @@ class RecordIncomeSpec(unittest.TestCase):
     ''' 记收入测试 '''
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+        self.driver = webdriver.PhantomJS()
         EnterCompany(self.driver,Environment)
         transaction_page = TransactionPage(self.driver,'income')
         transaction_page.goToTransactionModule(BaseUrl)
@@ -31,9 +32,8 @@ class RecordIncomeSpec(unittest.TestCase):
 
     
         transaction_page = TransactionPage(self.driver,'income')
-        transaction_page.gg = '2'
-        # transaction_page.clickSaveButton()                                   
-        # self.assertEqual('请填写交易账户！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-8:])
+        transaction_page.clickSaveButton()                                   
+        self.assertEqual('请填写交易账户！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-8:])
 
     def test2(self):
         '''交易账户-空校验'''

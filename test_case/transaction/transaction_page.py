@@ -5,6 +5,9 @@ import logging
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 from util.set_date_util import SetDate
 from util.is_element_exit_util import IsElementExit
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class TransactionPage:
@@ -28,11 +31,14 @@ class TransactionPage:
     # 进入记收支页面
     def goToTransactionPage(self, transactionName):
         try:
-            self.driver.find_element_by_xpath('//*[@id="body"]/list/div/div[2]/div/ol/li[3]/button[2]').click()
-            time.sleep(5)
+            # self.driver.find_element_by_xpath('//*[@id="body"]/list/div/div[2]/div/ol/li[3]/button[2]').click()
+            # time.sleep(5)
+            recordOneButtonLocator = '//*[@id="body"]/list/div/div[2]/div/ol/li[3]/button[2]'
+            WebDriverWait(self.driver,5,0.5).until(EC.presence_of_element_located((By.XPATH,recordOneButtonLocator))).click()
             self.driver.find_element_by_link_text(transactionName).click()
             time.sleep(5)
         except Exception as e:
+            self.driver.get_screenshot_as_file('error.jpg')
             print('====================================进入记收支页面失败……==============================')
             logging.exception(e)
 

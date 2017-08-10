@@ -9,6 +9,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../../'))
 from util.enter_company_util import EnterCompany
 from util.generate_random_util import GenerateRandom
 from util.category_map_util import CategoryMap
+from util.create_company_util import CreateCompay
 from config import *
 import xlrd
 from test_case.transaction.transaction_page import TransactionPage
@@ -20,7 +21,8 @@ class RecordBusinessSpec(unittest.TestCase):
     ''' 记业务单测试 '''
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+        self.driver = webdriver.PhantomJS()
         EnterCompany(self.driver,Environment)
     
     def test1(self):

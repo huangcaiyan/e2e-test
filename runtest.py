@@ -10,6 +10,7 @@ from test_case.finance.voucher.generate_voucher_spec import GenerateVoucherSpec
 from test_case.fixedassets.record_fixed_spec import RecordFixedSpec
 from test_case.fixedassets.record_intangible_spec import RecordIntangibleSpec
 from test_case.finance.voucher.record_business_spec import RecordBusinessSpec
+from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
 
 
 if __name__ == '__main__':
@@ -63,16 +64,28 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordIntangibleSpec('test2'))
 
     #记所有的业务单：收入、支出、账户互转、收票、开票、固定资产、无形资产
-    # testSuite.addTest(RecordBusinessSpec('test1'))
-    # testSuite.addTest(RecordBusinessSpec('test2'))
-    # testSuite.addTest(RecordBusinessSpec('test3'))
-    # testSuite.addTest(RecordBusinessSpec('test4'))
-    # testSuite.addTest(RecordBusinessSpec('test5'))
+    testSuite.addTest(RecordBusinessSpec('test1'))
+    testSuite.addTest(RecordBusinessSpec('test2'))
+    testSuite.addTest(RecordBusinessSpec('test3'))
+    testSuite.addTest(RecordBusinessSpec('test4'))
+    testSuite.addTest(RecordBusinessSpec('test5'))
     testSuite.addTest(RecordBusinessSpec('test6'))
-    # testSuite.addTest(RecordBusinessSpec('test7'))
-    # testSuite.addTest(RecordBusinessSpec('test8'))
-    # testSuite.addTest(RecordBusinessSpec('test9'))
-    # testSuite.addTest(RecordBusinessSpec('test10'))
+    testSuite.addTest(RecordBusinessSpec('test7'))
+    testSuite.addTest(RecordBusinessSpec('test8'))
+    testSuite.addTest(RecordBusinessSpec('test9'))
+    testSuite.addTest(RecordBusinessSpec('test10'))
+
+    #业务流程测试
+    # testSuite.addTest(PositiveFlowSpec('test1'))
+    # testSuite.addTest(PositiveFlowSpec('test2'))
+    # testSuite.addTest(PositiveFlowSpec('test3'))
+    # testSuite.addTest(PositiveFlowSpec('test4'))
+    # testSuite.addTest(PositiveFlowSpec('test5'))
+    # testSuite.addTest(PositiveFlowSpec('test6'))
+    # testSuite.addTest(PositiveFlowSpec('test7'))
+    # testSuite.addTest(PositiveFlowSpec('test8'))
+    # testSuite.addTest(PositiveFlowSpec('test9'))
+    # testSuite.addTest(PositiveFlowSpec('test10'))
 
 
     #生成凭证测试 *【注意】需要新增招商银行且没有流水记录

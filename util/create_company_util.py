@@ -3,6 +3,12 @@ import time
 import logging
 from .is_element_exit_util import IsElementExit
 from .set_date_util import SetDate
+from util.generate_random_util import GenerateRandom
+from datetime import datetime
+import xlrd
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 #创建公司
 class CreateCompay(object):
@@ -10,7 +16,10 @@ class CreateCompay(object):
         self.driver = driver
         self.driver.maximize_window()
 
-    #登陆
+    def get(self,baseUrl):
+        self.driver.get(baseUrl)
+
+     #登陆
     def login(self,account):
         idlocators = ['usernameInput','passwordInput']
         for idlocator,textValue in zip(idlocators,account):
@@ -32,26 +41,32 @@ class CreateCompay(object):
         manualCreateLocator = '//*[@id="manual-link"]'
         self.driver.find_element_by_xpath(manualCreateLocator).click()
         time.sleep(3)
-        nameLocators = ['companyName','legalPersonName','registeredCapital','taxNumber']
+        nameLocators = ['companyName','legalPersonName','registeredCapital']
         for namelocator,textValue in zip(nameLocators,companyPara[0:3]):
             self.driver.find_element_by_name(namelocator).clear()
             self.driver.find_element_by_name(namelocator).send_keys(textValue)
-        self.setAddress(companyPara[3])
-        SetDate(self.driver,'//*[@id="setupDate"]/span/span[2]',companyPara[4])
+        self.setAddress(companyPara[3:6])
+        SetDate(self.driver,'//*[@id="setupDate"]/span/span[2]',companyPara[6])
         self.driver.find_element_by_name('taxNumber').clear
-        self.driver.find_element_by_name('taxNumber').send_keys(companyPara[5])
+        self.driver.find_element_by_name('taxNumber').send_keys(companyPara[7])
         industryLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[9]/div/ng-select/div/div[2]/span'
         companyNature = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[10]/div/ng-select/div/div[2]/span'
-        for locator,selectValue in zip([industryLocator,companyNature],companyPara[6:8]):
+        for locator,selectValue in zip([industryLocator,companyNature],companyPara[8:10]):
             self.driver.find_element_by_xpath(locator).click()
             self.driver.find_element_by_link_text(selectValue).click()
         startDateButtonLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[11]/div/datepicker/datepicker-inner/div/monthpicker/div[1]/span/span[2]'
         self.driver.find_element_by_xpath(startDateButtonLocator).click()
         time.sleep(2)
-        self.driver.find_elements_by_class_name('month-button')[int(companyPara[8])].click()
+        self.driver.find_elements_by_class_name('month-button')[int(companyPara[10])-1].click()
         createCompanyLocator = '//*[@id="createCompany"]/div[7]/div/span/button[1]'
         self.driver.find_element_by_xpath(createCompanyLocator).click()
-        time.sleep(10)
+        try:
+            alertElement = WebDriverWait(self.driver,10,0.5).until(EC.presence_of_element_located((By.XPATH,'//*[@id="createCompany"]/div[1]/alert/div'))) 
+            print('======================================失败创建账套==========================================')
+            self.driver.get_screenshot_as_file('createCompanyerror.jpg')
+        except Exception as e:
+            print('*************************************成功创建账套********************************')
+            # logging.exception(e)
 
     #地址
     def setAddress(self,address):
@@ -71,19 +86,18 @@ class CreateCompay(object):
 
 
     #进入账套
-    def goToCompany(self,environment2):
+    def goToCompany(self,goToCompanyPara):
         try:
-            self.driver.get(environment2[0])
-            self.login(environment2[1])
-            self.createCompany(environment2[2])
-            self.driver.find_element_by_link_text(environment2[2][0]).find_element_by_xpath('../../..').find_elements_by_tag_name('td')[1].click()
+            self.login(goToCompanyPara[0])
+            self.createCompany(goToCompanyPara[1])
+            self.driver.find_element_by_link_text(goToCompanyPara[1][0]).find_element_by_xpath('../../..').find_elements_by_tag_name('td')[3].click()
             time.sleep(2)
-            self.setClient(environment2[3][0])
-            for role,locator in zip(environment2[3][1:],[2,3]):
-                self.driver.find_element_by_link_text(environment2[2][0]).find_element_by_xpath('../../..').find_elements_by_tag_name('td')[locator].click()
+            self.setClient(goToCompanyPara[2][0:2])
+            for role,locator in zip(goToCompanyPara[2][2:],[4,5]):
+                self.driver.find_element_by_link_text(goToCompanyPara[1][0]).find_element_by_xpath('../../..').find_elements_by_tag_name('td')[locator].click()
                 time.sleep(2)
                 self.setRole(role)
-            self.driver.find_element_by_link_text(environment2[2][0]).click()
+            self.driver.find_element_by_link_text(goToCompanyPara[1][0]).click()
             time.sleep(3)
             self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/beginning-period/div/div[3]/div[2]/div[2]/div[1]/button').click()
             time.sleep(8)
@@ -113,31 +127,43 @@ class CreateCompay(object):
         try:
             roleNameLocator = '//*[@id="name-sel"]/div/div[2]/span'
             inviteButtonLocator = '//*[@id="body"]/company-list/gpw-invite-user-new-modal/div/div/div/div[3]/div/button'
-            self.driver.find_element_by_xpath(roleNameLocator).click()
-            time.sleep(3)
-            self.driver.find_elements_by_link_text(roleInfo)[1].click()
-            time.sleep(2)
+            WebDriverWait(self.driver,5,0.5).until(EC.presence_of_element_located((By.XPATH,roleNameLocator))).click() 
+            # self.driver.find_element_by_xpath(roleNameLocator).click()
+            # time.sleep(3)
+            WebDriverWait(self.driver,3,0.5).until(EC.presence_of_all_elements_located((By.LINK_TEXT,roleInfo)))[1].click()
+            # self.driver.find_elements_by_link_text(roleInfo)[1].click()
+            # time.sleep(2)
             self.driver.find_element_by_xpath(inviteButtonLocator).click()
             time.sleep(3)
         except Exception as e:
             print('====================================分配会计或助理失败===============================================')
-            logging.exception(e)
-
-# driver = webdriver.Chrome()
-# cc = CreateCompay(driver)
-
-# driver.get('https://firms.guanplus.com')
-# cc.login(['18514509382','qq123456'])
-# driver.find_element_by_link_text('一般纳税人07291458').find_element_by_xpath('../../..').find_elements_by_tag_name('td')[2].click()
-# time.sleep(2)
-# cc.setRole('yang')
-# driver.find_element_by_link_text('一般纳税人07291458').find_element_by_xpath('../../..').find_elements_by_tag_name('td')[3].click()
-# time.sleep(2)
-# cc.setRole('yang')
+            # logging.exception(e)
 
 
+    #进入创建账户页面
+    def goToCreateAccountPage(self,baseUrl):
+        self.driver.get(baseUrl + '/app/account' )
+        time.sleep(3)
+        addButtouLocator = '//*[@id="addAccountButton"]'
+        self.driver.find_element_by_xpath(addButtouLocator).click()
+        time.sleep(2)
 
-# address = ['北京市','市辖区','海淀区']
-# companyPara = ['一般纳税人07291642','羊羊羊','12',address,'1','222222221111177','批发、零售','一般纳税人','7']
-# environment2 = ['https://firms.guanplus.com',['18514509382','qq123456'],companyPara,[['羊羊羊','18514509382'],'yang','yang']]
-# cc.goToCompany(environment2)
+    #创建账户
+    def createAccount(self,accountType,accountName):
+        if '添加银行账户' == accountType:
+            accountNameLocator = './/*[@id="input-accountName"]'
+        else:
+            accountNameLocator = ".//*[@id='input-accountNumber3']"
+
+        self.driver.find_element_by_xpath(accountNameLocator).clear()
+        self.driver.find_element_by_xpath(accountNameLocator).send_keys(accountName)
+        saveButtonLocator = ".//*[@id='saveButton']"
+        self.driver.find_element_by_xpath(saveButtonLocator).click()
+        alertLocator = ".//*[@id='body']/account/div[1]/alert/div"
+        try:
+             WebDriverWait(self.driver,5,0.5).until(EC.presence_of_element_located((By.XPATH,alertLocator)))
+        except Exception as e:
+            print('======================================创建账户失败======================================================')
+        
+        
+
