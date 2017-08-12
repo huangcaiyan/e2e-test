@@ -1,6 +1,6 @@
 import time
 
-class LoginPage:
+class LoginPage(object):
 
     # element location
     user_text_id = 'usernameInput'
@@ -31,7 +31,7 @@ class LoginPage:
         #click login button
         login_button.click()
         #delay
-        time.sleep(30)
+        time.sleep(20)
 
         # if self.driver.current_url == self.url + '/app/home-page/accounting':
         #     print('Accountant login success !')

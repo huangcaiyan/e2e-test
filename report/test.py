@@ -1,36 +1,97 @@
-# import requests
-# import json
+import requests
+import json
 
-# __author__ = u'ych'
+__author__ = u'ych'
 
-# def test():
-#     url = 'https://api-firms.guanplus.com/api/v1/invoice/8459a51b-6e10-4750-8bc1-d27687f6bf1e'
-#     data = {
-#                 "userName": "18514509382",
-#                 "password": "qq123456"
+def testGetApi():
+    url = 'https://api-firms.guanplus.com/api/v1/journal/search?year=2017&month=9&keyword=&pageIndex=2&pageSize=10&type='
+    headers = {
+        'Accept':'application/json',
+        'Accept-Encoding':'gzip, deflate, sdch',
+        'Accept-Language':'zh-CN,zh;q=0.8',
+        #账套id
+        # 'accountbook_id':'1d6c7113-442f-4ec5-9097-63fcc93ccfea',
+        #token
+        # 'Authorization':'bearer 5NRm-LGEuo1EYMVTc6LPa2dS2XNET0_t2DAxw8DOpuXU72go0ayEp2VJOgu4xsLJ8LfaCUoo25GEGdNYWhZN5VSoNzTY09HTr8LDwtLywCUeuJ6LbTuvVPfLO6v-xeSdVWbeDQk2hIavG96D6MR3FzTB56k0hrvMxI9St7lAjrKJOONjcMTzQ4bzhXy_4qbs7WjNu0G_bWkHGE552O6LtVL2wg2mYa5gZ0xLoGUy6I6ahDEdhd8fkK8o8JvnEsoMHyJTT7ZHSb_f-T-Sg5UjVWRVHMM',
+        'Cache-Control':'no-cache',
+        #公司id
+        # 'company_id':'5a8a5e65-0f17-4353-815a-9046199c6f5b',
+        'Connection':'keep-alive',
+        'Content-Type':'application/json',
+        #主机地址
+        'Host':'api-firms.guanplus.com',
+        'Origin':'https://firms.guanplus.com',
+        'Referer':'//firms.guanplus.com/app/finance/voucher',
+        'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0',
+    }
+    #调用token的api
+    urlPost = 'https://api-identity.guanplus.com/api/v1/account/token'
+    data = {"userName": "18514509382","password": "qq123456"}
+    rPost = requests.post(url,data=data)
+    au = json.loads(rPost.text)
+    headers['Authorization']=au['token_type'] + ' ' + au['access_token']
+    headers['company_id'] = au['user']['companies'][0]['id']
 
-#             }
-#     headers = {
-#         'Accept':'application/json',
-#         'Accept-Encoding':'gzip, deflate, sdch',
-#         'Accept-Language':'zh-CN,zh;q=0.8',
-#         'accountbook_id':'49fcab56-9b11-497c-bc8b-3502a3b4ad00',
-#         'Authorization':'bearer inR5zoqhGz3m-R7R3pcl6s7Qylmey49CExiGT2MBoHRuCGnMmUeRTtiWaIeD99rw5FI-1aw6hpJLYwlkDhATLKwMqcP2ZiWLonPpxcY7pwq10LVPM3pqpYvKHjqCgfljOBXOuIqoWYNEuNzAUMaIviJyrm7YNgwzBtY9QNolGoh41VT1O1HoR08RZfftDobfxHv_upUWOnlrZY-f4ov_X8FAz2DacVHLZE_28ZPH7FbD-l1G9wYEivTxgLJ_P0srCZpotR8l0x7U-wFUC-H-fUxttFQ',
-#         'Cache-Control':'no-cache',
-#         'company_id':'5a8a5e65-0f17-4353-815a-9046199c6f5b',
-#         'Connection':'keep-alive',
-#         'Content-Type':'application/json',
-#         'Host':'api-firms.guanplus.com',
-#         'Origin':'https://firms.guanplus.com',
-#         'Referer':'https://firms.guanplus.com/app/reconcile/detail/history;id=77c6c498-48ff-4b9e-b7bb-25e032b71499',
-#         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0'
-#     }
+    #调用获得账套的api
+    
 
-#     r = requests.get(url,headers = headers)
-#     print('resposegfffffffffffff:'+str(r.text.encode('utf-8')))
+    # headers['accountbook_id']=
+
+    r = requests.get(url,headers = headers)
+    print('api respose:')
+    print(r.text.encode('utf-8'))
+
+#获取账套api
+def getAccountbook():
+    accountbookSearchUrl = 'https://api-firms.guanplus.com/api/v1/accountbook/search'
+    headers = {
+        'Accept':'application/json',
+        'Accept-Encoding':'gzip, deflate, sdch',
+        'Accept-Language':'zh-CN,zh;q=0.8',
+        'Cache-Control':'no-cache',
+        'Connection':'keep-alive',
+        'Content-Type':'application/json',
+        'Authorization':'bearer 5NRm-LGEuo1EYMVTc6LPa2dS2XNET0_t2DAxw8DOpuXU72go0ayEp2VJOgu4xsLJ8LfaCUoo25GEGdNYWhZN5VSoNzTY09HTr8LDwtLywCUeuJ6LbTuvVPfLO6v-xeSdVWbeDQk2hIavG96D6MR3FzTB56k0hrvMxI9St7lAjrKJOONjcMTzQ4bzhXy_4qbs7WjNu0G_bWkHGE552O6LtVL2wg2mYa5gZ0xLoGUy6I6ahDEdhd8fkK8o8JvnEsoMHyJTT7ZHSb_f-T-Sg5UjVWRVHMM',
+        'company_id':'5a8a5e65-0f17-4353-815a-9046199c6f5b',
+        #主机地址
+        'Host':'api-firms.guanplus.com',
+        'Origin':'https://firms.guanplus.com',
+        'Referer':'//firms.guanplus.com/app/finance/voucher',
+        'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0',
+    }
+    # headers['Authorization']=getTokenAPi()[0]
+    # headers['company_id']=getTokenAPi()[1]
+    r = requests.get(accountbookSearchUrl,headers = headers)
+    pythonDict = json.loads(r.text)
+    companyList = pythonDict['list']
+    expectCompanyList = {}
+    for i in companyList:
+        dictId = i['id']
+        dictName = i['name']
+        expectCompanyList[dictId] = dictName
+        
+    print(expectCompanyList)
+    
 
 
-# test()
+def getTokenAPi():
+    url = 'https://api-identity.guanplus.com/api/v1/account/token'
+    data = {"userName": "18514509382","password": "qq123456"}
+    r = requests.post(url,data=data)
+    # pythondata = json.load(r.text.encode('utf-8'))
+    print(r.text)
+    dlo = json.loads(r.text)
+    print('Authorization:' + dlo['token_type'] + ' ' + dlo['access_token'] )
+    useinfp = dlo['user']
+    print(dlo['user']['companies'][0]['id'])
+    authorization =dlo['token_type'] + ' ' + dlo['access_token']
+    company_id =  dlo['user']['companies'][0]['id']
+    result = [authorization,company_id]
+    return result
+    # print(pythondata)
+getAccountbook()
+# testGetApi()
+
 # from tkinter import *
 
 # class Application(Frame):

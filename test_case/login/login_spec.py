@@ -10,12 +10,10 @@ from selenium import webdriver
 
 class LoginTest(unittest.TestCase):
     def setUp(self):
-        self.jsonData = JsonToPython(os.path.abspath(os.path.dirname(__file__) + '/' + '../..')+ '/test_data/login_data.json', 'r')
-        self.pythonData = self.jsonData.readJson()
         self.url = 'https://web-gyz-stage.guanplus.com'
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+        self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(6) 
-        # self.driver.maximize_window()
 
     def test_login(self):
         loginPage = LoginPage(self.url, self.driver)

@@ -48,8 +48,8 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordTransterSpec('test8'))
 
     # #记收票测试
-    # testSuite.addTest(RecordInputInvoiceSpec('test1'))
-    # testSuite.addTest(RecordInputInvoiceSpec('test2'))
+    testSuite.addTest(RecordInputInvoiceSpec('test1'))
+    testSuite.addTest(RecordInputInvoiceSpec('test2'))
 
     # #记开票测试
     # testSuite.addTest(RecordOutputInvoiceSpec('test1'))
@@ -64,16 +64,16 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordIntangibleSpec('test2'))
 
     #记所有的业务单：收入、支出、账户互转、收票、开票、固定资产、无形资产
-    testSuite.addTest(RecordBusinessSpec('test1'))
-    testSuite.addTest(RecordBusinessSpec('test2'))
-    testSuite.addTest(RecordBusinessSpec('test3'))
-    testSuite.addTest(RecordBusinessSpec('test4'))
-    testSuite.addTest(RecordBusinessSpec('test5'))
-    testSuite.addTest(RecordBusinessSpec('test6'))
-    testSuite.addTest(RecordBusinessSpec('test7'))
-    testSuite.addTest(RecordBusinessSpec('test8'))
-    testSuite.addTest(RecordBusinessSpec('test9'))
-    testSuite.addTest(RecordBusinessSpec('test10'))
+    # testSuite.addTest(RecordBusinessSpec('test1'))
+    # testSuite.addTest(RecordBusinessSpec('test2'))
+    # testSuite.addTest(RecordBusinessSpec('test3'))
+    # testSuite.addTest(RecordBusinessSpec('test4'))
+    # testSuite.addTest(RecordBusinessSpec('test5'))
+    # testSuite.addTest(RecordBusinessSpec('test6'))
+    # testSuite.addTest(RecordBusinessSpec('test7'))
+    # testSuite.addTest(RecordBusinessSpec('test8'))
+    # testSuite.addTest(RecordBusinessSpec('test9'))
+    # testSuite.addTest(RecordBusinessSpec('test10'))
 
     #业务流程测试
     # testSuite.addTest(PositiveFlowSpec('test1'))
