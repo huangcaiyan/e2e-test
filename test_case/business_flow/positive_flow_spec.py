@@ -19,44 +19,49 @@ from test_case.login.login_page import LoginPage
 from test_case.transaction.transaction_page import TransactionPage
 from test_case.invoice.invoice_page import InvoicePage
 from test_case.fixedassets.fixedassets_page import FixedassetsPage
+from test_case.call_api.call_account_token_api import CallAccountTokenApi
+from test_case.call_api.call_accountbook_search_api import CallAccountBookSearchApi
+from test_case.call_api.call_journalEntry_search_api import CallJournalEntrySearchApi
 
 class PositiveFlowSpec(unittest.TestCase):
     ''' 业务流程测试 '''
 
     @classmethod
     def setUpClass(self):
-        try:
-            self.driver = Driver
-            #创建公司->分配角色->启用期初账->进入账套
-            cc = CreateCompay(self.driver)
-            cc.get(BaseUrl)
-            wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
-            loginSh = wb.sheet_by_name(u'登陆账号')
-            loginRow = loginSh.row_values(1)
-            roleSh = wb.sheet_by_name(u'设置角色')
-            roleRow = roleSh.row_values(1)
-            createCompanySh = wb.sheet_by_name(u'创建公司测试数据')
-            createCompanyRow = createCompanySh.row_values(1)
-            now = datetime.now()
-            createCompanyRow[0]=createCompanyRow[0]+now.strftime('%m%d%H%M')
-            createCompanyRow[7]=GenerateRandom().generateRandom()
-            goToCompanyPara = [loginRow,createCompanyRow,roleRow]
-            cc.goToCompany(goToCompanyPara)
-            #创建三个账户：招商银行，羊羊羊微信，羊羊羊支付宝
-            cc.goToCreateAccountPage(BaseUrl)
-            accountSh = wb.sheet_by_name(u'创建账户')
-            for i in range(1,accountSh.nrows):
-                accountRow = accountSh.row_values(i)
-                cc.createAccount(accountRow[0],accountRow[1])
-                cc.goToCreateAccountPage(BaseUrl)
+        # try:
+        #     self.driver = Driver
+        #     #创建公司->分配角色->启用期初账->进入账套
+        #     cc = CreateCompay(self.driver)
+        #     cc.get(BaseUrl)
+        #     wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
+        #     loginSh = wb.sheet_by_name(u'登陆账号')
+        #     loginRow = loginSh.row_values(1)
+        #     roleSh = wb.sheet_by_name(u'设置角色')
+        #     roleRow = roleSh.row_values(1)
+        #     createCompanySh = wb.sheet_by_name(u'创建公司测试数据')
+        #     createCompanyRow = createCompanySh.row_values(1)
+        #     now = datetime.now()
+        #     createCompanyRow[0]=createCompanyRow[0]+now.strftime('%m%d%H%M')
+        #     createCompanyRow[7]=GenerateRandom().generateRandom()
+        #     goToCompanyPara = [loginRow,createCompanyRow,roleRow]
+        #     cc.goToCompany(goToCompanyPara)
+        #     #创建三个账户：招商银行，羊羊羊微信，羊羊羊支付宝
+        #     cc.goToCreateAccountPage(BaseUrl)
+        #     accountSh = wb.sheet_by_name(u'创建账户')
+        #     for i in range(1,accountSh.nrows):
+        #         accountRow = accountSh.row_values(i)
+        #         cc.createAccount(accountRow[0],accountRow[1])
+        #         cc.goToCreateAccountPage(BaseUrl)
 
-        except Exception as e:
-            print('===========================初始化环境失败=========================================')
-            self.skipTest(PositiveFlowSpec,'初始化环境失败')
+        # except Exception as e:
+        #     print('===========================初始化环境失败=========================================')
+        #     self.skipTest(PositiveFlowSpec,'初始化环境失败')
+        pass
 
     @classmethod
     def tearDownClass(self):
-        self.driver.quit()
+        # self.driver.quit()
+        pass
 
     def test1(self):
         '''记所有类别的-收入'''
@@ -212,9 +217,24 @@ class PositiveFlowSpec(unittest.TestCase):
         fixedassets_page.goToFixedassetsList(BaseUrl)
         self.assertEqual(BaseUrl + '/app/fixed-assets/intangible-list',self.driver.current_url)
 
+    def test11(self):
+        '''凭证校验'''
 
-
-
-if __name__ == '__main__':
-    unittest.main()
+        #获取Authorization和company_id
+        callAccountToken = CallAccountTokenApi()
+        auComDataList = callAccountToken.getAuthorizationComid()
+        #获取accountbook_id
+        callAccountBookSearch = CallAccountBookSearchApi()
+        accountBookDict = callAccountBookSearch.getAccountBook(auComDataList)
+        accountBookId = accountBookDict['羊羊羊08121546']
+        #获取凭证列表数据
+        callJournalEntrySearch = CallJournalEntrySearchApi()
+        journalList = callJournalEntrySearch.getJournalList([auComDataList[0],auComDataList[1],accountBookId[0]])
+        #读取预期的凭证数据
+        wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '收支.xlsx')
+        sh = wb.sheet_by_name(u'收入记录凭证校验数据')
+        for expect,actual in zip(range(1,sh.nrows),journalList):
+            sourceRowList = sh.row_values(i)
+            for i in sourceRowList:
+                
 

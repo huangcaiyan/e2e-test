@@ -19,7 +19,8 @@ class RecordOutcomeSpec(unittest.TestCase):
     ''' 记支出测试 '''
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+        self.driver = Driver
         EnterCompany(self.driver,Environment)
         self.transaction_page = TransactionPage(self.driver,'outcome')
         self.transaction_page.goToTransactionModule(BaseUrl)
