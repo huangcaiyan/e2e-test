@@ -58,6 +58,7 @@ def sendEmailAccessory():
 def sendEmailWithPicInmainFIle():
     smtpserver = 'smtp.163.com'
     user = '18514509382@163.com'
+    #客户端授权码
     password = 'yang115817'
 
     sender = '18514509382@163.com'

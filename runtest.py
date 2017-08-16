@@ -17,6 +17,8 @@ from test_case.fixedassets.record_fixed_spec import RecordFixedSpec
 from test_case.fixedassets.record_intangible_spec import RecordIntangibleSpec
 from test_case.finance.voucher.record_business_spec import RecordBusinessSpec
 from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
+# from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
+from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 
 #发送邮件
 def send_mail(file_new):
@@ -120,7 +122,12 @@ if __name__ == '__main__':
     # testSuite.addTest(PositiveFlowSpec('test8'))
     # testSuite.addTest(PositiveFlowSpec('test9'))
     # testSuite.addTest(PositiveFlowSpec('test10'))
-    testSuite.addTest(PositiveFlowSpec('test11'))
+    # testSuite.addTest(PositiveFlowSpec('test11'))
+
+    #会计首页测试（导入）
+    testSuite.addTest(AssistantDashbaordSPec('test1'))
+    # testSuite.addTest(AssistantDashbaordSPec('test2'))
+    # testSuite.addTest(AssistantDashbaordSPec('test3'))
 
 
     #生成凭证测试 *【注意】需要新增招商银行且没有流水记录

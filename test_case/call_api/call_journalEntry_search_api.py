@@ -9,7 +9,7 @@ from config import *
 class CallJournalEntrySearchApi(object):
 
     def __init__(self):
-        self.url = '/api/v1/journal/search?year=2017&month=8&keyword=&pageIndex=1&pageSize=10&type='
+        self.url = '/api/v1/journal/search?year=2017&month=8&keyword=&pageIndex=2&pageSize=10&type='
 
     def callJournalEntrySearchApi(self,auComAcc):
         url = ApiBaseUrl + self.url

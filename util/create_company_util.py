@@ -1,11 +1,13 @@
 from selenium import webdriver
-import time
+import time,os,sys
 import logging
 from .is_element_exit_util import IsElementExit
 from .set_date_util import SetDate
 from .generate_random_util import GenerateRandom
 from datetime import datetime
 import xlrd
+from openpyxl import load_workbook
+from openpyxl import Workbook
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -64,7 +66,11 @@ class CreateCompay(object):
             print('======================================失败创建账套==========================================')
             self.driver.get_screenshot_as_file('createCompanyerror.jpg')
         except Exception as e:
-            pass
+            #将创建的公司名字写入到excel中
+            wb = load_workbook('写入数据.xlsx')
+            sheet = wb.get_sheet_by_name('已创建的公司')
+            sheet['A2'] = companyPara[0]
+            wb.save('写入数据.xlsx')
 
     #地址
     def setAddress(self,address):
@@ -195,3 +201,4 @@ class CreateCompay(object):
 #     driver.quit()
 
 # test()
+
