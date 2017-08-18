@@ -1,7 +1,7 @@
 import time
 
 class LoginPage(object):
-
+    # login -> 无用的注释
     # element location
     user_text_id = 'usernameInput'
     pass_text_id = 'passwordInput'
