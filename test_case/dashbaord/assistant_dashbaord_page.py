@@ -1,5 +1,6 @@
 from selenium import webdriver
 from time import sleep
+import logging
 
 class AssistantDashbaordPage(object):
 
@@ -13,18 +14,23 @@ class AssistantDashbaordPage(object):
 
     #点击导入开票按钮
     def clickImportOutputInvoiceButton(self):
-        importButtonLocator = '//*[@id="body"]/app-assist-home-page/div/div/div[3]/div[1]/div[3]/span/a'
-        self.driver.find_element_by_xpath(importButtonLocator).click()
-        sleep(3)
+        try:
+            className = 'cub '
+            importButtonLocator = self.driver.find_element_by_class_name(className).find_element_by_tag_name('button')
+            importButtonLocator.click()
+            sleep(4)
+        except Exception as e:
+            print('[ERROR:助理首页导入开票按钮]')
+            logging.exception(e)
     
     #点击选择账户导入按钮
     def clickChooseAccountImport(self):
-        chooseAccountImportButtonLocator = '//*[@id="body"]/app-assist-home-page/div/div/div[3]/div[3]/div[3]/div/button[1]'
+        chooseAccountImportButtonLocator = '//*[@id="body"]/app-assist-home-page/div/div/div[3]/div[3]/div[3]/div/div/button[1]'
         self.driver.find_element_by_xpath(chooseAccountImportButtonLocator).click()
         sleep(2)
 
     #点击导入员工按钮
     def clickImportStaffButton(self):
-        importStaffButtonLocator = '//*[@id="body"]/app-assist-home-page/div/div/div[3]/div[5]/div[3]'
+        importStaffButtonLocator = '//*[@id="body"]/app-assist-home-page/div/div/div[3]/div[5]/div[3]/button'
         self.driver.find_element_by_xpath(importStaffButtonLocator).click()
         sleep(1)

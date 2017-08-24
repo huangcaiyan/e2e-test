@@ -17,8 +17,8 @@ class AssistantDashbaordSPec(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        # self.driver = Driver
-        self.driver = webdriver.Chrome()
+        self.driver = Driver
+        # self.driver = webdriver.Chrome()
         wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
         loginSh = wb.sheet_by_name(u'登陆账号')
         loginData = loginSh.row_values(1)
@@ -38,7 +38,6 @@ class AssistantDashbaordSPec(unittest.TestCase):
         dashboardPage.clickImportOutputInvoiceButton()
         importFile = ImportOutputInvoiceFile(self.driver)
         importFile.importOutputInvoiceFile('F:\\autoTest_workspace\\python_code\\e2e-test\\test_data\\导入开票(一般纳税人).xlsx')
-        # importFile.importOutputInvoiceFile(os.path.dirname(__file__) + '/../../test_data/' + '导入开票(一般纳税人).xlsx')
         self.assertEqual(BaseUrl + '/app/invoice/output-invoice',self.driver.current_url)
 
     def test2(self):

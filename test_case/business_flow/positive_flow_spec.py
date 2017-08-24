@@ -15,6 +15,7 @@ from util.create_company_util import CreateCompay
 from util.decorator_util import exit_test
 from config import *
 import xlrd
+from openpyxl import load_workbook
 from test_case.login.login_page import LoginPage
 from test_case.transaction.transaction_page import TransactionPage
 from test_case.invoice.invoice_page import InvoicePage
@@ -30,7 +31,7 @@ class PositiveFlowSpec(unittest.TestCase):
     def setUpClass(self):
         try:
             self.driver = Driver
-            #创建公司->分配角色->启用期初账->进入账套
+             #创建公司->分配角色->启用期初账->进入账套
             cc = CreateCompay(self.driver)
             cc.get(BaseUrl)
             wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
@@ -54,8 +55,9 @@ class PositiveFlowSpec(unittest.TestCase):
                 cc.goToCreateAccountPage(BaseUrl)
 
         except Exception as e:
-            print('===========================初始化环境失败=========================================')
+            print('[ERROR:初始化环境]')
             self.skipTest(PositiveFlowSpec,'初始化环境失败')
+            logging.exception(e)
 
     @classmethod
     def tearDownClass(self):
@@ -224,20 +226,46 @@ class PositiveFlowSpec(unittest.TestCase):
         #获取accountbook_id
         callAccountBookSearch = CallAccountBookSearchApi()
         accountBookDict = callAccountBookSearch.getAccountBook(auComDataList)
-        accountBookId = accountBookDict['羊羊羊08121546']
-        #获取凭证列表数据
-        callJournalEntrySearch = CallJournalEntrySearchApi()
-        journalList = callJournalEntrySearch.getJournalList([auComDataList[0],auComDataList[1],accountBookId[0]])
-        print(journalList)
-        #读取预期的凭证数据
-        # wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '收支.xlsx')
-        # sh = wb.sheet_by_name(u'收入记录凭证校验数据')
-        # for expect,actual in zip(range(1,sh.nrows),journalList):
-        #     sourceRowList = sh.row_values(expect)
-        #     self.assertEqual(sourceRowList[0],actual['journalNumber'])
-        #     self.assertEqual(sourceRowList[1],actual['accountCode'])
-        #     self.assertEqual(sourceRowList[2],actual['accountName'])
-        #     self.assertEqual(sourceRowList[3],actual['dcDirection'])
-        #     self.assertEqual(sourceRowList[4],actual['amount'])
-                
+        wb1 = load_workbook('写入数据.xlsx')
+        sheet = wb1.get_sheet_by_name('已创建的公司')
+        companyName = sheet['A2'].value
+        accountBookId = accountBookDict[companyName]
+        wb1.close()
 
+        #分页获取凭证列表数据
+        calljes = CallJournalEntrySearchApi()
+        auComAcc = [auComDataList[0],auComDataList[1],accountBookId[0]]
+        calljes.callJournalEntrySearchApi(auComAcc,)
+        # pageCount = calljes.get_pageCount()
+        pageCount = 3
+        journalPages = self.journalListGenerator(auComAcc,pageCount)
+        #读取预期的凭证数据
+        wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '凭证.xlsx')
+        sh = wb.sheet_by_name(u'（一般纳税人）流水单生成凭证校验')
+        excelRows = sh.nrows
+        pageIndex = 1
+        for page in journalPages:
+            startRowIndex = 20*(pageIndex - 1) + 1
+            endRowIndex = min((startRowIndex + 20),excelRows)
+            print('startRowIndex:'+ str(startRowIndex) + '  endRowIndex:' + str(endRowIndex))            
+            for expectResult,actualResult in zip(range(startRowIndex,endRowIndex),page):
+                sourceRowList = sh.row_values(expectResult)
+                # print(sourceRowList)
+                # print(actualResult)
+                self.assertEqual(sourceRowList[0],actualResult['journalNumber'])
+                self.assertEqual(sourceRowList[1],actualResult['accountCode'])
+                self.assertEqual(sourceRowList[2],actualResult['accountName'])
+                self.assertEqual(sourceRowList[3],actualResult['dcDirection'])
+                self.assertEqual(sourceRowList[4],actualResult['amount'])
+            pageIndex += 1
+
+        journalPages.close()
+
+    #凭证分页生成器            
+    def journalListGenerator(self,auComAcc,pageCount):
+        n = 1
+        while n < pageCount + 1:
+            yield CallJournalEntrySearchApi().getJournalList(auComAcc,str(n))
+            n += 1
+
+   
