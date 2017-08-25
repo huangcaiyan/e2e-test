@@ -29,36 +29,36 @@ class PositiveFlowSpec(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        # try:
-        #     self.driver = Driver
-        #      #创建公司->分配角色->启用期初账->进入账套
-        #     cc = CreateCompay(self.driver)
-        #     cc.get(BaseUrl)
-        #     wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
-        #     loginSh = wb.sheet_by_name(u'登陆账号')
-        #     loginRow = loginSh.row_values(1)
-        #     roleSh = wb.sheet_by_name(u'设置角色')
-        #     roleRow = roleSh.row_values(1)
-        #     createCompanySh = wb.sheet_by_name(u'创建公司测试数据')
-        #     createCompanyRow = createCompanySh.row_values(1)
-        #     now = datetime.now()
-        #     createCompanyRow[0]=createCompanyRow[0]+now.strftime('%m%d%H%M')
-        #     createCompanyRow[7]=GenerateRandom().generateRandom()
-        #     goToCompanyPara = [loginRow,createCompanyRow,roleRow]
-        #     cc.goToCompany(goToCompanyPara)
-        #     #创建三个账户：招商银行，羊羊羊微信，羊羊羊支付宝
-        #     cc.goToCreateAccountPage(BaseUrl)
-        #     accountSh = wb.sheet_by_name(u'创建账户')
-        #     for i in range(1,accountSh.nrows):
-        #         accountRow = accountSh.row_values(i)
-        #         cc.createAccount(accountRow[0],accountRow[1])
-        #         cc.goToCreateAccountPage(BaseUrl)
+        try:
+            self.driver = Driver
+             #创建公司->分配角色->启用期初账->进入账套
+            cc = CreateCompay(self.driver)
+            cc.get(BaseUrl)
+            wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
+            loginSh = wb.sheet_by_name(u'登陆账号')
+            loginRow = loginSh.row_values(1)
+            roleSh = wb.sheet_by_name(u'设置角色')
+            roleRow = roleSh.row_values(1)
+            createCompanySh = wb.sheet_by_name(u'创建公司测试数据')
+            createCompanyRow = createCompanySh.row_values(1)
+            now = datetime.now()
+            createCompanyRow[0]=createCompanyRow[0]+now.strftime('%m%d%H%M')
+            createCompanyRow[7]=GenerateRandom().generateRandom()
+            goToCompanyPara = [loginRow,createCompanyRow,roleRow]
+            cc.goToCompany(goToCompanyPara)
+            #创建三个账户：招商银行，羊羊羊微信，羊羊羊支付宝
+            cc.goToCreateAccountPage(BaseUrl)
+            accountSh = wb.sheet_by_name(u'创建账户')
+            for i in range(1,accountSh.nrows):
+                accountRow = accountSh.row_values(i)
+                cc.createAccount(accountRow[0],accountRow[1])
+                cc.goToCreateAccountPage(BaseUrl)
 
-        # except Exception as e:
-        #     print('[ERROR:初始化环境]')
-        #     self.skipTest(PositiveFlowSpec,'初始化环境失败')
-        #     logging.exception(e)
-        pass
+        except Exception as e:
+            print('[ERROR:初始化环境]')
+            self.skipTest(PositiveFlowSpec,'初始化环境失败')
+            logging.exception(e)
+        # pass
 
     @classmethod
     def tearDownClass(self):
