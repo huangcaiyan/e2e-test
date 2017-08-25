@@ -112,17 +112,17 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordBusinessSpec('test10'))
 
     #业务流程测试
-    testSuite.addTest(PositiveFlowSpec('test1'))
-    testSuite.addTest(PositiveFlowSpec('test2'))
-    testSuite.addTest(PositiveFlowSpec('test3'))
-    testSuite.addTest(PositiveFlowSpec('test4'))
-    testSuite.addTest(PositiveFlowSpec('test5'))
-    testSuite.addTest(PositiveFlowSpec('test6'))
-    testSuite.addTest(PositiveFlowSpec('test7'))
-    testSuite.addTest(PositiveFlowSpec('test8'))
-    testSuite.addTest(PositiveFlowSpec('test9'))
-    testSuite.addTest(PositiveFlowSpec('test10'))
-    # testSuite.addTest(PositiveFlowSpec('test11'))
+    # testSuite.addTest(PositiveFlowSpec('test1'))
+    # testSuite.addTest(PositiveFlowSpec('test2'))
+    # testSuite.addTest(PositiveFlowSpec('test3'))
+    # testSuite.addTest(PositiveFlowSpec('test4'))
+    # testSuite.addTest(PositiveFlowSpec('test5'))
+    # testSuite.addTest(PositiveFlowSpec('test6'))
+    # testSuite.addTest(PositiveFlowSpec('test7'))
+    # testSuite.addTest(PositiveFlowSpec('test8'))
+    # testSuite.addTest(PositiveFlowSpec('test9'))
+    # testSuite.addTest(PositiveFlowSpec('test10'))
+    testSuite.addTest(PositiveFlowSpec('test11'))
 
     #会计首页测试（导入）
     # testSuite.addTest(AssistantDashbaordSPec('test1'))

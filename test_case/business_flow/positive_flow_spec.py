@@ -29,35 +29,36 @@ class PositiveFlowSpec(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        try:
-            self.driver = Driver
-             #创建公司->分配角色->启用期初账->进入账套
-            cc = CreateCompay(self.driver)
-            cc.get(BaseUrl)
-            wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
-            loginSh = wb.sheet_by_name(u'登陆账号')
-            loginRow = loginSh.row_values(1)
-            roleSh = wb.sheet_by_name(u'设置角色')
-            roleRow = roleSh.row_values(1)
-            createCompanySh = wb.sheet_by_name(u'创建公司测试数据')
-            createCompanyRow = createCompanySh.row_values(1)
-            now = datetime.now()
-            createCompanyRow[0]=createCompanyRow[0]+now.strftime('%m%d%H%M')
-            createCompanyRow[7]=GenerateRandom().generateRandom()
-            goToCompanyPara = [loginRow,createCompanyRow,roleRow]
-            cc.goToCompany(goToCompanyPara)
-            #创建三个账户：招商银行，羊羊羊微信，羊羊羊支付宝
-            cc.goToCreateAccountPage(BaseUrl)
-            accountSh = wb.sheet_by_name(u'创建账户')
-            for i in range(1,accountSh.nrows):
-                accountRow = accountSh.row_values(i)
-                cc.createAccount(accountRow[0],accountRow[1])
-                cc.goToCreateAccountPage(BaseUrl)
+        # try:
+        #     self.driver = Driver
+        #      #创建公司->分配角色->启用期初账->进入账套
+        #     cc = CreateCompay(self.driver)
+        #     cc.get(BaseUrl)
+        #     wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
+        #     loginSh = wb.sheet_by_name(u'登陆账号')
+        #     loginRow = loginSh.row_values(1)
+        #     roleSh = wb.sheet_by_name(u'设置角色')
+        #     roleRow = roleSh.row_values(1)
+        #     createCompanySh = wb.sheet_by_name(u'创建公司测试数据')
+        #     createCompanyRow = createCompanySh.row_values(1)
+        #     now = datetime.now()
+        #     createCompanyRow[0]=createCompanyRow[0]+now.strftime('%m%d%H%M')
+        #     createCompanyRow[7]=GenerateRandom().generateRandom()
+        #     goToCompanyPara = [loginRow,createCompanyRow,roleRow]
+        #     cc.goToCompany(goToCompanyPara)
+        #     #创建三个账户：招商银行，羊羊羊微信，羊羊羊支付宝
+        #     cc.goToCreateAccountPage(BaseUrl)
+        #     accountSh = wb.sheet_by_name(u'创建账户')
+        #     for i in range(1,accountSh.nrows):
+        #         accountRow = accountSh.row_values(i)
+        #         cc.createAccount(accountRow[0],accountRow[1])
+        #         cc.goToCreateAccountPage(BaseUrl)
 
-        except Exception as e:
-            print('[ERROR:初始化环境]')
-            self.skipTest(PositiveFlowSpec,'初始化环境失败')
-            logging.exception(e)
+        # except Exception as e:
+        #     print('[ERROR:初始化环境]')
+        #     self.skipTest(PositiveFlowSpec,'初始化环境失败')
+        #     logging.exception(e)
+        pass
 
     @classmethod
     def tearDownClass(self):
@@ -236,28 +237,24 @@ class PositiveFlowSpec(unittest.TestCase):
         calljes = CallJournalEntrySearchApi()
         auComAcc = [auComDataList[0],auComDataList[1],accountBookId[0]]
         calljes.callJournalEntrySearchApi(auComAcc,)
-        # pageCount = calljes.get_pageCount()
-        pageCount = 3
+        pageCount = calljes.get_pageCount()
+        # pageCount = 3
         journalPages = self.journalListGenerator(auComAcc,pageCount)
         #读取预期的凭证数据
         wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '凭证.xlsx')
         sh = wb.sheet_by_name(u'（一般纳税人）流水单生成凭证校验')
-        excelRows = sh.nrows
-        pageIndex = 1
+        pagesList = []
         for page in journalPages:
-            startRowIndex = 20*(pageIndex - 1) + 1
-            endRowIndex = min((startRowIndex + 20),excelRows)
-            print('startRowIndex:'+ str(startRowIndex) + '  endRowIndex:' + str(endRowIndex))            
-            for expectResult,actualResult in zip(range(startRowIndex,endRowIndex),page):
-                sourceRowList = sh.row_values(expectResult)
-                # print(sourceRowList)
-                # print(actualResult)
-                self.assertEqual(sourceRowList[0],actualResult['journalNumber'])
-                self.assertEqual(sourceRowList[1],actualResult['accountCode'])
-                self.assertEqual(sourceRowList[2],actualResult['accountName'])
-                self.assertEqual(sourceRowList[3],actualResult['dcDirection'])
-                self.assertEqual(sourceRowList[4],actualResult['amount'])
-            pageIndex += 1
+            for line in page:
+                pagesList.append(line)
+        
+        for expectResult,actualResult in zip(range(1,sh.nrows),pagesList):
+            sourceRowList = sh.row_values(expectResult)
+            self.assertEqual(sourceRowList[0],actualResult['journalNumber'])
+            self.assertEqual(sourceRowList[1],actualResult['accountCode'])
+            self.assertEqual(sourceRowList[2],actualResult['accountName'])
+            self.assertEqual(sourceRowList[3],actualResult['dcDirection'])
+            self.assertEqual(sourceRowList[4],actualResult['amount'])
 
         journalPages.close()
 
