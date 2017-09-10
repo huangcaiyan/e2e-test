@@ -52,8 +52,8 @@ def find_new_report(testReport):
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
 
-    # #记支出测试
-    # testSuite.addTest(RecordOutcomeSpec('test1'))
+    #记支出测试
+    testSuite.addTest(RecordOutcomeSpec('test1'))
     # testSuite.addTest(RecordOutcomeSpec('test2'))
     # testSuite.addTest(RecordOutcomeSpec('test3'))
     # testSuite.addTest(RecordOutcomeSpec('test4'))
@@ -63,8 +63,8 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordOutcomeSpec('test8'))
 
 
-    # #记收入测试
-    # testSuite.addTest(RecordIncomeSpec('test1'))
+    #记收入测试
+    testSuite.addTest(RecordIncomeSpec('test1'))
     # testSuite.addTest(RecordIncomeSpec('test2'))
     # testSuite.addTest(RecordIncomeSpec('test3'))
     # testSuite.addTest(RecordIncomeSpec('test4'))
@@ -73,8 +73,8 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordIncomeSpec('test7'))
     # testSuite.addTest(RecordIncomeSpec('test8'))
 
-    # #记账户互转 *注意：需要新增招商银行账户
-    # testSuite.addTest(RecordTransterSpec('test1'))
+    #记账户互转 *注意：需要新增招商银行账户
+    testSuite.addTest(RecordTransterSpec('test1'))
     # testSuite.addTest(RecordTransterSpec('test2'))
     # testSuite.addTest(RecordTransterSpec('test3'))
     # testSuite.addTest(RecordTransterSpec('test4'))
@@ -83,19 +83,20 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordTransterSpec('test7'))
     # testSuite.addTest(RecordTransterSpec('test8'))
 
-    # #记收票测试
+    # # #记收票测试
     # testSuite.addTest(RecordInputInvoiceSpec('test1'))
     # testSuite.addTest(RecordInputInvoiceSpec('test2'))
 
-    # #记开票测试
+    # # #记开票测试
     # testSuite.addTest(RecordOutputInvoiceSpec('test1'))
+
     # testSuite.addTest(RecordOutputInvoiceSpec('test2'))
 
-    #记固定资产
+    # # #记固定资产
     # testSuite.addTest(RecordFixedSpec('test1'))
     # testSuite.addTest(RecordFixedSpec('test2'))
 
-    #记无形资产
+    # # # #记无形资产
     # testSuite.addTest(RecordIntangibleSpec('test1'))
     # testSuite.addTest(RecordIntangibleSpec('test2'))
 
@@ -112,17 +113,17 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordBusinessSpec('test10'))
 
     #业务流程测试
-    testSuite.addTest(PositiveFlowSpec('test1'))
-    testSuite.addTest(PositiveFlowSpec('test2'))
-    testSuite.addTest(PositiveFlowSpec('test3'))
-    testSuite.addTest(PositiveFlowSpec('test4'))
-    testSuite.addTest(PositiveFlowSpec('test5'))
-    testSuite.addTest(PositiveFlowSpec('test6'))
-    testSuite.addTest(PositiveFlowSpec('test7'))
-    testSuite.addTest(PositiveFlowSpec('test8'))
-    testSuite.addTest(PositiveFlowSpec('test9'))
-    testSuite.addTest(PositiveFlowSpec('test10'))
-    testSuite.addTest(PositiveFlowSpec('test11'))
+    # testSuite.addTest(PositiveFlowSpec('test1'))
+    # testSuite.addTest(PositiveFlowSpec('test2'))
+    # testSuite.addTest(PositiveFlowSpec('test3'))
+    # testSuite.addTest(PositiveFlowSpec('test4'))
+    # testSuite.addTest(PositiveFlowSpec('test5'))
+    # testSuite.addTest(PositiveFlowSpec('test6'))
+    # testSuite.addTest(PositiveFlowSpec('test7'))
+    # testSuite.addTest(PositiveFlowSpec('test8'))
+    # testSuite.addTest(PositiveFlowSpec('test9'))
+    # testSuite.addTest(PositiveFlowSpec('test10'))
+    # testSuite.addTest(PositiveFlowSpec('test11'))
 
     #会计首页测试（导入）
     # testSuite.addTest(AssistantDashbaordSPec('test1'))
@@ -137,6 +138,7 @@ if __name__ == '__main__':
 
     #支出-生成凭证测试
     # testSuite.addTest(OutcomeVoucherSpec('test1'))
+    
 
     now = time.strftime('%Y-%m-%d %H_%M_%S')
     report_dir = './report'

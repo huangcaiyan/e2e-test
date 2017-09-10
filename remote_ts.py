@@ -25,7 +25,7 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 lists = {
             'http://127.0.0.1:4444/wd/hub':'chrome',
             # 'http://192.168.38.88:5555/wd/hub':'chrome'
-            'http://192.168.43.20:5556/wd/hub':'chrome'
+            'http://127.0.0.1:5556/wd/hub':'chrome'
 
         }
 

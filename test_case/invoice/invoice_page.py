@@ -124,17 +124,19 @@ class InvoicePage(object):
     def setRemark(self,remark=None):
         if 'input' == self.invoiceType:
             if '普票' == invoiceClassfiy:
-                remarkXpath = '//*[@id="body"]/tab/new-'+ self.invoiceType +'-invoice/div/div[2]/ul/table/tbody/tr[1]/td[5]/input'
+                remarkElement = self.driver.find_element_by_class_name("content-body ").find_element_by_tag_name('table').find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')[0].find_elements_by_tag_name('td')[4].find_element_by_tag_name('input')
             elif '专票' == invoiceClassfiy:
-                remarkXpath = '//*[@id="body"]/tab/new-'+ self.invoiceType +'-invoice/div/div[2]/ul/table/tbody/tr[1]/td[6]/input'
+                remarkElement = self.driver.find_element_by_class_name("content-body ").find_element_by_tag_name('table').find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')[0].find_elements_by_tag_name('td')[5].find_element_by_tag_name('input')
             else:
                 print('====================================发票类别【invoiceClassfiy】设置错误==============================================')
         elif 'output' == self.invoiceType:
-            remarkXpath = '//*[@id="body"]/tab/new-'+ self.invoiceType +'-invoice/div/div[2]/ul/table/tbody/tr[1]/td[5]/input'
+            remarkElement = self.driver.find_element_by_class_name("content-body ").find_element_by_tag_name('table').find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')[0].find_elements_by_tag_name('td')[4].find_element_by_tag_name('input')
         else:
             print('=============================================发票类别【invoiceType】设置错误============================================================')
-        self.driver.find_element_by_xpath(remarkXpath).clear()
-        self.driver.find_element_by_xpath(remarkXpath).send_keys(remark)
+        # self.driver.find_element_by_xpath(remarkElement).clear()
+        # self.driver.find_element_by_xpath(remarkElement).send_keys(remark)
+        remarkElement.clear()
+        remarkElement.send_keys(remark)
                                             
     #点击保存按钮                             
     def clickSaveButton(self): 
@@ -158,8 +160,13 @@ class InvoicePage(object):
 
     #普票-设置收票的记账日期，发票类型，对方信息 publicInvoice 是一个list,[记账日期，发票类型，对方信息]
     def setCommonPublicInvoice(self,commonPublicInvoice):
-        date_button_xpath = '//*[@id="datePiker"]/span/span[2]'
-        SetDate(self.driver,date_button_xpath,commonPublicInvoice[0])
+        # date_button_xpath = '//*[@id="datePiker"]/span/span[2]'
+        # SetDate(self.driver,date_button_xpath,commonPublicInvoice[0])
+        dateButtonLocator = self.driver.find_elements_by_class_name("col-md-3")[0].find_element_by_tag_name('p-calendar')
+        dateButtonLocator.click()
+        time.sleep(2)
+        self.driver.find_element_by_link_text(commonPublicInvoice[0]).click()
+        time.sleep(2)
         self.setInvoiceType(commonPublicInvoice[1])
         self.setOtherInfo(commonPublicInvoice[2])
 
@@ -180,8 +187,13 @@ class InvoicePage(object):
 
     #专票-设置收票的记账日期，发票类型，对方信息，发票号码 publicInvoice 是一个list,[记账日期，发票类型，对方信息，发票号码]
     def setSpecialPublicInvoice(self,publicInvoice,invoiceNum):
-        date_button_xpath = '//*[@id="datePiker"]/span/span[2]'
-        SetDate(self.driver,date_button_xpath,publicInvoice[0])
+        # date_button_xpath = '//*[@id="datePiker"]/span/span[2]'
+        # SetDate(self.driver,date_button_xpath,publicInvoice[0])
+        dateButtonLocator = self.driver.find_elements_by_class_name("col-md-3")[0].find_element_by_tag_name('p-calendar')
+        dateButtonLocator.click()
+        time.sleep(2)
+        self.driver.find_element_by_link_text(publicInvoice[0]).click()
+        time.sleep(2)
         self.setInvoiceType(publicInvoice[1])
         self.setOtherInfo(publicInvoice[2])
         self.setInvoiceNum(invoiceNum)
@@ -194,7 +206,12 @@ class InvoicePage(object):
 
     #设置开票-记账日期，发票类别，发票状态，对方信息，发票号码  outputPublic [记账日期，发票类别，发票状态，对方信息] outputInvoiceNum 发票号码
     def setOutputInvoicePublic(self,outputPublic,outputInvoiceNum):
-        SetDate(self.driver,'//*[@id="datePiker"]/span/span[2]',outputPublic[0])
+        # SetDate(self.driver,'//*[@id="datePiker"]/span/span[2]',outputPublic[0])
+        dateButtonLocator = self.driver.find_elements_by_class_name("col-md-3")[0].find_element_by_tag_name('p-calendar')
+        dateButtonLocator.click()
+        time.sleep(2)
+        self.driver.find_element_by_link_text(outputPublic[0]).click()
+        time.sleep(2)
         self.setInvoiceType(outputPublic[1])
         self.setInvoiceStatus(outputPublic[2])
         self.setOtherInfo(outputPublic[3])

@@ -5,6 +5,7 @@ import os
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 # sys.path.append('F:\\autoTest_workspace\\python_code\\e2e-test\\test_case\\login')
 # from login_page import LoginPage
 
@@ -59,9 +60,13 @@ class ImportBankBillFile(object):
         tableLocator = '//*[@id="body"]/setting/gpw-multi-sync/div[2]/div/div'
         saveButtonLocator = '//*[@id="body"]/setting/gpw-multi-sync/div[2]/div/div/div/button[1]'
         tableElementsList = self.driver.find_element_by_xpath(tableLocator).find_elements_by_tag_name('table')
+        mappingHeadElement = self.driver.find_element_by_class_name('title')
+        actions = ActionChains(self.driver)
+        actions.move_to_element(mappingHeadElement).perform()
         for tableElement in tableElementsList:
             tbodyTrsList = tableElement.find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')
             tdList = tbodyTrsList[1].find_elements_by_tag_name('td')
+            # tdList[3].find_element_by_tag_name('span').click()
             tdList[3].click()
             sleep(1)
             self.setCategory(tdList[3])

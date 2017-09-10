@@ -11,6 +11,8 @@ from openpyxl import Workbook
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+
 
 #创建公司
 class CreateCompay(object):
@@ -53,14 +55,14 @@ class CreateCompay(object):
             self.driver.find_element_by_name(namelocator).clear()
             self.driver.find_element_by_name(namelocator).send_keys(textValue)
         # self.setAddress(companyPara[3:6])
-        SetDate(self.driver,'//*[@id="setupDate"]/span/span[2]',companyPara[6])
+        SetDate(self.driver,'//*[@id="setupDate"]/span/span',companyPara[6])
         self.driver.find_element_by_name('taxNumber').clear
         self.driver.find_element_by_name('taxNumber').send_keys(companyPara[7])
         try:
-            industryLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[9]/div/ng-select/div/div[2]/span'
-            companyNature = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[10]/div/ng-select/div/div[2]/span'
-            # industryLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[9]/div/ng-select/div/div[2]/span'
-            # companyNature = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[10]/div/ng-select/div/div[2]/span'
+            # industryLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[9]/div/ng-select/div/div[2]/span'
+            # companyNature = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[10]/div/ng-select/div/div[2]/span'
+            industryLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[9]/div/ng-select/div/div[2]/span'
+            companyNature = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[10]/div/ng-select/div/div[2]/span'
             for locator,selectValue in zip([industryLocator,companyNature],companyPara[8:10]):
                 self.driver.find_element_by_xpath(locator).click()
                 self.driver.find_element_by_link_text(selectValue).click()
@@ -71,8 +73,8 @@ class CreateCompay(object):
             logging.exception(e)
             sys.exit()
 
-        startDateButtonLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[11]/div/datepicker/datepicker-inner/div/monthpicker/div[1]/span/span[2]'
-        # startDateButtonLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[11]/div/datepicker/datepicker-inner/div/monthpicker/div[1]/span/span[2]'
+        # startDateButtonLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[11]/div/datepicker/datepicker-inner/div/monthpicker/div[1]/span/span[2]'
+        startDateButtonLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[11]/div/datepicker/datepicker-inner/div/monthpicker/div[1]/span/span[2]'
         self.driver.find_element_by_xpath(startDateButtonLocator).click()
         time.sleep(2)
         self.driver.find_elements_by_class_name('month-button')[int(companyPara[10])-1].click()
@@ -94,12 +96,12 @@ class CreateCompay(object):
     #地址
     def setAddress(self,address):
         try:
-            # provinceLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[4]/div/ng-select/div/div[2]/span'
-            # cityLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[5]/div/ng-select/div/div[2]/span'
-            # districtLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[6]/div/ng-select/div/div[2]/span'
-            provinceLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[4]/div/ng-select/div/div[2]/span'
-            cityLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[5]/div/ng-select/div/div[2]/span'
-            districtLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[6]/div/ng-select/div/div[2]/span'
+            provinceLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[4]/div/ng-select/div/div[2]/span'
+            cityLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[5]/div/ng-select/div/div[2]/span'
+            districtLocator = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[6]/div/ng-select/div/div[2]/span'
+            # provinceLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[4]/div/ng-select/div/div[2]/span'
+            # cityLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[5]/div/ng-select/div/div[2]/span'
+            # districtLocator = '//*[@id="createCompany"]/div[4]/div/div/table/tbody/tr/td[6]/div/ng-select/div/div[2]/span'
             locators = [provinceLocator,cityLocator,districtLocator]
             for locator,address in zip(locators,address):
                 self.driver.find_element_by_xpath(locator).click()
@@ -125,11 +127,21 @@ class CreateCompay(object):
                 self.driver.find_element_by_link_text(goToCompanyPara[1][0]).find_element_by_xpath('../../..').find_elements_by_tag_name('td')[locator].click()
                 time.sleep(2)
                 self.setRole(role)
+            time.sleep(3)
             self.driver.find_element_by_link_text(goToCompanyPara[1][0]).click()
             time.sleep(10)
-            #启用期初账
-            startButtonLocator = '//*[@id="body"]/finance/div/beginning-period/div/div[3]/div[2]/div[2]/div[1]/button'
-            WebDriverWait(self.driver,2,0.5).until(EC.presence_of_element_located((By.XPATH,startButtonLocator))).click()
+            #启用期初账          
+            # startButtonLocator = '//*[@id="body"]/finance/div/beginning-period/div/div[3]/div[2]/div[2]/div[1]/button'
+            # WebDriverWait(self.driver,10,0.5).until(EC.presence_of_element_located((By.XPATH,startButtonLocator))).click()
+            startButtonLocator = '//*[@id="body"]/finance/div/beginning-period/div/div[2]/div/div[1]/ol/li[2]/span'
+            locatorElement = self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/beginning-period/div/div[2]/div/div[1]/ol/li[2]/span')
+            actions = ActionChains(self.driver)
+            actions.move_to_element(locatorElement).perform()
+            # startButtonElement = self.driver.find_element_by_class_name(startButtonLocator).find_elements_by_tag_name('div')[2].find_element_by_tag_name('button')
+            # startButtonElement.click()
+            startButtonElement = self.driver.find_element_by_xpath('//*[@id="body"]/finance/div/beginning-period/div/div[3]/div[2]/div[2]/div[3]/button')
+            startButtonElement.click()
+            # self.driver.find_element_by_xpath(startButtonLocator).click()
             time.sleep(8)
             print('[SUCESS:启用期初账]')
         except Exception as e:

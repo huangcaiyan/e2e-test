@@ -7,7 +7,7 @@ class AssistantDashbaordPage(object):
     def __init__(self,driver):
         self.driver = driver
 
-    #进入会计首页
+    #进入助理首页
     def goAssistanDashbaordPage(self,url):
         self.driver.get(url + '/app/home-page/assist')
         sleep(2)

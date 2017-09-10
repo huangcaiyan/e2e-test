@@ -17,7 +17,8 @@ class RecordOutputInvoiceSpec(unittest.TestCase):
     ''' 记开票测试 '''
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+        self.driver = Driver
         EnterCompany(self.driver,Environment)
         invoice_page = InvoicePage(self.driver,'output')
         invoice_page.goToInvoice(BaseUrl)

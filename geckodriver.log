@@ -1,0 +1,17 @@
+1503316560106	geckodriver	INFO	geckodriver 0.18.0
+1503316560113	geckodriver	INFO	Listening on 127.0.0.1:53220
+1503316562184	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1503316563410	Marionette	INFO	Enabled via --marionette
+[GPU 19532] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1503316565768	Marionette	INFO	Listening on port 53229
+1503316565777	Marionette	INFO	Listening on port 53229
+1503316565809	Marionette	WARN	TLS certificate errors will be ignored for this session
+1503316565850	Marionette	DEBUG	loaded listener.js
+1503316565959	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1503316566053	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1503316566053	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1503316573072	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://guanplus-app-accountingfirm-web-dev-1.cn-north-1.eb.amazonaws.com.cn/"
+1503316574738	Marionette	DEBUG	Received DOM event "pageshow" for "http://guanplus-app-accountingfirm-web-dev-1.cn-north-1.eb.amazonaws.com.cn/"
+1503316575595	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1503316585603	Marionette	INFO	New connections will no longer be accepted
+[Child 7640] WARNING: pipe error: 232: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
