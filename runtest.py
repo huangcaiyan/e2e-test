@@ -6,6 +6,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 from HTMLTestRunner import HTMLTestRunner
+from test_case.login.login_spec import LoginSpec 
 from test_case.transaction.record_outcome_spec import RecordOutcomeSpec
 from test_case.transaction.record_income_spec import RecordIncomeSpec
 from test_case.transaction.record_transfer_spec import RecordTransterSpec
@@ -19,6 +20,7 @@ from test_case.finance.voucher.record_business_spec import RecordBusinessSpec
 from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
 # from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
+from test_case.setting.setting_spec import SettingSpec 
 
 #发送邮件
 def send_mail(file_new):
