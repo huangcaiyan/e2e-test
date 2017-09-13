@@ -125,8 +125,14 @@ class TransactionPage:
 
     #设置收支的记账日期，交易账户，对方信息 publicTransaction 是一个list,[记账日期，交易账户，对方信息]
     def setPublicTransaction(self,publicTransaction):
-        date_button_xpath = '//*[@id="body"]/detail/'+ self.transactionType +'/div/div[2]/form/div[1]/div/p-calendar/span/span[2]'
-        SetDate(self.driver,date_button_xpath,publicTransaction[0])
+        # date_button_xpath = '//*[@id="body"]/detail/'+ self.transactionType +'/div/div[2]/form/div[1]/div/p-calendar/span/span[2]'
+        # date_button_xpath = '//*[@id="body"]/detail/'+ self.transactionType +'/div/div[2]/form/div[1]/div/p-calendar/span/span'
+        # SetDate(self.driver,date_button_xpath,publicTransaction[0])
+        dateButtonElement = self.driver.find_elements_by_class_name('col-sm-3')[0].find_element_by_tag_name('p-calendar')
+        dateButtonElement.click()
+        time.sleep(2)
+        self.driver.find_element_by_link_text(publicTransaction[0]).click()
+        time.sleep(2)
         self.setAccount(publicTransaction[1])
         self.setOtherInfo(publicTransaction[2])
 
@@ -184,8 +190,14 @@ class TransactionPage:
 
     #记账户互转-点击保存并新增 transferPara [记账日期，转出账户，转入账户，金额，备注]
     def recordTransfer(self,transferPara):
-        dateButtonXPath = '//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[1]/p-calendar/span/span[2]'
-        SetDate(self.driver,dateButtonXPath,transferPara[0])
+        # dateButtonXPath = '//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[1]/p-calendar/span/span[2]'
+        dataButtonLocator = 'col-xs-12'
+        dateButtonElement =  self.driver.find_element_by_class_name(dataButtonLocator).find_element_by_tag_name('form').find_elements_by_tag_name('div')[0].find_element_by_tag_name('p-calendar')
+        dateButtonElement.click()
+        time.sleep(2)
+        self.driver.find_element_by_link_text(transferPara[0]).click()
+        time.sleep(2)
+        # SetDate(self.driver,dateButtonXPath,transferPara[0])
         self.setFundFlow(transferPara[1],transferPara[2])
         self.setTransferMoney(transferPara[3])
         self.setTransferRemark(transferPara[4])

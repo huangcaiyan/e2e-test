@@ -63,7 +63,7 @@ class CallJournalEntrySearchApi(object):
                 checkJournalItemDict['accountCode'] = j['account']['id']
                 checkJournalItemDict['accountName'] = j['account']['name']
                 checkJournalItemDict['dcDirection'] = j['debitCreditType']
-                checkJournalItemDict['amount'] = str(round(int(j['amount'])))
+                checkJournalItemDict['amount'] = str(j['amount'])
                 checkJournalList.append(checkJournalItemDict)
 
         return checkJournalList

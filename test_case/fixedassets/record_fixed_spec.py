@@ -11,15 +11,28 @@ from util.enter_company_util import EnterCompany
 from config import *
 from util.category_map_util import CategoryMap
 import xlrd
+import threading
 
 class RecordFixedSpec(unittest.TestCase):
     ''' 记固定资产测试 '''
 
-    def setUp(self):
+    # def setUp(self):
+    #     # self.driver = webdriver.Chrome()
+    #     self.driver = Driver
+    #     EnterCompany(self.driver,Environment)
+    #     fixedassets_page = FixedassetsPage(self.driver,'fixed')
+    #     fixedassets_page.goToRecordFixedassetsPage(BaseUrl)
+    @classmethod
+    def setUpClass(self):
+        # self.driver = Driver
         self.driver = webdriver.Chrome()
         EnterCompany(self.driver,Environment)
         fixedassets_page = FixedassetsPage(self.driver,'fixed')
         fixedassets_page.goToRecordFixedassetsPage(BaseUrl)
+
+    @classmethod
+    def tearDownClass(self):
+        self.driver.quit()
 
     def test1(self):
         '''成功记录多笔固定资产-普票记录测试'''
@@ -37,8 +50,9 @@ class RecordFixedSpec(unittest.TestCase):
 
     def test2(self):
         '''成功记录多笔固定资产-专票记录测试'''
-
+        
         fixedassets_page = FixedassetsPage(self.driver,'fixed')
+        fixedassets_page.goToRecordFixedassetsPage(BaseUrl)
         invoiceNumList = []
         for i in range(0,10):
             invoiceNumList.append(self.invoiceNum())
@@ -60,9 +74,11 @@ class RecordFixedSpec(unittest.TestCase):
             invoiceNum = invoiceNum + str(random.randint(0,9))
         return invoiceNum
 
-    def tearDown(self):
-        self.driver.quit()
-        
+    # def tearDown(self):
+    #     self.driver.quit()
+    #     print('end!!!!!!!!!!!!!!!')
+
+
 
 if __name__ == '__main__':
     unittest.main()

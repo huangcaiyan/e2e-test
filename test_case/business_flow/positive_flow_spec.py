@@ -58,6 +58,7 @@ class PositiveFlowSpec(unittest.TestCase):
             print('[ERROR:初始化环境]')
             self.skipTest(PositiveFlowSpec,'初始化环境失败')
             logging.exception(e)
+        # pass
 
     @classmethod
     def tearDownClass(self):
@@ -236,28 +237,24 @@ class PositiveFlowSpec(unittest.TestCase):
         calljes = CallJournalEntrySearchApi()
         auComAcc = [auComDataList[0],auComDataList[1],accountBookId[0]]
         calljes.callJournalEntrySearchApi(auComAcc,)
-        # pageCount = calljes.get_pageCount()
-        pageCount = 3
+        pageCount = calljes.get_pageCount()
+        # pageCount = 3
         journalPages = self.journalListGenerator(auComAcc,pageCount)
         #读取预期的凭证数据
         wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '凭证.xlsx')
         sh = wb.sheet_by_name(u'（一般纳税人）流水单生成凭证校验')
-        excelRows = sh.nrows
-        pageIndex = 1
+        pagesList = []
         for page in journalPages:
-            startRowIndex = 20*(pageIndex - 1) + 1
-            endRowIndex = min((startRowIndex + 20),excelRows)
-            print('startRowIndex:'+ str(startRowIndex) + '  endRowIndex:' + str(endRowIndex))            
-            for expectResult,actualResult in zip(range(startRowIndex,endRowIndex),page):
-                sourceRowList = sh.row_values(expectResult)
-                # print(sourceRowList)
-                # print(actualResult)
-                self.assertEqual(sourceRowList[0],actualResult['journalNumber'])
-                self.assertEqual(sourceRowList[1],actualResult['accountCode'])
-                self.assertEqual(sourceRowList[2],actualResult['accountName'])
-                self.assertEqual(sourceRowList[3],actualResult['dcDirection'])
-                self.assertEqual(sourceRowList[4],actualResult['amount'])
-            pageIndex += 1
+            for line in page:
+                pagesList.append(line)
+        
+        for expectResult,actualResult in zip(range(1,sh.nrows),pagesList):
+            sourceRowList = sh.row_values(expectResult)
+            self.assertEqual(sourceRowList[0],actualResult['journalNumber'])
+            self.assertEqual(sourceRowList[1],actualResult['accountCode'])
+            self.assertEqual(sourceRowList[2],actualResult['accountName'])
+            self.assertEqual(sourceRowList[3],actualResult['dcDirection'])
+            self.assertEqual(sourceRowList[4],actualResult['amount'])
 
         journalPages.close()
 
@@ -269,3 +266,5 @@ class PositiveFlowSpec(unittest.TestCase):
             n += 1
 
    
+if __name__ == '__main__':
+    unittest.main()

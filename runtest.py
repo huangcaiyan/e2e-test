@@ -6,6 +6,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 from HTMLTestRunner import HTMLTestRunner
+from test_case.login.login_spec import LoginSpec 
 from test_case.transaction.record_outcome_spec import RecordOutcomeSpec
 from test_case.transaction.record_income_spec import RecordIncomeSpec
 from test_case.transaction.record_transfer_spec import RecordTransterSpec
@@ -19,6 +20,7 @@ from test_case.finance.voucher.record_business_spec import RecordBusinessSpec
 from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
 # from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
+from test_case.setting.setting_spec import SettingSpec 
 
 #发送邮件
 def send_mail(file_new):
@@ -52,6 +54,7 @@ def find_new_report(testReport):
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
 
+<<<<<<< HEAD
     # #记支出测试
     testSuite.addTest(RecordOutcomeSpec('test1'))
     testSuite.addTest(RecordOutcomeSpec('test2'))
@@ -61,10 +64,21 @@ if __name__ == '__main__':
     testSuite.addTest(RecordOutcomeSpec('test6'))
     testSuite.addTest(RecordOutcomeSpec('test7'))
     testSuite.addTest(RecordOutcomeSpec('test8'))
+=======
+    #记支出测试
+    testSuite.addTest(RecordOutcomeSpec('test1'))
+    # testSuite.addTest(RecordOutcomeSpec('test2'))
+    # testSuite.addTest(RecordOutcomeSpec('test3'))
+    # testSuite.addTest(RecordOutcomeSpec('test4'))
+    # testSuite.addTest(RecordOutcomeSpec('test5'))
+    # testSuite.addTest(RecordOutcomeSpec('test6'))
+    # testSuite.addTest(RecordOutcomeSpec('test7'))
+    # testSuite.addTest(RecordOutcomeSpec('test8'))
+>>>>>>> e62348180f8c1658af8fa14c9701c79491fe2b38
 
 
-    # #记收入测试
-    # testSuite.addTest(RecordIncomeSpec('test1'))
+    #记收入测试
+    testSuite.addTest(RecordIncomeSpec('test1'))
     # testSuite.addTest(RecordIncomeSpec('test2'))
     # testSuite.addTest(RecordIncomeSpec('test3'))
     # testSuite.addTest(RecordIncomeSpec('test4'))
@@ -73,8 +87,8 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordIncomeSpec('test7'))
     # testSuite.addTest(RecordIncomeSpec('test8'))
 
-    # #记账户互转 *注意：需要新增招商银行账户
-    # testSuite.addTest(RecordTransterSpec('test1'))
+    #记账户互转 *注意：需要新增招商银行账户
+    testSuite.addTest(RecordTransterSpec('test1'))
     # testSuite.addTest(RecordTransterSpec('test2'))
     # testSuite.addTest(RecordTransterSpec('test3'))
     # testSuite.addTest(RecordTransterSpec('test4'))
@@ -83,19 +97,20 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordTransterSpec('test7'))
     # testSuite.addTest(RecordTransterSpec('test8'))
 
-    # #记收票测试
+    # # #记收票测试
     # testSuite.addTest(RecordInputInvoiceSpec('test1'))
     # testSuite.addTest(RecordInputInvoiceSpec('test2'))
 
-    # #记开票测试
+    # # #记开票测试
     # testSuite.addTest(RecordOutputInvoiceSpec('test1'))
+
     # testSuite.addTest(RecordOutputInvoiceSpec('test2'))
 
-    #记固定资产
+    # # #记固定资产
     # testSuite.addTest(RecordFixedSpec('test1'))
     # testSuite.addTest(RecordFixedSpec('test2'))
 
-    #记无形资产
+    # # # #记无形资产
     # testSuite.addTest(RecordIntangibleSpec('test1'))
     # testSuite.addTest(RecordIntangibleSpec('test2'))
 
@@ -137,6 +152,7 @@ if __name__ == '__main__':
 
     #支出-生成凭证测试
     # testSuite.addTest(OutcomeVoucherSpec('test1'))
+    
 
     now = time.strftime('%Y-%m-%d %H_%M_%S')
     report_dir = './report'

@@ -17,7 +17,17 @@ class RecordIntangibleSpec(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
+        # self.driver = Driver
         EnterCompany(self.driver,Environment)
+        # user_text_id = 'usernameInput'
+        # pass_text_id = 'passwordInput'
+        # login_button_id = 'loginButton'
+        # self.driver.get('https://web-gyz-stage.guanplus.com')
+        # self.driver.find_element_by_id(user_text_id).send_keys('18514509382')
+        # self.driver.find_element_by_id(pass_text_id).send_keys('qq123456')
+        # self.driver.find_element_by_id(login_button_id).click()
+        # time.sleep(10)
+        # self.driver.find_element_by_link_text('多数据多账期0904').click()
         fixedassets_page = FixedassetsPage(self.driver,'intangible')
         fixedassets_page.goToRecordFixedassetsPage(BaseUrl)
 
@@ -62,6 +72,7 @@ class RecordIntangibleSpec(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
+        # self.driver.close()
         
 
 if __name__ == '__main__':

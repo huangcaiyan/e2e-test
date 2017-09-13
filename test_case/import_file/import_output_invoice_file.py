@@ -20,8 +20,6 @@ class ImportOutputInvoiceFile(object):
         alertLocator = '//*[@id="body"]/invoice/import-output-invoice/div[1]/div[1]/alert/div'
         self.driver.find_element_by_id(self.importInputId).send_keys(file)
         sleep(20)
-        alertInfo = self.driver.switch_to_alert().text
-        print('alertInfo:' + alertInfo)
         # try:
         #     if '导入的文件不符合当前模板' == self.driver.find_element_by_xpath(alertLocator).text:
         #         print('[error: 导入的文件不符合当前模板]')

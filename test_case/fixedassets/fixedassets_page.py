@@ -67,12 +67,21 @@ class FixedassetsPage(object):
         self.driver.find_element_by_xpath(classifyLocator).click()
         time.sleep(2)
         self.driver.find_element_by_link_text(itemsPara[1]).click()
-        amountLocator = '//*[@id="body"]/app-assets-tab/app-'+ self.fixedassetsType  +'/div/div[2]/div[3]/div/table/tbody/tr/td[3]/input'
-        sumLocator = '//*[@id="body"]/app-assets-tab/app-'+ self.fixedassetsType + '/div/div[2]/div[3]/div/table/tbody/tr/td[4]/bp-input/input'
-        remarkLocator = '//*[@id="body"]/app-assets-tab/app-'+ self.fixedassetsType +'/div/div[2]/div[3]/div/table/tbody/tr/td[5]/input'
-        for locator,paraValue in zip([amountLocator,sumLocator,remarkLocator],itemsPara[2:]):
-            self.driver.find_element_by_xpath(locator).clear()
-            self.driver.find_element_by_xpath(locator).send_keys(paraValue)
+        # amountLocator = '//*[@id="body"]/app-assets-tab/app-'+ self.fixedassetsType  +'/div/div[2]/div[3]/div/table/tbody/tr/td[3]/input'
+        # sumLocator = '//*[@id="body"]/app-assets-tab/app-'+ self.fixedassetsType + '/div/div[2]/div[3]/div/table/tbody/tr/td[4]/bp-input/input'
+        # remarkLocator = '//*[@id="body"]/app-assets-tab/app-'+ self.fixedassetsType +'/div/div[2]/div[3]/div/table/tbody/tr/td[5]/input'
+        # for locator,paraValue in zip([amountLocator,sumLocator,remarkLocator],itemsPara[2:]):
+        #     self.driver.find_element_by_xpath(locator).clear()
+        #     self.driver.find_element_by_xpath(locator).send_keys(paraValue)
+        amountElement = self.driver.find_element_by_class_name('input-amount').find_element_by_tag_name('input')
+        amountElement.clear()
+        amountElement.send_keys(itemsPara[2])
+        sumElements = self.driver.find_element_by_class_name("max-input-amount").find_element_by_tag_name('ng2-numeric-input').find_elements_by_tag_name('input')
+        sumElements[0].click()
+        sumElements[1].send_keys(itemsPara[3])
+        remarkElement = self.driver.find_element_by_class_name('input-amount').find_element_by_xpath('..').find_element_by_class_name('operation').find_element_by_tag_name('input')
+        remarkElement.clear()
+        remarkElement.send_keys(itemsPara[4])
 
     #点击保存并新增按钮
     def clickSaveAndAdd(self):

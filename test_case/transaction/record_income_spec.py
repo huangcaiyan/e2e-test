@@ -21,7 +21,7 @@ class RecordIncomeSpec(unittest.TestCase):
 
     def setUp(self):
         # self.driver = webdriver.Chrome()
-        self.driver = webdriver.PhantomJS()
+        self.driver = Driver
         EnterCompany(self.driver,Environment)
         transaction_page = TransactionPage(self.driver,'income')
         transaction_page.goToTransactionModule(BaseUrl)
