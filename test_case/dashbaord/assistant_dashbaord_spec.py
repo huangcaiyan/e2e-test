@@ -15,10 +15,26 @@ from test_case.import_file.import_staff_file import ImportStaffFile
 class AssistantDashbaordSPec(unittest.TestCase):
     '''助理首页测试'''
 
-    @classmethod
-    def setUpClass(self):
-        self.driver = Driver
-        # self.driver = webdriver.Chrome()
+    # @classmethod
+    # def setUpClass(self):
+    #     self.driver = Driver
+    #     # self.driver = webdriver.Chrome()
+    #     wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
+    #     loginSh = wb.sheet_by_name(u'登陆账号')
+    #     loginData = loginSh.row_values(1)
+    #     wb1 = load_workbook('写入数据.xlsx')
+    #     sheet = wb1.get_sheet_by_name('已创建的公司')
+    #     companyName = sheet['A2'].value
+    #     loginData.append(companyName)
+    #     EnterCompany(self.driver,[BaseUrl,loginData])
+
+    # @classmethod
+    # def tearDownClass(self):
+    #     self.driver.quit()
+    def setUp(self):
+        # self.driver = Driver
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
         wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
         loginSh = wb.sheet_by_name(u'登陆账号')
         loginData = loginSh.row_values(1)
@@ -28,8 +44,7 @@ class AssistantDashbaordSPec(unittest.TestCase):
         loginData.append(companyName)
         EnterCompany(self.driver,[BaseUrl,loginData])
 
-    @classmethod
-    def tearDownClass(self):
+    def tearDown(self):
         self.driver.quit()
 
     def test1(self):
@@ -37,7 +52,7 @@ class AssistantDashbaordSPec(unittest.TestCase):
         dashboardPage = AssistantDashbaordPage(self.driver)
         dashboardPage.clickImportOutputInvoiceButton()
         importFile = ImportOutputInvoiceFile(self.driver)
-        importFile.importOutputInvoiceFile('F:\\autoTest_workspace\\python_code\\e2e-test\\test_data\\导入开票(一般纳税人).xlsx')
+        importFile.importOutputInvoiceFile('F:\\autoTest_workspace\\python_code\\e2e-test\\test_data\\一般纳税人开票导入.xlsx')
         self.assertEqual(BaseUrl + '/app/invoice/output-invoice',self.driver.current_url)
 
     def test2(self):

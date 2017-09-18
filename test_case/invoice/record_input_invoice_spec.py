@@ -18,8 +18,8 @@ class RecordInputInvoiceSpec(unittest.TestCase):
     ''' 记收票测试 '''
 
     def setUp(self):
-        # self.driver = webdriver.Chrome()
-        self.driver = Driver
+        self.driver = webdriver.Chrome()
+        # self.driver = Driver
         EnterCompany(self.driver,Environment)
         invoice_page = InvoicePage(self.driver,'input')
         invoice_page.goToInvoice(BaseUrl)

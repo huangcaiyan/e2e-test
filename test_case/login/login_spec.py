@@ -24,7 +24,7 @@ class LoginSpec(unittest.TestCase):
         self.assertEqual("杨春红",self.driver.find_element_by_xpath('//*[@id="personalInfoDropdownMenu"]/span').text)
 
     def test_verify_login(self):
-        """登陆管有帐"""
+        """登录管有帐"""
         loginpage = LoginPage(CompInfo.BASE_URL, self.driver)
         loginpage.login(VERIFY_LOGIN)
 

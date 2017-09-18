@@ -266,3 +266,5 @@ class PositiveFlowSpec(unittest.TestCase):
             n += 1
 
    
+if __name__ == '__main__':
+    unittest.main()

@@ -22,7 +22,7 @@ BaseUrl = 'https://firms.guanplus.com'
 # AccountCompany = ['18201215366','qq123456','一般纳税人07251510'] 
 
 #stage环境:账户->账套 [账户，密码，公司名]
-AccountCompany = ['18514509382','qq123456','羊羊羊08101921']
+AccountCompany = ['18514509382','qq123456','多数据多账期0905']
 
 #pro环境测试：账户->账套 [账户，密码，公司名]
 # AccountCompany = ['18514509382','qq123456','一般纳税人07272015'] 

@@ -1,13 +1,20 @@
 {
     "version": "0.2.0",
     "configurations": [
+<<<<<<< HEAD
+=======
         
+>>>>>>> aa83da6aba2ca2bd8d28babf912398ca2114d309
         {
             "name": "Python",
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
+<<<<<<< HEAD
+            "pythonPath": "${config:python.pythonPath}",
+=======
             // "pythonPath": "${config:python.pythonPath}",
+>>>>>>> aa83da6aba2ca2bd8d28babf912398ca2114d309
             "program": "${file}",
             "cwd": "${workspaceRoot}",
             "env": {},
@@ -100,7 +107,12 @@
             "cwd": "${workspaceRoot}",
             "args": [
                 "runserver",
+<<<<<<< HEAD
+                "--noreload",
+                "--nothreading"
+=======
                 "--noreload"
+>>>>>>> aa83da6aba2ca2bd8d28babf912398ca2114d309
             ],
             "env": {},
             "envFile": "${workspaceRoot}/.env",
