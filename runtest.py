@@ -21,6 +21,7 @@ from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
 # from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 from test_case.setting.setting_spec import SettingSpec 
+from test_case.setting.contact.contact_spec import ContactSpec 
 
 #发送邮件
 def send_mail(file_new):
@@ -63,11 +64,12 @@ if __name__ == '__main__':
     # testSuite.addTest(LoginSpec('test_typeerror_username'))
     
     # 设置页面
-    testSuite.addTest(SettingSpec('test_go_to_comp_billing_page'))
-    testSuite.addTest(SettingSpec('test_go_to_contact_page'))
-    testSuite.addTest(SettingSpec('test_go_to_mutil_user_page'))
-    testSuite.addTest(SettingSpec('test_go_to_partner_set_page'))
-    testSuite.addTest(SettingSpec('test_go_to_tax_rate_page'))
+    # testSuite.addTest(SettingSpec('test_go_to_comp_billing_page'))
+    # testSuite.addTest(SettingSpec('test_go_to_contact_page'))
+    # testSuite.addTest(SettingSpec('test_go_to_mutil_user_page'))
+    # testSuite.addTest(SettingSpec('test_go_to_partner_set_page'))
+    # testSuite.addTest(SettingSpec('test_go_to_tax_rate_page'))
+    testSuite.addTest(ContactSpec('test_click_add_btn'))
     
 
     # #记支出测试

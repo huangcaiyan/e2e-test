@@ -15,7 +15,6 @@ class SettingSpec(unittest.TestCase):
     '''
     设置页面测试用例
     '''
-
     def setUp(self):
         # self.driver = webdriver.Chrome()
         self.driver = webdriver.PhantomJS()
