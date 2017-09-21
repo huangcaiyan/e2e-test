@@ -20,7 +20,7 @@ capital_elem = '//*[@id="body"]/stuff/div[3]/form/div[4]/div[2]/div/label/input'
 # 是否残疾下拉 xpath
 health_drop_elem = '//*[@id="body"]/stuff/div[3]/form/div[4]/div[3]/div/label/ng-select'
 # 人员状态 下拉xpath
-office_drop_elem = '//*[@id="body"]/stuff/div[3]/form/div[5]/div[1]/div/label/ng-select'
+office_status_drop_elem = '//*[@id="body"]/stuff/div[3]/form/div[5]/div[1]/div/label/ng-select'
 # 电话 input xpath
 phone_elem = '//*[@id="body"]/stuff/div[3]/form/div[5]/div[2]/div/label/input'
 # 邮箱 input xpath
