@@ -6,22 +6,22 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 from HTMLTestRunner import HTMLTestRunner
-# from test_case.login.login_spec import LoginSpec 
-# from test_case.transaction.record_outcome_spec import RecordOutcomeSpec
-# from test_case.transaction.record_income_spec import RecordIncomeSpec
-# from test_case.transaction.record_transfer_spec import RecordTransterSpec
-# from test_case.transaction.outcome_voucher_spec import OutcomeVoucherSpec
-# from test_case.invoice.record_input_invoice_spec import RecordInputInvoiceSpec
-# from test_case.invoice.record_output_invoice_spec import RecordOutputInvoiceSpec
-# from test_case.finance.voucher.generate_voucher_spec import GenerateVoucherSpec
-# from test_case.fixedassets.record_fixed_spec import RecordFixedSpec
-# from test_case.fixedassets.record_intangible_spec import RecordIntangibleSpec
-# from test_case.finance.voucher.record_business_spec import RecordBusinessSpec
-# from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
-# # from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
+from test_case.login.login_spec import LoginSpec 
+from test_case.transaction.record_outcome_spec import RecordOutcomeSpec
+from test_case.transaction.record_income_spec import RecordIncomeSpec
+from test_case.transaction.record_transfer_spec import RecordTransterSpec
+from test_case.transaction.outcome_voucher_spec import OutcomeVoucherSpec
+from test_case.invoice.record_input_invoice_spec import RecordInputInvoiceSpec
+from test_case.invoice.record_output_invoice_spec import RecordOutputInvoiceSpec
+from test_case.finance.voucher.generate_voucher_spec import GenerateVoucherSpec
+from test_case.fixedassets.record_fixed_spec import RecordFixedSpec
+from test_case.fixedassets.record_intangible_spec import RecordIntangibleSpec
+from test_case.finance.voucher.record_business_spec import RecordBusinessSpec
+from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
 # from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
-# from test_case.setting.setting_spec import SettingSpec 
-# from test_case.setting.contact.contact_spec import ContactSpec 
+from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
+from test_case.setting.setting_spec import SettingSpec 
+from test_case.setting.contact.contact_spec import ContactSpec 
 from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec 
 
 #发送邮件
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     # testSuite.addTest(ContactSpec('test_click_add_btn'))
 
     # 工资
-    testSuite.addTest(AddStuffSpec('test_name_empty'))
+    # testSuite.addTest(AddStuffSpec('test_name_empty'))
     
 
 

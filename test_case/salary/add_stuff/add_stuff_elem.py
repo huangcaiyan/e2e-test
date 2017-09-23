@@ -15,7 +15,7 @@ partment_drop_elem = '//*[@id="body"]/stuff/div[3]/form/div[3]/div[2]/div/label/
 position_elem = '//*[@id="body"]/stuff/div[3]/form/div[3]/div[3]/div/label/input'
 # 雇员选择下拉 xpath
 employ_drop_elem = '//*[@id="body"]/stuff/div[3]/form/div[4]/div[1]/div/label/ng-select'
-# 个人孤本（投资）额 input xpath
+# 个人股本（投资）额 input xpath
 capital_elem = '//*[@id="body"]/stuff/div[3]/form/div[4]/div[2]/div/label/input'
 # 是否残疾下拉 xpath
 health_drop_elem = '//*[@id="body"]/stuff/div[3]/form/div[4]/div[3]/div/label/ng-select'
