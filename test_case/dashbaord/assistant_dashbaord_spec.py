@@ -1,5 +1,4 @@
 import unittest,sys,os
-from selenium import webdriver
 from time import sleep
 import xlrd
 from openpyxl import load_workbook
@@ -10,7 +9,7 @@ from util.enter_company_util import EnterCompany
 from test_case.import_file.import_output_invoice_file import ImportOutputInvoiceFile
 from test_case.import_file.import_bank_bill_file import ImportBankBillFile
 from test_case.import_file.import_staff_file import ImportStaffFile
-
+from util.driver_util import Driver
 
 class AssistantDashbaordSPec(unittest.TestCase):
     '''助理首页测试'''
@@ -32,17 +31,9 @@ class AssistantDashbaordSPec(unittest.TestCase):
     # def tearDownClass(self):
     #     self.driver.quit()
     def setUp(self):
-        # self.driver = Driver
-        self.driver = webdriver.Chrome()
-        self.driver.maximize_window()
-        wb = xlrd.open_workbook(os.path.dirname(__file__) + '/../../test_data/' + '创建公司.xlsx')
-        loginSh = wb.sheet_by_name(u'登陆账号')
-        loginData = loginSh.row_values(1)
-        wb1 = load_workbook('写入数据.xlsx')
-        sheet = wb1.get_sheet_by_name('已创建的公司')
-        companyName = sheet['A2'].value
-        loginData.append(companyName)
-        EnterCompany(self.driver,[BaseUrl,loginData])
+        self.driver = Driver().get_driver()
+        enterCompany = EnterCompany(self.driver)
+        enterCompany.goToCompany()
 
     def tearDown(self):
         self.driver.quit()
@@ -72,6 +63,15 @@ class AssistantDashbaordSPec(unittest.TestCase):
         importFile = ImportStaffFile(self.driver)
         importFile.importStaffFile('F:\\autoTest_workspace\\python_code\\e2e-test\\test_data\\导入员工.xlsx')
         self.assertEqual(BaseUrl+'/app/salary/stuff-list',self.driver.current_url)
+
+    def test4(self):
+        '''提交审核'''
+
+        dashboardPage = AssistantDashbaordPage(self.driver)
+        dashboardPage.goAssistanDashbaordPage(BaseUrl)
+        dashboardPage.clickSubmit()
+        self.assertEqual(BaseUrl + '/app/home-page/accounting',self.driver.current_url)
+
 
 if __name__ =='__main__':
     unittest.main()
