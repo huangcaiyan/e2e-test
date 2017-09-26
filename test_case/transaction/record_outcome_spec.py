@@ -12,6 +12,7 @@ from test_data.record_outcome_data import *
 from util.enter_company_util import EnterCompany
 from config import *
 from util.category_map_util import CategoryMap
+from util.driver_util import Driver
 import xlrd
 
 
@@ -19,9 +20,9 @@ class RecordOutcomeSpec(unittest.TestCase):
     ''' 记支出测试 '''
 
     def setUp(self):
-        # self.driver = webdriver.Chrome()
-        self.driver = Driver
-        EnterCompany(self.driver,Environment)
+        self.driver = Driver().get_driver()
+        enterCompany = EnterCompany(self.driver)
+        enterCompany.goToCompany()
         self.transaction_page = TransactionPage(self.driver,'outcome')
         self.transaction_page.goToTransactionModule(BaseUrl)
         self.transaction_page.goToTransactionPage('记支出')
@@ -68,7 +69,7 @@ class RecordOutcomeSpec(unittest.TestCase):
     def test6(self):
         '''成功记一笔支出测试'''
 
-        transaction = ['1','现金','内部代表']
+        transaction = ['1','现金','(个)内部代表']
         items1 = [['1','1'],'111','行政支出']
         self.transaction_page.recordTransaction(transaction,items1)
         self.assertEqual('保存成功',self.driver.find_element_by_xpath('//*[@id="body"]/detail/outcome/div/div[1]/alert/div').text[-4:])

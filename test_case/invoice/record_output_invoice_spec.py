@@ -11,23 +11,24 @@ from test_data.record_output_invoice_data import *
 from util.enter_company_util import EnterCompany
 from config import *
 from util.category_map_util import CategoryMap
+from util.driver_util import Driver
 import xlrd
 
 class RecordOutputInvoiceSpec(unittest.TestCase):
     ''' 记开票测试 '''
 
     def setUp(self):
-        # self.driver = webdriver.Chrome()
-        self.driver = Driver
-        EnterCompany(self.driver,Environment)
+        self.driver = Driver().get_driver()
+        enterCompany = EnterCompany(self.driver)
+        enterCompany.goToCompany()
         invoice_page = InvoicePage(self.driver,'output')
         invoice_page.goToInvoice(BaseUrl)
 
     def test1(self):
-        '''成功记录一笔开票-普票-税控自开测试'''
+        '''成功记录一笔开票-普票'''
 
-        outputInvoicePublic = ['1','普票','税控自开','内部代表']
-        outputInvoiceNum = '00000000'
+        outputInvoicePublic = ['1','普票','税控自开','(个)内部代表']
+        outputInvoiceNum = self.invoiceNum()
         outputInvoiceItems = [['1','1'],'管理部门','5%','41111','普票-税控自开-商品销售-5%-管理部门41111']
         invoice_page = InvoicePage(self.driver,'output')
         invoice_page.recordOutputInvoice(outputInvoicePublic,outputInvoiceNum,outputInvoiceItems)

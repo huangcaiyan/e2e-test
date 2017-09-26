@@ -12,17 +12,17 @@ from test_data.record_income_data import *
 from util.enter_company_util import EnterCompany
 from util.category_map_util import CategoryMap
 from config import *
+from util.driver_util import Driver
 import xlrd
 
 
-#前置条件：新账套
 class RecordIncomeSpec(unittest.TestCase):
     ''' 记收入测试 '''
 
     def setUp(self):
-        # self.driver = webdriver.Chrome()
-        self.driver = Driver
-        EnterCompany(self.driver,Environment)
+        self.driver = Driver().get_driver()
+        enterCompany = EnterCompany(self.driver)
+        enterCompany.goToCompany()
         transaction_page = TransactionPage(self.driver,'income')
         transaction_page.goToTransactionModule(BaseUrl)
         transaction_page.goToTransactionPage('记收入')
@@ -30,7 +30,6 @@ class RecordIncomeSpec(unittest.TestCase):
     def test1(self):
         '''全空校验'''
 
-    
         transaction_page = TransactionPage(self.driver,'income')
         transaction_page.clickSaveButton()                                   
         self.assertEqual('请填写交易账户！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-8:])
@@ -72,13 +71,12 @@ class RecordIncomeSpec(unittest.TestCase):
         transaction_page.setMoney('0')
         transaction_page.clickSaveButton()
         self.assertEqual('金额不能为0！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-7:])
-        # self.assertEqual('请填写完整！',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-6:])
 
     def test6(self):
         '''成功记一笔收入测试'''
 
         transaction_page = TransactionPage(self.driver,'income')
-        transaction = ['1','现金','内部代表']
+        transaction = ['1','现金','(个)内部代表']
         items1 = [['1','1'],'111','利息收入']
         transaction_page.recordTransaction(transaction,items1)
         self.assertEqual('保存成功',self.driver.find_element_by_xpath('//*[@id="body"]/detail/income/div/div[1]/alert/div').text[-4:])

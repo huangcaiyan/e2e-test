@@ -11,6 +11,7 @@ from test_data.record_transfer_data import *
 from util.enter_company_util import EnterCompany
 from config import *
 from util.category_map_util import CategoryMap
+from util.driver_util import Driver
 import xlrd
 
 #前提条件：有一个【招商银行】账户
@@ -18,8 +19,9 @@ class RecordTransterSpec(unittest.TestCase):
     ''' 记账户互转测试 '''
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
-        EnterCompany(self.driver,Environment)
+        self.driver = Driver().get_driver()
+        enterCompany = EnterCompany(self.driver)
+        enterCompany.goToCompany()
         self.transaction_page = TransactionPage(self.driver,'accounttransfers')
         self.transaction_page.goToTransactionModule(BaseUrl)
         self.transaction_page.goToTransactionPage('记账户互转')
@@ -79,10 +81,6 @@ class RecordTransterSpec(unittest.TestCase):
     def test8(self):
         '''成功12笔账户互转测试[现金，银行，微信，支付宝]'''
     
-        # for transferPara in RecordTransferData:
-        #     self.transaction_page.recordTransfer(transferPara)
-        # self.transaction_page.goToTransactionModule(BaseUrl)
-        # self.assertEqual(BaseUrl + '/app/transaction/list',self.driver.current_url)
         wb = xlrd.open_workbook(os.path.dirname(__file__) + '/' + '../../test_data/' + '收支.xlsx')
         sh = wb.sheet_by_name(u'记账户互转测试数据')
         for i in range(1,sh.nrows):
