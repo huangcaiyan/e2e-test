@@ -6,7 +6,7 @@ import time
 from HTMLTestRunner import HTMLTestRunner
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../'))
 from test_case.login.login_page import LoginPage
-from transaction_page import TransactionPage
+from .transaction_page import TransactionPage
 from test_data.record_outcome_data import *
 from util.enter_company_util import EnterCompany
 from config import *
