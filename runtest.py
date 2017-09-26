@@ -21,6 +21,8 @@ from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
 from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 from test_case.dashbaord.account_dashboard_spec import AccountDashbaordSPec
 from test_case.setting.setting_spec import SettingSpec 
+from test_case.setting.contact.contact_spec import ContactSpec 
+from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec 
 
 #发送邮件
 def send_mail(file_new):
@@ -55,7 +57,32 @@ def find_new_report(testReport):
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
 
+<<<<<<< HEAD
     #记支出测试
+=======
+    # 登录测试
+    # testSuite.addTest(LoginSpec('test_verify_login'))
+    # testSuite.addTest(LoginSpec('test_unexit_username'))
+    # testSuite.addTest(LoginSpec('test_wrong_password'))
+    # testSuite.addTest(LoginSpec('test_empty_username'))
+    # testSuite.addTest(LoginSpec('test_empty_password'))
+    # testSuite.addTest(LoginSpec('test_typeerror_username'))
+    
+    # 设置页面
+    # testSuite.addTest(SettingSpec('test_go_to_comp_billing_page'))
+    # testSuite.addTest(SettingSpec('test_go_to_contact_page'))
+    # testSuite.addTest(SettingSpec('test_go_to_mutil_user_page'))
+    # testSuite.addTest(SettingSpec('test_go_to_partner_set_page'))
+    # testSuite.addTest(SettingSpec('test_go_to_tax_rate_page'))
+    # testSuite.addTest(ContactSpec('test_click_add_btn'))
+
+    # 工资
+    # testSuite.addTest(AddStuffSpec('test_name_empty'))
+    
+
+
+    # #记支出测试
+>>>>>>> 23211bec792b97f0c0d56510852e2e8dae92ef24
     # testSuite.addTest(RecordOutcomeSpec('test1'))
     # testSuite.addTest(RecordOutcomeSpec('test2'))
     # testSuite.addTest(RecordOutcomeSpec('test3'))
@@ -65,6 +92,7 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordOutcomeSpec('test7'))
     testSuite.addTest(RecordOutcomeSpec('test8'))
 
+<<<<<<< HEAD
 
     # #记收入测试
     # # testSuite.addTest(RecordIncomeSpec('test1'))
@@ -84,6 +112,26 @@ if __name__ == '__main__':
     # # testSuite.addTest(RecordTransterSpec('test5'))
     # # testSuite.addTest(RecordTransterSpec('test6'))
     # # testSuite.addTest(RecordTransterSpec('test7'))
+=======
+    #记收入测试
+    # testSuite.addTest(RecordIncomeSpec('test1'))
+    # testSuite.addTest(RecordIncomeSpec('test2'))
+    # testSuite.addTest(RecordIncomeSpec('test3'))
+    # testSuite.addTest(RecordIncomeSpec('test4'))
+    # testSuite.addTest(RecordIncomeSpec('test5'))
+    # testSuite.addTest(RecordIncomeSpec('test6'))
+    # testSuite.addTest(RecordIncomeSpec('test7'))
+    # testSuite.addTest(RecordIncomeSpec('test8'))
+
+    #记账户互转 *注意：需要新增招商银行账户
+    # testSuite.addTest(RecordTransterSpec('test1'))
+    # testSuite.addTest(RecordTransterSpec('test2'))
+    # testSuite.addTest(RecordTransterSpec('test3'))
+    # testSuite.addTest(RecordTransterSpec('test4'))
+    # testSuite.addTest(RecordTransterSpec('test5'))
+    # testSuite.addTest(RecordTransterSpec('test6'))
+    # testSuite.addTest(RecordTransterSpec('test7'))
+>>>>>>> 23211bec792b97f0c0d56510852e2e8dae92ef24
     # testSuite.addTest(RecordTransterSpec('test8'))
 
     # # # # #记收票测试

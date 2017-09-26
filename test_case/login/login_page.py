@@ -23,7 +23,7 @@ class LoginPage(object):
 
     # 点击登录
     def click_login_btn(self):
-        login_button = self.driver.find_element_by_id(login_btn_elem)
+        login_button = self.driver.find_element_by_css_selector(login_btn_elem)
         login_button.click()
 
     # 个人信息名称

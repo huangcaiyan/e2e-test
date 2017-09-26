@@ -6,7 +6,7 @@ import time
 import random
 from HTMLTestRunner import HTMLTestRunner
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../'))
-from .fixedassets_page import FixedassetsPage
+from fixedassets_page import FixedassetsPage
 from util.enter_company_util import EnterCompany
 from config import *
 from util.category_map_util import CategoryMap
