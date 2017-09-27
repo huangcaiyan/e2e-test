@@ -37,12 +37,15 @@ class RecordAcountSpec(unittest.TestCase):
     '''添加微信账户'''
     def test_addaccount_2(self):
         account_page = AccountPage(self.driver)
-        account_page.test_add_weixin_account(account_data_1)
+        account_page.test_add_WeChat_account(account_data_1)
 
     '''添加支付宝账户'''
     def test_addaccount_3(self):
         account_page = AccountPage(self.driver)
-        account_page.test_add_zhifubao_account(account_data_2)
+        account_page.test_add_Alipay_account(account_data_2)
+
+    '''编辑银行账户'''
+    
 
 
     def tearDown(self):

@@ -17,9 +17,9 @@ class AccountPage():
     
     # 微信账户名称元素定位
     add_weixin_xpath = '//*[@id="body"]/account/gpw-account-details-modal/div/div/div/div[2]/div/tabset/ul/li[2]/a/span'
-    input_accountName_id_weixin = 'input-accountName3'
-    input_accountNumber_id_weixin = 'input-accountNumber3'
-    input_description_id_weixin = 'input-description3'
+    input_accountName_id_WeChat = 'input-accountName3'
+    input_accountNumber_id_WeChat = 'input-accountNumber3'
+    input_description_id_WeChat = 'input-description3'
 
     # 支付宝账户名称元素定位
     add_zhifubao_xpath = '//*[@id="body"]/account/gpw-account-details-modal/div/div/div/div[2]/div/tabset/ul/li[3]/a/span'
@@ -88,37 +88,37 @@ class AccountPage():
 
 
     # 输入微信账户名称
-    def InputaccountNameWeixin(self, InputaccountNameWeixin):
-        input_accountName_weixin = self.driver.find_element_by_id(self.input_accountName_id_weixin)
-        input_accountName_weixin.send_keys(InputaccountNameWeixin)
+    def InputaccountNameWeixin(self, InputaccountNameWeChat):
+        input_accountName_weixin = self.driver.find_element_by_id(self.input_accountName_id_WeChat)
+        input_accountName_weixin.send_keys(InputaccountNameWeChat)
 
     # 输入微信账号
-    def InputaccountNumberWeixin(self, InputaccountNumberWeixin):
-        input_accountNumber = self.driver.find_element_by_id(self.input_accountNumber_id_weixin)
-        input_accountNumber.send_keys(InputaccountNumberWeixin)
+    def InputaccountNumberWeixin(self, InputaccountNumberWeChat):
+        input_accountNumber = self.driver.find_element_by_id(self.input_accountNumber_id_WeChat)
+        input_accountNumber.send_keys(InputaccountNumberWeChat)
 
     # 输入微信备注
-    def InputdescriptionWweixin(self, InputdescriptionWeixin):
-        input_description = self.driver.find_element_by_id(self.input_description_id_weixin)
-        input_description.send_keys(InputdescriptionWeixin)
+    def InputdescriptionWweixin(self, InputdescriptionWeChat):
+        input_description = self.driver.find_element_by_id(self.input_description_id_WeChat)
+        input_description.send_keys(InputdescriptionWeChat)
 
 
 
     
     # 输入支付宝账户名称
-    def InputaccountNameWeixin(self, InputaccountNameZhifubao):
-        input_accountName_weixin = self.driver.find_element_by_id(self.input_accountName_id_zhifubao)
-        input_accountName_weixin.send_keys(InputaccountNameZhifubao)
+    def InputaccountNameWeixin(self, InputaccountNameAlipay):
+        input_accountName_weixin = self.driver.find_element_by_id(self.input_accountName_id_Alipay)
+        input_accountName_weixin.send_keys(InputaccountNameAlipay)
 
     # 输入支付宝账号
-    def InputaccountNumberWeixin(self, InputaccountNumberZhifubao):
-        input_accountNumber = self.driver.find_element_by_id(self.input_accountNumber_id_zhifubao)
-        input_accountNumber.send_keys(InputaccountNumberZhifubao)
+    def InputaccountNumberWeixin(self, InputaccountNumberAlipay):
+        input_accountNumber = self.driver.find_element_by_id(self.input_accountNumber_id_Alipay)
+        input_accountNumber.send_keys(InputaccountNumberAlipay)
 
     # 输入支付宝备注
-    def InputdescriptionWweixin(self, InputdescriptionZhifubao):
-        input_description = self.driver.find_element_by_id(self.input_description_id_zhifubao)
-        input_description.send_keys(InputdescriptionZhifubao)
+    def InputdescriptionWweixin(self, InputdescriptionAlipay):
+        input_description = self.driver.find_element_by_id(self.input_description_id_Alipay)
+        input_description.send_keys(InputdescriptionAlipay)
 
 
     # 点击保存按钮
@@ -139,17 +139,17 @@ class AccountPage():
 
     
     # 添加微信账户
-    def test_add_weixin_account(self,account_data_1):
+    def test_add_WeChat_account(self,account_data_1):
         # self.driver.get(page_url)
-        self.InputaccountNameWeixin(account_data_1[0])
-        self.InputaccountNumberWeixin(account_data_1[1])
-        self.InputdescriptionWeixin(account_data_1[2])
+        self.InputaccountNameWeChat(account_data_1[0])
+        self.InputaccountNumberWeChat(account_data_1[1])
+        self.InputdescriptionWeChat(account_data_1[2])
         self.SaveButton()
     
 
     # 添加支付宝账户
-    def test_add_zhifubao_account(self, account_data_2):
-        self.InputaccountNameZhifubao(account_data_2[0])
-        self.InputaccountNumberZhifubao(account_data_2[1])
-        self.InputdescriptionZhifubao(account_data_2[2])
+    def test_add_Alipay_account(self, account_data_2):
+        self.InputaccountNameAlipay(account_data_2[0])
+        self.InputaccountNumberAlipay(account_data_2[1])
+        self.InputdescriptionAlipay(account_data_2[2])
         self.SaveButton()

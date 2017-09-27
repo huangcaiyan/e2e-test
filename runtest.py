@@ -21,6 +21,8 @@ from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
 # from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 from test_case.setting.setting_spec import SettingSpec 
+from test_case.account.add_account_spec import RecordAcountSpec
+
 
 #发送邮件
 def send_mail(file_new):
@@ -54,19 +56,9 @@ def find_new_report(testReport):
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
     # #记支出测试
-    testSuite.addTest(RecordOutcomeSpec('test1'))
-    testSuite.addTest(RecordOutcomeSpec('test2'))
-    testSuite.addTest(RecordOutcomeSpec('test3'))
-    testSuite.addTest(RecordOutcomeSpec('test4'))
-    testSuite.addTest(RecordOutcomeSpec('test5'))
-    testSuite.addTest(RecordOutcomeSpec('test6'))
-    testSuite.addTest(RecordOutcomeSpec('test7'))
-    testSuite.addTest(RecordOutcomeSpec('test8'))
-=======
-    #记支出测试
-    testSuite.addTest(RecordOutcomeSpec('test1'))
+    # testSuite.addTest(RecordOutcomeSpec('test1'))
     # testSuite.addTest(RecordOutcomeSpec('test2'))
     # testSuite.addTest(RecordOutcomeSpec('test3'))
     # testSuite.addTest(RecordOutcomeSpec('test4'))
@@ -74,11 +66,21 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordOutcomeSpec('test6'))
     # testSuite.addTest(RecordOutcomeSpec('test7'))
     # testSuite.addTest(RecordOutcomeSpec('test8'))
->>>>>>> e62348180f8c1658af8fa14c9701c79491fe2b38
+# =======
+    #记支出测试
+    # testSuite.addTest(RecordOutcomeSpec('test1'))
+    # testSuite.addTest(RecordOutcomeSpec('test2'))
+    # testSuite.addTest(RecordOutcomeSpec('test3'))
+    # testSuite.addTest(RecordOutcomeSpec('test4'))
+    # testSuite.addTest(RecordOutcomeSpec('test5'))
+    # testSuite.addTest(RecordOutcomeSpec('test6'))
+    # testSuite.addTest(RecordOutcomeSpec('test7'))
+    # testSuite.addTest(RecordOutcomeSpec('test8'))
+# >>>>>>> e62348180f8c1658af8fa14c9701c79491fe2b38
 
 
     #记收入测试
-    testSuite.addTest(RecordIncomeSpec('test1'))
+    # testSuite.addTest(RecordIncomeSpec('test1'))
     # testSuite.addTest(RecordIncomeSpec('test2'))
     # testSuite.addTest(RecordIncomeSpec('test3'))
     # testSuite.addTest(RecordIncomeSpec('test4'))
@@ -86,6 +88,9 @@ if __name__ == '__main__':
     # testSuite.addTest(RecordIncomeSpec('test6'))
     # testSuite.addTest(RecordIncomeSpec('test7'))
     # testSuite.addTest(RecordIncomeSpec('test8'))
+
+    # 添加账户测试
+    testSuite.addTest(RecordAcountSpec('test_addaccount_1'))
 
     #记账户互转 *注意：需要新增招商银行账户
     testSuite.addTest(RecordTransterSpec('test1'))
