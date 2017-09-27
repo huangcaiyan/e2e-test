@@ -27,8 +27,8 @@ class EnterCompPage:
             enter_comp_info[1])
         comp_name_loc.click()
         time.sleep(5)
-        c_comp_name = self.get_comp_name(enter_comp_info[1])
-        if c_comp_name == enter_comp_info[1]:
-            print('当前公司公司名为： ', c_comp_name)
+        page_url = self.driver.current_url
+        if 'home-page' in page_url :
+            print('进入帐套成功！当前帐套名称为： ',self.get_comp_name(enter_comp_info[1]))
         else:
             print('————————————进入公司失败 ！————————————')
