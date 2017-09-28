@@ -39,11 +39,12 @@ if __name__ == '__main__':
     # testSuite.addTest(SettingSpec('test_go_to_mutil_user_page'))
     # testSuite.addTest(SettingSpec('test_go_to_partner_set_page'))
     # testSuite.addTest(SettingSpec('test_go_to_tax_rate_page'))
-    # testSuite.addTest(ContactSpec('test_click_add_btn'))
+    testSuite.addTest(ContactSpec('test_show_add_modal'))
+    
 
     # 工资
     # testSuite.addTest(AddStuffSpec('test_name_empty'))
-    testSuite.addTest(AddStuffSpec('test_country_empty'))
+    # testSuite.addTest(AddStuffSpec('test_country_empty'))
     # testSuite.addTest(AddStuffSpec('test_id_empty'))
     # testSuite.addTest(AddStuffSpec('test_employed_empty'))
     # testSuite.addTest(AddStuffSpec('test_verify_add_stuff'))

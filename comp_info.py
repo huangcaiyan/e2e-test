@@ -17,8 +17,8 @@ class CompInfo(object):
     # pro
     BASE_URL = 'https://firms.guanplus.com'
     LOGIN_DATA = ['13683139989','qq123456']
-    COMP_NAME = 'auto_test'
-    COMP_NAME_YB = 'auto_test_yb'
+    COMP_NAME = 'autotest'
+    COMP_NAME_YB = 'autotestyb'
 
 
     ENTER_COMP_INFO = [LOGIN_DATA, COMP_NAME]
