@@ -22,8 +22,8 @@ class AddStuffSpec(unittest.TestCase):
         self.driver.implicitly_wait(30)
         self.driver.maximize_window()
 
-        enterCompPage = EnterCompPage(CompInfo.BASE_URL, self.driver)
-        enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO_YB)
+        enterCompPage = EnterCompPage(self.driver)
+        enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
     def test_name_empty(self):
         """添加员工－员工名称为空－红框警示，保存失败"""

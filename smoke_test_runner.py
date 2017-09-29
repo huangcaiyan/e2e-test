@@ -18,15 +18,14 @@ from test_case.finance.voucher.generate_voucher_spec import GenerateVoucherSpec
 from test_case.setting.setting_spec import SettingSpec
 from test_case.setting.contact.contact_spec import ContactSpec
 from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec
-from test_case.external.enter_comp_spec import EnterCompSpec 
+from test_case.external.enter_comp_spec import EnterCompSpec
+from test_case.external.create_comp.create_comp_spec import CreateCompSpec
 
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
 
-
-
     # 登录测试
-    # testSuite.addTest(LoginSpec('test_verify_login'))
+    testSuite.addTest(LoginSpec('test_verify_login'))
     # testSuite.addTest(LoginSpec('test_unexit_username'))
     # testSuite.addTest(LoginSpec('test_wrong_password'))
     # testSuite.addTest(LoginSpec('test_empty_username'))
@@ -39,8 +38,7 @@ if __name__ == '__main__':
     # testSuite.addTest(SettingSpec('test_go_to_mutil_user_page'))
     # testSuite.addTest(SettingSpec('test_go_to_partner_set_page'))
     # testSuite.addTest(SettingSpec('test_go_to_tax_rate_page'))
-    testSuite.addTest(ContactSpec('test_show_add_modal'))
-    
+    # testSuite.addTest(ContactSpec('test_show_add_modal'))
 
     # 工资
     # testSuite.addTest(AddStuffSpec('test_name_empty'))
@@ -49,9 +47,10 @@ if __name__ == '__main__':
     # testSuite.addTest(AddStuffSpec('test_employed_empty'))
     # testSuite.addTest(AddStuffSpec('test_verify_add_stuff'))
     # testSuite.addTest(AddStuffSpec('test_verify_add_labour'))
-    
+
     # external
     # testSuite.addTest(EnterCompSpec('test_enter_comp'))
+    # testSuite.addTest(CreateCompSpec('create_account_book_empty_comp_name'))
 
     now = time.strftime('%Y-%m-%d %H_%M_%S')
     report_dir = './report'

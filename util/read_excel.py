@@ -30,10 +30,12 @@ class ReadExcel(object):
         return values
 
     # 读取某一sheet中的某一行的值
-    def get_value_by_row(self, sheet_index,row_index):
+    def get_value_by_row(self, sheet_index, row_index):
         sheets = self.get_sheets()
         values = []
         s = sheets[sheet_index]
+        print('sheet_index=>', sheet_index)
+        print('row_index=>', row_index)
         for row in range(row_index):
             if row != 0:
                 col_value = []

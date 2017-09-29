@@ -173,3 +173,11 @@ class PublicPage:
             return danger_msg
         except Exception as e:
             logging.error('There are an exception %s', str(e))
+
+    # 必填项红框警示
+    def has_danger_is_show(self):
+        publicPage = PublicPage(self.driver)
+        ui_loc = self.driver.find_element_by_css_selector('.has-danger')
+        print('publicPage.is_element_present(ui_loc)=>',
+              publicPage.is_element_present(ui_loc))
+        return publicPage.is_element_present(ui_loc)

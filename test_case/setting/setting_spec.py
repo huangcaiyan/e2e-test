@@ -21,7 +21,7 @@ class SettingSpec(unittest.TestCase):
         self.driver.implicitly_wait(30)
 
         enterCompPage = EnterCompPage(CompInfo.BASE_URL,self.driver)
-        enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO_YB)
+        enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
     # url跳转测试
     def test_go_to_comp_billing_page(self):

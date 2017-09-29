@@ -28,7 +28,7 @@ class ContactSpec(unittest.TestCase):
         self.driver.set_window_size(1280,800)
 
         enterCompPage = EnterCompPage(CompInfo.BASE_URL,self.driver)
-        enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO_YB)
+        enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
     def test_show_add_modal(self):
         """往来信息－测试点击添加按钮显示添加modal框"""
