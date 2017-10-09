@@ -126,10 +126,17 @@ class PublicPage:
         except Exception as e:
             logging.error('There was an exception when get_value s%', str(e))
 
+    def move_to_element_with_offset(self, elem_loc):
+        action = webdriver.common.action_chains.ActionChains(self.driver)
+        action.move_to_element(elem_loc)
+        # action.move_to_element_with_offset(elem_loc[0], 5, 5)
+        action.click()
+        action.perform()
+
     # 将光标定位到元素处
     def scroll_to_elem(self, elem_loc):
         try:
-            return self.driver.execute_script('arguments[0].scrollIntoView();',
+            return self.driver.execute_script('return arguments[0].scrollIntoView();',
                                               elem_loc)
         except Exception as e:
             print('Error scrolling down  web elem ', str(e))
@@ -142,6 +149,16 @@ class PublicPage:
     def scroll_to_bottom(self):
         return self.driver.execute_script(
             'scroll(0,document.body.scrollHeight)')
+
+    # 获取元素位置坐标
+    def get_elem_location(self, elem_loc):
+        try:
+            location = elem_loc.location
+            size = elem_loc.size
+            print('location=>', location, '\nsize=>', size)
+            return location
+        except Exception as e:
+            print('[PublicPage]There was an exception when get_elem_location=>', str(e))
 
     # 选择下拉项
     def select_dropdown_item(self, drop_loc, item_name):

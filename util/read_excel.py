@@ -36,12 +36,10 @@ class ReadExcel(object):
         s = sheets[sheet_index]
         print('sheet_index=>', sheet_index)
         print('row_index=>', row_index)
-        for row in range(row_index):
-            if row != 0:
-                col_value = []
-                for col in range(s.ncols):
-                    value = (str(s.cell(row, col).value))
-                    col_value.append(value)
-                values.append(col_value)
+        col_value = []
+        for col in range(s.ncols):
+            value = (str(s.cell(row_index, col).value))
+            col_value.append(value)
+        values.extend(col_value)
         print('values=>', values)
         return values

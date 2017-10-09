@@ -20,12 +20,12 @@ from test_data.cai.login_data import *
 
 class LoginSpec(unittest.TestCase):
 
-    login_test_data_dir = './test_data/cai/login_test_data.xlsx'
+    login_test_data_dir = '/Users/huangcaiyan/work/e2e-test/test_data/cai/login_test_data.xlsx'
 
     def setUp(self):
         # self.url = 'https://web-gyz-stage.guanplus.com'
-        # self.driver = webdriver.Chrome()
-        self.driver = webdriver.PhantomJS()
+        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
 
     def test_login(self):
@@ -37,24 +37,26 @@ class LoginSpec(unittest.TestCase):
     def test_verify_login(self):
         """登录管有帐"""
         loginpage = LoginPage(CompInfo.BASE_URL, self.driver)
-        readExcel = ReadExcel(self.login_test_data_dir)
+        # loginpage.login(CompInfo.LOGIN_DATA)
         if 'dev' in CompInfo.BASE_URL:
             sheet_index = 0
         elif 'stage' in CompInfo.BASE_URL:
             sheet_index = 1
         elif 'firms' in CompInfo.BASE_URL:
             sheet_index = 2
-        excel_data = readExcel.get_value_by_row(sheet_index, 1)
-        for login_test_data in excel_data:
-            loginpage.login(login_test_data)
+        readExcel = ReadExcel(self.login_test_data_dir)
+        login_test_data = readExcel.get_value_by_row(sheet_index, 1)
+        loginpage.login(login_test_data)
 
         page_url = self.driver.current_url
+        print('page_url=>', page_url)
         self.assertIn('/app/company-list', page_url)
         print('登录成功！')
 
     def test_unexit_username(self):
         """ 登录测试－用户不存在 """
         loginpage = LoginPage(CompInfo.BASE_URL, self.driver)
+        dangerPage = DangerPage(self.driver)
         readExcel = ReadExcel(self.login_test_data_dir)
         if 'dev' in CompInfo.BASE_URL:
             sheet_index = 0
@@ -62,17 +64,16 @@ class LoginSpec(unittest.TestCase):
             sheet_index = 1
         elif 'firms' in CompInfo.BASE_URL:
             sheet_index = 2
-        excel_data = readExcel.get_value_by_row(sheet_index, 2)
-        for login_test_data in excel_data:
-            loginpage.login(login_test_data)
+        login_test_data = readExcel.get_value_by_row(sheet_index, 2)
+        loginpage.login(login_test_data)
 
-        publicPage = publicPage(self.driver)
-        alert_msg = alertpage.get_alert_msg()
-        self.assertEqual(alert_msg, excel_data[3])
+        error_msg = dangerPage.get_error_msg()
+        self.assertEqual(error_msg, login_test_data[3])
 
     def test_wrong_password(self):
         """ 登录测试－密码不正确 """
         loginpage = LoginPage(CompInfo.BASE_URL, self.driver)
+        dangerPage = DangerPage(self.driver)
         readExcel = ReadExcel(self.login_test_data_dir)
         if 'dev' in CompInfo.BASE_URL:
             sheet_index = 0
@@ -80,17 +81,16 @@ class LoginSpec(unittest.TestCase):
             sheet_index = 1
         elif 'firms' in CompInfo.BASE_URL:
             sheet_index = 2
-        excel_data = readExcel.get_value_by_row(sheet_index, 3)
-        for login_test_data in excel_data:
-            loginpage.login(login_test_data)
+        login_test_data = readExcel.get_value_by_row(sheet_index, 3)
+        loginpage.login(login_test_data)
 
-        alertpage = AlertPage(self.driver)
-        alert_msg = alertpage.get_alert_msg()
-        self.assertEqual(alert_msg, excel_data[3])
+        error_msg = dangerPage.get_error_msg()
+        self.assertEqual(error_msg, login_test_data[3])
 
     def test_empty_username(self):
         """ 登录测试－用户名为空 """
         loginpage = LoginPage(CompInfo.BASE_URL, self.driver)
+        dangerpage = DangerPage(self.driver)
         readExcel = ReadExcel(self.login_test_data_dir)
         if 'dev' in CompInfo.BASE_URL:
             sheet_index = 0
@@ -98,13 +98,11 @@ class LoginSpec(unittest.TestCase):
             sheet_index = 1
         elif 'firms' in CompInfo.BASE_URL:
             sheet_index = 2
-        excel_data = readExcel.get_value_by_row(sheet_index, 4)
-        for login_test_data in excel_data:
-            loginpage.login(login_test_data)
+        login_test_data = readExcel.get_value_by_row(sheet_index, 4)
+        loginpage.login(login_test_data)
 
-        dangerpage = DangerPage(self.driver)
-        danger_msg = dangerpage.get_text_danger_msg()
-        self.assertEqual(danger_msg, excel_data[3])
+        input_alert_msg = dangerpage.get_input_alert_msg()
+        self.assertEqual(input_alert_msg, login_test_data[3])
 
     def test_empty_password(self):
         """ 登录测试－密码为空 """
@@ -116,17 +114,16 @@ class LoginSpec(unittest.TestCase):
             sheet_index = 1
         elif 'firms' in CompInfo.BASE_URL:
             sheet_index = 2
-        excel_data = readExcel.get_value_by_row(sheet_index, 5)
-        for login_test_data in excel_data:
-            loginpage.login(login_test_data)
+        login_test_data = readExcel.get_value_by_row(sheet_index, 5)
+        loginpage.login(login_test_data)
 
-        dangerpage = DangerPage(self.driver)
-        danger_msg = dangerpage.get_text_danger_msg()
-        self.assertEqual(danger_msg, excel_data[3])
+        input_alert_msg = loginpage.get_input_error('password')
+        self.assertEqual(input_alert_msg, login_test_data[3])
 
     def test_typeerror_username(self):
-        """ 登录测试－手机格式不正确 """
+        """ 登录测试－手机号码格式错误 """
         loginpage = LoginPage(CompInfo.BASE_URL, self.driver)
+        dangerpage = DangerPage(self.driver)
         readExcel = ReadExcel(self.login_test_data_dir)
         if 'dev' in CompInfo.BASE_URL:
             sheet_index = 0
@@ -134,13 +131,11 @@ class LoginSpec(unittest.TestCase):
             sheet_index = 1
         elif 'firms' in CompInfo.BASE_URL:
             sheet_index = 2
-        excel_data = readExcel.get_value_by_row(sheet_index, 6)
-        for login_test_data in excel_data:
-            loginpage.login(login_test_data)
+        login_test_data = readExcel.get_value_by_row(sheet_index, 6)
+        loginpage.login(login_test_data)
 
-        dangerpage = DangerPage(self.driver)
-        danger_msg = dangerpage.get_text_danger_msg()
-        self.assertEqual(danger_msg, excel_data[3])
+        input_alert_msg = dangerpage.get_input_alert_msg()
+        self.assertEqual(input_alert_msg, login_test_data[3])
 
     def tearDown(self):
         self.driver.quit()

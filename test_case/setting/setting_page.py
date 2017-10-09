@@ -65,4 +65,5 @@ class SettingPage(object):
         except Exception as e:
             print('[SettingPage] There was an exception when go_to_tax_rete_page= %s',str(e))
             
-        
+
+   

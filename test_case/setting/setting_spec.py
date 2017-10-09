@@ -16,11 +16,11 @@ class SettingSpec(unittest.TestCase):
     设置页面测试用例
     '''
     def setUp(self):
-        # self.driver = webdriver.Chrome()
-        self.driver = webdriver.PhantomJS()
+        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
 
-        enterCompPage = EnterCompPage(CompInfo.BASE_URL,self.driver)
+        enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
     # url跳转测试
