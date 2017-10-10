@@ -21,11 +21,19 @@ class AddStuffSpec(unittest.TestCase):
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
-        self.driver.maximize_window()
+        self.driver.set_window_size(1280, 1000)
 
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
+    # def run(self, result_1=None):
+    #     if self.run_count == 0:
+    #         print('run_count=>', self.run_count)
+    #         self.setUp()
+    #     super(AddStuffPage).run(result_1)
+    #     self.run_count += 1
+
+    # 添加雇员 校验
     def test_verify_add_stuff(self):
         """添加员工－添加一位员工－添加成功"""
         page = AddStuffPage(self.driver)
@@ -34,8 +42,10 @@ class AddStuffSpec(unittest.TestCase):
         page.add_stuff_base(excel_data)
         time.sleep(3)
         page_url = self.driver.current_url
+        print('page_url=>', page_url)
         self.assertIn('stuff-list', page_url)
 
+    # 添加非雇员 校验
     def test_verify_add_labour(self):
         """添加员工－添加一位非雇员－添加成功"""
         page = AddStuffPage(self.driver)
@@ -44,17 +54,20 @@ class AddStuffSpec(unittest.TestCase):
         page.add_stuff_base(excel_data)
         time.sleep(3)
         page_url = self.driver.current_url
+        print('page_url=>', page_url)
         self.assertIn('stuff-list', page_url)
 
+    # 必填项为空 校验
     def test_name_empty(self):
         """添加员工－员工名称为空－红框警示，保存失败"""
         page = AddStuffPage(self.driver)
         readExcel = ReadExcel(self.file_dir)
-        excel_data = readExcel.get_value_by_row(0, 2)
+        excel_data = readExcel.get_value_by_row(0, 1)
         page.add_stuff_base(excel_data)
         result = page.has_danger_is_show()
         self.assertEqual(result, 1)
 
+    # 必填项为空 校验
     def test_country_empty(self):
         """添加员工－国籍为空－红框提示，保存失败"""
         page = AddStuffPage(self.driver)
@@ -64,6 +77,7 @@ class AddStuffSpec(unittest.TestCase):
         result = page.has_danger_is_show()
         self.assertEqual(result, 1)
 
+    # 必填项为空 校验
     def test_id_empty(self):
         """添加员工－身份证号为空－红框提示，保存失败"""
         page = AddStuffPage(self.driver)
@@ -73,6 +87,7 @@ class AddStuffSpec(unittest.TestCase):
         result = page.has_danger_is_show()
         self.assertEqual(result, 1)
 
+    # 必填项为空 校验
     def test_employed_empty(self):
         """添加员工－是否雇员为空－红框提示，保存失败"""
         page = AddStuffPage(self.driver)
@@ -81,17 +96,6 @@ class AddStuffSpec(unittest.TestCase):
         page.add_stuff_base(excel_data)
         result = page.has_danger_is_show()
         self.assertEqual(result, 1)
-
-    # def test_id_repeat(self):
-    #     """添加员工－身份证号重复-该身份证号/证件号已存在，请调整后保存，保存失败"""
-    #     page = AddStuffPage(self.driver)
-    #     dangerPage = DangerPage(self.driver)
-    #     readExcel = ReadExcel(self.file_dir)
-    #     excel_data = readExcel.get_value_in_order(1)
-    #     for add_stuff_data in excel_data:
-    #         page.add_stuff_base(add_stuff_data)
-    #     result = dangerPage.get_alert_danger_msg()
-    #     self.assertEqual(result, readExcel.get_value_by_row(2, 34))
 
     def tearDown(self):
         self.driver.quit()

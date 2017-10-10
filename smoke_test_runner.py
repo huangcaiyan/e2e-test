@@ -31,13 +31,13 @@ if __name__ == '__main__':
     # testSuite.addTest(ContactSpec('test_show_add_modal'))
 
     # 工资
-    # testSuite.addTest(AddStuffSpec('test_name_empty'))
-    # testSuite.addTest(AddStuffSpec('test_country_empty'))
-    # testSuite.addTest(AddStuffSpec('test_id_empty'))
-    # testSuite.addTest(AddStuffSpec('test_employed_empty'))
+    testSuite.addTest(AddStuffSpec('test_name_empty'))
+    testSuite.addTest(AddStuffSpec('test_country_empty'))
+    testSuite.addTest(AddStuffSpec('test_id_empty'))
+    testSuite.addTest(AddStuffSpec('test_employed_empty'))
     testSuite.addTest(AddStuffSpec('test_verify_add_stuff'))
-    # testSuite.addTest(AddStuffSpec('test_verify_add_labour'))
-    # testSuite.addTest(AddStuffSpec('test_id_repeat'))
+    testSuite.addTest(AddStuffSpec('test_verify_add_labour'))
+    # testSuite.addTest(AddStuffSpec('test'))
     
 
     # external

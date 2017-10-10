@@ -4,6 +4,7 @@ import time
 import random
 import logging
 from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 class PublicPage:
@@ -97,6 +98,7 @@ class PublicPage:
         return del_loc.click()
 
     # 随机数
+    # num: 范围
     def random_num(self, num):
         return random.randrange(0, num)
 
@@ -109,14 +111,26 @@ class PublicPage:
             logging.error('There was an exception when click_elem %s', str(e))
 
     # input 框
+    #
     def set_value(self, elem_loc, input_value):
+        try:
+            self.is_element_present(elem_loc)
+            elem_loc.clear()
+            elem_loc.send_keys(input_value)
+        except Exception as e:
+            logging.error('There was an exception when set_value s%', str(e))
+
+    # input 框
+    # 滚动屏幕至元素位置设值
+    def scroll_to_set_value(self, elem_loc, input_value):
         try:
             self.is_element_present(elem_loc)
             self.scroll_to_elem(elem_loc)
             elem_loc.clear()
             elem_loc.send_keys(input_value)
         except Exception as e:
-            logging.error('There was an exception when set_value s%', str(e))
+            logging.error(
+                'There was an exception when scroll_to_set_value s%', str(e))
 
     # 获取文本值
     def get_value(self, elem_loc):
@@ -125,13 +139,12 @@ class PublicPage:
             return elem_loc.text
         except Exception as e:
             logging.error('There was an exception when get_value s%', str(e))
-
-    def move_to_element_with_offset(self, elem_loc):
-        action = webdriver.common.action_chains.ActionChains(self.driver)
-        action.move_to_element(elem_loc)
-        # action.move_to_element_with_offset(elem_loc[0], 5, 5)
-        action.click()
-        action.perform()
+            
+    # 光标移动到元素为止并做点击操作 
+    def move_to_element_to_click(self, elem_loc):
+        # action = webdriver.common.action_chains.ActionChains(self.driver)
+        action = ActionChains(self.driver)
+        action.move_to_element(elem_loc).click().perform()
 
     # 将光标定位到元素处
     def scroll_to_elem(self, elem_loc):
@@ -162,10 +175,18 @@ class PublicPage:
 
     # 选择下拉项
     def select_dropdown_item(self, drop_loc, item_name):
-        self.click_elem(drop_loc)
-        time.sleep(1)
-        item_loc = self.driver.find_element_by_link_text(item_name)
-        self.click_elem(item_loc)
+        # self.click_elem(drop_loc)
+        # time.sleep(1)
+        # item_loc = self.driver.find_element_by_link_text(item_name)
+        # self.click_elem(item_loc)
+        try:
+            self.move_to_element_to_click(drop_loc)
+            time.sleep(1)
+            item_loc = self.driver.find_element_by_link_text(item_name)
+            self.move_to_element_to_click(item_loc)
+        except Exception as e:
+            print(
+                '[PublicPage]There was an exception when select_dropdown_item=>', str(e))
 
     # alet
     def get_alert_msg(self):

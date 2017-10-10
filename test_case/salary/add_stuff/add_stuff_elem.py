@@ -4,7 +4,7 @@ num_elem = '//*[@id="body"]/stuff/div[3]/form/div[1]/div[1]/div/label/input'
 # 姓名 input xpath
 name_elem = '//*[@id="body"]/stuff/div[3]/form/div[1]/div[2]/div/label/input'
 # 国籍下拉 xpath
-country_drop_elem = '//*[@id="body"]/stuff/div[3]/form/div[1]/div[3]/div/label/ng-select/div'
+country_drop_elem = '//*[@id="body"]/stuff/div[3]/form/div[1]/div[3]/div/label/ng-select'
 # 身份证号
 id_elem = '//*[@id="body"]/stuff/div[3]/form/div[2]/div[1]/div/label/input'
 # 性别 下拉 xpath
