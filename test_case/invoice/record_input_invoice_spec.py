@@ -12,19 +12,40 @@ from test_data.record_input_invoice_data import *
 from util.enter_company_util import EnterCompany
 from config import *
 from util.category_map_util import CategoryMap
+from util.driver_util import Driver
 import xlrd
 
 class RecordInputInvoiceSpec(unittest.TestCase):
     ''' 记收票测试 '''
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
-        # self.driver = Driver
-        EnterCompany(self.driver,Environment)
+        self.driver = Driver().get_driver()
+        enterCompany = EnterCompany(self.driver)
+        enterCompany.goToCompany()
         invoice_page = InvoicePage(self.driver,'input')
         invoice_page.goToInvoice(BaseUrl)
 
     def test1(self):
+        '''记一笔收票-普票记录'''
+
+        invoice_page = InvoicePage(self.driver,'input')
+        commonPublicData = ['1','普票','(个)内部代表']
+        itemsData = [['1','1'],'管理部门','1.5%','123','普票-内部代表-薪资福利-福利费-管理部门-1.5']
+        invoice_page.recordCommonIncomeInvoice(commonPublicData,itemsData)
+        invoice_page.goToInvoiceList(BaseUrl)
+        self.assertEqual(BaseUrl + '/app/invoice/input-invoice',self.driver.current_url)
+
+    def test2(self):
+        '''记一笔收票-专票记录'''
+
+        invoice_page = InvoicePage(self.driver,'input')
+        commonPublicData = ['1','专票','(个)内部代表']
+        itemsData = [['1','1'],'管理部门','3%','有形动产租赁','123','专票-内部代表-薪资福利-福利费-管理部门']
+        invoice_page.recordSpecialIncomeInvoice(commonPublicData,self.invoiceNum(),itemsData)
+        invoice_page.goToInvoiceList(BaseUrl)
+        self.assertEqual(BaseUrl + '/app/invoice/input-invoice',self.driver.current_url)
+
+    def test3(self):
         '''记录所有类别的收票-普票'''
 
         invoice_page = InvoicePage(self.driver,'input')
@@ -38,7 +59,7 @@ class RecordInputInvoiceSpec(unittest.TestCase):
         invoice_page.goToInvoiceList(BaseUrl)
         self.assertEqual(BaseUrl + '/app/invoice/input-invoice',self.driver.current_url)
 
-    def test2(self):
+    def test4(self):
         '''记所有类别的收票-专票'''
 
         invoice_page = InvoicePage(self.driver,'input')

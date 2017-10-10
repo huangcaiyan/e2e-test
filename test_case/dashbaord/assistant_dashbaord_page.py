@@ -27,10 +27,16 @@ class AssistantDashbaordPage(object):
     def clickChooseAccountImport(self):
         chooseAccountImportButtonLocator = '//*[@id="body"]/app-assist-home-page/div/div/div[3]/div[3]/div[3]/div/div/button[1]'
         self.driver.find_element_by_xpath(chooseAccountImportButtonLocator).click()
-        sleep(2)
+        sleep(5)
 
     #点击导入员工按钮
     def clickImportStaffButton(self):
         importStaffButtonLocator = '//*[@id="body"]/app-assist-home-page/div/div/div[3]/div[5]/div[3]/button'
         self.driver.find_element_by_xpath(importStaffButtonLocator).click()
         sleep(1)
+
+    #点击提交审核按钮
+    def clickSubmit(self):
+        submitButtouLocator = '//*[@id="body"]/app-assist-home-page/div/div/div[2]/div[3]/button'
+        self.driver.find_element_by_xpath(submitButtouLocator).click()
+        sleep(6)
