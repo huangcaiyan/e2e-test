@@ -28,3 +28,18 @@ class ReadExcel(object):
                 values.append(col_value)
         print('values=>', values)
         return values
+
+    # 读取某一sheet中的某一行的值
+    def get_value_by_row(self, sheet_index, row_index):
+        sheets = self.get_sheets()
+        values = []
+        s = sheets[sheet_index]
+        print('sheet_index=>', sheet_index)
+        print('row_index=>', row_index)
+        col_value = []
+        for col in range(s.ncols):
+            value = (str(s.cell(row_index, col).value))
+            col_value.append(value)
+        values.extend(col_value)
+        print('values=>', values)
+        return values

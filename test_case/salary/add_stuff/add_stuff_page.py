@@ -1,10 +1,11 @@
-from selenium import webdriver
+# from selenium import webdriver
 import sys
 import os
 import time
+sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../'))
 from util.public_page import PublicPage
 from .add_stuff_elem import *
-from test_case.salary.salary_page import SalaryPage 
+from test_case.salary.salary_page import SalaryPage
 
 # 添加员工
 # 创建于2017-09-21-四
@@ -13,7 +14,7 @@ from test_case.salary.salary_page import SalaryPage
 
 class AddStuffPage(object):
 
-    def __init__(self, driver):
+    def __init__(self,driver):
         # self.driver = webdriver.Chrome()
         self.driver = driver
 
@@ -21,13 +22,13 @@ class AddStuffPage(object):
     def has_danger_is_show(self):
         publicPage = PublicPage(self.driver)
         ui_loc = self.driver.find_element_by_css_selector(has_danger_elem)
-        print('publicPage.is_element_present(ui_loc)=>',publicPage.is_element_present(ui_loc))
+        print('publicPage.is_element_present(ui_loc)=>',
+              publicPage.is_element_present(ui_loc))
         return publicPage.is_element_present(ui_loc)
-       
 
     # 设置编号(0)
     # num：编号
-    def set_nun(self, num):
+    def set_num(self, num):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(nun_elem)
@@ -109,7 +110,7 @@ class AddStuffPage(object):
 
     # 个人股本投资额(10)
     # capital:股本金额（number）
-    def set_capital(self,capital):
+    def set_capital(self, capital):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(capital_elem)
@@ -120,7 +121,7 @@ class AddStuffPage(object):
 
     # 是否残疾烈属孤老(11)
     # health:健康状况：是、否
-    def select_health(self,health):
+    def select_health(self, health):
         try:
             publicPage = PublicPage(self.driver)
             drop_loc = self.driver.find_element_by_xpath(health_drop_elem)
@@ -163,7 +164,7 @@ class AddStuffPage(object):
 
     # 联系地址(15)
     # address:地址
-    def set_address(self,address):
+    def set_address(self, address):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(address_elem)
@@ -173,34 +174,36 @@ class AddStuffPage(object):
 
     # 选择户口类型(16)
     # registered_type:农业、非农业
-    def select_registered_type(self,registered_type):
+    def select_registered_type(self, registered_type):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(registered_drop_elem)
-            publicPage.set_value(input_loc,registered_type)
+            publicPage.set_value(input_loc, registered_type)
         except Exception as e:
-            print('[AddStuffPage] There was an exception when select_registered_type=>', str(e))
-            
+            print(
+                '[AddStuffPage] There was an exception when select_registered_type=>', str(e))
+
     # 开户银行(17)
     # bank_name:开户银行名
-    def set_openning_bank(self,bank_name):
+    def set_openning_bank(self, bank_name):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(opening_bank_elem)
-            publicPage.set_value(input_loc,bank_name)
+            publicPage.set_value(input_loc, bank_name)
         except Exception as e:
-            print('[AddStuffPage] There was an exception when set_openning_bank=>', str(e))
-            
+            print(
+                '[AddStuffPage] There was an exception when set_openning_bank=>', str(e))
+
     # 银行账号(18)
     # bank_num：帐号
-    def set_bank_num(self,bank_num):
+    def set_bank_num(self, bank_num):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(bank_num_elem)
-            publicPage.set_value(input_loc,bank_num)
+            publicPage.set_value(input_loc, bank_num)
         except Exception as e:
             print('[AddStuffPage] There was an exception when set_bank_num=>', str(e))
-            
+
     # 基本工资(19)
     # base_salary:基本工资（number）
     def set_basic_salary(self, basic_salary):
@@ -235,22 +238,22 @@ class AddStuffPage(object):
 
     # 医疗保险缴纳基数(21)
     # medicare_care:医疗保险基数（number）
-    def set_medicare_base(self,medicare_base):
+    def set_medicare_base(self, medicare_base):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(medicare_base_elem)
-            publicPage.set_value(input_loc,medicare_base)
+            publicPage.set_value(input_loc, medicare_base)
         except Exception as e:
             print(
                 '[AddStuffPage] There was an exception when set_medicare_base=>', str(e))
 
     # 养老保险缴纳基数(22)
     # pension_base:养老保险缴纳基数
-    def set_pension_base(self,pension_base):
+    def set_pension_base(self, pension_base):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(pension_base_elem)
-            publicPage.set_value(input_loc,pension_base)
+            publicPage.set_value(input_loc, pension_base)
         except Exception as e:
             print(
                 '[AddStuffPage] There was an exception when set_pension_base=>', str(e))
@@ -406,11 +409,69 @@ class AddStuffPage(object):
             print('[AddStuffPage] There was an exception when cancel=>', str(e))
 
     # 添加员工base
-    def add_stuff_base(self,stuff_info):
+    # stuff_info[1]:姓名
+    # stuff_info[2]:国籍
+    # stuff_info[3]:身份证号
+    # stuff_info[9]:是否雇员
+    def add_stuff_base(self, stuff_info):
+        publicPage = PublicPage(self.driver)
+        random_num = str(publicPage.random_num(10000000000))
         salaryPage = SalaryPage(self.driver)
         salaryPage.go_to_add_stuff_page()
-        self.set_name(stuff_info[0])
-        self.select_country(stuff_info[1])
-        self.set_id(stuff_info[2])
-        self.select_employed(stuff_info[3])
+        self.set_name(stuff_info[1])
+        self.select_country(stuff_info[2])
+        self.set_id(stuff_info[3]+random_num)
+        self.select_employed(stuff_info[9])
         self.save()
+
+    # 员工基本信息
+    #
+    def set_stuff_base_info(self, stuff_info):
+        random_num = str(publicPage.random_num(10000000000))        
+        self.set_num(stuff_info[0])
+        self.set_name(stuff_info[1])
+        self.select_country(stuff_info[2])
+        self.set_id(stuff_info[3]+random_num)
+        self.select_sex(stuff_info[5])
+        self.select_partment(stuff_info[7])
+        self.set_position(stuff_info[8])
+        self.select_employed(stuff_info[9])
+        self.set_capital(stuff_info[10])
+        self.select_health(stuff_info[11])
+        self.select_office_status(stuff_info[12])
+        self.set_phone(stuff_info[13])
+        self.set_email(stuff_info[14])
+        self.set_address(stuff_info[15])
+        self.select_registered_type(stuff_info[16])
+        self.set_openning_bank(stuff_info[17])
+        self.set_bank_num(stuff_info[18])
+
+    # 基本工资
+    def set_salary_base_info(self, stuff_info):
+        self.set_basic_salary(stuff_info[19])
+        self.set_actual_salary(stuff_info[20])
+
+    # 医疗／养老保险缴纳基数
+    def set_basic_insurance_payment(self, stuff_info):
+        self.set_medicare_base(stuff_info[21])
+        self.set_pension_base(stuff_info[22])
+
+    # 个人社保缴纳
+    def set_pers_social_security(self, stuff_info):
+        self.set_pers_medicare(stuff_info[23])
+        self.set_pers_pension_insurance(stuff_info[24])
+        self.set_pers_unemploy_insurance(stuff_info[25])
+
+    # 公司社保缴纳
+    def set_comp_social_security(self, stuff_info):
+        self.set_comp_medicare(stuff_info[26])
+        self.set_comp_pension_insurance(stuff_info[27])
+        self.set_comp_unemploy_insurance(stuff_info[28])
+        self.set_comp_birth_insurance(stuff_info[29])
+        self.set_comp_injury_insurance(stuff_info[30])
+
+    # 公积金
+    def set_fund(self, stuff_info):
+        self.set_public_reserve_fund(stuff_info[31])
+        self.set_comp_public_reserve_fund(stuff_info[32])
+        self.set_pers_public_reserve_fund(stuff_info[33])

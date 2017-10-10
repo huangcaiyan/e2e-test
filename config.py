@@ -7,7 +7,7 @@ IdentityApiBaseUrl = 'https://api-identity.guanplus.com'
 
 #PhantomJS webdriver
 # Driver = webdriver.PhantomJS()
-Driver = webdriver.Chrome()
+# Driver = webdriver.Chrome()
 
 #dev环境地址
 # BaseUrl = 'http://guanplus-app-accountingfirm-web-dev-1.cn-north-1.eb.amazonaws.com.cn'

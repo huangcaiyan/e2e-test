@@ -7,7 +7,10 @@ class DangerPage:
     text_danger_msg_elem = '.text-danger'
     # class 为 alert_danger
     alert_danger_msg_elem = '.alert_danger'
-
+    # 错误提示信息 id
+    error_msg_elem = 'errMsg'
+    # 输入框警示文字class
+    input_alert_msg_elem = '.error'
     alert_msgs = []
 
     def __init__(self, driver):
@@ -33,9 +36,21 @@ class DangerPage:
         print('The text danger message is ', text_danger_msg)
         return text_danger_msg
 
+    # 获取错误提示信息
+    def get_error_msg(self):
+        publicPage = PublicPage(self.driver)
+        error_msg_loc = self.driver.find_element_by_id(self.error_msg_elem)
+        publicPage.is_element_present(error_msg_loc)
+        error_msg = error_msg_loc.text
+        print('The error message is ', error_msg)
+        return error_msg
 
-
-
-        
-        
-
+    #  输入框警示文字
+    def get_input_alert_msg(self):
+        publicPage = PublicPage(self.driver)
+        input_alert_msg_loc = self.driver.find_element_by_css_selector(
+            self.input_alert_msg_elem)
+        publicPage.is_element_present(input_alert_msg_loc)
+        input_alert_msg = input_alert_msg_loc.text
+        print('The text danger message is ', input_alert_msg)
+        return input_alert_msg

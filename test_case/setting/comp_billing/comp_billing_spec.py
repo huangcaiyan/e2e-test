@@ -22,7 +22,7 @@ class CompBillingSpec(unittest.TestCase):
         self.driver.maximize_window()
 
         enterCompany = EnterCompany(CompInfo.BASE_URL,self.driver)
-        enterCompany.enter_comp(CompInfo.ENTER_COMP_INFO_YB)
+        enterCompany.enter_comp(CompInfo.ENTER_COMP_INFO)
 
     def test_edit_comp_info(self):
         """ 编辑帐套信息测试"""
