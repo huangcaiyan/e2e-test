@@ -10,6 +10,7 @@ class AlertPage:
     def get_alert_msg(self):
         alert_msg_elem = self.driver.find_element_by_tag_name(self.alert_msg_tagname)
         alert_msg = alert_msg_elem.text
+        print (alert_msg)
         alert_info_array = alert_msg.split('\n')
         print('The alert message is ',alert_info_array[2])
         return alert_info_array[2]

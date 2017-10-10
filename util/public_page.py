@@ -11,6 +11,10 @@ class PublicPage:
     # location
     pre_button_xpath = '//*[@id="ui-datepicker-div"]/div/a[1]'
     next_button_xpath = '//*[@id="ui-datepicker-div"]/div/a[2]'
+    # 日期年下拉 class
+    datepicker_year_drop_elem = '.ui-datepicker-year'
+    # 日期 月下拉 class
+    datepicker_month_drop_elem = 'ui-datepicker-month'
 
     def __init__(self, driver):
         self.driver = driver
@@ -58,10 +62,27 @@ class PublicPage:
         else:
             return False
 
+    # 选择日期
+    # year:2017
+    # month:一月
+    # day：1
+    def select_date_by_ymd(self, calen_drop_loc, year, month, day):
+        try:
+            self.click_elem(calen_drop_loc)
+            year_drop_loc = self.driver.find_element_by_css_selector(
+                self.datepicker_year_drop_elem)
+            self.select_dropdown_item(year_drop_loc, year)
+            month_drop_loc = self.driver.find_element_by_css_selector(
+                self.datepicker_month_drop_elem)
+            self.select_dropdown_item(month_drop_loc, month)
+            day_loc = self.driver.find_element_by_link_text(day)
+        except Exception as e:
+            print(
+                '[PublicPage] There was an exception when select_date_by_ymd=>', str(e))
+
     # 月份选择插件
-    def select_month(self, calen_xpath, month):
-        calen_loc = self.driver.find_element_by_xpath(calen_xpath)
-        self.click_elem(calen_loc)
+    def select_month(self, calen_drop_loc, month):
+        self.click_elem(calen_drop_loc)
         pre_btn = self.driver.find_element_by_css_selector('.pull-left')
         time.sleep(2)
         if pre_btn:
@@ -105,23 +126,39 @@ class PublicPage:
         except Exception as e:
             logging.error('There was an exception when get_value s%', str(e))
 
+    def move_to_element_with_offset(self, elem_loc):
+        action = webdriver.common.action_chains.ActionChains(self.driver)
+        action.move_to_element(elem_loc)
+        # action.move_to_element_with_offset(elem_loc[0], 5, 5)
+        action.click()
+        action.perform()
+
     # 将光标定位到元素处
     def scroll_to_elem(self, elem_loc):
         try:
-            return self.driver.execute_script('arguments[0].scrollIntoView();',
+            return self.driver.execute_script('return arguments[0].scrollIntoView();',
                                               elem_loc)
         except Exception as e:
             print('Error scrolling down  web elem ', str(e))
 
     # 将光标定位到页面顶部
     def scroll_to_top(self):
-        return self.driver.execute_script('scroll(0,-250)')
+        return self.driver.execute_script('scroll(250,0)')
 
-# 将光标定位到页面底部
-# def scroll_to_bottom(self):
-#     return self.driver.execute_script(
-#         'scroll(0,document.body.scrollHeight)')
-#     # return self.driver.execute_script('scroll(0,-250)')
+    # 将光标定位到页面底部
+    def scroll_to_bottom(self):
+        return self.driver.execute_script(
+            'scroll(0,document.body.scrollHeight)')
+
+    # 获取元素位置坐标
+    def get_elem_location(self, elem_loc):
+        try:
+            location = elem_loc.location
+            size = elem_loc.size
+            print('location=>', location, '\nsize=>', size)
+            return location
+        except Exception as e:
+            print('[PublicPage]There was an exception when get_elem_location=>', str(e))
 
     # 选择下拉项
     def select_dropdown_item(self, drop_loc, item_name):
@@ -153,3 +190,11 @@ class PublicPage:
             return danger_msg
         except Exception as e:
             logging.error('There are an exception %s', str(e))
+
+    # 必填项红框警示
+    def has_danger_is_show(self):
+        publicPage = PublicPage(self.driver)
+        ui_loc = self.driver.find_element_by_css_selector('.has-danger')
+        print('publicPage.is_element_present(ui_loc)=>',
+              publicPage.is_element_present(ui_loc))
+        return publicPage.is_element_present(ui_loc)
