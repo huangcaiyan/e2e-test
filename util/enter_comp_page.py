@@ -30,14 +30,15 @@ class EnterCompPage:
         loginPage.login(enter_comp_info[1])
         time.sleep(3)
         try:
-            comp_name_loc = self.driver.find_element_by_link_text(
-                enter_comp_info[2])
-            comp_name_loc.click()
+            comp_name_loc = self.driver.find_element_by_link_text(enter_comp_info[2])
+            publicPage.click_elem(comp_name_loc)
+            # comp_name_loc.click()
             time.sleep(5)
             if publicPage.is_element_present(self.driver.find_element_by_xpath(self.comp_name_elem)):
                 print('[EnterCompPage]－－－－－－进入帐套成功！－－－－－－')
         except Exception as e:
             print('[EnterCompPage]＝＝＝＝＝＝进入帐套失败！＝＝＝＝＝＝')
+            exit()
 
     # 创建帐套
     def create_comp(self, create_comp_info):

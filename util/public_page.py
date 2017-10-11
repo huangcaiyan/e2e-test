@@ -5,6 +5,7 @@ import random
 import logging
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 
 
 class PublicPage:
@@ -105,16 +106,35 @@ class PublicPage:
     # 点击事件
     def click_elem(self, elem_loc):
         try:
-            self.scroll_to_elem(elem_loc)
-            return elem_loc.click()
+            if self.is_element_present(elem_loc):
+                self.move_to_element_to_click(elem_loc)
+                # elem_loc.click()
+            else:
+                self.scroll_to_elem(elem_loc)
+                elem_loc.click()
         except Exception as e:
             logging.error('There was an exception when click_elem %s', str(e))
 
+    def double_click_elem(self, elem_loc):
+        try:
+            if self.is_element_present(elem_loc):
+                action = ActionChains(self.driver)
+                action.move_to_element(elem_loc).double_click()
+            else:
+                action = ActionChains(self.driver)
+                self.scroll_to_elem(elem_loc)
+                action.move_to_element(elem_loc).double_click()
+        except Exception as e:
+            logging.error(
+                'There was an exception when double_click_elem %s', str(e))
+
     # input 框
-    #
     def set_value(self, elem_loc, input_value):
         try:
-            self.is_element_present(elem_loc)
+            if self.is_element_present(elem_loc):
+                self.move_to_element_to_click(elem_loc)
+            else:
+                self.scroll_to_elem(elem_loc)
             elem_loc.clear()
             elem_loc.send_keys(input_value)
         except Exception as e:
@@ -139,8 +159,8 @@ class PublicPage:
             return elem_loc.text
         except Exception as e:
             logging.error('There was an exception when get_value s%', str(e))
-            
-    # 光标移动到元素为止并做点击操作 
+
+    # 光标移动到元素为止并做点击操作
     def move_to_element_to_click(self, elem_loc):
         # action = webdriver.common.action_chains.ActionChains(self.driver)
         action = ActionChains(self.driver)
@@ -183,7 +203,8 @@ class PublicPage:
             self.move_to_element_to_click(drop_loc)
             time.sleep(1)
             item_loc = self.driver.find_element_by_link_text(item_name)
-            self.move_to_element_to_click(item_loc)
+            self.scroll_to_elem(item_loc)
+            self.click_elem(item_loc)
         except Exception as e:
             print(
                 '[PublicPage]There was an exception when select_dropdown_item=>', str(e))
