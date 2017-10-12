@@ -11,27 +11,29 @@ from test_case.salary.salary_page import SalaryPage
 from test_data.cai.add_stuff_data import *
 from util.read_excel import ReadExcel
 from util.danger_page import DangerPage
-
+# 添加员工
+# 创建于2017-10-11-三
+# caicai
 
 class AddStuffSpec(unittest.TestCase):
+    '''添加员工测试'''
 
     file_dir = './test_data/cai/add_stuff_data.xlsx'
 
-    def setUp(self):
+    @classmethod
+    def setUpClass(self):
+        # 登录->进入账套
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
-        self.driver.set_window_size(1280, 1000)
+        self.driver.set_window_size(1280, 800)
 
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
-    # def run(self, result_1=None):
-    #     if self.run_count == 0:
-    #         print('run_count=>', self.run_count)
-    #         self.setUp()
-    #     super(AddStuffPage).run(result_1)
-    #     self.run_count += 1
+    @classmethod
+    def tearDownClass(self):
+        self.driver.quit()
 
     # 添加雇员 校验
     def test_verify_add_stuff(self):
@@ -40,7 +42,7 @@ class AddStuffSpec(unittest.TestCase):
         readExcel = ReadExcel(self.file_dir)
         excel_data = readExcel.get_value_by_row(0, 5)
         page.add_stuff_base(excel_data)
-        time.sleep(3)
+        time.sleep(5)
         page_url = self.driver.current_url
         print('page_url=>', page_url)
         self.assertIn('stuff-list', page_url)
@@ -52,7 +54,7 @@ class AddStuffSpec(unittest.TestCase):
         readExcel = ReadExcel(self.file_dir)
         excel_data = readExcel.get_value_by_row(0, 6)
         page.add_stuff_base(excel_data)
-        time.sleep(3)
+        time.sleep(5)
         page_url = self.driver.current_url
         print('page_url=>', page_url)
         self.assertIn('stuff-list', page_url)
@@ -96,9 +98,6 @@ class AddStuffSpec(unittest.TestCase):
         page.add_stuff_base(excel_data)
         result = page.has_danger_is_show()
         self.assertEqual(result, 1)
-
-    def tearDown(self):
-        self.driver.quit()
 
 
 if __name__ == '_main_':

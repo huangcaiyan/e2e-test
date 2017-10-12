@@ -2,7 +2,7 @@ from selenium import webdriver
 import time
 from util.public_page import PublicPage
 from .comp_billing_elem import *
-
+from selenium.webdriver.common.keys import Keys
 # 帐套信息
 # 创建于20170801
 # caicai
@@ -19,7 +19,7 @@ class CompBillingPage:
             publicPage = PublicPage(self.driver)
             edit_loc = self.driver.find_element_by_xpath(edit_xpath)
             publicPage.click_elem(edit_loc)
-        except expression as e:
+        except Exception as e:
             print(
                 '[CompBillingPage] There was an exception when click_edit= %s', str(e))
 
@@ -30,8 +30,8 @@ class CompBillingPage:
             publicPage = PublicPage(self.driver)
             comp_name_loc = self.driver.find_element_by_name(comp_name_elem)
             publicPage.set_value(comp_name_loc, comp_name)
-            publicPage.double_click_elem(comp_name_loc)
-        except expression as e:
+
+        except Exception as e:
             print(
                 '[CompBillingPage] There was an exception when set_comp_name- %s', str(e))
 
@@ -40,7 +40,8 @@ class CompBillingPage:
         try:
             publicPage = PublicPage(self.driver)
             comp_name_loc = self.driver.find_element_by_id(comp_name_text_id)
-            publicPage.get_value(comp_name_loc)
+            print('comp_name')            
+            return publicPage.get_value(comp_name_loc)
         except expression as e:
             print(
                 '[CompBillingPage] There was an exception when get_comp_name= %s', str(e))

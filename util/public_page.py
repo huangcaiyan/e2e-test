@@ -25,7 +25,6 @@ class PublicPage:
     # 判断元素是否显示
     def is_element_present(self, elem_loc):
         try:
-            # self.driver.find_element_by_xpath(elem_loc)
             elem_loc
         except NoSuchElementException as e:
             return False
@@ -111,7 +110,8 @@ class PublicPage:
                 # elem_loc.click()
             else:
                 self.scroll_to_elem(elem_loc)
-                elem_loc.click()
+                self.move_to_element_to_click(elem_loc)
+                # elem_loc.click()
         except Exception as e:
             logging.error('There was an exception when click_elem %s', str(e))
 
@@ -140,6 +140,18 @@ class PublicPage:
         except Exception as e:
             logging.error('There was an exception when set_value s%', str(e))
 
+    # 点击键盘的delete键
+    def click_backspace_btn(self, elem_loc):
+        try:
+            if self.is_element_present(elem_loc):
+                elem_loc.send_keys(Keys.BACKSPACE)
+            else:
+                self.scroll_to_elem(elem_loc)
+                elem_loc.send_keys(Keys.BACKSPACE)
+        except Exception as e:
+            logging.error(
+                'There was an exception when click_backspace_btn s%', str(e))
+
     # input 框
     # 滚动屏幕至元素位置设值
     def scroll_to_set_value(self, elem_loc, input_value):
@@ -162,15 +174,16 @@ class PublicPage:
 
     # 光标移动到元素为止并做点击操作
     def move_to_element_to_click(self, elem_loc):
-        # action = webdriver.common.action_chains.ActionChains(self.driver)
         action = ActionChains(self.driver)
         action.move_to_element(elem_loc).click().perform()
 
     # 将光标定位到元素处
     def scroll_to_elem(self, elem_loc):
         try:
-            return self.driver.execute_script('return arguments[0].scrollIntoView();',
-                                              elem_loc)
+            self.driver.execute_script(
+                'return arguments[0].scrollIntoView();', elem_loc)
+            self.driver.execute_script('window.scrollBy(0,-150);')
+
         except Exception as e:
             print('Error scrolling down  web elem ', str(e))
 
@@ -195,15 +208,11 @@ class PublicPage:
 
     # 选择下拉项
     def select_dropdown_item(self, drop_loc, item_name):
-        # self.click_elem(drop_loc)
-        # time.sleep(1)
-        # item_loc = self.driver.find_element_by_link_text(item_name)
-        # self.click_elem(item_loc)
         try:
-            self.move_to_element_to_click(drop_loc)
+            publicPage = PublicPage(self.driver)
+            self.click_elem(drop_loc)
             time.sleep(1)
             item_loc = self.driver.find_element_by_link_text(item_name)
-            self.scroll_to_elem(item_loc)
             self.click_elem(item_loc)
         except Exception as e:
             print(

@@ -394,6 +394,7 @@ class AddStuffPage(object):
     def save(self):
         try:
             publicPage = PublicPage(self.driver)
+            publicPage.scroll_to_bottom()
             btn_loc = self.driver.find_element_by_xpath(save_btn_elem)
             publicPage.click_elem(btn_loc)
         except Exception as e:
