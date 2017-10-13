@@ -8,57 +8,145 @@ from .contact_page import ContactPage
 from .contact_elem import *
 from util.read_excel import ReadExcel
 from util.danger_page import DangerPage
+from util.alert_page import AlertPage
 from util.enter_comp_page import EnterCompPage
 from comp_info import CompInfo
+from ..setting_page import SettingPage
 # 往来信息
 # 创建于 2017-09-28-四
 # caicai
 
 
 class ContactSpec(unittest.TestCase):
+    ''' 添加往来测试'''
 
     # 添加往来测试数据
-    add_contact_data_dir = './test_data/cai/add_contact_data.xlsx'
+    add_contact_data_dir = './test_data/cai/contact_test_data.xlsx'
 
-
-    def setUp(self):
+    @classmethod
+    def setUpClass(self):
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
-        self.driver.set_window_size(1280,800)
+        self.driver.set_window_size(1280, 800)
 
-        enterCompPage = EnterCompPage(CompInfo.BASE_URL,self.driver)
+        enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
+
+    @classmethod
+    def tearDownClass(self):
+        self.driver.quit()
 
     def test_show_add_modal(self):
         """往来信息－测试点击添加按钮显示添加modal框"""
+        settingPage = SettingPage(self.driver)
         page = ContactPage(self.driver)
         publicPage = PublicPage(self.driver)
+        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+
         page.click_add_btn()
         time.sleep(2)
         elem_loc = self.driver.find_element_by_xpath(contact_property_elem)
         result = publicPage.is_element_present(elem_loc)
-        self.assertEqual(result,1)
+        self.assertEqual(result, 1)
+        print('result=>', result)
 
-    def test_name_empty(self,contact_info):
+    def test_name_empty(self):
         """往来信息－测试往来名称为空，保存失败"""
+        settingPage = SettingPage(self.driver)
+        page = ContactPage(self.driver)
+        publicPage = PublicPage(self.driver)
+        readExcel = ReadExcel(self.add_contact_data_dir)
+        dangerPage = DangerPage(self.driver)
+
+        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        add_contact_data = readExcel.get_value_by_row(0, 1)
+        page.add_contact(add_contact_data)
+
+        result = dangerPage.get_text_danger_msg()
+        self.assertEqual(result, add_contact_data[7])
+        print('result=>', result)
+
+    def test_phone_num_typeError(self):
+        """往来信息－手机号格式不正确，提示‘手机格式不正确’，保存失败"""
+        settingPage = SettingPage(self.driver)
         page = ContactPage(self.driver)
         publicPage = PublicPage(self.driver)
         dangerPage = DangerPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
-        excel_data = readExcel.get_value_by_row(0,1)
-        for add_contact_data in excel_data:
-            page.add_contact(add_contact_data)
+
+        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        add_contact_data = readExcel.get_value_by_row(0, 2)
+        page.add_contact(add_contact_data)
+
         result = dangerPage.get_text_danger_msg()
-        self.assertEqual(result,excel_data[7])
-        
+        self.assertEqual(result, add_contact_data[7])
+        print('result=>', result)
 
+    def test_contact_input_show(self):
+        """往来信息－测试性质为单位时－联系人输入框 显示"""
+        settingPage = SettingPage(self.driver)
+        page = ContactPage(self.driver)
+        publicPage = PublicPage(self.driver)
+        readExcel = ReadExcel(self.add_contact_data_dir)
 
+        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        add_contact_data = readExcel.get_value_by_row(0, 3)
+        page.add_contact(add_contact_data)
 
+        contact_loc = self.driver.find_element_by_id(contact_elem)
+        result = publicPage.is_element_present(contact_loc)
+        self.assertEqual(result, 1)
+        print('result=>', result)
 
+    def test_contact_property_is_unit(self):
+        """往来信息－测试 添加一个性质为单位的往来，添加成功"""
+        settingPage = SettingPage(self.driver)
+        page = ContactPage(self.driver)
+        alertPage = AlertPage(self.driver)
+        publicPage = PublicPage(self.driver)
+        readExcel = ReadExcel(self.add_contact_data_dir)
 
-    def tearDown(self):
-        self.driver.quit()
+        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        add_contact_data = readExcel.get_value_by_row(0, 4)
+        page.add_contact(add_contact_data)
+
+        result = alertPage.get_alert_msg()
+        self.assertEqual(result, add_contact_data[7])
+        print('result=>', result)
+
+    def test_contact_property_is_personal(self):
+        """往来信息－测试 添加一个性质为个人的往来，添加成功"""
+        settingPage = SettingPage(self.driver)
+        page = ContactPage(self.driver)
+        alertPage = AlertPage(self.driver)
+        publicPage = PublicPage(self.driver)
+        readExcel = ReadExcel(self.add_contact_data_dir)
+
+        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        add_contact_data = readExcel.get_value_by_row(0, 5)
+        page.add_contact(add_contact_data)
+        page.click_edit_btn()
+
+        result = alertPage.get_alert_msg()
+        self.assertEqual(result, add_contact_data[7])
+        print('result=>', result)
+
+    def test_adit_contact(self):
+        """往来信息－测试 编辑往来，编辑成功"""
+        settingPage = SettingPage(self.driver)
+        page = ContactPage(self.driver)
+        alertPage = AlertPage(self.driver)
+        publicPage = PublicPage(self.driver)
+        readExcel = ReadExcel(self.add_contact_data_dir)
+
+        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        add_contact_data = readExcel.get_value_by_row(0, 5)
+        page.add_contact(add_contact_data)
+
+        result = alertPage.get_alert_msg()
+        self.assertEqual(result, add_contact_data[7])
+        print('result=>', result)
 
 
 if __name__ == '_main_':

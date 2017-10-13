@@ -18,7 +18,7 @@ class CompInfo(object):
     BASE_URL = 'https://firms.guanplus.com'
     LOGIN_DATA = ['13683139989', 'qq123456']
     # COMP_NAME = 'autotest'  # 小规模
-    COMP_NAME = '张宇迪'  # 一般纳税人
+    COMP_NAME = '固定yk'  # 一般纳税人
 
     ENTER_COMP_INFO = [BASE_URL, LOGIN_DATA, COMP_NAME]
     # ENTER_COMP_INFO = [BASE_URL, LOGIN_DATA, COMP_NAME_YB]

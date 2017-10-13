@@ -58,7 +58,6 @@ class AddStuffSpec(unittest.TestCase):
         page_url = self.driver.current_url
         print('page_url=>', page_url)
         self.assertIn('stuff-list', page_url)
-
     # 必填项为空 校验
     def test_name_empty(self):
         """添加员工－员工名称为空－红框警示，保存失败"""

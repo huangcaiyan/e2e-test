@@ -29,15 +29,25 @@ if __name__ == '__main__':
     # testSuite.addTest(SettingSpec('test_go_to_mutil_user_page'))
     # testSuite.addTest(SettingSpec('test_go_to_partner_set_page'))
     # testSuite.addTest(SettingSpec('test_go_to_tax_rate_page'))
-    # testSuite.addTest(ContactSpec('test_show_add_modal'))
+    
+    # 设置－帐套信息页面
     # testSuite.addTest(CompBillingSpec('test_comp_name_empty'))
     # testSuite.addTest(CompBillingSpec('test_legal_person_name_empty'))
     # testSuite.addTest(CompBillingSpec('test_tax_num_empty'))
     # testSuite.addTest(CompBillingSpec('test_verify_edit_comp_info'))
 
-    # 工资
-    testSuite.addTest(AddStuffSpec('test_name_empty'))
-    testSuite.addTest(AddStuffSpec('test_country_empty'))
+    # 设置－往来性质
+    # testSuite.addTest(ContactSpec('test_show_add_modal'))
+    # testSuite.addTest(ContactSpec('test_name_empty'))
+    # testSuite.addTest(ContactSpec('test_phone_num_typeError'))
+    # testSuite.addTest(ContactSpec('test_contact_input_show'))
+    # testSuite.addTest(ContactSpec('test_contact_property_is_unit'))
+    testSuite.addTest(ContactSpec('test_contact_property_is_personal'))
+    
+    # 
+    # 工资－添加员工
+    # testSuite.addTest(AddStuffSpec('test_name_empty'))
+    # testSuite.addTest(AddStuffSpec('test_country_empty'))
     # testSuite.addTest(AddStuffSpec('test_id_empty'))
     # testSuite.addTest(AddStuffSpec('test_employed_empty'))
     # testSuite.addTest(AddStuffSpec('test_verify_add_stuff'))

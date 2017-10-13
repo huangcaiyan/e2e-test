@@ -18,3 +18,4 @@ pip命令使用配置:   将python安装文件目录下Scripts配置到系统环
 # pip3 install xlrd
 # pip3 install openpyxl
 # pip3 install requests
+# pip3 install html-testRunner

@@ -1,5 +1,6 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
+from selenium.common.exceptions import WebDriverException
 import time
 import random
 import logging
@@ -115,6 +116,13 @@ class PublicPage:
         except Exception as e:
             logging.error('There was an exception when click_elem %s', str(e))
 
+    # def click_elem(self, elem_loc):
+    #     try:
+    #         self.scroll_to_elem(elem_loc)
+    #         self.move_to_element_to_click(elem_loc)
+    #     except Exception as e:
+    #         logging.error('There was an exception when click_elem %s', str(e))
+
     def double_click_elem(self, elem_loc):
         try:
             if self.is_element_present(elem_loc):
@@ -182,10 +190,9 @@ class PublicPage:
         try:
             self.driver.execute_script(
                 'return arguments[0].scrollIntoView();', elem_loc)
-            self.driver.execute_script('window.scrollBy(0,-150);')
-
-        except Exception as e:
-            print('Error scrolling down  web elem ', str(e))
+        except WebDriverException:
+            self.driver.execute_script('window.scrollBy(0,-100);')
+            time.sleep(2)
 
     # 将光标定位到页面顶部
     def scroll_to_top(self):
@@ -195,6 +202,11 @@ class PublicPage:
     def scroll_to_bottom(self):
         return self.driver.execute_script(
             'scroll(0,document.body.scrollHeight)')
+
+    # 跳转至莫大了框
+    def switch_to_add_contact_modal_dialog(self):
+        self.driver.switch_to_active_element()
+
 
     # 获取元素位置坐标
     def get_elem_location(self, elem_loc):
