@@ -11,6 +11,7 @@ from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec
 from test_case.external.enter_comp_spec import EnterCompSpec
 from test_case.external.create_comp.create_comp_spec import CreateCompSpec
 from test_case.external.user_setting.user_setting_spec import UserSettingSpec
+from test_case.transaction.revenue_and_expenditure.record_revenue_and_expenditure_spec import RecordRevenueAndExpenditureSpec
 
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
@@ -29,7 +30,7 @@ if __name__ == '__main__':
     # testSuite.addTest(SettingSpec('test_go_to_mutil_user_page'))
     # testSuite.addTest(SettingSpec('test_go_to_partner_set_page'))
     # testSuite.addTest(SettingSpec('test_go_to_tax_rate_page'))
-    
+
     # 设置－帐套信息页面
     # testSuite.addTest(CompBillingSpec('test_comp_name_empty'))
     # testSuite.addTest(CompBillingSpec('test_legal_person_name_empty'))
@@ -42,9 +43,9 @@ if __name__ == '__main__':
     # testSuite.addTest(ContactSpec('test_phone_num_typeError'))
     # testSuite.addTest(ContactSpec('test_contact_input_show'))
     # testSuite.addTest(ContactSpec('test_contact_property_is_unit'))
-    testSuite.addTest(ContactSpec('test_contact_property_is_personal'))
-    
-    # 
+    # testSuite.addTest(ContactSpec('test_contact_property_is_personal'))
+
+    #
     # 工资－添加员工
     # testSuite.addTest(AddStuffSpec('test_name_empty'))
     # testSuite.addTest(AddStuffSpec('test_country_empty'))
@@ -53,6 +54,11 @@ if __name__ == '__main__':
     # testSuite.addTest(AddStuffSpec('test_verify_add_stuff'))
     # testSuite.addTest(AddStuffSpec('test_verify_add_labour'))
     # testSuite.addTest(AddStuffSpec('test'))
+
+    # 记收支
+    testSuite.addTest(RecordRevenueAndExpenditureSpec('test_record_revenue'))
+    # testSuite.addTest(RecordRevenueAndExpenditureSpec('test_record_expenditure'))
+    # testSuite.addTest(RecordRevenueAndExpenditureSpec('test_record_transfer'))
 
     # external
     # testSuite.addTest(EnterCompSpec('test_enter_comp'))
