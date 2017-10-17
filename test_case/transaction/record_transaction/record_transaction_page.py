@@ -1,10 +1,17 @@
 from selenium import webdriver
 import time
+import sys 
+import os
+# sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../'))
 from util.public_page import PublicPage
-from .revenue_and_expenditure_elem import *
+from .income_outcome_elem import *
+
+# 记收入、支出、互转测试
+# 创建于2017-10-16-周二
+# caicai
 
 
-class RevenueAndExpenditurePage():
+class RecordTransactionPage():
     """记收入支出互转测试"""
 
     # base_url:主页地址
@@ -23,7 +30,7 @@ class RevenueAndExpenditurePage():
             self.record_name = 'accounttransfers'
 
     # 去记收入、支出、互转页面
-    def go_to_record_page(self):
+    def go_to_record_transaction_page(self):
         try:
             self.driver.get(
                 self.base_url + '/app/transaction/detail/' + self.record_type)
@@ -271,13 +278,13 @@ class RevenueAndExpenditurePage():
                 '[RevenueAndExpenditurePage] There was an exception when select_transfer_account=>', str(e))
 
     # 记收入／支出
-    def recort_revenue_and_expenditure(self, revenue_and_expenditure_data):
+    def record_income_and_outcome(self, revenue_and_expenditure_data):
         self.select_account(revenue_and_expenditure_data[2])
         self.select_contact(revenue_and_expenditure_data[3])
         self.select_category(revenue_and_expenditure_data[4])
         self.set_total(revenue_and_expenditure_data[5])
         self.set_attachment(revenue_and_expenditure_data[6])
-        self.click_save_btn()
+        self.click_save_and_new_btn()
         time.sleep(2)
 
     # 记互转

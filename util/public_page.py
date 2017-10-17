@@ -103,6 +103,10 @@ class PublicPage:
     def random_num(self, num):
         return random.randrange(0, num)
 
+    # 八位数随机数
+    def eight_random_nums(self):
+        return random.randint(10000000, 100000000)
+
     # 点击事件
     def click_elem(self, elem_loc):
         try:
@@ -206,7 +210,6 @@ class PublicPage:
     # 跳转至莫大了框
     def switch_to_add_contact_modal_dialog(self):
         self.driver.switch_to_active_element()
-
 
     # 获取元素位置坐标
     def get_elem_location(self, elem_loc):

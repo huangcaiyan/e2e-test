@@ -1,4 +1,4 @@
-# 记收支页面
+# ---记收支页面
 # base xpath
 page_base_xpath_elem = '//*[@id="body"]/detail/'
 # 账户下拉结尾xpath
@@ -24,7 +24,7 @@ cancel_btn_elem = '/div/div[5]/div/span/button[3]'
 add_lable_btn_elem = '/div/tag/div/div[1]/div/div/button'
 # 上传票据结尾xpath
 upload_bill_btn_elem = '/div/upload-attachments/div/div[1]/span/label'
-# 记互转页面
+# ---记互转页面
 # 转出账户下拉 结尾xpath
 output_account_drop_elem = '/div/div[2]/div/form/div[2]/ng-select[1]'
 # 转入账户下拉 结尾xpath
@@ -39,3 +39,8 @@ transfer_save_and_new_btn_elem = '/div/div[3]/div/span/button[1]'
 transfer_save_btn_elem = '/div/div[3]/div/span/button[2]'
 # 互转取消按钮 结尾xpath
 transfer_cancel_btn_elem = '/div/div[3]/div/span/button[3]'
+# ---收支列表页面
+# 收入合计xpath
+
+revenue_sum_elem = '//*[@id="body"]/list/div[3]/table/thead[2]/tr/th[3]'
+expenditure_sum_elem = ''
