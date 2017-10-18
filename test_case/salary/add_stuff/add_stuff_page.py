@@ -14,7 +14,7 @@ from test_case.salary.salary_page import SalaryPage
 
 class AddStuffPage(object):
 
-    def __init__(self,driver):
+    def __init__(self, driver):
         # self.driver = webdriver.Chrome()
         self.driver = driver
 
@@ -394,6 +394,7 @@ class AddStuffPage(object):
     def save(self):
         try:
             publicPage = PublicPage(self.driver)
+            publicPage.scroll_to_bottom()
             btn_loc = self.driver.find_element_by_xpath(save_btn_elem)
             publicPage.click_elem(btn_loc)
         except Exception as e:
@@ -418,20 +419,28 @@ class AddStuffPage(object):
         random_num = str(publicPage.random_num(10000000000))
         salaryPage = SalaryPage(self.driver)
         salaryPage.go_to_add_stuff_page()
+        if stuff_info[3] == '':
+            random_num = ''
+        else:
+            random_num = random_num
         self.set_name(stuff_info[1])
         self.select_country(stuff_info[2])
-        self.set_id(stuff_info[3]+random_num)
+        self.set_id(stuff_info[3] + random_num)
         self.select_employed(stuff_info[9])
         self.save()
 
     # 员工基本信息
     #
     def set_stuff_base_info(self, stuff_info):
-        random_num = str(publicPage.random_num(10000000000))        
+        random_num = str(publicPage.random_num(10000000000))
+        if stuff_info[3] == '':
+            random_num = ''
+        else:
+            random_num = random_num
         self.set_num(stuff_info[0])
         self.set_name(stuff_info[1])
         self.select_country(stuff_info[2])
-        self.set_id(stuff_info[3]+random_num)
+        self.set_id(stuff_info[3] + random_num)
         self.select_sex(stuff_info[5])
         self.select_partment(stuff_info[7])
         self.set_position(stuff_info[8])

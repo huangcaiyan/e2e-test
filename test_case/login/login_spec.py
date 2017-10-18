@@ -44,6 +44,7 @@ class LoginSpec(unittest.TestCase):
             sheet_index = 1
         elif 'firms' in CompInfo.BASE_URL:
             sheet_index = 2
+
         readExcel = ReadExcel(self.login_test_data_dir)
         login_test_data = readExcel.get_value_by_row(sheet_index, 1)
         loginpage.login(login_test_data)

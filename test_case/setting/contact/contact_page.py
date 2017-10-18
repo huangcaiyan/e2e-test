@@ -16,13 +16,17 @@ class ContactPage(object):
         self.driver = driver
 
     def click_add_btn(self):
-        publicPage = PublicPage(self.driver)
-        click_loc = self.driver.find_element_by_id(add_btn_elem)
-        publicPage.click_elem(click_loc)
+        try:
+            publicPage = PublicPage(self.driver)
+            click_loc = self.driver.find_element_by_id(add_btn_elem)
+            publicPage.click_elem(click_loc)
+        except Exception as e:
+            print(
+                '[ContactPage] There was an exception when click_add_btn=>', str(e))
 
     # 设置往来名称
     # contact_name: 往来名称
-    def set_contact_name(self, contact_name):
+    def set_name(self, contact_name):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_id(name_elem)
@@ -44,11 +48,11 @@ class ContactPage(object):
 
     # 联系人
     # contact_name：联系人名称
-    def set_contact_name(self, contact_name):
+    def set_contact(self, contact):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_id(contact_elem)
-            publicPage.set_value(input_loc, contact_name)
+            publicPage.set_value(input_loc, contact)
         except Exception as e:
             print(
                 '[ContactPage] There was an exception when set_contact_name=>', str(e))
@@ -111,6 +115,12 @@ class ContactPage(object):
         except Exception as e:
             print('[ContactPage] There was an exception when close_modal=>', str(e))
 
+    # 
+    def click_edit_btn(self):
+        elem = self.driver.find_elements_by_xpath('//tr[contrains(td,1)]')
+        print('elem=>',elem.location)
+
+
     # 添加往来
     # contact_info[0]:名称
     # contact_info[1]:性质
@@ -120,11 +130,18 @@ class ContactPage(object):
     # contact_info[5]:手机号
     def add_contact(self, contact_info):
         publicPage = PublicPage(self.driver)
-        num = publicPage.random_num(10000)
-        self.set_account_name(contact_info[0] + num)
+        num = str(publicPage.random_num(1000000))
+        self.click_add_btn()
+        time.sleep(2)
+        publicPage.switch_to_add_contact_modal_dialog()
+        if contact_info[0] == '':
+            self.set_contact(contact_info[0])
+        else:
+            self.set_name(contact_info[0] + num)
         self.select_contact_property(contact_info[1])
         if contact_info[1] == '单位':
-            self.set_contact_name(contact_info[2])
+            self.set_contact(contact_info[2])
         self.set_account_name(contact_info[3])
         self.set_account_num(contact_info[4])
         self.set_phone_num(contact_info[5])
+        self.save()
