@@ -92,9 +92,21 @@ class RecordInvoicePage():
     def select_category(self, category):
         try:
             publicPage = PublicPage(self.driver)
+            print(self.category_index(category))
+            p_index = self.category_index(category)[0]
+            c_index = self.category_index(category)[1]
+
             drop_loc = self.driver.find_element_by_xpath(
                 record_invoice_base_xpath + self.invoice_io + category_drop_elem)
-            publicPage.select_dropdown_item(drop_loc, category)
+            publicPage.click_elem(drop_loc)
+
+            parent_loc = self.driver.find_elements_by_css_selector(parent_elem)[
+                p_index]
+            publicPage.click_elem(parent_loc)
+
+            child_loc = self.driver.find_elements_by_css_selector(child_elem)[
+                c_index]
+            return publicPage.click_elem(child_loc)
         except Exception as e:
             print('[RecordInvoicePage]－－选择类别失败－－失败原因是->', str(e))
 
@@ -149,6 +161,7 @@ class RecordInvoicePage():
             print('[RecordInvoicePage]－－设置备注失败－－失败原因是->', str(e))
 
     # 点击保存并新增
+    # btn_name（save_and_new，save，cancel）
     def submit(self, btn_name):
         try:
             if btn_name == 'save_and_new':
@@ -194,93 +207,133 @@ class RecordInvoicePage():
     # 类别转义
     def category_index(self, category):
         try:
-            p_c_index = []
-            if sel == 'input':
+            p_c_arr = []
+            if self == 'input':
                 if category == '福利费':
-                    p_c_index = [0, 0]
+                    p_c_arr = [0, 0]
+                    return p_c_arr
                 elif category == '劳务费':
-                    p_c_index = [0, 1]
+                    p_c_arr = [0, 1]
+                    return p_c_arr
                 elif category == '招待费':
-                    p_c_index = [1, 0]
+                    p_c_arr = [1, 0]
+                    return p_c_arr
                 elif category == '办公费':
-                    p_c_index = [1, 1]
+                    p_c_arr = [1, 1]
+                    return p_c_arr
                 elif category == '快递费':
-                    p_c_index = [1, 2]
+                    p_c_arr = [1, 2]
+                    return p_c_arr
                 elif category == '通讯费':
-                    p_c_index = [1, 3]
+                    p_c_arr = [1, 3]
+                    return p_c_arr
                 elif category == '维修费':
-                    p_c_index = [1, 4]
+                    p_c_arr = [1, 4]
+                    return p_c_arr
                 elif category == '财产保险费':
-                    p_c_index = [1, 5]
+                    p_c_arr = [1, 5]
+                    return p_c_arr
                 elif category == '设备租赁费':
-                    p_c_index = [1, 6]
+                    p_c_arr = [1, 6]
+                    return p_c_arr
                 elif category == '银行费用':
-                    p_c_index = [1, 7]
+                    p_c_arr = [1, 7]
+                    return p_c_arr
                 elif category == '差旅费':
-                    p_c_index = [2, 0]
+                    p_c_arr = [2, 0]
+                    return p_c_arr
                 elif category == '交通费':
-                    p_c_index = [2, 1]
+                    p_c_arr = [2, 1]
+                    return p_c_arr
                 elif category == '汽油费':
-                    p_c_index = [2, 2]
+                    p_c_arr = [2, 2]
                 elif category == '路桥费':
-                    p_c_index = [2, 3]
+                    p_c_arr = [2, 3]
+                    return p_c_arr
                 elif category == '汽车维修费':
-                    p_c_index = [2, 4]
+                    p_c_arr = [2, 4]
+                    return p_c_arr
                 elif category == '汽车保险费':
-                    p_c_index = [2, 5]
+                    p_c_arr = [2, 5]
+                    return p_c_arr
                 elif category == '物流费':
-                    p_c_index = [2, 6]
+                    p_c_arr = [2, 6]
+                    return p_c_arr
                 elif category == '房租费':
-                    p_c_index = [3, 0]
+                    p_c_arr = [3, 0]
+                    return p_c_arr
                 elif category == '物业费':
-                    p_c_index = [3, 1]
+                    p_c_arr = [3, 1]
+                    return p_c_arr
                 elif category == '水费':
-                    p_c_index = [3, 2]
+                    p_c_arr = [3, 2]
+                    return p_c_arr
                 elif category == '电费':
-                    p_c_index = [3, 3]
+                    p_c_arr = [3, 3]
                 elif category == '仓储费':
-                    p_c_index = [3, 4]
+                    p_c_arr = [3, 4]
+                    return p_c_arr
                 elif category == '装修费':
-                    p_c_index = [3, 5]
+                    p_c_arr = [3, 5]
+                    return p_c_arr
                 elif category == '广告费':
-                    p_c_index = [4, 0]
+                    p_c_arr = [4, 0]
+                    return p_c_arr
                 elif category == '宣传费':
-                    p_c_index = [4, 1]
+                    p_c_arr = [4, 1]
+                    return p_c_arr
                 elif category == '研发费':
-                    p_c_index = [4, 2]
+                    p_c_arr = [4, 2]
+                    return p_c_arr
                 elif category == '会议费':
-                    p_c_index = [4, 3]
+                    p_c_arr = [4, 3]
+                    return p_c_arr
                 elif category == '服务费':
-                    p_c_index = [4, 4]
+                    p_c_arr = [4, 4]
+                    return p_c_arr
                 elif category == '咨询费':
-                    p_c_index = [4, 5]
+                    p_c_arr = [4, 5]
+                    return p_c_arr
                 elif category == '认证费':
-                    p_c_index = [4, 6]
+                    p_c_arr = [4, 6]
+                    return p_c_arr
                 elif category == '专利费':
-                    p_c_index = [4, 7]
+                    p_c_arr = [4, 7]
+                    return p_c_arr
                 elif category == '工会经费':
-                    p_c_index = [4, 8]
+                    p_c_arr = [4, 8]
+                    return p_c_arr
                 elif category == '其他':
-                    p_c_index = [4, 9]
+                    p_c_arr = [4, 9]
+                    return p_c_arr
                 elif category == '行政罚款':
-                    p_c_index = [5, 0]
+                    p_c_arr = [5, 0]
+                    return p_c_arr
                 elif category == '税务滞纳金':
-                    p_c_index = [5, 1]
+                    p_c_arr = [5, 1]
+                    return p_c_arr
                 elif category == '印花税':
-                    p_c_index = [6, 0]
+                    p_c_arr = [6, 0]
+                    return p_c_arr
                 elif category == '残保金':
-                    p_c_index = [6, 1]
+                    p_c_arr = [6, 1]
+                    return p_c_arr
                 elif category == '减免税款':
-                    p_c_index = [6, 2]
+                    p_c_arr = [6, 2]
+                    return p_c_arr
                 elif category == '原材料':
-                    p_c_index = [7, 0]
+                    p_c_arr = [7, 0]
+                    return p_c_arr
                 elif category == '商品产品':
-                    p_c_index = [7, 1]
+                    p_c_arr = [7, 1]
+                    return p_c_arr
             elif self.invoice_io == 'output':
                 if category == '商品销售':
-                    p_c_index = [0, 0]
+                    p_c_arr = [0, 0]
+                    return p_c_arr
                 elif category == '服务收入':
-                    p_c_index = [1, 0]
+                    p_c_arr = [1, 0]
+                    return p_c_arr
             else:
                 return 'error'
         except Exception as e:
