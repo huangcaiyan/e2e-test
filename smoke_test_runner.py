@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # 登录测试
     # testSuite.addTest(LoginSpec('test_verify_login'))
     # testSuite.addTest(LoginSpec('test_unexit_username'))
-    # testSuite.addTest(LoginSpec('test_wrong_password'))
+    testSuite.addTest(LoginSpec('test_wrong_password'))
     # testSuite.addTest(LoginSpec('test_empty_username'))
     # testSuite.addTest(LoginSpec('test_empty_password'))
     # testSuite.addTest(LoginSpec('test_typeerror_username'))

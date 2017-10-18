@@ -23,7 +23,7 @@ class LoginSpec(unittest.TestCase):
     login_test_data_dir = './test_data/cai/login_test_data.xlsx'
 
     def setUp(self):
-        # self.url = 'https://web-gyz-stage.guanplus.com'
+        self.url = 'https://web-gyz-stage.guanplus.com'
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)

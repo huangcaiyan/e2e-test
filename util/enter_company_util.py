@@ -36,7 +36,7 @@ class EnterCompany(object):
         if isElementExit.is_element_exit_by_xpath('//*[@id="content"]/div[2]/div[1]/alert/div'):
             print('=========================登陆失败===================================')
             exit()
-        time.sleep(12)
+        time.sleep(5)
             
         try:
             self.driver.find_element_by_link_text(accountCom[2]).click()
