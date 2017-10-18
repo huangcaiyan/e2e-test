@@ -132,7 +132,7 @@ class ContactSpec(unittest.TestCase):
         self.assertEqual(result, add_contact_data[7])
         print('result=>', result)
 
-    def test_edit_contact(self):
+    def test_adit_contact(self):
         """往来信息－测试 编辑往来，编辑成功"""
         settingPage = SettingPage(self.driver)
         page = ContactPage(self.driver)
@@ -141,31 +141,12 @@ class ContactSpec(unittest.TestCase):
         readExcel = ReadExcel(self.add_contact_data_dir)
 
         settingPage.go_to_contact_page(CompInfo.BASE_URL)
-        add_contact_data = readExcel.get_value_by_row(0, 6)
+        add_contact_data = readExcel.get_value_by_row(0, 5)
         page.add_contact(add_contact_data)
 
         result = alertPage.get_alert_msg()
         self.assertEqual(result, add_contact_data[7])
         print('result=>', result)
-
-    def test_name_repeat(self):
-        """往来信息－测试往来名称重复，保存失败"""
-        settingPage = SettingPage(self.driver)
-        page = ContactPage(self.driver)
-        publicPage = PublicPage(self.driver)
-        readExcel = ReadExcel(self.add_contact_data_dir)
-        alertPage = AlertPage(self.driver)
-
-        settingPage.go_to_contact_page(CompInfo.BASE_URL)
-        add_contact_data = readExcel.get_value_by_row(0, 7)
-        page.add_contact(add_contact_data)
-
-        result = alertPage.get_alert_msg()
-        self.assertEqual(result, add_contact_data[7])
-        print('result=>', result)
-
-
-
 
 
 if __name__ == '_main_':

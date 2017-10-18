@@ -44,7 +44,6 @@ if __name__ == '__main__':
     # testSuite.addTest(ContactSpec('test_contact_input_show'))
     # testSuite.addTest(ContactSpec('test_contact_property_is_unit'))
     # testSuite.addTest(ContactSpec('test_contact_property_is_personal'))
-    # testSuite.addTest(ContactSpec('test_name_repeat'))
 
     #
     # 工资－添加员工
@@ -64,9 +63,7 @@ if __name__ == '__main__':
 
     # 记发票
     # 记所有类别发票
-    # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
-    # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
-    
+    testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
 
     # external
     # testSuite.addTest(EnterCompSpec('test_enter_comp'))

@@ -19,9 +19,6 @@ input_invoice_num_elem = '-invoice/div/div[2]/ul/div[1]/div/label[4]/div/input'
 output_invoice_num_elem = '-invoice/div/div[2]/ul/div[1]/div/label[5]/div/input'
 # 类别下拉 结尾xpath
 category_drop_elem = '-invoice/div/div[2]/ul/table/tbody/tr[1]/td[1]/ng-select'
-# 类别下拉选择class
-parent_elem = '.parent-options'
-child_elem = '.children-options'
 # 部门性质下拉 结尾xpath
 department_drop_elem = '-invoice/div/div[2]/ul/table/tbody/tr[1]/td[2]/ng-select'
 # 税率下拉 结尾xpath

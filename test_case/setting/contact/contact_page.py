@@ -134,8 +134,8 @@ class ContactPage(object):
         self.click_add_btn()
         time.sleep(2)
         publicPage.switch_to_add_contact_modal_dialog()
-        if contact_info[0] == '' or contact_info[0]=='其他' or contact_info[0]=='内部代表':
-            self.set_name(contact_info[0])
+        if contact_info[0] == '':
+            self.set_contact(contact_info[0])
         else:
             self.set_name(contact_info[0] + num)
         self.select_contact_property(contact_info[1])
