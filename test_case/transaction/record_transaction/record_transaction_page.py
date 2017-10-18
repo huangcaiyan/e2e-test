@@ -35,6 +35,9 @@ class RecordTransactionPage():
             self.driver.get(
                 self.base_url + '/app/transaction/detail/' + self.record_type)
             time.sleep(3)
+            page_url =self.driver.current_url
+            if self.record_type in page_url:
+                print('[RecordTransactionPage]－－－') 
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when go_to_record_page=>', str(e))
@@ -66,97 +69,7 @@ class RecordTransactionPage():
             print(
                 '[RevenueAndExpenditurePage] There was an exception when select_contact=>', str(e))
 
-    # 类别index
-    # category：类别名称
-    # p_c_arr = [parent_index,child_index]
-    def category_index(self, category):
-        try:
-            p_c_arr = []
-            if self.record_name == 'income':
-                if category == '利息收入':
-                    p_c_arr = [0, 0]
-                    return p_c_arr
-                elif category == '回收借出资金(收入)':
-                    p_c_arr = [1, 0]
-                    return p_c_arr
-                elif category == '收到临时借入款(收入)':
-                    p_c_arr = [1, 1]
-                    return p_c_arr
-                elif category == '收回投资利息(收入)':
-                    p_c_arr = [2, 0]
-                    return p_c_arr
-                elif category == '收回投资本金(收入)':
-                    p_c_arr = [2, 1]
-                    return p_c_arr
-                elif category == '收到投资款':
-                    p_c_arr = [2, 2]
-                    return p_c_arr
-                elif category == '银行贷款(收入)':
-                    p_c_arr = [2, 3]
-                    return p_c_arr
-                elif category == '应收账款':
-                    p_c_arr = [3, 0]
-                    return p_c_arr
-            elif self.record_name == 'outcome':
-                if category == '银行费用':
-                    p_c_arr = [0, 0]
-                    return p_c_arr
-                elif category == '归还临时资金':
-                    p_c_arr = [1, 0]
-                    return p_c_arr
-                elif category == '归还临时借入':
-                    p_c_arr = [1, 1]
-                    return p_c_arr
-                elif category == '对外投资款':
-                    p_c_arr = [2, 0]
-                    return p_c_arr
-                elif category == '归还银行贷款':
-                    p_c_arr = [2, 1]
-                    return p_c_arr
-                elif category == '贷款利息':
-                    p_c_arr = [2, 2]
-                    return p_c_arr
-                elif category == '应付工资奖金':
-                    p_c_arr = [3, 0]
-                    return p_c_arr
-                elif category == '应付社保费':
-                    p_c_arr = [3, 1]
-                    return p_c_arr
-                elif category == '应付公积金':
-                    p_c_arr = [3, 2]
-                    return p_c_arr
-                elif category == '应付劳务费':
-                    p_c_arr = [3, 3]
-                    return p_c_arr
-                elif category == '应交增值税':
-                    p_c_arr = [4, 0]
-                    return p_c_arr
-                elif category == '应交城建税':
-                    p_c_arr = [4, 1]
-                    return p_c_arr
-                elif category == '应交教育附加':
-                    p_c_arr = [4, 2]
-                    return p_c_arr
-                elif category == '应交地方教育附加':
-                    p_c_arr = [4, 3]
-                    return p_c_arr
-                elif category == '应交个税':
-                    p_c_arr = [4, 4]
-                    return p_c_arr
-                elif category == '应交印花税':
-                    p_c_arr = [4, 5]
-                    return p_c_arr
-                elif category == '应交所得税':
-                    p_c_arr = [4, 6]
-                    return p_c_arr
-                elif category == '应付账款':
-                    p_c_arr = [4, 7]
-                    return p_c_arr
-            else:
-                print(record_name + '－－－－－－选择类别失败－－－－－－')
-        except Exception as e:
-            print(
-                '[RevenueAndExpenditurePage] There was an exception when category_index=>', str(e))
+    
 
     # 选择类别
     # category：类别名称(收入／支出)
@@ -213,6 +126,7 @@ class RecordTransactionPage():
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when set_attachment=>', str(e))
+                
 
     # 点击保存并新增按钮(收入／支出)
     def click_save_and_new_btn(self):
@@ -289,8 +203,100 @@ class RecordTransactionPage():
 
     # 记互转
     def record_transfer(self, transfer_data):
-        self.go_to_record_page()
+        self.go_to_record_transaction_page()
         self.select_transfer_account(transfer_data[2], transfer_data[3])
         self.set_total(transfer_data[4])
         self.set_attachment(transfer_data[5])
         self.click_save_and_new_btn()
+
+    # 类别index
+    # category：类别名称
+    # p_c_arr = [parent_index,child_index]
+    def category_index(self, category):
+        try:
+            p_c_arr = []
+            if self.record_name == 'income':
+                if category == '利息收入':
+                    p_c_arr = [0, 0]
+                    return p_c_arr
+                elif category == '回收借出资金(收入)':
+                    p_c_arr = [1, 0]
+                    return p_c_arr
+                elif category == '收到临时借入款(收入)':
+                    p_c_arr = [1, 1]
+                    return p_c_arr
+                elif category == '收回投资利息(收入)':
+                    p_c_arr = [2, 0]
+                    return p_c_arr
+                elif category == '收回投资本金(收入)':
+                    p_c_arr = [2, 1]
+                    return p_c_arr
+                elif category == '收到投资款':
+                    p_c_arr = [2, 2]
+                    return p_c_arr
+                elif category == '银行贷款(收入)':
+                    p_c_arr = [2, 3]
+                    return p_c_arr
+                elif category == '应收账款':
+                    p_c_arr = [3, 0]
+                    return p_c_arr
+            elif self.record_name == 'outcome':
+                if category == '银行费用':
+                    p_c_arr = [0, 0]
+                    return p_c_arr
+                elif category == '临时借出资金':
+                    p_c_arr = [1, 0]
+                    return p_c_arr
+                elif category == '归还临时借入':
+                    p_c_arr = [1, 1]
+                    return p_c_arr
+                elif category == '对外投资款':
+                    p_c_arr = [2, 0]
+                    return p_c_arr
+                elif category == '归还银行贷款':
+                    p_c_arr = [2, 1]
+                    return p_c_arr
+                elif category == '贷款利息':
+                    p_c_arr = [2, 2]
+                    return p_c_arr
+                elif category == '应付工资奖金':
+                    p_c_arr = [3, 0]
+                    return p_c_arr
+                elif category == '应付社保费':
+                    p_c_arr = [3, 1]
+                    return p_c_arr
+                elif category == '应付公积金':
+                    p_c_arr = [3, 2]
+                    return p_c_arr
+                elif category == '应付劳务费':
+                    p_c_arr = [3, 3]
+                    return p_c_arr
+                elif category == '应交增值税':
+                    p_c_arr = [4, 0]
+                    return p_c_arr
+                elif category == '应交城建税':
+                    p_c_arr = [4, 1]
+                    return p_c_arr
+                elif category == '应交教育附加':
+                    p_c_arr = [4, 2]
+                    return p_c_arr
+                elif category == '应交地方教育附加':
+                    p_c_arr = [4, 3]
+                    return p_c_arr
+                elif category == '应交个税':
+                    p_c_arr = [4, 4]
+                    return p_c_arr
+                elif category == '应交印花税':
+                    p_c_arr = [4, 5]
+                    return p_c_arr
+                elif category == '应交所得税':
+                    p_c_arr = [4, 6]
+                    return p_c_arr
+                elif category == '应付账款':
+                    p_c_arr = [5, 0]
+                    return p_c_arr
+            else:
+                print(record_name + '－－－－－－选择类别失败－－－－－－')
+        except Exception as e:
+            print(
+                '[RevenueAndExpenditurePage] There was an exception when category_index=>', str(e))
