@@ -42,7 +42,7 @@ class RecordTransactionSpec(unittest.TestCase):
         page = RecordTransactionPage(
             self.driver, CompInfo.BASE_URL, 'Income')
         page.go_to_record_transaction_page()
-        excel_data = readExcel.get_value_in_order(0)        
+        excel_data = readExcel.get_value_in_order(0)
         try:
             for income_test_data in excel_data:
                 page.record_income_and_outcome(income_test_data)
@@ -55,7 +55,6 @@ class RecordTransactionSpec(unittest.TestCase):
             else:
                 print('[RecordTransactionSpec]－－记收入失败－－错误原因', str(e))
             self.driver.quit()
-
 
     def test_record_outcome(self):
         """测试记多条支出"""
@@ -78,7 +77,6 @@ class RecordTransactionSpec(unittest.TestCase):
             else:
                 print('[RecordTransactionSpec]－－记支出失败－－错误原因', str(e))
             self.driver.quit()
-
 
     def test_record_transfer(self):
         """测试记多条互转"""
@@ -103,3 +101,6 @@ class RecordTransactionSpec(unittest.TestCase):
                 print('[RecordTransactionSpec]－－记互转失败－－错误原因', str(e))
             self.driver.quit()
 
+
+if __name__ == '_main_':
+    unittest.main()

@@ -73,4 +73,7 @@ class RecordInvoiceSpec(unittest.TestCase):
             else:
                 print('[RecordInvoiceSpec]－－记开票失败－－错误原因', str(e))
             self.driver.quit()
+
+if __name__ == '_main_':
+    unittest.main()
             

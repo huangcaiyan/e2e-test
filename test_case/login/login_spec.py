@@ -22,11 +22,16 @@ class LoginSpec(unittest.TestCase):
 
     login_test_data_dir = './test_data/cai/login_test_data.xlsx'
 
-    def setUp(self):
+    @classmethod
+    def setUpClass(self):
         self.url = 'https://web-gyz-stage.guanplus.com'
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
+
+    @classmethod
+    def tearDownClass(self):
+        self.driver.quit()
 
     def test_login(self):
         loginPage = LoginPage(self.url, self.driver)
@@ -138,8 +143,7 @@ class LoginSpec(unittest.TestCase):
         input_alert_msg = dangerpage.get_input_alert_msg()
         self.assertEqual(input_alert_msg, login_test_data[3])
 
-    def tearDown(self):
-        self.driver.quit()
+
 
 
 if __name__ == "__main__":
