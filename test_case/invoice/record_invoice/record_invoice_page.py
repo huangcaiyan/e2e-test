@@ -235,7 +235,6 @@ class RecordInvoicePage():
         self.select_invoice_type(invoice_data[0])
         self.select_invoice_status(invoice_data[1])
         self.select_contact(invoice_data[2])
-        invoice_num = publicPage.eight_random_nums()
         if invoice_data[0] == '专票' or invoice_type_define == '普票':
             self.set_invoice_num(invoice_data[3] + invoice_num)
         self.select_category(invoice_data[4])
