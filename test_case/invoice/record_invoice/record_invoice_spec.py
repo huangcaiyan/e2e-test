@@ -33,10 +33,32 @@ class RecordInvoiceSpec(unittest.TestCase):
         self.driver.quit()
 
     def test_record_input_invoice(self):
-        """记多条收票 测试"""
-        page = RecordInvoicePage(self.driver, CompInfo.BASE_URL, 'input')
+        """cai-记多条收票 测试"""
         readExcel = ReadExcel(self.record_invoice_data_dir)
         excel_data = readExcel.get_value_in_order(0)
+        dangerPage = DangerPage(self.driver)
+        try:
+            for input_invoice_data in excel_data:
+                page = RecordInvoicePage(self.driver, CompInfo.BASE_URL, 'input')                
+                page.go_to_record_invoice_page()
+                page.record_input_invoice(input_invoice_data)
+                page.submit('save_and_new')
+                time.sleep(1)
+                print('input_invoice_data=>', input_invoice_data)
+            time.sleep(3)
+        except Exception as e:
+            danger_msg = dangerPage.get_alert_danger_msg()
+            if danger_msg == '请完善相关信息':
+                print(input_invoice_data[8] + '－－－－－－记收票失败－－－－－－')
+            else:
+                print('[RecordInvoiceSpec]－－记收票失败－－错误原因', str(e))
+            self.driver.quit()
+
+    def test_record_output_invoice(self):
+        """cai-记多条开票 测试"""
+        page = RecordInvoicePage(self.driver, CompInfo.BASE_URL, 'input')
+        readExcel = ReadExcel(self.record_invoice_data_dir)
+        excel_data = readExcel.get_value_in_order(1)
         dangerPage = DangerPage(self.driver)
         page.go_to_record_invoice_page()
         try:
@@ -48,32 +70,11 @@ class RecordInvoiceSpec(unittest.TestCase):
         except Exception as e:
             danger_msg = dangerPage.get_alert_danger_msg()
             if danger_msg == '请完善相关信息':
-                print(input_invoice_data[8] + '－－－－－－记收票失败－－－－－－')
-            else:
-                print('[RecordInvoiceSpec]－－记收票失败－－错误原因', str(e))
-            self.driver.quit()
-
-    def test_record_output_invoice(self):
-        """记多条开票 测试"""
-        page = RecordInvoicePage(self.driver, CompInfo.BASE_URL, 'input')
-        readExcel = ReadExcel(self.record_invoice_data_dir)
-        excel_data = readExcel.get_value_in_order(1)
-        dangerPage = DangerPage(self.driver)
-        page.go_to_record_invoice_page()        
-        try:
-            for input_invoice_data in excel_data:
-                page.record_invoice(input_invoice_data)
-                page.submit('save_and_new')                
-                print('income_test_data=>', income_test_data)
-            time.sleep(3)
-        except Exception as e:
-            danger_msg = dangerPage.get_alert_danger_msg()
-            if danger_msg == '请完善相关信息':
                 print(input_invoice_data[8] + '－－－－－－记开票失败－－－－－－')
             else:
                 print('[RecordInvoiceSpec]－－记开票失败－－错误原因', str(e))
             self.driver.quit()
 
+
 if __name__ == '_main_':
     unittest.main()
-            
