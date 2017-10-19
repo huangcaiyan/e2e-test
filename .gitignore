@@ -1,8 +1,11 @@
 *.html
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.vscode
 *.pyc
 =======
+=======
+>>>>>>> af549b254dcc9c915357b991fcf2e7553ba40153
 test_case/external/user_setting/__pycache__/user_setting_elem.cpython-36.pyc
 test_case/invoice/__pycache__/income_invoice_spec.cpython-36.pyc
 test_case/external/user_setting/__pycache__/user_setting_spec.cpython-36.pyc
@@ -66,4 +69,39 @@ util/__pycache__/read_excel.cpython-36.pyc
 util/__pycache__/set_date_util.cpython-36.pyc
 util/__pycache__/setDate_util.cpython-36.pyc
 util/__pycache__/voucher_check_util.cpython-36.pyc
+<<<<<<< HEAD
 >>>>>>> ca873ae986b2676eb385e6913f5c5aee1cbaa6cc
+=======
+__pycache__/comp_info.cpython-36.pyc
+test_case/external/__pycache__/enter_comp_spec.cpython-36.pyc
+test_case/external/create_comp/__pycache__/create_comp_page.cpython-36.pyc
+test_case/external/create_comp/__pycache__/create_comp_spec.cpython-36.pyc
+test_case/external/user_setting/__pycache__/user_setting_elem.cpython-36.pyc
+test_case/external/user_setting/__pycache__/user_setting_page.cpython-36.pyc
+test_case/external/user_setting/__pycache__/user_setting_spec.cpython-36.pyc
+test_case/login/__pycache__/login_elem.cpython-36.pyc
+test_case/login/__pycache__/login_page.cpython-36.pyc
+test_case/login/__pycache__/login_spec.cpython-36.pyc
+test_case/salary/__pycache__/salary_elem.cpython-36.pyc
+test_case/salary/__pycache__/salary_page.cpython-36.pyc
+test_case/salary/add_stuff/__pycache__/add_stuff_elem.cpython-36.pyc
+test_case/salary/add_stuff/__pycache__/add_stuff_page.cpython-36.pyc
+test_case/salary/add_stuff/__pycache__/add_stuff_spec.cpython-36.pyc
+test_case/setting/__pycache__/setting_elem.cpython-36.pyc
+test_case/setting/__pycache__/setting_page.cpython-36.pyc
+test_case/setting/__pycache__/setting_spec.cpython-36.pyc
+test_case/setting/comp_billing/__pycache__/comp_billing_elem.cpython-36.pyc
+test_case/setting/contact/__pycache__/contact_elem.cpython-36.pyc
+test_case/setting/contact/__pycache__/contact_page.cpython-36.pyc
+test_case/setting/contact/__pycache__/contact_spec.cpython-36.pyc
+test_data/cai/__pycache__/add_stuff_data.cpython-36.pyc
+test_data/cai/__pycache__/comp_billing_data.cpython-36.pyc
+test_data/cai/__pycache__/login_data.cpython-36.pyc
+util/__pycache__/__init__.cpython-36.pyc
+util/__pycache__/alert_page.cpython-36.pyc
+util/__pycache__/danger_page.cpython-36.pyc
+util/__pycache__/enter_comp_page.cpython-36.pyc
+util/__pycache__/jsonToPython_util.cpython-36.pyc
+util/__pycache__/public_page.cpython-36.pyc
+util/__pycache__/read_excel.cpython-36.pyc
+>>>>>>> af549b254dcc9c915357b991fcf2e7553ba40153

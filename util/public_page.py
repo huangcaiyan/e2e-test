@@ -224,14 +224,19 @@ class PublicPage:
     # 选择下拉项
     def select_dropdown_item(self, drop_loc, item_name):
         try:
-            publicPage = PublicPage(self.driver)
             self.click_elem(drop_loc)
             time.sleep(1)
             item_loc = self.driver.find_element_by_link_text(item_name)
-            self.click_elem(item_loc)
+            if self.is_element_present(item_loc):
+                print('[select_dropdown_item]--self.is_element_present(item_loc)=>',self.is_element_present(item_loc))
+                self.click_elem(item_loc)
+            else:
+                print('item_loc=' + item_name + 'is not show!')
+                self.driver.quit()
         except Exception as e:
             print(
                 '[PublicPage]There was an exception when select_dropdown_item=>', str(e))
+            self.driver.quit()
 
     # alet
     def get_alert_msg(self):

@@ -13,13 +13,14 @@ from test_case.external.create_comp.create_comp_spec import CreateCompSpec
 from test_case.external.user_setting.user_setting_spec import UserSettingSpec
 from test_case.transaction.record_transaction.record_transaction_spec import RecordTransactionSpec
 from test_case.invoice.record_invoice.record_invoice_spec import RecordInvoiceSpec
+from test_case.external.sidebar.sidebar_spec import SidebarSpec
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
 
     # 登录测试
     # testSuite.addTest(LoginSpec('test_verify_login'))
     # testSuite.addTest(LoginSpec('test_unexit_username'))
-    testSuite.addTest(LoginSpec('test_wrong_password'))
+    # testSuite.addTest(LoginSpec('test_wrong_password'))
     # testSuite.addTest(LoginSpec('test_empty_username'))
     # testSuite.addTest(LoginSpec('test_empty_password'))
     # testSuite.addTest(LoginSpec('test_typeerror_username'))
@@ -64,14 +65,20 @@ if __name__ == '__main__':
 
     # 记发票
     # 记所有类别发票
+<<<<<<< HEAD
     # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
     # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
     
+=======
+    testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
+    # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
+>>>>>>> af549b254dcc9c915357b991fcf2e7553ba40153
 
     # external
     # testSuite.addTest(EnterCompSpec('test_enter_comp'))
     # testSuite.addTest(CreateCompSpec('create_account_book_empty_comp_name'))
     # testSuite.addTest(UserSettingSpec('test_go_to_comp_billing_page'))
+    # testSuite.addTest(SidebarSpec('test_get_current_account_period'))
 
     now = time.strftime('%Y-%m-%d %H_%M_%S')
     report_dir = './report'
