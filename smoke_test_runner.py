@@ -59,15 +59,14 @@ if __name__ == '__main__':
 
     # 记收支
     # 记所有科目和账户的收支、互转
-    testSuite.addTest(RecordTransactionSpec('test_record_income'))
-    testSuite.addTest(RecordTransactionSpec('test_record_outcome'))
-    testSuite.addTest(RecordTransactionSpec('test_record_transfer'))
+    # testSuite.addTest(RecordTransactionSpec('test_record_income'))
+    # testSuite.addTest(RecordTransactionSpec('test_record_outcome'))
+    # testSuite.addTest(RecordTransactionSpec('test_record_transfer'))
 
     # 记发票
     # 记所有类别发票
-    # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
+    testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
     # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
-    
 
     # external
     # testSuite.addTest(EnterCompSpec('test_enter_comp'))

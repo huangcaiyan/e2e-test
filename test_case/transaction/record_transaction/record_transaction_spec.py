@@ -84,8 +84,8 @@ class RecordTransactionSpec(unittest.TestCase):
         dangerPage = DangerPage(self.driver)
         page = RecordTransactionPage(
             self.driver, CompInfo.BASE_URL, 'accountTransfers')
-        page.go_to_record_transaction_page()
         excel_data = readExcel.get_value_in_order(2)
+        page.go_to_record_transaction_page()        
         try:
             for transfer_test_data in excel_data:
                 page.record_transfer(transfer_test_data)

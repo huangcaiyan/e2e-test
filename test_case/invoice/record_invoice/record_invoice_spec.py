@@ -35,15 +35,15 @@ class RecordInvoiceSpec(unittest.TestCase):
     def test_record_input_invoice(self):
         """cai-记多条收票 测试"""
         readExcel = ReadExcel(self.record_invoice_data_dir)
-        excel_data = readExcel.get_value_in_order(0)
+        excel_data = readExcel.get_value_in_order(1)
         dangerPage = DangerPage(self.driver)
+        page = RecordInvoicePage(self.driver, CompInfo.BASE_URL, 'input')                        
+        page.go_to_record_invoice_page()        
         try:
             for input_invoice_data in excel_data:
-                page = RecordInvoicePage(self.driver, CompInfo.BASE_URL, 'input')                
-                page.go_to_record_invoice_page()
                 page.record_input_invoice(input_invoice_data)
                 page.submit('save_and_new')
-                time.sleep(1)
+                time.sleep(2.5)
                 print('input_invoice_data=>', input_invoice_data)
             time.sleep(3)
         except Exception as e:
@@ -58,7 +58,7 @@ class RecordInvoiceSpec(unittest.TestCase):
         """cai-记多条开票 测试"""
         page = RecordInvoicePage(self.driver, CompInfo.BASE_URL, 'input')
         readExcel = ReadExcel(self.record_invoice_data_dir)
-        excel_data = readExcel.get_value_in_order(1)
+        excel_data = readExcel.get_value_in_order(2)
         dangerPage = DangerPage(self.driver)
         page.go_to_record_invoice_page()
         try:

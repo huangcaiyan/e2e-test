@@ -154,9 +154,9 @@ class RecordInvoicePage():
     def set_total(self, total):
         try:
             if self.invoice_io == 'input' and invoice_type_define == '专票':
-                total_elem = general_total_elem
-            else:
                 total_elem = special_total_elem
+            else:
+                total_elem = general_total_elem
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(
                 record_invoice_base_xpath + self.invoice_io + total_elem)
@@ -218,12 +218,12 @@ class RecordInvoicePage():
         invoice_num = str(publicPage.eight_random_nums())
         self.select_invoice_type(invoice_data[0])
         self.select_contact(invoice_data[1])
-        if invoice_data[0] == '专票':
+        if invoice_type_define == '专票':
             self.set_invoice_num(invoice_data[2] + invoice_num)
         self.select_category(invoice_data[3])
         self.select_department(invoice_data[4])
         self.select_tax_rate(invoice_data[5])
-        if invoice_data[0] == '专票':
+        if invoice_type_define == '专票':
             self.select_input_tax_category(invoice_data[6])
         self.set_total(invoice_data[7])
         self.set_attachment(invoice_data[8])
@@ -236,7 +236,7 @@ class RecordInvoicePage():
         self.select_invoice_status(invoice_data[1])
         self.select_contact(invoice_data[2])
         invoice_num = publicPage.eight_random_nums()
-        if invoice_data[0] == '专票' or invoice_data[1] == '普票':
+        if invoice_data[0] == '专票' or invoice_type_define == '普票':
             self.set_invoice_num(invoice_data[3] + invoice_num)
         self.select_category(invoice_data[4])
         self.select_department(invoice_data[5])

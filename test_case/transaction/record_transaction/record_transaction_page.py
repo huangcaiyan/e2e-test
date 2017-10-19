@@ -203,7 +203,6 @@ class RecordTransactionPage():
 
     # 记互转
     def record_transfer(self, transfer_data):
-        self.go_to_record_transaction_page()
         self.select_transfer_account(transfer_data[2], transfer_data[3])
         self.set_total(transfer_data[4])
         self.set_attachment(transfer_data[5])
