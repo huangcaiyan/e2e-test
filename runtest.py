@@ -69,7 +69,8 @@ if __name__ == '__main__':
 
     # 添加账户测试
     # testSuite.addTest(RecordAcountSpec('test_addaccount_1'))
-    testSuite.addTest(RecordAcountSpec('test_same_name'))
+    # testSuite.addTest(RecordAcountSpec('test_same_name'))
+    testSuite.addTest(RecordAcountSpec('test_empty_name'))
 
     #记账户互转 *注意：需要新增招商银行账户
     # testSuite.addTest(RecordTransterSpec('test1'))
