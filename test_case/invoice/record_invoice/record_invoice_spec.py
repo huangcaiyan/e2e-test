@@ -69,8 +69,8 @@ class RecordInvoiceSpec(unittest.TestCase):
             for output_invoice_data in excel_data:
                 page.record_invoice(output_invoice_data)
                 page.submit('save_and_new')
-                print('output_invoice_data=>', output_invoice_data)
                 time.sleep(2.5)
+                print('output_invoice_data=>', output_invoice_data)
             alert_msg = alertPage.get_alert_msg()
             self.assertEqual(alert_msg, '保存成功')
         except Exception as e:
