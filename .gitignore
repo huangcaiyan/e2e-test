@@ -1,4 +1,3 @@
-*.html
 test_case/external/user_setting/__pycache__/user_setting_elem.cpython-36.pyc
 test_case/invoice/__pycache__/income_invoice_spec.cpython-36.pyc
 test_case/external/user_setting/__pycache__/user_setting_spec.cpython-36.pyc

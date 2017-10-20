@@ -10,7 +10,7 @@ class CompInfo(object):
     # # stage
     # BASE_URL = 'https://web-gyz-stage.guanplus.com'
     # LOGIN_DATA = ['13683139989', 'qq123456']
-    # COMP_NAME = 'auto_test'
+    # COMP_NAME = 'test'
     # COMP_NAME_YB = 'auto_test_yb'
 
     # -------------------------------------------------
