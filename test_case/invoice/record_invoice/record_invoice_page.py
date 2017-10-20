@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 import sys
 import os
+from selenium.webdriver.support.ui import WebDriverWait
 # sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../'))
 from util.public_page import PublicPage
 from .record_invoice_elem import *
@@ -23,32 +24,39 @@ class RecordInvoicePage():
         self.invoice_io = invoice_io
 
     def go_to_record_invoice_page(self):
-        self.driver.get(self.base_url + '/app/invoice/tab/new-' +
-                        self.invoice_io + '-invoice')
         if self.invoice_io == 'input':
             page_name = '记收票页面'
         elif self.invoice_io == 'output':
             page_name = '记开票页面'
         else:
             return 'error'
+        # pro,stage
+        # page_url = self.base_url + '/app/invoice/tab/new-' + self.invoice_io + '-invoice'
+        # dev
+        page_url = self.base_url + '/app/invoice/detail/new-' + self.invoice_io + '-invoice'        
+        time.sleep(3)
+        self.driver.get(page_url)
         page_url = self.driver.current_url
         if self.invoice_io in page_url:
-            print('[RecordInvoicePage]－－－－－－成功进入' + page_name + '－－－－－－')
+            print('[RecordInvoicePage]－－－－－－成功进入' +
+                  page_name + '－－－－－－\n当前url是=>', page_url)
         else:
             print('[RecordInvoicePage]－－－－－－去' + page_name + ' 失败－－－－－－')
             self.driver.quit()
 
     # 选择发票类型
-    # invoice_type:开票（普票、专票、无票），收票（普票、专票）
+    # invoice_type：（专票、普票、无票）
     def select_invoice_type(self, invoice_type):
         global invoice_type_define
         invoice_type_define = invoice_type
         try:
-            publicPage = PublicPage(self.driver)
-            drop_loc = self.driver.find_element_by_xpath(
-                record_invoice_base_xpath + self.invoice_io + invoice_type_drop_elem)
-            publicPage.select_dropdown_item(drop_loc, invoice_type)
-            time.sleep(1)
+            publicPage = PublicPage(self.driver)   
+            is_disapeared = publicPage.wait_until_loader_disapeared()
+            if is_disapeared == False:
+                drop_loc = self.driver.find_element_by_xpath(
+                    record_invoice_base_xpath + self.invoice_io + invoice_type_drop_elem)
+                publicPage.select_dropdown_item(drop_loc, invoice_type)
+                time.sleep(1)
         except Exception as e:
             print('[RecordInvoicePage] －－选择发票类型失败－－失败原因是->', str(e))
             self.driver.quit()
@@ -286,6 +294,7 @@ class RecordInvoicePage():
                     return p_c_arr
                 elif category == '汽油费':
                     p_c_arr = [2, 2]
+                    return p_c_arr
                 elif category == '路桥费':
                     p_c_arr = [2, 3]
                     return p_c_arr
@@ -309,6 +318,7 @@ class RecordInvoicePage():
                     return p_c_arr
                 elif category == '电费':
                     p_c_arr = [3, 3]
+                    return p_c_arr
                 elif category == '仓储费':
                     p_c_arr = [3, 4]
                     return p_c_arr
@@ -345,27 +355,35 @@ class RecordInvoicePage():
                 elif category == '其他':
                     p_c_arr = [4, 9]
                     return p_c_arr
-                elif category == '行政罚款':
-                    p_c_arr = [5, 0]
-                    return p_c_arr
-                elif category == '税务滞纳金':
-                    p_c_arr = [5, 1]
-                    return p_c_arr
-                elif category == '印花税':
-                    p_c_arr = [6, 0]
-                    return p_c_arr
-                elif category == '残保金':
-                    p_c_arr = [6, 1]
-                    return p_c_arr
-                elif category == '减免税款':
-                    p_c_arr = [6, 2]
-                    return p_c_arr
-                elif category == '原材料':
-                    p_c_arr = [7, 0]
-                    return p_c_arr
-                elif category == '商品产品':
-                    p_c_arr = [7, 1]
-                    return p_c_arr
+                elif invoice_type_define == '普票':
+                    if category == '行政罚款':
+                        p_c_arr = [5, 0]
+                        return p_c_arr
+                    elif category == '税务滞纳金':
+                        p_c_arr = [5, 1]
+                        return p_c_arr
+                    elif category == '印花税':
+                        p_c_arr = [6, 0]
+                        return p_c_arr
+                    elif category == '残保金':
+                        p_c_arr = [6, 1]
+                        return p_c_arr
+                    elif category == '减免税款':
+                        p_c_arr = [6, 2]
+                        return p_c_arr
+                    elif category == '原材料':
+                        p_c_arr = [7, 0]
+                        return p_c_arr
+                    elif category == '商品产品':
+                        p_c_arr = [7, 1]
+                        return p_c_arr
+                elif invoice_type_define == '专票':
+                    if category == '原材料':
+                        p_c_arr = [5,0]
+                        return p_c_arr
+                    elif category == '商品产品':
+                        p_c_arr = [5,1]
+                        return p_c_arr
             elif self.invoice_io == 'output':
                 if category == '商品销售':
                     p_c_arr = [0, 0]
