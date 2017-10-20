@@ -65,16 +65,12 @@ if __name__ == '__main__':
 
     # 记发票
     # 记所有类别发票
-<<<<<<< HEAD
     # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
     # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
     
-=======
-    testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
-    # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
->>>>>>> af549b254dcc9c915357b991fcf2e7553ba40153
 
     # external
+    # 记录完全部收入、支出、互转，手指列表本月收入为42,650.92，支出为70,584.30
     # testSuite.addTest(EnterCompSpec('test_enter_comp'))
     # testSuite.addTest(CreateCompSpec('create_account_book_empty_comp_name'))
     # testSuite.addTest(UserSettingSpec('test_go_to_comp_billing_page'))
