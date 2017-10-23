@@ -21,8 +21,9 @@ class RecordInvoiceSpec(unittest.TestCase):
     # 发票测试数据地址
     record_invoice_data_dir = './test_data/cai/record_invoice_data.xlsx'
 
-    @classmethod
-    def setUpClass(self):
+    # @classmethod
+    # def setUpClass(self):
+    def setUp(self):
         # self.driver = webdriver.PhantomJS()
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
@@ -31,8 +32,9 @@ class RecordInvoiceSpec(unittest.TestCase):
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
-    @classmethod
-    def tearDownClass(self):
+    # @classmethod
+    # def tearDownClass(self):
+    def tearDown(self):
         self.driver.quit()
     # 纪录完所有数据，收票列表本月收票总额为263,097.00
     def test_record_input_invoice(self):
@@ -48,7 +50,7 @@ class RecordInvoiceSpec(unittest.TestCase):
                 page.record_input_invoice(input_invoice_data)
                 page.submit('save_and_new')
                 print('input_invoice_data=>', input_invoice_data)
-            time.sleep(3)            
+            time.sleep(3)
             alert_msg = alertPage.get_alert_msg()
             self.assertIn('发票保存成功', alert_msg)
         except Exception as e:
@@ -72,7 +74,7 @@ class RecordInvoiceSpec(unittest.TestCase):
             for output_invoice_data in excel_data:
                 page.record_invoice(output_invoice_data)
                 page.submit('save_and_new')
-                print('output_invoice_data=>', output_invoice_data)                
+                print('output_invoice_data=>', output_invoice_data)
             time.sleep(3)
             alert_msg = alertPage.get_alert_msg()
             self.assertEqual(alert_msg, '保存成功')

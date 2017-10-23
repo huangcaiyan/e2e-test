@@ -4,7 +4,7 @@ class CompInfo(object):
     BASE_URL = 'http://guanplus-app-accountingfirm-web-dev-1.cn-north-1.eb.amazonaws.com.cn'
     LOGIN_DATA = ['18612198503','Qq123456']
     # COMP_NAME = 'testyb'
-    COMP_NAME ='dev跨年测试12月启用yb'
+    COMP_NAME ='dev跨年测试1月启用yb'
 
     # ------------------------------------------------
     # # stage
