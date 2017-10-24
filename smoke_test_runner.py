@@ -7,6 +7,7 @@ from test_case.login.login_spec import LoginSpec
 from test_case.setting.setting_spec import SettingSpec
 from test_case.setting.comp_billing.comp_billing_spec import CompBillingSpec
 from test_case.setting.contact.contact_spec import ContactSpec
+from test_case.setting.partner_set.partner_set_spec import PartnersetSpec
 from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec
 from test_case.external.enter_comp_spec import EnterCompSpec
 from test_case.external.create_comp.create_comp_spec import CreateCompSpec
@@ -47,6 +48,13 @@ if __name__ == '__main__':
     # testSuite.addTest(ContactSpec('test_contact_property_is_personal'))
     # testSuite.addTest(ContactSpec('test_name_repeat'))
 
+    # 设置－股东信息
+    # testSuite.addTest(PartnersetSpec('test_click_add_btn'))
+    # testSuite.addTest(PartnersetSpec('test_partnerset_empty'))
+    # testSuite.addTest(PartnersetSpec('test_actual_paid_empty'))
+    # testSuite.addTest(PartnersetSpec('test_partset_name_repeat'))
+    
+
     #
     # 工资－添加员工
     # testSuite.addTest(AddStuffSpec('test_name_empty'))
@@ -67,6 +75,8 @@ if __name__ == '__main__':
     # 记所有类别发票
     testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
     # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
+
+
     
 
     # external

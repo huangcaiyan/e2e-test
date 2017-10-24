@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../..'))
 import unittest
-from partner_set_elem import *
+from .partner_set_elem import *
 from util.public_page import PublicPage
 from ..setting_page import SettingPage
 
@@ -12,14 +12,14 @@ from ..setting_page import SettingPage
 class PartnersetPage(object):
 
     def __init__(self, driver):
-        self.driver = webdriver.Chrome()
-        # self.driver = driver
+        # self.driver = webdriver.Chrome()
+        self.driver = driver
 
     # 点击添加按钮
     def click_add_btn(self):
         try:
             publicPage = PublicPage(self.driver)
-            global add_btn_loc = self.driver.find_element_by_xpath(add_btn_elem)
+            add_btn_loc = self.driver.find_element_by_xpath(add_btn_elem)
             publicPage.click_elem(add_btn_loc)
             input_loc = self.driver.find_element_by_xpath(partner_name_elem)
             if publicPage.is_element_present(input_loc):
@@ -46,7 +46,7 @@ class PartnersetPage(object):
         try:
             publicPage = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(actual_paid_elem)
-            publicPage.set_value(input_loc)
+            publicPage.set_value(input_loc,amount)
         except Exception as e:
             print('[PartnerSetPage]set_actual_paid－－设置实缴金额 失败－－失败原因是＝>', str(e))
             exit()
@@ -79,12 +79,19 @@ class PartnersetPage(object):
             exit()
         
     def add_partnerset(self,partnerset_info):
-        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
-        settingPage.go_to_partnerset_page()
         page_url = self.driver.current_url
         publicPage = PublicPage(self.driver)
+        add_btn_loc = self.driver.find_element_by_xpath(add_btn_elem)        
         if publicPage.is_element_present(add_btn_loc):
-            self.set_partnerset_name(partnerset_info[0])
+            random_num = publicPage.random_num(100000)
+            if partnerset_info[0] == '':
+                name = partnerset_info[0]
+            elif partnerset_info[0] == 'hello':
+                today = time.strftime('%Y-%m-%d')
+                name = partnerset_info[0] + today
+            else:
+                name = partnerset_info[0] + random_num
+            self.set_partnerset_name(name)
             self.set_actual_paid(partnerset_info[1])
             self.submit('save')
         else:
