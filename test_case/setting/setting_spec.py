@@ -15,7 +15,8 @@ class SettingSpec(unittest.TestCase):
     '''
     设置页面测试用例
     '''
-    def setUp(self):
+    @classmethod
+    def setUpClass(self):
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
@@ -60,8 +61,8 @@ class SettingSpec(unittest.TestCase):
         self.assertIn(tax_rate_url,current_url)
 
     # tab 切换测试
-
-    def tearDown(self):
+    @classmethod
+    def tearDownClass(self):
         self.driver.quit()
 
 

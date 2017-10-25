@@ -1,6 +1,7 @@
 import time
 from util.public_page import PublicPage
 from .setting_elem import *
+from .partner_set.partner_set_elem import *
 
 # 设置page
 # 创建于2017-8
@@ -65,14 +66,14 @@ class SettingPage(object):
             publicPage = PublicPage(self.driver)
             self.driver.get(self.base_url + partner_set_url)
             time.sleep(3)
-            add_loc = self.driver.find_element_by_xpath(partner_set_url)
-            if publicPage.is_element_present(start_loc):
+            add_loc = self.driver.find_element_by_xpath(add_btn_elem)
+            if publicPage.is_element_present(add_loc):
                 print('[SettingPage]＋＋＋＋＋＋ 去股东页面 成功＋＋＋＋＋＋')
             else:
                 print('[SettingPage]－－－－－－ 去股东页面 失败！－－－－－－')
         except Exception as e:
             print(
-                '[SettingPage] There was an exception when go_to_partner_set_page= %s', str(e))
+                '[SettingPage] There was an exception when go_to_partnerset_page= %s', str(e))
 
 # 去税率设置页面
     def go_to_tax_rate_page(self):

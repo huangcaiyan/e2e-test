@@ -32,6 +32,8 @@ class PartnersetSpec(unittest.TestCase):
 
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
+        
+
 
     @classmethod
     def tearDownClass(self):
@@ -103,6 +105,22 @@ class PartnersetSpec(unittest.TestCase):
         else:
             print('[PartnersetSpec]test_partset_name_repeat －－去 股东页面 失败－－')
 
+    def test_add_a_partner(self):
+        """测试 添加一名股东，添加成功，提示‘股东名称不能重复’"""
+        page = PartnersetPage(self.driver)
+        alertPage = AlertPage(self.driver)
+        readExcel = ReadExcel(self.partnerset_test_data_dir)
+        settingPage = SettingPage(self.driver, CompInfo.BASE_URL) 
+        
+        settingPage.go_to_partnerset_page()                 
+        if 'partner-set' in self.driver.current_url:
+            partnerset_test_data = readExcel.get_value_by_row(0, 4)
+            page.add_partnerset(partnerset_test_data)
+            time.sleep(1)
+            result = alertPage.get_alert_msg()
+            self.assertEqual(result, partnerset_test_data[3])
+        else:
+            print('[PartnersetSpec]test_partset_name_repeat －－去 股东页面 失败－－')
 
 if __name__ == '_main_':
     unittest.main()

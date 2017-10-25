@@ -5,6 +5,7 @@ from .public_page import PublicPage
 from test_case.login.login_elem import *
 
 
+
 class EnterCompPage:
 
     # location
@@ -12,6 +13,7 @@ class EnterCompPage:
     create_comp_xpath = '//*[@id="body"]/company-list/div[1]/div[3]/div[2]/button[1]'
 
     def __init__(self, driver):
+        # self.driver = webdriver.Chrome()
         self.driver = driver
 
     # 获取当前帐套名称
@@ -32,9 +34,15 @@ class EnterCompPage:
         try:
             comp_name_loc = self.driver.find_element_by_link_text(
                 enter_comp_info[2])
-            self.driver.execute_script(
-                'return arguments[0].scrollIntoView();', comp_name_loc)
-            # self.driver.execute_script('window.scrollBy(0,-150')
+            # self.driver.execute_script(
+                # 'return arguments[0].scrollIntoView();', comp_name_loc)
+            # self.driver.execute_script('window.scrollBy(0,600')
+            # comp_name_loc.click()
+            # self.driver.execute_script()
+            # self.driver.execute_script("window.scrollTo(0, 1600)")
+            # publicPage.scroll_to_elem(comp_name_loc)
+            # time.sleep(1)
+            # publicPage.scroll_to_elem(comp_name_loc)
             # comp_name_loc.click()
             publicPage.click_elem(comp_name_loc)
             time.sleep(5)

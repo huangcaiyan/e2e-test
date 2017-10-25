@@ -8,6 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class PublicPage:
@@ -27,7 +28,9 @@ class PublicPage:
     # 判断元素是否显示
     def is_element_present(self, elem_loc):
         try:
-            elem_loc
+            # EC.visibility_of(elem_loc)
+            elem_loc.is_displayed()
+            print('--------1 =', elem_loc.is_displayed())
         except NoSuchElementException as e:
             return False
         return True
@@ -35,10 +38,10 @@ class PublicPage:
     # 等待直到加载蒙板消失
     # 当 is_disapeared ＝ False 时，蒙板消失
     def wait_until_loader_disapeared(self):
-        is_disapeared = WebDriverWait(self.driver, 30, 1).until_not(lambda x: self.driver.find_element_by_css_selector('.loader').is_displayed())
-        print('is_disapeared=>',is_disapeared)
+        is_disapeared = WebDriverWait(self.driver, 30, 1).until_not(
+            lambda x: self.driver.find_element_by_css_selector('.loader').is_displayed())
+        print('is_disapeared=>', is_disapeared)
         return is_disapeared
-
 
     # 判断alert框是否出现
     def is_alert_present(self):
@@ -117,17 +120,27 @@ class PublicPage:
         return random.randint(10000000, 100000000)
 
     # 点击事件
+    # def click_elem(self, elem_loc):
+    #     try:
+    #         if self.is_element_present(elem_loc):
+    #             print('2==:',self.is_element_present(elem_loc))
+    #             # self.move_to_element_to_click(elem_loc)
+    #             elem_loc.click()
+    #         else:
+    #             print('3、=:',self.is_element_present(elem_loc))
+    #             self.scroll_to_elem(elem_loc)
+    #             # self.move_to_element_to_click(elem_loc)
+    #             elem_loc.click()
+    #             print('HEHE')
+    #     except Exception as e:
+    #         logging.error('There was an exception when click_elem', str(e))
+
     def click_elem(self, elem_loc):
         try:
-            if self.is_element_present(elem_loc):
-                self.move_to_element_to_click(elem_loc)
-                # elem_loc.click()
-            else:
-                self.scroll_to_elem(elem_loc)
-                self.move_to_element_to_click(elem_loc)
-                # elem_loc.click()
+            self.scroll_to_elem(elem_loc)
+            return elem_loc.click()
         except Exception as e:
-            logging.error('There was an exception when click_elem %s', str(e))
+            logging.error('There was an exception when click_elem', str(e))
 
     # def click_elem(self, elem_loc):
     #     try:
@@ -198,14 +211,18 @@ class PublicPage:
         action = ActionChains(self.driver)
         action.move_to_element(elem_loc).click().perform()
 
-    # 将光标定位到元素处
+    # 移动到元素element对象的“底端”与当前窗口的“底部”对齐
     def scroll_to_elem(self, elem_loc):
         try:
-            self.driver.execute_script(
-                'return arguments[0].scrollIntoView();', elem_loc)
+            return self.driver.execute_script("arguments[0].scrollIntoView(false);", elem_loc)
+            time.sleep(1)
         except WebDriverException:
             self.driver.execute_script('window.scrollBy(0,-100);')
             time.sleep(2)
+
+    # 移动到页面到中部
+    def scroll_to_page_center(self):
+        return self.driver.execute_script("window.scrollTo(0, 1000)")
 
     # 将光标定位到页面顶部
     def scroll_to_top(self):
@@ -213,8 +230,7 @@ class PublicPage:
 
     # 将光标定位到页面底部
     def scroll_to_bottom(self):
-        return self.driver.execute_script(
-            'scroll(0,document.body.scrollHeight)')
+        return self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
 
     # 跳转至莫大了框
     def switch_to_add_contact_modal_dialog(self):

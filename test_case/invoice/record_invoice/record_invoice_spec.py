@@ -21,9 +21,9 @@ class RecordInvoiceSpec(unittest.TestCase):
     # 发票测试数据地址
     record_invoice_data_dir = './test_data/cai/record_invoice_data.xlsx'
 
-    # @classmethod
-    # def setUpClass(self):
-    def setUp(self):
+    @classmethod
+    def setUpClass(self):
+    # def setUp(self):
         # self.driver = webdriver.PhantomJS()
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
@@ -32,9 +32,9 @@ class RecordInvoiceSpec(unittest.TestCase):
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
-    # @classmethod
-    # def tearDownClass(self):
-    def tearDown(self):
+    @classmethod
+    def tearDownClass(self):
+    # def tearDown(self):
         self.driver.quit()
     # 纪录完所有数据，收票列表本月收票总额为263,097.00
     def test_record_input_invoice(self):

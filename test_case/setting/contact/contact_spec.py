@@ -39,10 +39,10 @@ class ContactSpec(unittest.TestCase):
 
     def test_show_add_modal(self):
         """往来信息－测试点击添加按钮显示添加modal框"""
-        settingPage = SettingPage(self.driver)
+        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         publicPage = PublicPage(self.driver)
-        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        settingPage.go_to_contact_page()
 
         page.click_add_btn()
         time.sleep(2)
@@ -53,13 +53,13 @@ class ContactSpec(unittest.TestCase):
 
     def test_name_empty(self):
         """往来信息－测试往来名称为空，保存失败"""
-        settingPage = SettingPage(self.driver)
+        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
         dangerPage = DangerPage(self.driver)
 
-        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        settingPage.go_to_contact_page()
         add_contact_data = readExcel.get_value_by_row(0, 1)
         page.add_contact(add_contact_data)
 
@@ -69,13 +69,13 @@ class ContactSpec(unittest.TestCase):
 
     def test_phone_num_typeError(self):
         """往来信息－手机号格式不正确，提示‘手机格式不正确’，保存失败"""
-        settingPage = SettingPage(self.driver)
+        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         publicPage = PublicPage(self.driver)
         dangerPage = DangerPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
 
-        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        settingPage.go_to_contact_page()
         add_contact_data = readExcel.get_value_by_row(0, 2)
         page.add_contact(add_contact_data)
 
@@ -85,12 +85,12 @@ class ContactSpec(unittest.TestCase):
 
     def test_contact_input_show(self):
         """往来信息－测试性质为单位时－联系人输入框 显示"""
-        settingPage = SettingPage(self.driver)
+        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
 
-        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        settingPage.go_to_contact_page()
         add_contact_data = readExcel.get_value_by_row(0, 3)
         page.add_contact(add_contact_data)
 
@@ -101,13 +101,13 @@ class ContactSpec(unittest.TestCase):
 
     def test_contact_property_is_unit(self):
         """往来信息－测试 添加一个性质为单位的往来，添加成功"""
-        settingPage = SettingPage(self.driver)
+        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         alertPage = AlertPage(self.driver)
         publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
 
-        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        settingPage.go_to_contact_page()
         add_contact_data = readExcel.get_value_by_row(0, 4)
         page.add_contact(add_contact_data)
 
@@ -117,13 +117,13 @@ class ContactSpec(unittest.TestCase):
 
     def test_contact_property_is_personal(self):
         """往来信息－测试 添加一个性质为个人的往来，添加成功"""
-        settingPage = SettingPage(self.driver)
+        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         alertPage = AlertPage(self.driver)
         publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
 
-        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        settingPage.go_to_contact_page()
         add_contact_data = readExcel.get_value_by_row(0, 5)
         page.add_contact(add_contact_data)
         page.click_edit_btn()
@@ -134,13 +134,13 @@ class ContactSpec(unittest.TestCase):
 
     def test_edit_contact(self):
         """往来信息－测试 编辑往来，编辑成功"""
-        settingPage = SettingPage(self.driver)
+        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         alertPage = AlertPage(self.driver)
         publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
 
-        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        settingPage.go_to_contact_page()
         add_contact_data = readExcel.get_value_by_row(0, 6)
         page.add_contact(add_contact_data)
 
@@ -150,13 +150,13 @@ class ContactSpec(unittest.TestCase):
 
     def test_name_repeat(self):
         """往来信息－测试往来名称重复，保存失败"""
-        settingPage = SettingPage(self.driver)
+        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
         alertPage = AlertPage(self.driver)
 
-        settingPage.go_to_contact_page(CompInfo.BASE_URL)
+        settingPage.go_to_contact_page()
         add_contact_data = readExcel.get_value_by_row(0, 7)
         page.add_contact(add_contact_data)
 

@@ -53,10 +53,12 @@ if __name__ == '__main__':
     # testSuite.addTest(PartnersetSpec('test_partnerset_empty'))
     # testSuite.addTest(PartnersetSpec('test_actual_paid_empty'))
     # testSuite.addTest(PartnersetSpec('test_partset_name_repeat'))
+    # testSuite.addTest(PartnersetSpec('test_add_a_partner'))
+    
     
 
     #
-    # 工资－添加员工
+    # # 工资－添加员工
     # testSuite.addTest(AddStuffSpec('test_name_empty'))
     # testSuite.addTest(AddStuffSpec('test_country_empty'))
     # testSuite.addTest(AddStuffSpec('test_id_empty'))
@@ -73,8 +75,8 @@ if __name__ == '__main__':
 
     # 记发票
     # 记所有类别发票
-    testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
-    # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
+    # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
+    testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
 
 
     
