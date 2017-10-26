@@ -23,6 +23,7 @@ from test_case.dashbaord.account_dashboard_spec import AccountDashbaordSPec
 from test_case.setting.setting_spec import SettingSpec 
 from test_case.setting.contact.contact_spec import ContactSpec 
 from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec 
+from test_case.transaction.record_income_page_spec import RecordIncomePageSpec
 
 #发送邮件
 def send_mail(file_new):
@@ -40,7 +41,7 @@ def send_mail(file_new):
     msg['From'] = '18514509382@163.com'
     msg['Subject'] = Header(u'自动化测试报告','utf8').encode()
     msg['To'] = 'yangchunhong@concordya.com'
-    msg['To'] = 'william.lim@concordya.com'
+    # msg['To'] = 'william.lim@concordya.com'
     msg.attach(MIMEText(mail_body,'html','utf-8'))
     smtp = smtplib.SMTP(smtpserver,25)
     smtp.login(user,password)
@@ -78,80 +79,85 @@ if __name__ == '__main__':
     
 
 
-    # #记支出测试
-    # testSuite.addTest(RecordOutcomeSpec('test1'))
-    # testSuite.addTest(RecordOutcomeSpec('test2'))
-    # testSuite.addTest(RecordOutcomeSpec('test3'))
-    # testSuite.addTest(RecordOutcomeSpec('test4'))
-    # testSuite.addTest(RecordOutcomeSpec('test5'))
-    # testSuite.addTest(RecordOutcomeSpec('test6'))
-    # testSuite.addTest(RecordOutcomeSpec('test7'))
+    # # #记支出测试
+    # # testSuite.addTest(RecordOutcomeSpec('test1'))
+    # # testSuite.addTest(RecordOutcomeSpec('test2'))
+    # # testSuite.addTest(RecordOutcomeSpec('test3'))
+    # # testSuite.addTest(RecordOutcomeSpec('test4'))
+    # # testSuite.addTest(RecordOutcomeSpec('test5'))
+    # # testSuite.addTest(RecordOutcomeSpec('test6'))
+    # # testSuite.addTest(RecordOutcomeSpec('test7'))
     testSuite.addTest(RecordOutcomeSpec('test8'))
 
-    # #记收入测试
-    # # testSuite.addTest(RecordIncomeSpec('test1'))
-    # # testSuite.addTest(RecordIncomeSpec('test2'))
-    # # testSuite.addTest(RecordIncomeSpec('test3'))
-    # # testSuite.addTest(RecordIncomeSpec('test4'))
-    # # testSuite.addTest(RecordIncomeSpec('test5'))
-    # # testSuite.addTest(RecordIncomeSpec('test6'))
-    # # testSuite.addTest(RecordIncomeSpec('test7'))
+    # # #记收入测试
+    # # # testSuite.addTest(RecordIncomeSpec('test1'))
+    # # # testSuite.addTest(RecordIncomeSpec('test2'))
+    # # # testSuite.addTest(RecordIncomeSpec('test3'))
+    # # # testSuite.addTest(RecordIncomeSpec('test4'))
+    # # # testSuite.addTest(RecordIncomeSpec('test5'))
+    # # # testSuite.addTest(RecordIncomeSpec('test6'))
+    # # # testSuite.addTest(RecordIncomeSpec('test7'))
     # testSuite.addTest(RecordIncomeSpec('test8'))
+    # testSuite.addTest(RecordIncomePageSpec('test1'))
+    # testSuite.addTest(RecordIncomePageSpec('test2'))
+    # testSuite.addTest(RecordIncomePageSpec('test3'))
+    # testSuite.addTest(RecordIncomePageSpec('test4'))
+    # testSuite.addTest(RecordIncomePageSpec('test5'))
 
-    # #记账户互转 *注意：需要新增招商银行账户
-    # # testSuite.addTest(RecordTransterSpec('test1'))
-    # # testSuite.addTest(RecordTransterSpec('test2'))
-    # # testSuite.addTest(RecordTransterSpec('test3'))
-    # # testSuite.addTest(RecordTransterSpec('test4'))
-    # # testSuite.addTest(RecordTransterSpec('test5'))
-    # # testSuite.addTest(RecordTransterSpec('test6'))
-    # # testSuite.addTest(RecordTransterSpec('test7'))
+    # # #记账户互转 *注意：需要新增招商银行账户
+    # # # testSuite.addTest(RecordTransterSpec('test1'))
+    # # # testSuite.addTest(RecordTransterSpec('test2'))
+    # # # testSuite.addTest(RecordTransterSpec('test3'))
+    # # # testSuite.addTest(RecordTransterSpec('test4'))
+    # # # testSuite.addTest(RecordTransterSpec('test5'))
+    # # # testSuite.addTest(RecordTransterSpec('test6'))
+    # # # testSuite.addTest(RecordTransterSpec('test7'))
     # testSuite.addTest(RecordTransterSpec('test8'))
 
-    # # # # #记收票测试
+    # # # # # #记收票测试
     # testSuite.addTest(RecordInputInvoiceSpec('test1'))
     # testSuite.addTest(RecordInputInvoiceSpec('test2'))
 
-    # # # #记开票测试
-    # # testSuite.addTest(RecordOutputInvoiceSpec('test1'))
+    # # # # #记开票测试
+    # testSuite.addTest(RecordOutputInvoiceSpec('test1'))
 
     # testSuite.addTest(RecordOutputInvoiceSpec('test2'))
 
-    # # # #记固定资产
+    # # # # #记固定资产
     # testSuite.addTest(RecordFixedSpec('test1'))
     # testSuite.addTest(RecordFixedSpec('test2'))
 
-    # # # # #记无形资产
+    # # # # # #记无形资产
     # testSuite.addTest(RecordIntangibleSpec('test1'))
     # testSuite.addTest(RecordIntangibleSpec('test2'))
 
-    # #记所有的业务单：收入、支出、账户互转、收票、开票、固定资产、无形资产
-    # # testSuite.addTest(RecordBusinessSpec('test1'))
-    # # testSuite.addTest(RecordBusinessSpec('test2'))
-    # # testSuite.addTest(RecordBusinessSpec('test3'))
-    # # testSuite.addTest(RecordBusinessSpec('test4'))
-    # # testSuite.addTest(RecordBusinessSpec('test5'))
-    # # testSuite.addTest(RecordBusinessSpec('test6'))
-    # # testSuite.addTest(RecordBusinessSpec('test7'))
-    # # testSuite.addTest(RecordBusinessSpec('test8'))
-    # # testSuite.addTest(RecordBusinessSpec('test9'))
-    # # testSuite.addTest(RecordBusinessSpec('test10'))
+    # # #记所有的业务单：收入、支出、账户互转、收票、开票、固定资产、无形资产
+    # # # testSuite.addTest(RecordBusinessSpec('test1'))
+    # # # testSuite.addTest(RecordBusinessSpec('test2'))
+    # # # testSuite.addTest(RecordBusinessSpec('test3'))
+    # # # testSuite.addTest(RecordBusinessSpec('test4'))
+    # # # testSuite.addTest(RecordBusinessSpec('test5'))
+    # # # testSuite.addTest(RecordBusinessSpec('test6'))
+    # # # testSuite.addTest(RecordBusinessSpec('test7'))
+    # # # testSuite.addTest(RecordBusinessSpec('test8'))
+    # # # testSuite.addTest(RecordBusinessSpec('test9'))
+    # # # testSuite.addTest(RecordBusinessSpec('test10'))
 
-    # #业务流程测试
-    # # testSuite.addTest(PositiveFlowSpec('test1'))
-    # # testSuite.addTest(PositiveFlowSpec('test2'))
-    # # testSuite.addTest(PositiveFlowSpec('test3'))
-    # # testSuite.addTest(PositiveFlowSpec('test4'))
-    # # testSuite.addTest(PositiveFlowSpec('test5'))
-    # # testSuite.addTest(PositiveFlowSpec('test6'))
-    # # testSuite.addTest(PositiveFlowSpec('test7'))
-    # # testSuite.addTest(PositiveFlowSpec('test8'))
-    # # testSuite.addTest(PositiveFlowSpec('test9'))
-    # # testSuite.addTest(PositiveFlowSpec('test10'))
-    # # testSuite.addTest(PositiveFlowSpec('test11'))
+    # # #业务流程测试
+    # # # testSuite.addTest(PositiveFlowSpec('test1'))
+    # # # testSuite.addTest(PositiveFlowSpec('test2'))
+    # # # testSuite.addTest(PositiveFlowSpec('test3'))
+    # # # testSuite.addTest(PositiveFlowSpec('test4'))
+    # # # testSuite.addTest(PositiveFlowSpec('test5'))
+    # # # testSuite.addTest(PositiveFlowSpec('test6'))
+    # # # testSuite.addTest(PositiveFlowSpec('test7'))
+    # # # testSuite.addTest(PositiveFlowSpec('test8'))
+    # # # testSuite.addTest(PositiveFlowSpec('test9'))
+    # # # testSuite.addTest(PositiveFlowSpec('test10'))
+    # # # testSuite.addTest(PositiveFlowSpec('test11'))
 
-    # #助理首页测试（导入）
-    # # testSuite.addTest(AssistantDashbaordSPec('test1'))
+    # # #助理首页测试（导入）
+    # testSuite.addTest(AssistantDashbaordSPec('test1'))
     # testSuite.addTest(AssistantDashbaordSPec('test2'))
     # testSuite.addTest(AssistantDashbaordSPec('test3'))
     # testSuite.addTest(AssistantDashbaordSPec('test4'))
@@ -196,8 +202,8 @@ if __name__ == '__main__':
     runner = HTMLTestRunner(stream = testReport,title = "管有账测试报告",description='测试用例执行情况：')
     runner.run(testSuite)
     testReport.close()
-    new_report = find_new_report('./report')
-    send_mail(new_report)
+    # new_report = find_new_report('./report')
+    # send_mail(new_report)
 
 
 
