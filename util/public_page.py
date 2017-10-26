@@ -216,7 +216,7 @@ class PublicPage:
         return self.driver.execute_script(
             'scroll(0,document.body.scrollHeight)')
 
-    # 跳转至莫大了框
+    # 跳转至modal框
     def switch_to_add_contact_modal_dialog(self):
         self.driver.switch_to_active_element()
 

@@ -10,10 +10,10 @@ IdentityApiBaseUrl = 'https://api-identity.guanplus.com'
 # Driver = webdriver.Chrome()
 
 #dev环境地址
-# BaseUrl = 'http://guanplus-app-accountingfirm-web-dev-1.cn-north-1.eb.amazonaws.com.cn'
+BaseUrl = 'http://guanplus-app-accountingfirm-web-dev-1.cn-north-1.eb.amazonaws.com.cn'
 
 #stage环境地址
-BaseUrl = 'https://web-gyz-stage.guanplus.com'
+# BaseUrl = 'https://web-gyz-stage.guanplus.com'
 
 #pro环境地址
 # BaseUrl = 'https://firms.guanplus.com'

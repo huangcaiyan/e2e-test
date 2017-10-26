@@ -21,7 +21,8 @@ from test_case.login.login_spec import LoginSpec
 # from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 # from test_case.dashbaord.account_dashboard_spec import AccountDashbaordSPec
 # from test_case.setting.setting_spec import SettingSpec 
-from test_case.account.account_spec import RecordAcountSpec
+from test_case.transaction.record_transaction.record_transaction_cash_spec import RecordTransactionSpecCash
+# from test_case.account.account_spec import RecordAcountSpec
 
 
 #发送邮件
@@ -70,7 +71,7 @@ if __name__ == '__main__':
     # 添加账户测试
     # testSuite.addTest(RecordAcountSpec('test_addaccount_1'))
     # testSuite.addTest(RecordAcountSpec('test_same_name'))
-    testSuite.addTest(RecordAcountSpec('test_empty_name'))
+    # testSuite.addTest(RecordAcountSpec('test_empty_name'))
 
     #记账户互转 *注意：需要新增招商银行账户
     # testSuite.addTest(RecordTransterSpec('test1'))
@@ -110,6 +111,8 @@ if __name__ == '__main__':
     # # testSuite.addTest(RecordBusinessSpec('test8'))
     # # testSuite.addTest(RecordBusinessSpec('test9'))
     # # testSuite.addTest(RecordBusinessSpec('test10'))
+    testSuite.addTest(RecordTransactionSpecCash('test_record_income_cash'))
+    testSuite.addTest(RecordTransactionSpecCash('test_record_outcome_cash'))
 
     # #业务流程测试
     # # testSuite.addTest(PositiveFlowSpec('test1'))
