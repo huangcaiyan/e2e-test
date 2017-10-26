@@ -59,6 +59,7 @@ class SettingSpec(unittest.TestCase):
         page.go_to_tax_rate_page(CompInfo.BASE_URL)
         current_url = self.driver.current_url
         self.assertIn(tax_rate_url,current_url)
+        self.driver.execute_script("arguments[0].focus();", element)
         
 
     # tab 切换测试
