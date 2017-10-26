@@ -98,6 +98,18 @@ class AddStuffSpec(unittest.TestCase):
         result = page.has_danger_is_show()
         self.assertEqual(result, 1)
 
+    # def test_add_multiple_employees(self):
+    #     """添加员工－天假多条员工"""
+    #     page = AddStuffPage(self.driver)
+    #     readExcel = ReadExcel(self.file_dir)
+    #     excel_data = readExcel.get_value_by_row(0, 5)
+    #     page.add_stuff_base(excel_data)
+    #     time.sleep(5)
+    #     page_url = self.driver.current_url
+    #     print('page_url=>', page_url)
+    #     self.assertIn('stuff-list', page_url)
+        
+
 
 if __name__ == '_main_':
     unittest.main()

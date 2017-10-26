@@ -12,7 +12,6 @@ class DangerPage:
     # 输入框警示文字class
     input_alert_msg_elem = '.error'
     alert_msgs = []
-
     def __init__(self, driver):
         self.driver = driver
 

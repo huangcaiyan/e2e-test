@@ -6,6 +6,11 @@ import xlrd
 from openpyxl import load_workbook
 from config import *
 from .is_element_exit_util import IsElementExit
+<<<<<<< HEAD
+from selenium.webdriver.common.action_chains import ActionChains
+=======
+from public_page import PublicPage
+>>>>>>> 735c391171023dac287ea94470d35b2205bcf030
 
 #定义从登陆到进入账套
 class EnterCompany(object):
@@ -39,8 +44,13 @@ class EnterCompany(object):
         time.sleep(5)
             
         try:
+            actionsLocator = self.driver.find_element_by_link_text(accountCom[2])
+            actions = ActionChains(self.driver)
+            actions.move_to_element(actionsLocator).perform()
+            time.sleep(4)
             self.driver.find_element_by_link_text(accountCom[2]).click()
             time.sleep(5)
+            actions.release()
             print('*******************************进入账套成功啦啦啦！！！*******************************')
         except Exception as e:
             print('===============================进入账套失败喽喽喽……==================================')

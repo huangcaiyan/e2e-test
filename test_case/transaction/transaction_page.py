@@ -29,6 +29,11 @@ class TransactionPage:
         self.driver.get(baseUrl + '/app/transaction/list')
         time.sleep(5)
 
+    #进入记收入页面Url
+    def recordIncomeUrl(self,baseUrl):
+        self.driver.get(baseUrl + '/app/transaction/detail/Income')
+        time.sleep(5)
+
     # 进入记收支页面
     def goToTransactionPage(self, transactionName):
         try:

@@ -15,7 +15,8 @@ class SettingSpec(unittest.TestCase):
     '''
     设置页面测试用例
     '''
-    def setUp(self):
+    @classmethod
+    def setUpClass(self):
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
@@ -45,10 +46,10 @@ class SettingSpec(unittest.TestCase):
         current_url = self.driver.current_url
         self.assertIn(mutil_user_url,current_url)
 
-    def test_go_to_partner_set_page(self):
+    def test_go_to_partnerset_page(self):
         """测试－去股东页面"""
         page = SettingPage(self.driver)
-        page.go_to_partner_set_page(CompInfo.BASE_URL)
+        page.go_to_partnerset_page(CompInfo.BASE_URL)
         current_url = self.driver.current_url
         self.assertIn(partner_set_url,current_url)
      
@@ -58,10 +59,11 @@ class SettingSpec(unittest.TestCase):
         page.go_to_tax_rate_page(CompInfo.BASE_URL)
         current_url = self.driver.current_url
         self.assertIn(tax_rate_url,current_url)
+        
 
     # tab 切换测试
-
-    def tearDown(self):
+    @classmethod
+    def tearDownClass(self):
         self.driver.quit()
 
 

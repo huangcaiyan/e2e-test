@@ -35,6 +35,8 @@ class RecordTransactionSpec(unittest.TestCase):
     def tearDownClass(self):
         self.driver.quit()
 
+    # 
+    # 纪录完收入、支出、互转，收支列表本月收入、支出总额为42,650.92 ，70,584.30
     def test_record_income(self):
         """测试记多条收入"""
         readExcel = ReadExcel(self.revenue_and_expenditure_data_dir)
