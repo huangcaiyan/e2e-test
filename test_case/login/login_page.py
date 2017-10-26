@@ -1,5 +1,6 @@
 import time
 from .login_elem import *
+from util.public_page import PublicPage
 
 # 更新于2017-09-06
 class LoginPage(object):
@@ -14,6 +15,11 @@ class LoginPage(object):
         username_text = self.driver.find_element_by_id(username_elem)
         username_text.clear()
         username_text.send_keys(username)
+        publicPage = PublicPage(self.driver)
+        loc = publicPage.get_elem_location(username_text)
+        print('loc =',loc)
+        print('loc1 =',loc['x'])
+        
 
     # 输入密码
     def type_password(self, password):
@@ -26,6 +32,15 @@ class LoginPage(object):
         login_button = self.driver.find_element_by_css_selector(login_btn_elem)
         login_button.click()
 
+    # 密码框错误 
+    def get_input_error(self,input_name):
+        publicPage = PublicPage(self.driver)
+        error_loc = self.driver.find_element_by_id(input_name+'-error')
+        publicPage.is_element_present(error_loc)
+        error_msg = error_loc.text
+        print('The text danger message is ', error_msg)
+        return error_msg
+
     # 个人信息名称
     def personal_name_show(self):
         personal_name = self.driver.find_element_by_xpath(personal_name_elem)
@@ -34,7 +49,6 @@ class LoginPage(object):
     # 登陆成功用户名展示
     # login_data:username,password
     def login(self,login_data):
-        print('aaa=>',self.driver)
         self.driver.delete_cookie('OAUTH_TOKEN')
         self.driver.get(self.url)
         self.type_username(login_data[0])

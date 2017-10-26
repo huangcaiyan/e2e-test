@@ -6,7 +6,11 @@ import xlrd
 from openpyxl import load_workbook
 from config import *
 from .is_element_exit_util import IsElementExit
+<<<<<<< HEAD
 from selenium.webdriver.common.action_chains import ActionChains
+=======
+from public_page import PublicPage
+>>>>>>> 735c391171023dac287ea94470d35b2205bcf030
 
 #定义从登陆到进入账套
 class EnterCompany(object):
@@ -37,7 +41,7 @@ class EnterCompany(object):
         if isElementExit.is_element_exit_by_xpath('//*[@id="content"]/div[2]/div[1]/alert/div'):
             print('=========================登陆失败===================================')
             exit()
-        time.sleep(12)
+        time.sleep(5)
             
         try:
             actionsLocator = self.driver.find_element_by_link_text(accountCom[2])

@@ -18,3 +18,18 @@ pip命令使用配置:   将python安装文件目录下Scripts配置到系统环
 # pip3 install xlrd
 # pip3 install openpyxl
 # pip3 install requests
+# pip3 install html-testRunner
+
+
+<!-- 代码规范 -->
+# class name(类名)：
+# # 驼峰命名方法，首字母大写，单词之间大写字母连接，
+# # eg：LoginPage()
+
+# method name(方法名)：
+# # 字母小写，单词之间用下划线 _ 连接
+# # eg：set_password()
+
+# variable name(变量名)：
+# # 字母小写，单词之间用下划线 _ 连接
+# # eg：login_btn_elem

@@ -12,6 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class TransactionPage:
 
+    # transactionType:(Income , Outcome , accountTransfers)
     def __init__(self, driver,transactionType):
         self.driver = driver
         self.transactionType = transactionType
@@ -212,3 +213,6 @@ class TransactionPage:
     def deleteDate(self):
         self.driver.find_element_by_xpath('//*[@id="body"]/detail/accounttransfers/div/div[2]/div/form/div[1]/p-calendar/span/span[1]').click()
         time.sleep(1)
+
+    # 连续记录新增一笔
+    def type_record_income(self,record_invoice_data):
