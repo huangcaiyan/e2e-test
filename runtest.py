@@ -7,7 +7,6 @@ from email.mime.base import MIMEBase
 from email import encoders
 from HTMLTestRunner import HTMLTestRunner
 from test_case.login.login_spec import LoginSpec 
-<<<<<<< HEAD
 from test_case.transaction.record_outcome_spec import RecordOutcomeSpec
 from test_case.transaction.record_income_spec import RecordIncomeSpec
 from test_case.transaction.record_transfer_spec import RecordTransterSpec
@@ -25,24 +24,6 @@ from test_case.setting.setting_spec import SettingSpec
 from test_case.setting.contact.contact_spec import ContactSpec 
 from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec 
 from test_case.transaction.record_income_page_spec import RecordIncomePageSpec
-=======
-# from test_case.transaction.record_outcome_spec import RecordOutcomeSpec
-# from test_case.transaction.record_income_spec import RecordIncomeSpec
-# from test_case.transaction.record_transfer_spec import RecordTransterSpec
-# from test_case.transaction.outcome_voucher_spec import OutcomeVoucherSpec
-# from test_case.invoice.record_input_invoice_spec import RecordInputInvoiceSpec
-# from test_case.invoice.record_output_invoice_spec import RecordOutputInvoiceSpec
-# from test_case.finance.voucher.generate_voucher_spec import GenerateVoucherSpec
-# from test_case.fixedassets.record_fixed_spec import RecordFixedSpec
-# from test_case.fixedassets.record_intangible_spec import RecordIntangibleSpec
-# from test_case.finance.voucher.record_business_spec import RecordBusinessSpec
-# from test_case.business_flow.positive_flow_spec import PositiveFlowSpec
-# from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
-# from test_case.dashbaord.account_dashboard_spec import AccountDashbaordSPec
-# from test_case.setting.setting_spec import SettingSpec 
-from test_case.account.account_spec import RecordAcountSpec
-
->>>>>>> 735c391171023dac287ea94470d35b2205bcf030
 
 #发送邮件
 def send_mail(file_new):
@@ -77,7 +58,6 @@ def find_new_report(testReport):
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
 
-<<<<<<< HEAD
     # 登录测试
     # testSuite.addTest(LoginSpec('test_verify_login'))
     # testSuite.addTest(LoginSpec('test_unexit_username'))
@@ -132,30 +112,6 @@ if __name__ == '__main__':
     # # # testSuite.addTest(RecordTransterSpec('test5'))
     # # # testSuite.addTest(RecordTransterSpec('test6'))
     # # # testSuite.addTest(RecordTransterSpec('test7'))
-=======
-    #记收入测试
-    # testSuite.addTest(RecordIncomeSpec('test1'))
-    # testSuite.addTest(RecordIncomeSpec('test2'))
-    # testSuite.addTest(RecordIncomeSpec('test3'))
-    # testSuite.addTest(RecordIncomeSpec('test4'))
-    # testSuite.addTest(RecordIncomeSpec('test5'))
-    # testSuite.addTest(RecordIncomeSpec('test6'))
-    # testSuite.addTest(RecordIncomeSpec('test7'))
-    # testSuite.addTest(RecordIncomeSpec('test8'))
-
-    # 添加账户测试
-    # testSuite.addTest(RecordAcountSpec('test_addaccount_1'))
-    testSuite.addTest(RecordAcountSpec('test_same_name'))
-
-    #记账户互转 *注意：需要新增招商银行账户
-    # testSuite.addTest(RecordTransterSpec('test1'))
-    # testSuite.addTest(RecordTransterSpec('test2'))
-    # testSuite.addTest(RecordTransterSpec('test3'))
-    # testSuite.addTest(RecordTransterSpec('test4'))
-    # testSuite.addTest(RecordTransterSpec('test5'))
-    # testSuite.addTest(RecordTransterSpec('test6'))
-    # testSuite.addTest(RecordTransterSpec('test7'))
->>>>>>> 735c391171023dac287ea94470d35b2205bcf030
     # testSuite.addTest(RecordTransterSpec('test8'))
 
     # # # # # #记收票测试
