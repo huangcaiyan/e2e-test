@@ -23,20 +23,23 @@ class RecordInvoiceSpec(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-    # def setUp(self):
+        # def setUp(self):
         # self.driver = webdriver.PhantomJS()
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
-        self.driver.set_window_size(1280, 800)
+        # self.driver.set_window_size(1280, 800)
+        self.driver.maximize_window()
+        
 
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
     @classmethod
     def tearDownClass(self):
-    # def tearDown(self):
+        # def tearDown(self):
         self.driver.quit()
     # 纪录完所有数据，收票列表本月收票总额为263,097.00
+
     def test_record_input_invoice(self):
         """cai-记多条收票 测试"""
         readExcel = ReadExcel(self.record_invoice_data_dir)
@@ -50,13 +53,14 @@ class RecordInvoiceSpec(unittest.TestCase):
                 page.record_input_invoice(input_invoice_data)
                 page.submit('save_and_new')
                 print('input_invoice_data=>', input_invoice_data)
-<<<<<<< HEAD
-            time.sleep(3)            
-=======
             time.sleep(3)
->>>>>>> 0beffb23ebcb06e22534b4543f9c569c042fc901
             alert_msg = alertPage.get_alert_msg()
-            self.assertIn('发票保存成功', alert_msg)
+            if '发票保存成功' in alert_msg:
+                self.assertIn('发票保存成功', alert_msg)
+            elif alert_msg == '请完善相关信息' or alert_msg == '':
+                print('[test_record_output_invoice]－－记收票失败－－aler_msg=',alert_msg)                
+                self.assertEqual(1, 0)
+                exit()
         except Exception as e:
             danger_msg = dangerPage.get_alert_danger_msg()
             if danger_msg == '请完善相关信息':
@@ -78,14 +82,14 @@ class RecordInvoiceSpec(unittest.TestCase):
             for output_invoice_data in excel_data:
                 page.record_invoice(output_invoice_data)
                 page.submit('save_and_new')
-<<<<<<< HEAD
-                print('output_invoice_data=>', output_invoice_data)                
-=======
                 print('output_invoice_data=>', output_invoice_data)
->>>>>>> 0beffb23ebcb06e22534b4543f9c569c042fc901
             time.sleep(3)
             alert_msg = alertPage.get_alert_msg()
-            self.assertEqual(alert_msg, '保存成功')
+            if alert_msg == '保存成功':
+                self.assertEqual(alert_msg, '保存成功')
+            elif alert_msg == '请完善相关信息' or alert_msg == '':
+                print('[test_record_output_invoice]－－记开票失败－－aler_msg=',alert_msg)
+                self.assertEqual(1, 0)
         except Exception as e:
             danger_msg = dangerPage.get_alert_danger_msg()
             if danger_msg == '请完善相关信息':

@@ -75,8 +75,8 @@ if __name__ == '__main__':
 
     # 记发票
     # 记所有类别发票
-    # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
-    testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
+    testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
+    # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
 
 
     

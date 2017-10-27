@@ -34,16 +34,6 @@ class EnterCompPage:
         try:
             comp_name_loc = self.driver.find_element_by_link_text(
                 enter_comp_info[2])
-            # self.driver.execute_script(
-                # 'return arguments[0].scrollIntoView();', comp_name_loc)
-            # self.driver.execute_script('window.scrollBy(0,600')
-            # comp_name_loc.click()
-            # self.driver.execute_script()
-            # self.driver.execute_script("window.scrollTo(0, 1600)")
-            # publicPage.scroll_to_elem(comp_name_loc)
-            # time.sleep(1)
-            # publicPage.scroll_to_elem(comp_name_loc)
-            # comp_name_loc.click()
             publicPage.click_elem(comp_name_loc)
             time.sleep(5)
             if publicPage.is_element_present(self.driver.find_element_by_xpath(self.comp_name_elem)):

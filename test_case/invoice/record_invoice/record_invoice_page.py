@@ -30,16 +30,10 @@ class RecordInvoicePage():
             page_name = '记开票页面'
         else:
             return 'error'
-        # pro,stage
-<<<<<<< HEAD
+        # pro
         # page_url = self.base_url + '/app/invoice/tab/new-' + self.invoice_io + '-invoice'
-        # dev
+        # dev,stage
         page_url = self.base_url + '/app/invoice/detail/new-' + self.invoice_io + '-invoice'        
-=======
-        page_url = self.base_url + '/app/invoice/tab/new-' + self.invoice_io + '-invoice'
-        # dev
-        # page_url = self.base_url + '/app/invoice/detail/new-' + self.invoice_io + '-invoice'        
->>>>>>> 0beffb23ebcb06e22534b4543f9c569c042fc901
         time.sleep(3)
         self.driver.get(page_url)
         page_url = self.driver.current_url
