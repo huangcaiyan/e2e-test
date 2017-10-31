@@ -31,9 +31,9 @@ class RecordInvoicePage():
         else:
             return 'error'
         # pro
-        # page_url = self.base_url + '/app/invoice/tab/new-' + self.invoice_io + '-invoice'
+        page_url = self.base_url + '/app/invoice/tab/new-' + self.invoice_io + '-invoice'
         # dev,stage
-        page_url = self.base_url + '/app/invoice/detail/new-' + self.invoice_io + '-invoice'        
+        # page_url = self.base_url + '/app/invoice/detail/new-' + self.invoice_io + '-invoice'        
         time.sleep(3)
         self.driver.get(page_url)
         page_url = self.driver.current_url

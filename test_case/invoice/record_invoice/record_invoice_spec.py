@@ -43,7 +43,7 @@ class RecordInvoiceSpec(unittest.TestCase):
     def test_record_input_invoice(self):
         """cai-记多条收票 测试"""
         readExcel = ReadExcel(self.record_invoice_data_dir)
-        excel_data = readExcel.get_value_in_order(0)
+        excel_data = readExcel.get_value_in_order(1)
         dangerPage = DangerPage(self.driver)
         alertPage = AlertPage(self.driver)
         page = RecordInvoicePage(self.driver, CompInfo.BASE_URL, 'input')
