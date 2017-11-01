@@ -26,7 +26,7 @@ class RecordTransactionSpec(unittest.TestCase):
         # self.driver = webdriver.PhantomJS()
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
-        self.driver.set_window_size(1280, 800)
+        self.driver.maximize()
 
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)

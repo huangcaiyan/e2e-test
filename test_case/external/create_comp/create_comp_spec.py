@@ -21,7 +21,7 @@ class CreateCompSpec(unittest.TestCase):
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
-        self.driver.set_window_size(1280, 800)
+        self.driver.maximize_window()
 
     def create_account_book_empty_comp_name(self, account_book_info):
         """创建帐套-帐套名称为空,红框提醒保存失败"""
