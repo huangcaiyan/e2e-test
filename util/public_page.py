@@ -85,13 +85,16 @@ class PublicPage:
             year_drop_loc = self.driver.find_element_by_css_selector(
                 self.datepicker_year_drop_elem)
             self.select_dropdown_item(year_drop_loc, year)
+
             month_drop_loc = self.driver.find_element_by_css_selector(
                 self.datepicker_month_drop_elem)
             self.select_dropdown_item(month_drop_loc, month)
+
             day_loc = self.driver.find_element_by_link_text(day)
+            self.click_elem(day_loc)
         except Exception as e:
             print(
-                '[PublicPage] There was an exception when select_date_by_ymd=>', str(e))
+                '[PublicPage]select_date_by_ymd－－选择年月日失败－－错误原因=>', str(e))
 
     # 月份选择插件
     def select_month(self, calen_drop_loc, month):
