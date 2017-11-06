@@ -16,5 +16,9 @@ class InvoiceListSpec(unittest.TestCase):
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 
+    def test_get_input_invoice_list_total(self):
+        
+
+
     def tearDownClass(self):
         self.driver.quit()

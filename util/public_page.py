@@ -28,9 +28,8 @@ class PublicPage:
     # 判断元素是否显示
     def is_element_present(self, elem_loc):
         try:
-            # EC.visibility_of(elem_loc)
             elem_loc.is_displayed()
-            print('--------1 =', elem_loc.is_displayed())
+            print('elem display？＝>', elem_loc.is_displayed())
         except NoSuchElementException as e:
             return False
         return True
@@ -119,36 +118,20 @@ class PublicPage:
     def eight_random_nums(self):
         return random.randint(10000000, 100000000)
 
-    # 点击事件
-    # def click_elem(self, elem_loc):
-    #     try:
-    #         if self.is_element_present(elem_loc):
-    #             print('2==:',self.is_element_present(elem_loc))
-    #             # self.move_to_element_to_click(elem_loc)
-    #             elem_loc.click()
-    #         else:
-    #             print('3、=:',self.is_element_present(elem_loc))
-    #             self.scroll_to_elem(elem_loc)
-    #             # self.move_to_element_to_click(elem_loc)
-    #             elem_loc.click()
-    #             print('HEHE')
-    #     except Exception as e:
-    #         logging.error('There was an exception when click_elem', str(e))
-
+    # 单击某元素
     def click_elem(self, elem_loc):
         try:
-            self.scroll_to_elem(elem_loc)
-            return elem_loc.click()
+            if self.wait_until_loader_disapeared() == False:
+                self.scroll_to_elem(elem_loc)
+                return elem_loc.click()
+            else:
+                print('[PublicPage]－－加载蒙板未消失－－点击失败！')
+                time.sleep(5)
+                return elem_loc.click()
         except Exception as e:
-            logging.error('There was an exception when click_elem', str(e))
+            logging.error('There was an exception when click_elem＝', str(e))
 
-    # def click_elem(self, elem_loc):
-    #     try:
-    #         self.scroll_to_elem(elem_loc)
-    #         self.move_to_element_to_click(elem_loc)
-    #     except Exception as e:
-    #         logging.error('There was an exception when click_elem %s', str(e))
-
+    # 双击某元素
     def double_click_elem(self, elem_loc):
         try:
             if self.is_element_present(elem_loc):
