@@ -8,10 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
-<<<<<<< HEAD
-=======
 from selenium.webdriver.support import expected_conditions as EC
->>>>>>> 0beffb23ebcb06e22534b4543f9c569c042fc901
 
 
 class PublicPage:
@@ -41,19 +38,11 @@ class PublicPage:
     # 等待直到加载蒙板消失
     # 当 is_disapeared ＝ False 时，蒙板消失
     def wait_until_loader_disapeared(self):
-<<<<<<< HEAD
-        is_disapeared = WebDriverWait(self.driver, 30, 1).until_not(lambda x: self.driver.find_element_by_css_selector('.loader').is_displayed())
-        print('is_disapeared=>',is_disapeared)
-        return is_disapeared
-
-
-=======
         is_disapeared = WebDriverWait(self.driver, 30, 1).until_not(
             lambda x: self.driver.find_element_by_css_selector('.loader').is_displayed())
         print('is_disapeared=>', is_disapeared)
         return is_disapeared
 
->>>>>>> 0beffb23ebcb06e22534b4543f9c569c042fc901
     # 判断alert框是否出现
     def is_alert_present(self):
         try:

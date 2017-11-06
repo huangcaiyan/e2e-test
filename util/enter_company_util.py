@@ -6,11 +6,8 @@ import xlrd
 from openpyxl import load_workbook
 from config import *
 from .is_element_exit_util import IsElementExit
-<<<<<<< HEAD
 from selenium.webdriver.common.action_chains import ActionChains
-=======
 from public_page import PublicPage
->>>>>>> 735c391171023dac287ea94470d35b2205bcf030
 
 #定义从登陆到进入账套
 class EnterCompany(object):

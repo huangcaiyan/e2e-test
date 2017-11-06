@@ -8,16 +8,16 @@ class CompInfo(object):
 
     # ------------------------------------------------
     # # stage
-    BASE_URL = 'https://web-gyz-stage.guanplus.com'
-    LOGIN_DATA = ['15636017838', 'Livewell1']
-    COMP_NAME = '测试期初导入重复8月创建'
+    # BASE_URL = 'https://web-gyz-stage.guanplus.com'
+    # LOGIN_DATA = ['15636017838', 'qq123456']
+    # COMP_NAME = 'test一般人7'
     # COMP_NAME_YB = 'auto_test_yb'
 # 
     # -------------------------------------------------
     # # # pro
-    # BASE_URL = 'https://firms.guanplus.com'
-    # LOGIN_DATA = ['13683139989', 'qq123456']
-    # # COMP_NAME = 'testyb'  # 小规模
+    BASE_URL = 'https://firms.guanplus.com'
+    LOGIN_DATA = ['15636017838', 'qq123456']
+    COMP_NAME = 'test一般人7'  # 小规模
     # COMP_NAME = '跨年测试11月启用yb'  # 一般纳税人
 
     ENTER_COMP_INFO = [BASE_URL, LOGIN_DATA, COMP_NAME]

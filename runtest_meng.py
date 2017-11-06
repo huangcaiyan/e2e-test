@@ -21,8 +21,9 @@ from test_case.login.login_spec import LoginSpec
 # from test_case.dashbaord.assistant_dashbaord_spec import AssistantDashbaordSPec
 # from test_case.dashbaord.account_dashboard_spec import AccountDashbaordSPec
 # from test_case.setting.setting_spec import SettingSpec 
-from test_case.transaction.record_transaction.record_transaction_cash_spec import RecordTransactionSpecCash
+# from test_case.transaction.record_transaction.record_transaction_cash_spec import RecordTransactionSpecCash
 # from test_case.account.account_spec import RecordAcountSpec
+from test_case.reports.cashFlows_statement.cashFlows_statement_spec import CashFlowsSpec
 
 # from test_case.transaction.record_outcome_spec import RecordOutcomeSpec
 # from test_case.transaction.record_income_spec import RecordIncomeSpec
@@ -138,8 +139,13 @@ if __name__ == '__main__':
     # # testSuite.addTest(RecordBusinessSpec('test8'))
     # # testSuite.addTest(RecordBusinessSpec('test9'))
     # # testSuite.addTest(RecordBusinessSpec('test10'))
-    testSuite.addTest(RecordTransactionSpecCash('test_record_income_cash'))
-    testSuite.addTest(RecordTransactionSpecCash('test_record_outcome_cash'))
+    # # 现金流量表记收入，支出
+    # testSuite.addTest(RecordTransactionSpecCash('test_record_income_cash'))
+    # testSuite.addTest(RecordTransactionSpecCash('test_record_outcome_cash'))
+    # 现金流量表数据校验
+    testSuite.addTest(RecordTransactionSpecCash('test_cashFlows_1'))
+
+    
 
     # #业务流程测试
     # # testSuite.addTest(PositiveFlowSpec('test1'))
@@ -203,5 +209,3 @@ if __name__ == '__main__':
     # send_mail(new_report)
 
 
-
-    
