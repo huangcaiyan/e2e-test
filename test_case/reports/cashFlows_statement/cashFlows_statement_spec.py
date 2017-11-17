@@ -12,10 +12,12 @@ from util.read_excel import ReadExcel
 from test_case.login.login_page import LoginPage
 from util.enter_company_util import EnterCompany
 from config import *
+from util.get_table_text_util import GetTableContent
 
 # 现金流量表数据校验
 # 修改与2017-11-06
 # meng
+'''现金流量表'''
 
 
 class CashFlowsSpec(unittest.TestCase):
@@ -46,5 +48,7 @@ class CashFlowsSpec(unittest.TestCase):
         ''' 行次1数值测试'''
         cashFlows_page = CashFlowsPage(self.url, self.driver)
         readExcel = ReadExcel(self.cashFlows_test_data_dir)
-        cashFlows_page.get_table_content(".table","第一行第三列")
+        getTabelContent = GetTableContent(self.tableId, self.queryContent)
+        getTabelContent.get_table_content("tab1",[1,1])
+        
 

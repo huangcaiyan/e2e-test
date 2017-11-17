@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 
 # 更新于2017/11/06
 class CashFlowsPage(object):
+    '''现金流量表'''
+
     # 根据table的class属性和table中的某一个元素定位其在table中的位置
     # table包括表头，位置坐标都是从1开始算
     # tableClass:table的class属性
