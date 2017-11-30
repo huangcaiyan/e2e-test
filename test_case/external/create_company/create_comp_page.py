@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 from util.public_page import PublicPage
-from create_comp_elem import *
+from .create_comp_elem import *
 '''
 进入帐套
 创建于2017-09-29-五
@@ -152,10 +152,10 @@ class CreateCompPage(object):
     def submit(self, btn_name):
         # 保存／取消
         try:
-            if btn_name = 'save':
+            if btn_name == 'save':
                 btn_elem = create_btn_elem
                 operation_name = '保存'
-            elif btn_name = 'cancel':
+            elif btn_name == 'cancel':
                 btn_elem = cancel_btn_elem
                 operation_name = '取消'
             btn_loc = self.driver.find_element_by_xpath(btn_elem)

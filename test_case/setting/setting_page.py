@@ -9,7 +9,6 @@ from .partner_set.partner_set_elem import *
 
 
 class SettingPage(object):
-
     def __init__(self, driver,base_url):
         self.driver = driver
         self.base_url = base_url

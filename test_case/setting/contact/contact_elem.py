@@ -6,7 +6,7 @@ modal_title_elem = '.modal-title'
 # 名称 id
 name_elem = 'input-name'
 # 性质 下拉xpath
-contact_property_elem = '//*[@id="body"]/setting/div[2]/div/contact/gpw-contact-details-modal/div/div/div/div[2]/div/form/div[2]/div/ng-select'
+contact_property_elem = '//*[@id="body"]/setting/contact/gpw-contact-details-modal/div/div/div/div[2]/div/form/div[2]/div/ng-select'
 # 联系人 id
 contact_elem = 'input-contactName'
 # 账户名称 id
@@ -17,11 +17,11 @@ account_num_elem = 'input-accountNumber'
 phone_num_elem = 'input-phoneNumber'
 # 列表
 # 保存按钮 xpath
-save_btn_elem = '//*[@id="body"]/setting/div[2]/div/contact/gpw-contact-details-modal/div/div/div/div[3]/button[1]'
+save_btn_elem = '//*[@id="body"]/setting/contact/gpw-contact-details-modal/div/div/div/div[3]/button[1]'
 # 取消按钮 xpath
-cancel_btn_elem = '//*[@id="body"]/setting/div[2]/div/contact/gpw-contact-details-modal/div/div/div/div[3]/button[2]'
+cancel_btn_elem = '//*[@id="body"]/setting/contact/gpw-contact-details-modal/div/div/div/div[3]/button[2]'
 # 关闭窗口按钮 xpath
-close_btn_elem = '//*[@id="body"]/setting/div[2]/div/contact/gpw-contact-details-modal/div/div/div/div[1]/button/span'
+close_btn_elem = '//*[@id="body"]/setting/contact/gpw-contact-details-modal/div/div/div/div[1]/button/span'
 # 列表
 # 
 # 列表－名称 id

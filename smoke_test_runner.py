@@ -10,7 +10,7 @@ from test_case.setting.contact.contact_spec import ContactSpec
 from test_case.setting.partner_set.partner_set_spec import PartnersetSpec
 from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec
 from test_case.external.enter_comp_spec import EnterCompSpec
-from test_case.external.create_comp.create_comp_spec import CreateCompSpec
+from test_case.external.create_company.create_comp_spec import CreateCompSpec
 from test_case.external.user_setting.user_setting_spec import UserSettingSpec
 from test_case.transaction.record_transaction.record_transaction_spec import RecordTransactionSpec
 from test_case.invoice.record_invoice.record_invoice_spec import RecordInvoiceSpec
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     # testSuite.addTest(CompBillingSpec('test_tax_num_empty'))
     # testSuite.addTest(CompBillingSpec('test_verify_edit_comp_info'))
 
-    # 设置－往来性质
+    # 设置－往来性质(done)
     # testSuite.addTest(ContactSpec('test_show_add_modal'))
     # testSuite.addTest(ContactSpec('test_name_empty'))
     # testSuite.addTest(ContactSpec('test_phone_num_typeError'))
@@ -49,11 +49,13 @@ if __name__ == '__main__':
     # testSuite.addTest(ContactSpec('test_name_repeat'))
 
     # 设置－股东信息
-    # testSuite.addTest(PartnersetSpec('test_click_add_btn'))
-    # testSuite.addTest(PartnersetSpec('test_partnerset_empty'))
-    # testSuite.addTest(PartnersetSpec('test_actual_paid_empty'))
-    # testSuite.addTest(PartnersetSpec('test_partset_name_repeat'))
-    # testSuite.addTest(PartnersetSpec('test_add_a_partner'))
+    # testSuite.addTest(PartnersetSpec('test_click_add_btn_modal_is_show'))
+    # testSuite.addTest(PartnersetSpec('test_partnerset_empty_invalid'))
+    # # testSuite.addTest(PartnersetSpec('test_actual_paid_empty_valid'))
+    # testSuite.addTest(PartnersetSpec('test_partset_name_repeat_invalid'))
+    # testSuite.addTest(PartnersetSpec('test_add_a_partner_valid'))
+    # testSuite.addTest(PartnersetSpec('test_edit_partnerset_valid'))
+    # testSuite.addTest(PartnersetSpec('test'))
     
     
 
@@ -69,14 +71,14 @@ if __name__ == '__main__':
 
     # 记收支
     # # 记所有科目和账户的收支、互转
-    testSuite.addTest(RecordTransactionSpec('test_record_income'))
-    testSuite.addTest(RecordTransactionSpec('test_record_outcome'))
+    # testSuite.addTest(RecordTransactionSpec('test_record_income'))
+    # testSuite.addTest(RecordTransactionSpec('test_record_outcome'))
     testSuite.addTest(RecordTransactionSpec('test_record_transfer'))
 
     # 记发票
-    # 记所有类别发票
-    testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
-    testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
+    # # 记所有类别发票
+    # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
+    # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
 
 
     
