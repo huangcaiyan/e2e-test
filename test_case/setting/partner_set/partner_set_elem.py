@@ -1,6 +1,6 @@
 # 股东
 # 添加按钮 xpath pro环境
-add_btn_elem = '//*[@id="body"]/setting/div[2]/div/app-partner-set/div[1]/div/button'
+add_btn_elem = '//*[@id="body"]/setting/app-partner-set/div[1]/div[2]/button'
 # 添加按钮 xpath dev环境
 # add_btn_elem = '//*[@id="body"]/setting/app-partner-set/div[1]/div[2]/button'
 # modal 框标题 class
@@ -17,3 +17,11 @@ save_btn_elem = '//*[@id="partnerDetailModal"]/div/div/div[3]/button[1]'
 cancel_btn_elem = '//*[@id="partnerDetailModal"]/div/div/div[3]/button[2]'
 # 关闭modal框按钮xpath
 close_modal_btn_elem = '//*[@id="partnerDetailModal"]/div/div/div[1]/button/span'
+
+# 股东列表
+# 名称 id
+table_tr_elem = 'departmentList'
+table_partnerset_name_elem = 'departmentName'
+table_actual_paid_elem = 'departmentType'
+
+table_edit_btn_elem = '//*[@id="departmentList"]/td[3]'

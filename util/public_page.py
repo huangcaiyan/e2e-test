@@ -28,11 +28,12 @@ class PublicPage:
     # 判断元素是否显示
     def is_element_present(self, elem_loc):
         try:
-            elem_loc.is_displayed()
-            print('elem display？＝>', elem_loc.is_displayed())
+            elem_loc
         except NoSuchElementException as e:
+            print('未找到该元素。')
             return False
-        return True
+        else:
+            return True
 
     # 等待直到加载蒙板消失
     # 当 is_disapeared ＝ False 时，蒙板消失
@@ -85,13 +86,16 @@ class PublicPage:
             year_drop_loc = self.driver.find_element_by_css_selector(
                 self.datepicker_year_drop_elem)
             self.select_dropdown_item(year_drop_loc, year)
+
             month_drop_loc = self.driver.find_element_by_css_selector(
                 self.datepicker_month_drop_elem)
             self.select_dropdown_item(month_drop_loc, month)
+
             day_loc = self.driver.find_element_by_link_text(day)
+            self.click_elem(day_loc)
         except Exception as e:
             print(
-                '[PublicPage] There was an exception when select_date_by_ymd=>', str(e))
+                '[PublicPage]select_date_by_ymd－－选择年月日失败－－错误原因=>', str(e))
 
     # 月份选择插件
     def select_month(self, calen_drop_loc, month):
@@ -129,7 +133,7 @@ class PublicPage:
                 time.sleep(5)
                 return elem_loc.click()
         except Exception as e:
-            logging.error('There was an exception when click_elem＝', str(e))
+            print('There was an exception when click_elem＝', str(e))
 
     # 双击某元素
     def double_click_elem(self, elem_loc):
@@ -142,7 +146,7 @@ class PublicPage:
                 self.scroll_to_elem(elem_loc)
                 action.move_to_element(elem_loc).double_click()
         except Exception as e:
-            logging.error(
+            print(
                 'There was an exception when double_click_elem %s', str(e))
 
     # input 框
@@ -155,7 +159,7 @@ class PublicPage:
             elem_loc.clear()
             elem_loc.send_keys(input_value)
         except Exception as e:
-            logging.error('There was an exception when set_value s%', str(e))
+            print('There was an exception when set_value=>', str(e))
 
     # 点击键盘的delete键
     def click_backspace_btn(self, elem_loc):
@@ -166,8 +170,8 @@ class PublicPage:
                 self.scroll_to_elem(elem_loc)
                 elem_loc.send_keys(Keys.BACKSPACE)
         except Exception as e:
-            logging.error(
-                'There was an exception when click_backspace_btn s%', str(e))
+            print(
+                'There was an exception when click_backspace_btn=>', str(e))
 
     # input 框
     # 滚动屏幕至元素位置设值
@@ -178,8 +182,8 @@ class PublicPage:
             elem_loc.clear()
             elem_loc.send_keys(input_value)
         except Exception as e:
-            logging.error(
-                'There was an exception when scroll_to_set_value s%', str(e))
+            print(
+                'There was an exception when scroll_to_set_value=>', str(e))
 
     # 获取文本值
     def get_value(self, elem_loc):
@@ -187,7 +191,7 @@ class PublicPage:
             self.scroll_to_elem(elem_loc)
             return elem_loc.text
         except Exception as e:
-            logging.error('There was an exception when get_value s%', str(e))
+            print('There was an exception when get_value=>', str(e))
 
     # 光标移动到元素为止并做点击操作
     def move_to_element_to_click(self, elem_loc):
@@ -236,8 +240,6 @@ class PublicPage:
             time.sleep(1)
             item_loc = self.driver.find_element_by_link_text(item_name)
             if self.is_element_present(item_loc):
-                print('[select_dropdown_item]--self.is_element_present(item_loc)=>',
-                      self.is_element_present(item_loc))
                 self.click_elem(item_loc)
             else:
                 print('item_loc=' + item_name + 'is not show!')
@@ -269,7 +271,7 @@ class PublicPage:
             print('The danger message is ', danger_msg)
             return danger_msg
         except Exception as e:
-            logging.error('There are an exception %s', str(e))
+            print('There are an exception %s', str(e))
 
     # 必填项红框警示
     def has_danger_is_show(self):
@@ -278,3 +280,34 @@ class PublicPage:
         print('publicPage.is_element_present(ui_loc)=>',
               publicPage.is_element_present(ui_loc))
         return publicPage.is_element_present(ui_loc)
+
+    # 点击操作按钮
+    # name_td_index:名称的td索引（表格行中任意唯一值，如收支表里的单号td索引，股东表里股东名称的索引）
+    # item_name:名称（表格行中的任意唯一值，如收支里的单号，股东里的股东名）
+    # btn_td_index:操作按钮索引（表格中‘操作’列的td索引，如收支列表中操作列的td索引是‘5’
+    # btn_name:操作按钮名称（可选值'edit'、'delete')
+    def click_operation_btn(self, name_td_index, item_name, btn_td_index, btn_name):
+        row_elems = self.driver.find_elements_by_tag_name('tr')
+        # 获取列表中所有行的名称（唯一值）
+        names = []
+        for tr_index in range(len(row_elems)):
+            if tr_index == 0:
+                tr_index = tr_index + 1
+            name_loc = self.driver.find_elements_by_tag_name('tr')[tr_index].find_elements_by_tag_name(
+                'td')[name_td_index].find_element_by_tag_name('span')
+            name = name_loc.text
+            names.append(name)
+        print('names=>', names)
+
+        # 获取所选名称所在行的索引；
+        index = names.index(item_name)
+        # 点击对应名称行的操作按钮；
+        if btn_name == 'edit':
+            btn_index = 0
+        elif btn_name == 'delete':
+            btn_index = 1
+        else:
+            False
+        btn_loc = self.driver.find_elements_by_tag_name('tr')[index].find_elements_by_tag_name(
+            'td')[btn_td_index].find_elements_by_tag_name('button')[btn_index]
+        return btn_loc.click()
