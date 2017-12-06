@@ -3,8 +3,8 @@
 username_elem = 'mobile'
 # 密码 input id
 password_elem = 'password'
-# 登录按钮 class
-login_btn_elem = '.sign-in'
+# 登录按钮 xpath
+login_btn_elem = '//*[@id="signupForm"]/div[2]/button'
 # 个人信息名 xpath
 personal_name_elem = '//*[@id="personalInfoDropdownMenu"]/span' 
 # 手机号错误id

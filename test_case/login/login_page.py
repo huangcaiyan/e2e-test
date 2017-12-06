@@ -13,12 +13,10 @@ class LoginPage(object):
     def type_username(self, username):
         username_text = self.driver.find_element_by_id(username_elem)
         username_text.clear()
-        print('username=>', username)
         username_text.send_keys(username)
         public_page = PublicPage(self.driver)
         loc = public_page.get_elem_location(username_text)
-        print('loc =', loc)
-        print('loc1 =', loc['x'])
+
 
     # 输入密码
     def type_password(self, password):
@@ -28,7 +26,7 @@ class LoginPage(object):
 
     # 点击登录
     def click_login_btn(self):
-        login_button = self.driver.find_element_by_css_selector(login_btn_elem)
+        login_button = self.driver.find_element_by_xpath(login_btn_elem)
         login_button.click()
 
     # 密码框错误 

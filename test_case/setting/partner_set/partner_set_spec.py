@@ -101,7 +101,7 @@ class PartnersetSpec(unittest.TestCase):
         page = PartnersetPage(self.driver)
         alertPage = AlertPage(self.driver)
         readExcel = ReadExcel(self.partnerset_test_data_dir)
-        settingPage = SettingPage(self.driver.CompInfo.BASE_URL)
+        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
         settingPage.go_to_partnerset_page()
         time.sleep(2)
 
