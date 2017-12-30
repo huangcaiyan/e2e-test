@@ -1,10 +1,11 @@
 from selenium import webdriver
 import time
-import sys 
+import sys
 import os
 # sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../'))
 from util.public_page import PublicPage
 from .income_outcome_elem import *
+
 
 # 记收入、支出、互转测试
 # 创建于2017-10-16-周二
@@ -35,9 +36,9 @@ class RecordTransactionPage():
             self.driver.get(
                 self.base_url + '/app/transaction/detail/' + self.record_type)
             time.sleep(3)
-            page_url =self.driver.current_url
+            page_url = self.driver.current_url
             if self.record_type in page_url:
-                print('[RecordTransactionPage]－－－') 
+                print('[RecordTransactionPage]－－－')
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when go_to_record_page=>', str(e))
@@ -69,28 +70,34 @@ class RecordTransactionPage():
             print(
                 '[RevenueAndExpenditurePage] There was an exception when select_contact=>', str(e))
 
-    
-
     # 选择类别
     # category：类别名称(收入／支出)
     def select_category(self, category):
         try:
-            publicPage = PublicPage(self.driver)
+            if self.record_type == 'Income':
+                category_drop_end_xpath_elem = income_category_drop_end_xpath_elem
+            elif self.record_type == 'Outcome':
+                category_drop_end_xpath_elem = outcome_category_drop_end_xpath_elem
+            else:
+                category_drop_end_xpath_elem = None
+                print('类别定位失败！')
+
+            public_page = PublicPage(self.driver)
             print(self.category_index(category))
             p_index = self.category_index(category)[0]
             c_index = self.category_index(category)[1]
 
             drop_loc = self.driver.find_element_by_xpath(
                 page_base_xpath_elem + self.record_name + category_drop_end_xpath_elem)
-            publicPage.click_elem(drop_loc)
+            public_page.click_elem(drop_loc)
 
             parent_loc = self.driver.find_elements_by_css_selector(parent_elem)[
                 p_index]
-            publicPage.click_elem(parent_loc)
+            public_page.click_elem(parent_loc)
 
             child_loc = self.driver.find_elements_by_css_selector(child_elem)[
                 c_index]
-            return publicPage.click_elem(child_loc)
+            return public_page.click_elem(child_loc)
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when select_category=>', str(e))
@@ -101,12 +108,17 @@ class RecordTransactionPage():
         try:
             if self.record_type == 'accountTransfers':
                 input_elem = transfer_total_elem
+            elif self.record_type == 'Outcome':
+                input_elem = outcome_total_elem
+            elif self.record_type == 'Income':
+                input_elem = income_total_elem
             else:
-                input_elem = total_elem
-            publicPage = PublicPage(self.driver)
+                input_elem = None
+
+            public_page = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(
                 page_base_xpath_elem + self.record_name + input_elem)
-            publicPage.set_value(input_loc, total)
+            public_page.set_value(input_loc, total)
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when set_total=>', str(e))
@@ -117,16 +129,18 @@ class RecordTransactionPage():
         try:
             if self.record_type == 'accountTransfers':
                 input_elem = transfer_attachment_elem
-            else:
-                input_elem = attachment_elem
-            publicPage = PublicPage(self.driver)
+            elif self.record_type == 'Income':
+                input_elem = income_attachment_elem
+            elif self.record_type == 'Outcome':
+                input_elem =  outcome_attachment_elem
+
+            public_page = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_xpath(
                 page_base_xpath_elem + self.record_name + input_elem)
-            publicPage.set_value(input_loc, attachment)
+            public_page.set_value(input_loc, attachment)
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when set_attachment=>', str(e))
-                
 
     # 点击保存并新增按钮(收入／支出)
     def click_save_and_new_btn(self):
@@ -135,10 +149,10 @@ class RecordTransactionPage():
                 btn_elem = transfer_save_and_new_btn_elem
             else:
                 btn_elem = save_and_new_btn_elem
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             btn_loc = self.driver.find_element_by_xpath(
                 page_base_xpath_elem + self.record_name + btn_elem)
-            publicPage.click_elem(btn_loc)
+            public_page.click_elem(btn_loc)
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when click_save_and_new_btn=>', str(e))
@@ -150,10 +164,10 @@ class RecordTransactionPage():
                 btn_elem = transfer_save_btn_elem
             else:
                 btn_elem = save_btn_elem
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             btn_loc = self.driver.find_element_by_xpath(
                 page_base_xpath_elem + self.record_name + btn_elem)
-            publicPage.click_elem(btn_loc)
+            public_page.click_elem(btn_loc)
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when click_save_btn=>', str(e))
@@ -162,13 +176,13 @@ class RecordTransactionPage():
     def click_cancel_btn(self):
         try:
             if self.record_type == 'accountTransfers':
-                btn_elem == transfer_cancel_btn_elem
+                btn_elem = transfer_cancel_btn_elem
             else:
                 btn_elem = cancel_btn_elem
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             btn_loc = self.driver.find_element_by_xpath(
                 page_base_xpath_elem + self.record_name + btn_elem)
-            publicPage.click_elem(btn_loc)
+            public_page.click_elem(btn_loc)
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when click_cancel_btn=>', str(e))
@@ -179,14 +193,14 @@ class RecordTransactionPage():
     # input_account：转入账户
     def select_transfer_account(self, output_account, input_account):
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             output_drop_loc = self.driver.find_element_by_xpath(
                 page_base_xpath_elem + self.record_name + output_account_drop_elem)
-            publicPage.select_dropdown_item(output_drop_loc, output_account)
+            public_page.select_dropdown_item(output_drop_loc, output_account)
 
             input_drop_loc = self.driver.find_element_by_xpath(
                 page_base_xpath_elem + self.record_name + input_account_drop_elem)
-            publicPage.select_dropdown_item(input_drop_loc, input_account)
+            public_page.select_dropdown_item(input_drop_loc, input_account)
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when select_transfer_account=>', str(e))
@@ -213,7 +227,6 @@ class RecordTransactionPage():
     # p_c_arr = [parent_index,child_index]
     def category_index(self, category):
         try:
-            p_c_arr = []
             if self.record_name == 'income':
                 if category == '利息收入':
                     p_c_arr = [0, 0]
@@ -295,7 +308,7 @@ class RecordTransactionPage():
                     p_c_arr = [5, 0]
                     return p_c_arr
             else:
-                print(record_name + '－－－－－－选择类别失败－－－－－－')
+                print(self.record_name + '－－－－－－选择类别失败－－－－－－')
         except Exception as e:
             print(
                 '[RevenueAndExpenditurePage] There was an exception when category_index=>', str(e))

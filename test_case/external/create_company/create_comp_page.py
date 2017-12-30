@@ -2,143 +2,168 @@ from selenium import webdriver
 import time
 from util.public_page import PublicPage
 from .create_comp_elem import *
-'''
+
+"""
 进入帐套
 创建于2017-09-29-五
 caicai
-'''
+"""
 
 
 class CreateCompPage(object):
-
     def __init__(self, driver):
         self.driver = driver
 
     def set_accounting_book_name(self, account_book_name):
-        # 帐套名称
+        """
+        :param account_book_name:帐套名称
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_name(comp_name_elem)
-            random_num = publicPage.random_num(1000)
+            random_num = public_page.random_num(1000)
             if account_book_name == '':
                 book_name = account_book_name
             else:
                 book_name == account_book_name + random_num
-            publicPage.set_value(input_loc, book_name)
+            public_page.set_value(input_loc, book_name)
         except Exception as e:
             print(
                 '[CreateCompPage]set_accounting_book_name－－设置帐套名称失败－－失败原因=>', str(e))
 
     def set_legal_person_name(self, legal_person_name):
-        # 法定代表人
+        """
+        :param legal_person_name: 法人代表名字
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_name(
                 legal_person_name_elem)
-            publicPage.set_value(input_loc, legal_person_name)
+            public_page.set_value(input_loc, legal_person_name)
         except Exception as e:
             print(
                 '[CreateCompPage]set_legal_person_name－－设置法定代表人失败－－失败原因=>', str(e))
 
     def set_registered_capital(self, registered_capital):
-        # 注册资本
+        """
+        :param registered_capital: 注册资本（string）
+        :return:
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_name(
                 registered_capital_elem)
-            publicPage.set_value(input_loc, registered_capital)
+            public_page.set_value(input_loc, registered_capital)
         except Exception as e:
             print(
                 '[CreateCompPage]set_registered_capital－－设置注册资本失败－－失败原因=>', str(e))
 
     def select_prov(self, prov):
-     # 选择省份
+        """
+        :param prov: 省份
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             drop_loc = self.driver.find_element_by_name(prov_drop_elem)
-            publicPage.select_dropdown_item(drop_loc, prov)
+            public_page.select_dropdown_item(drop_loc, prov)
         except Exception as e:
             print('[CreateCompPage]select_prov－－选择省份失败－－失败原因=>', str(e))
 
     def select_city(self, city):
-     # 选择市
+        """
+        :param city: 市名
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             drop_loc = self.driver.find_element_by_name(city_drop_elem)
-            publicPage.select_dropdown_item(drop_loc, city)
+            public_page.select_dropdown_item(drop_loc, city)
         except Exception as e:
             print('[CreateCompPage]select_city－－选择省份失败－－失败原因=>', str(e))
 
     def select_dist(self, dist):
-        # 选择区
+        """
+        :param dist: 区
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             drop_loc = self.driver.find_element_by_name(dist_drop_elem)
-            publicPage.select_dropdown_item(drop_loc, dist)
+            public_page.select_dropdown_item(drop_loc, dist)
         except Exception as e:
             print('[CreateCompPage]select_dist－－选择省份失败－－失败原因=>', str(e))
 
     def select_address(self, prov, city, dist):
-        # 住所
+        """
+        :param prov: 省份
+        :param city: 市
+        :param dist: 区
+        """
         self.select_prov(prov)
         self.select_city(city)
         self.select_dist(dist)
 
-    # 选择成立日期
-    # year:年份＝2017
-    # month：月份＝十一月
-    # day：日期 ＝ 1
     def select_setup_date(self, year, month, day):
-        # 选择成立日期
+        """
+        :param year: 年份，eg：2017
+        :param month: 月份，eg：一月
+        :param day: 日期，eg：1
+        :return:成立日期
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             drop_loc = self.driver.find_element_by_id(setup_date_elem)
-            publicPage.select_date_by_ymd(drop_loc, year, month, day)
+            public_page.select_date_by_ymd(drop_loc, year, month, day)
         except Exception as e:
             print(
                 '[CreateCompPage]select_setup_date－－选择年月日失败－－失败原因=>', str(e))
 
     def set_tax_num(self, tax_num):
-        # 税号
+        """
+        :param tax_num: 税号（string）
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             input_loc = self.driver.find_element_by_name(tax_num_elem)
-            random_num = publicPage.random_num(1000000)
+            random_num = public_page.random_num(1000000)
             if tax_num == '':
                 num = tax_num
             else:
                 num = tax_num + random_num
-            publicPage.set_value(input_loc, num)
+            public_page.set_value(input_loc, num)
         except Exception as e:
             print('[CreateCompPage]set_tax_num－－设置税号失败－－失败原因=>', str(e))
 
     def select_industry(self, industry):
-        # 行业
+        """
+        :param industry:行业性质
+        """
         try:
-            publicPage = PublicPage(self.driver)
-            dorp_loc = self.driver.find_element_by_name(indust_drop_elem)
-            publicPage.select_dropdown_item(drop_loc, industry)
+            public_page = PublicPage(self.driver)
+            drop_loc = self.driver.find_element_by_name(indust_drop_elem)
+            public_page.select_dropdown_item(drop_loc, industry)
         except Exception as e:
             print(
                 '[CreateCompPage]select_industry－－选择行业失败－－失败原因=>', str(e))
 
-    # account_property:帐套性质
     def select_property(self, account_property):
-        # 帐套性质
+        """
+        :param account_property: 帐套性质，可选值：一般纳税人、小规模纳税人
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             drop_loc = self.driver.find_element_by_name(property_elem)
-            publicPage.select_dropdown_item(drop_loc, account_property)
+            public_page.select_dropdown_item(drop_loc, account_property)
         except Exception as e:
             print(
                 '[CreateCompPage]select_property－－选择帐套性质失败－－失败原因=>', str(e))
 
     def select_enable_date(self, begin_date):
-        # 启用帐套日期
+        """
+        :param begin_date: 其中帐套日期，eg：1、2、3...
+        """
         try:
-            publicPage = PublicPage(self.driver)
+            public_page = PublicPage(self.driver)
             drop_loc = self.driver.find_element_by_xpath(enable_date_drop_elem)
-            publicPage.click_elem(drop_loc)
+            public_page.click_elem(drop_loc)
             month_loc = self.driver.find_element_by_css_selector(month_elem)
             month = month_loc.text
             if month == begin_date:
@@ -150,7 +175,11 @@ class CreateCompPage(object):
                 '[CreateCompPage]select_enable_date－－设置启用日期失败－－失败原因=>', str(e))
 
     def submit(self, btn_name):
-        # 保存／取消
+        """
+        保存／取消
+        :param btn_name: 按钮名称，可选值：保存、取消；
+        :return:点击按钮；
+        """
         try:
             if btn_name == 'save':
                 btn_elem = create_btn_elem
@@ -159,20 +188,22 @@ class CreateCompPage(object):
                 btn_elem = cancel_btn_elem
                 operation_name = '取消'
             btn_loc = self.driver.find_element_by_xpath(btn_elem)
-            publicPage = PublicPage(self.driver)
-            publicPage.click_elem(btn_loc)
+            public_page = PublicPage(self.driver)
+            public_page.click_elem(btn_loc)
         except Exception as e:
             print(
                 '[CreateCompPage]submit－－' + operation_name + '失败－－失败原因=>', str(e))
 
     # 创建帐套
     def create_comp(self, create_comp_info):
+        """
+        :param create_comp_info: 创建帐套数据
+        """
         if create_comp_info[11] == '一般纳税人':
             accounting_book_name = create_comp_info[0] + yb
         elif create_comp_info[11] == '小规模纳税人':
             accounting_book_name = create_comp_info[0] + xgm
-        publicPage = PublicPage(self.driver)
-        self.set_accounting_book_name(create_comp_info[0])
+        self.set_accounting_book_name(accounting_book_name)
         self.set_legal_person_name(create_comp_info[1])
         self.set_registered_capital(create_comp_info[2])
         self.select_address(

@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>管有账测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>管有账测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-12-29 10:34:22</p>
+<p class='attribute'><strong>Duration:</strong> 0:01:18.362592</p>
+<p class='attribute'><strong>Status:</strong> Error 1</p>
+
+<p class='description'>测试用例执行情况：</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_case.invoice.record_invoice.record_invoice_spec.RecordInvoiceSpec: 记发票测试</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_record_input_invoice: cai-记多条收票 测试</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: [RecordInvoicePage]－－－－－－成功进入记收票页面－－－－－－
+当前url是=&gt; https://web-gyz-stage.guanplus.com/app/invoice/detail/new-input-invoice
+is_disapeared=&gt; False
+is_disapeared=&gt; False
+is_disapeared=&gt; False
+is_disapeared=&gt; False
+is_disapeared=&gt; False
+[0, 0]
+is_disapeared=&gt; False
+is_disapeared=&gt; False
+is_disapeared=&gt; False
+is_disapeared=&gt; False
+[PublicPage]There was an exception when select_dropdown_item=&gt; Message: no such element: Unable to locate element: {"method":"link text","selector":"管理部门"}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.33.506106 (8a06c39c4582fbfbab6966dbb1c38a9173bfb1a2),platform=Mac OS X 10.11.6 x86_64)
+
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '福利费', '管理部门', '1.5%', '', 100.22, '普票，内部代表，福利费，福利费56020104-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[0, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '劳务费', '销售部门', '3%', '', 200.33, '普票，其他，劳务费，劳务费56020105－临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '招待费', '管理部门', '5%', '', 300.44, '普票，内部代表，招待费，招待费56020201-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '办公费', '销售部门', '6%', '', 400.55, '普票，其他，办公费，办公费56020202-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 2]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '快递费', '管理部门', '11%', '', 500.66, '普票，内部代表，快递费，快递费56020203-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 4]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '维修费', '销售部门', '13%', '', 600.77, '普票，其他，维修费，维修费56020204-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 5]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '财产保险费', '管理部门', '17%', '', 700.88, '普票，内部代表，财产保险费，财产保险费56020206-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 6]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '设备租赁费', '销售部门', '1.5%', '', 800.99, '普票，其他，设备租赁费，设备租赁费56020207-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 7]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '银行费用', '管理部门', '3%', '', 901.1, '普票，内部代表，银行费用，手续费560302-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '差旅费', '销售部门', '5%', '', 1001.21, '普票，其他，差旅费，差旅费56020301-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '交通费', '管理部门', '6%', '', 1101.32, '普票，内部代表，交通费，交通费56020302-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 2]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '汽油费', '销售部门', '11%', '', 1201.43, '普票，其他，汽油费，汽油费56020303-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 3]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '路桥费', '管理部门', '13%', '', 1301.54, '普票，内部代表，路桥费，路桥费56020304－临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 4]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '汽车维修费', '销售部门', '17%', '', 1401.65, '普票，其他，汽车维修费，汽车维修费56020305-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 5]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '汽车保险费', '管理部门', '1.5%', '', 1501.76, '普票，内部代表，汽车保险费，汽车保险费56020306-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 6]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '物流费', '销售部门', '3%', '', 1601.87, '普票，其他，物流费，物流费56020307-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '房租费', '管理部门', '5%', '', 1701.98, '普票，内部代表，房租费，房租费56020401-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '物业费', '销售部门', '6%', '', 1802.09, '普票，其他，物业费，物业费56020402-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 2]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '水费', '管理部门', '11%', '', 1902.2, '普票，内部代表，水费，水费56020403-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 3]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '电费', '销售部门', '13%', '', 2002.31, '普票，其他，电费，电费56020404-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 4]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '仓储费', '管理部门', '17%', '', 2102.42, '普票，内部代表，仓储费，仓储费56020405-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 5]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '装修费', '销售部门', '1.5%', '', 2202.53, '普票，其他，装修费，装修费56020406-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '广告费', '管理部门', '3%', '', 2302.64, '普票，内部代表，广告费，广告费56020501-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '宣传费', '销售部门', '5%', '', 2402.75, '普票，其他，宣传费，宣传费56020502-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 2]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '研发费', '管理部门', '6%', '', 2502.86, '普票，内部代表，研发费，研发费56020503-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 3]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '会议费', '销售部门', '11%', '', 2602.97, '普票，其他，会议费，会议费56020504-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 4]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '服务费', '管理部门', '13%', '', 2703.08, '普票，内部代表，服务费，服务费56020505-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 5]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '咨询费', '销售部门', '17%', '', 2803.19, '普票，其他，咨询费，咨询费56020506-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 6]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '认证费', '管理部门', '1.5%', '', 2903.3, '普票，内部代表，认证费，认证费56020507-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 7]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '专利费', '销售部门', '3%', '', 3003.41, '普票，其他，专利费，专利费56020508-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 8]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '工会经费', '管理部门', '5%', '', 3103.52, '普票，内部代表，工会经费，工会经费56020509-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 9]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '其他', '销售部门', '6%', '', 3203.63, '普票，其他，其他，其他560299-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[5, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '行政罚款', '管理部门', '11%', '', 3303.74, '普票，内部代表，行政罚款，行政罚款571106-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[5, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '税务滞纳金', '销售部门', '13%', '', 3403.85, '普票，其他，税务滞纳金，税务滞纳金571105-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[6, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '印花税', '管理部门', '17%', '', 3503.96, '普票，内部代表，印花税，印花税560309-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[6, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '残保金', '销售部门', '1.5%', '', 3604.07, '普票，其他，残保金，残保金540314-临时借入款22410101', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[6, 2]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '减免税款', '管理部门', '3%', '', 3704.18, '普票，内部代表，减免税款，减免税款222117-临时借入款22410102', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[7, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)其他', '', '原材料', '销售部门', '5%', '', 3804.29, '普票，内部代表，原材料，原材料140301-单位220201', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[7, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['普票', '(个)内部代表', '', '商品产品', '管理部门', '6%', '', 3904.4, '普票，其他，商品产品，库存商品140501-单位220202', '记普票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[0, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '福利费', '管理部门', '1.5%', '其他', 4004.51, '专票，其他，福利费，福利费56020104、待抵扣进项税1221033-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '招待费', '销售部门', '3%', '其他', 4104.62, '普票，内部代表，招待费，招待费56020201、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '办公费', '管理部门', '3%', '有形动产租赁', 4204.73, '普票，其他，办公费，办公费56020202、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 2]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '快递费', '销售部门', '3%', '运输服务', 4304.84, '普票，内部代表，快递费，快递费56020203、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 4]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '维修费', '管理部门', '3%', '电信服务', 4404.95, '普票，其他，维修费，维修费56020204、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 5]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '财产保险费', '销售部门', '3%', '建筑安装服务', 4505.06, '普票，内部代表，财产保险费，财产保险费56020206、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 6]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '设备租赁费', '管理部门', '3%', '金融保险服务', 4605.17, '普票，其他，设备租赁费，设备租赁费56020207、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[1, 7]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '银行费用', '销售部门', '3%', '生活服务', 4705.28, '普票，内部代表，银行费用，手续费560302、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '差旅费', '管理部门', '3%', '货物及加工，修理修配劳务', 4805.39, '普票，其他，差旅费，差旅费56020301、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '交通费', '销售部门', '5%', '其他', 4905.5, '普票，内部代表，交通费，交通费56020302、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 2]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '汽油费', '管理部门', '5%', '不动产租赁服务', 5005.61, '普票，其他，汽油费，汽油费56020303、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 3]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '路桥费', '销售部门', '6%', '其他', 5105.72, '普票，内部代表，路桥费，路桥费56020304、待抵扣进项税122103－临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 4]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '汽车维修费', '管理部门', '6%', '电信服务', 5205.83, '普票，其他，汽车维修费，汽车维修费56020305、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 5]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '汽车保险费', '销售部门', '6%', '金融保险服务', 5305.94, '普票，内部代表，汽车保险费，汽车保险费56020306、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[2, 6]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '物流费', '管理部门', '6%', '生活服务', 5406.05, '普票，其他，物流费，物流费56020307、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '房租费', '销售部门', '11%', '其他', 5506.16, '普票，内部代表，房租费，房租费56020401、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '物业费', '管理部门', '11%', '运输服务', 5606.27, '普票，其他，物业费，物业费56020402、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 2]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '水费', '销售部门', '11%', '电信服务', 5706.38, '普票，内部代表，水费，水费56020403、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 3]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '电费', '管理部门', '11%', '建筑安装服务', 5806.49, '普票，其他，电费，电费56020404、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 4]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '仓储费', '销售部门', '11%', '不动产租赁服务', 5906.6, '普票，内部代表，仓储费，仓储费56020405、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[3, 5]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '装修费', '管理部门', '13%', '其他', 6006.71, '普票，其他，装修费，装修费56020406、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '广告费', '销售部门', '17%', '其他', 6106.82, '普票，内部代表，广告费，广告费56020501、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '宣传费', '管理部门', '17%', '有形动产租赁', 6206.93, '普票，其他，宣传费，宣传费56020502、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 2]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '研发费', '销售部门', '1.5%', '其他', 6307.04, '普票，内部代表，研发费，研发费56020503、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 3]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '会议费', '管理部门', '3%', '其他', 6407.15, '普票，其他，会议费，会议费56020504、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 4]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '服务费', '销售部门', '3%', '有形动产租赁', 6507.26, '普票，内部代表，服务费，服务费56020505、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 5]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '咨询费', '管理部门', '3%', '运输服务', 6607.37, '普票，其他，咨询费，咨询费56020506、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 6]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '认证费', '销售部门', '3%', '电信服务', 6707.48, '普票，内部代表，认证费，认证费56020507、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 7]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '专利费', '管理部门', '3%', '建筑安装服务', 6807.59, '普票，其他，专利费，专利费56020508、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 8]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '工会经费', '销售部门', '3%', '金融保险服务', 6907.7, '普票，内部代表，工会经费，工会经费56020509、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[4, 9]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '其他', '管理部门', '3%', '生活服务', 7007.81, '普票，其他，其他，其他560299、待抵扣进项税122103-临时借入款22410101', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[5, 0]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)内部代表', '', '原材料', '销售部门', '3%', '货物及加工，修理修配劳务', 7107.92, '普票，内部代表，原材料，原材料140301、待抵扣进项税1221033-单位220201', '记专票收票', '成功']
+[RecordInvoicePage] －－选择发票类型失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择对方信息失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－填写发票号失败－－失败原因是-&gt; [Errno 61] Connection refused
+[5, 1]
+[RecordInvoicePage]－－选择类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择部门性质失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择税率失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－选择进项税类别失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置价税合计失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－设置备注失败－－失败原因是-&gt; [Errno 61] Connection refused
+[RecordInvoicePage]－－保存并新增失败－－失败原因是-&gt; [Errno 61] Connection refused
+input_invoice_data=&gt; ['专票', '(个)其他', '', '商品产品', '管理部门', '5%', '其他', 7208.03, '普票，其他，商品产品，库存商品140501、待抵扣进项税1221033-单位220202', '记专票收票', '成功']
+Traceback (most recent call last):
+  File "/Users/huangcaiyan/work/e2e-test/test_case/invoice/record_invoice/record_invoice_spec.py", line 57, in test_record_input_invoice
+    alert_msg = alertPage.get_alert_msg()
+  File "/Users/huangcaiyan/work/e2e-test/util/alert_page.py", line 15, in get_alert_msg
+    self.alert_msg_tagname)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 461, in find_element_by_tag_name
+    return self.find_element(by=By.TAG_NAME, value=name)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 855, in find_element
+    'value': value})['value']
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 306, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py", line 460, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py", line 483, in _request
+    self._conn.request(method, parsed_url.path, body, headers)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huangcaiyan/work/e2e-test/test_case/invoice/record_invoice/record_invoice_spec.py", line 65, in test_record_input_invoice
+    danger_msg = dangerPage.get_alert_danger_msg()
+  File "/Users/huangcaiyan/work/e2e-test/util/danger_page.py", line 22, in get_alert_danger_msg
+    self.alert_danger_msg_elem)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 485, in find_element_by_class_name
+    return self.find_element(by=By.CLASS_NAME, value=name)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 855, in find_element
+    'value': value})['value']
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 306, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py", line 460, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py", line 483, in _request
+    self._conn.request(method, parsed_url.path, body, headers)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

@@ -1,19 +1,19 @@
 from selenium import webdriver
 import unittest
 import time
-mport sys
+import sys
 import os
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../../'))
 from util.enter_comp_page import EnterCompPage
 from comp_info import CompInfo
 from util.read_excel import ReadExcel
-from ../invoice/record_invoice_page import RecordInvoicePage
-from ../transaction/record_transaction_page import RecordTransactionPage
+from test_case.invoice.record_invoice.record_invoice_page import RecordInvoicePage
+from test_case.transaction.record_transaction.record_transaction_page import RecordTransactionPage
 from util.public_page import PublicPage
 from util.danger_page import DangerPage
 from util.alert_page import AlertPage
 from selenium.webdriver.support.ui import WebDriverWait
-from .record_invoice_elem import *
+from test_case.invoice.record_invoice.record_invoice_elem import *
 
 # 记发票测试
 # 创建于2017-10-17-周三

@@ -1,18 +1,19 @@
 import sys
 import os
+from selenium import webdriver
 import unittest
 
 # sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 from .login_page import LoginPage
-from selenium import webdriver
 from comp_info import CompInfo
 from util.danger_page import DangerPage
 from util.read_excel import ReadExcel
 
-
-# 登录测试
-# 修改于2017-09-29-五
-# caicai
+"""
+登录测试
+修改于2017-12-8-五
+caicai
+"""
 
 
 class LoginSpec(unittest.TestCase):
@@ -45,8 +46,7 @@ class LoginSpec(unittest.TestCase):
 
         page_url = self.driver.current_url
         print('page_url=>', page_url)
-        self.assertIn('/app/company-list', page_url)
-        print('登录成功！')
+        self.assertIn('/app/company-list', page_url, msg='登录验证失败！')
 
     def test_unexit_username(self):
         """ 登录测试－用户不存在 """
@@ -63,7 +63,7 @@ class LoginSpec(unittest.TestCase):
         login_page.login(login_test_data)
 
         error_msg = danger_page.get_error_msg()
-        self.assertEqual(error_msg, login_test_data[3])
+        self.assertEqual(error_msg, login_test_data[3], msg='登录测试－用户不存在，失败！')
 
     def test_wrong_password(self):
         """ 登录测试－密码不正确 """
@@ -80,7 +80,7 @@ class LoginSpec(unittest.TestCase):
         login_page.login(login_test_data)
 
         error_msg = danger_page.get_error_msg()
-        self.assertEqual(error_msg, login_test_data[3])
+        self.assertEqual(error_msg, login_test_data[3], msg='登录测试－密码不正确，失败！')
 
     def test_empty_username(self):
         """ 登录测试－用户名为空 """
@@ -97,7 +97,7 @@ class LoginSpec(unittest.TestCase):
         login_page.login(login_test_data)
 
         input_alert_msg = danger_page.get_input_alert_msg()
-        self.assertEqual(input_alert_msg, login_test_data[3])
+        self.assertEqual(input_alert_msg, login_test_data[3], msg='登录测试－用户名为空,失败！')
 
     def test_empty_password(self):
         """ 登录测试－密码为空 """
@@ -113,7 +113,7 @@ class LoginSpec(unittest.TestCase):
         login_page.login(login_test_data)
 
         input_alert_msg = login_page.get_input_error('password')
-        self.assertEqual(input_alert_msg, login_test_data[3])
+        self.assertEqual(input_alert_msg, login_test_data[3], msg='登录测试－密码为空,失败！')
 
     def test_typeerror_username(self):
         """ 登录测试－手机号码格式错误 """
@@ -130,8 +130,12 @@ class LoginSpec(unittest.TestCase):
         login_page.login(login_test_data)
 
         input_alert_msg = danger_page.get_input_alert_msg()
-        self.assertEqual(input_alert_msg, login_test_data[3])
+        self.assertEqual(input_alert_msg, login_test_data[3], msg='登录测试－手机号码格式错误,失败！')
 
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
+    login_test_data_dir = '../test_data/cai/login_test_data.xlsx'
+    testCase = unittest.TestLoader().loadTestsFromTestCase(LoginSpec)
+    suite = unittest.TestSuite()
+    unittest.TextTestRunner(verbosity=2).run(suite)

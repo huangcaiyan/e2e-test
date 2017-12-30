@@ -24,8 +24,8 @@ category_drop_elem = '-invoice/div[2]/ul/table/tbody/tr[1]/td[1]/ng-select'
 # 类别下拉选择class
 parent_elem = '.parent-options'
 child_elem = '.children-options'
-# 部门性质下拉 结尾xpath
-department_drop_elem = '-invoice/div[2]/ul/table/tbody/tr[1]/td[2]/ng-select'
+# 部门名称下拉 结尾xpath
+department_drop_elem = '-invoice/div[2]/ul/table/tbody[1]/tr/td[2]/ng-select'
 # 税率下拉 结尾xpath
 tax_rate_drop_elem = '-invoice/div[2]/ul/table/tbody/tr[1]/td[3]/ng-select'
 # 进项税类别下拉 结尾xpath

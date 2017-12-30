@@ -15,6 +15,7 @@ from test_case.external.user_setting.user_setting_spec import UserSettingSpec
 from test_case.transaction.record_transaction.record_transaction_spec import RecordTransactionSpec
 from test_case.invoice.record_invoice.record_invoice_spec import RecordInvoiceSpec
 from test_case.external.sidebar.sidebar_spec import SidebarSpec
+from test_case.reports.reports_data.reports_data_ready_spec import ReportDataReadySpec 
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
 
@@ -49,7 +50,7 @@ if __name__ == '__main__':
     # testSuite.addTest(ContactSpec('test_name_repeat'))
 
     # 设置－股东信息(done)
-    testSuite.addTest(PartnersetSpec('test_click_add_btn_modal_is_show'))
+    # testSuite.addTest(PartnersetSpec('test_click_add_btn_modal_is_show'))
     # testSuite.addTest(PartnersetSpec('test_partnerset_empty_invalid'))
     # testSuite.addTest(PartnersetSpec('test_actual_paid_empty_valid'))
     # testSuite.addTest(PartnersetSpec('test_partset_name_repeat_invalid'))
@@ -68,15 +69,25 @@ if __name__ == '__main__':
     # testSuite.addTest(AddStuffSpec('test'))
 
     # 记收支
-    # # 记所有科目和账户的收支、互转
+    # 记所有科目和账户的收支、互转
     # testSuite.addTest(RecordTransactionSpec('test_record_income'))
     # testSuite.addTest(RecordTransactionSpec('test_record_outcome'))
     # testSuite.addTest(RecordTransactionSpec('test_record_transfer'))
 
-    # 记发票
-    # # 记所有类别发票
+    # # 记发票
+    # # # 记所有类别发票
     # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
-    # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
+    testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
+    #
+    # 报表
+    # 
+    # testSuite.addTest(ReportDataReadySpec('test_record_income'))
+    # testSuite.addTest(ReportDataReadySpec('test_record_outcome'))
+    # testSuite.addTest(ReportDataReadySpec('test_record_transfer'))
+    # testSuite.addTest(ReportDataReadySpec('test_record_input_invoice'))
+    # testSuite.addTest(ReportDataReadySpec('test_record_output_invoice'))
+
+
 
 
     

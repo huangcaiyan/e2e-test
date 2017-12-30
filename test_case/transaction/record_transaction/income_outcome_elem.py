@@ -5,15 +5,23 @@ page_base_xpath_elem = '//*[@id="body"]/detail/'
 account_drop_end_xpath_elem = '/div/div[2]/form/div[2]/div/ng-select'
 # 往来信息下拉结尾xpath
 contact_drop_end_xpath_elem = '/div/div[2]/form/div[3]/div/ng-select'
+
 # 收支类别下拉结尾xpath
-category_drop_end_xpath_elem = '/div/div[3]/div/table/tbody[1]/tr/th/ng-select'
+outcome_category_drop_end_xpath_elem = '/div/div[3]/div/table/tbody[1]/tr/td[1]/ng-select'
+income_category_drop_end_xpath_elem = '/div/div[3]/div/table/tbody[1]/tr/th/ng-select'
+
 # 类别下拉选择class
 parent_elem = '.parent-options'
 child_elem = '.children-options'
+
 # 金额输入框结尾 xpath
-total_elem = '/div/div[3]/div/table/tbody[1]/tr/td[1]/bp-input/input'
+outcome_total_elem = '/div/div[3]/div/table/tbody[1]/tr/td[2]/bp-input/input'
+income_total_elem = '/div/div[3]/div/table/tbody[1]/tr/td[1]/bp-input/input'
+
 # 备注输入框结尾 xpath
-attachment_elem = '/div/div[3]/div/table/tbody[1]/tr/td[2]/input'
+outcome_attachment_elem = '/div/div[3]/div/table/tbody[1]/tr/td[3]/input'
+income_attachment_elem = '/div/div[3]/div/table/tbody[1]/tr/td[2]/input'
+
 # 保存并新增按钮结尾xpath
 save_and_new_btn_elem = '/div/div[5]/div/span/button[1]'
 # 保存按钮结尾xpath

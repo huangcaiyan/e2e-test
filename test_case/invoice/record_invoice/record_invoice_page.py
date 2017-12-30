@@ -43,19 +43,18 @@ class RecordInvoicePage():
         else:
             print('[RecordInvoicePage]－－－－－－去' + page_name + ' 失败－－－－－－')
             self.driver.quit()
-
     # 选择发票类型
     # invoice_type：（专票、普票、无票）
     def select_invoice_type(self, invoice_type):
         global invoice_type_define
         invoice_type_define = invoice_type
         try:
-            publicPage = PublicPage(self.driver)   
-            is_disapeared = publicPage.wait_until_loader_disapeared()
-            if is_disapeared == False:
+            public_page = PublicPage(self.driver)
+            is_disapeared = public_page.wait_until_loader_disapeared()
+            if not is_disapeared:
                 drop_loc = self.driver.find_element_by_xpath(
                     record_invoice_base_xpath + self.invoice_io + invoice_type_drop_elem)
-                publicPage.select_dropdown_item(drop_loc, invoice_type)
+                public_page.select_dropdown_item(drop_loc, invoice_type)
                 time.sleep(1)
         except Exception as e:
             print('[RecordInvoicePage] －－选择发票类型失败－－失败原因是->', str(e))
@@ -126,7 +125,7 @@ class RecordInvoicePage():
             print('[RecordInvoicePage]－－选择类别失败－－失败原因是->', str(e))
             self.driver.quit()
 
-    # 选择部门性质
+    # 选择部门名称
     def select_department(self, department):
         try:
             publicPage = PublicPage(self.driver)
@@ -134,7 +133,7 @@ class RecordInvoicePage():
                 record_invoice_base_xpath + self.invoice_io + department_drop_elem)
             publicPage.select_dropdown_item(drop_loc, department)
         except Exception as e:
-            print('[RecordInvoicePage]－－选择部门性质失败－－失败原因是->', str(e))
+            print('[RecordInvoicePage]－－选择部门名称失败－－失败原因是->', str(e))
 
     # 选择税率
     def select_tax_rate(self, tax_rate):

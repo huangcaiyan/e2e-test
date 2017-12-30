@@ -18,7 +18,7 @@ indust_drop_elem = 'industry'
 # 帐套性质drop name
 property_elem = 'property'
 # 启用帐套日期drop
-enable_date_drop_elem ='//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[11]/div/datepicker'
+enable_date_drop_elem = '//*[@id="createCompany"]/div[4]/div/div[2]/table/tbody/tr/td[11]/div/datepicker'
 # 启用日期月份class
 month_elem = 'month-button'
 # 创建按钮 xpath
@@ -27,5 +27,3 @@ create_btn_elem = '//*[@id="createCompany"]/div[7]/div/span/button[1]'
 cancel_btn_elem = '//*[@id="createCompany"]/div[7]/div/span/button[2]'
 # logo 链接 class
 header_logo_elem = '.header-logo'
-
-

@@ -14,8 +14,6 @@ class LoginPage(object):
         username_text = self.driver.find_element_by_id(username_elem)
         username_text.clear()
         username_text.send_keys(username)
-        public_page = PublicPage(self.driver)
-        loc = public_page.get_elem_location(username_text)
 
 
     # 输入密码
