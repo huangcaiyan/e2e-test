@@ -2,32 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="557e64a7-8c95-4c45-80c0-71e9b6e4e0ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/huangcaiyan.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/~$往来辅助核算明细表映射验证.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_data/cai/login_test_data.xlsx" afterPath="$PROJECT_DIR$/test_data/cai/login_test_data.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_data/cai/record_invoice_data.xlsx" afterPath="$PROJECT_DIR$/test_data/cai/record_invoice_data.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_data/cai/record_transaction_data.xlsx" afterPath="$PROJECT_DIR$/test_data/cai/record_transaction_data.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/e2e-test.iml" afterPath="$PROJECT_DIR$/.idea/e2e-test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comp_info.py" afterPath="$PROJECT_DIR$/comp_info.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smoke_test_runner.py" afterPath="$PROJECT_DIR$/smoke_test_runner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/external/create_company/create_comp_elem.py" afterPath="$PROJECT_DIR$/test_case/external/create_company/create_comp_elem.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" afterPath="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_elem.py" afterPath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_elem.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" afterPath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py" afterPath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/login/login_page.py" afterPath="$PROJECT_DIR$/test_case/login/login_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/login/login_spec.py" afterPath="$PROJECT_DIR$/test_case/login/login_spec.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/reports/reports_data/reports_data_ready_spec.py" afterPath="$PROJECT_DIR$/test_case/reports/reports_data/reports_data_ready_spec.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py" afterPath="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_spec.py" afterPath="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_spec.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/transaction/record_transaction/income_outcome_elem.py" afterPath="$PROJECT_DIR$/test_case/transaction/record_transaction/income_outcome_elem.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_page.py" afterPath="$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_spec.py" afterPath="$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_spec.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/read_excel.py" afterPath="$PROJECT_DIR$/util/read_excel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/doghome.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/e2e-test.iml" afterPath="$PROJECT_DIR$/.idea/e2e-test.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-06 17_39_55_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-08 14_57_22_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-08 14_58_04_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_02_07_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_02_28_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_03_31_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_12_53_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_13_00_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_14_01_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_16_42_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_19_05_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_19_57_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_20_58_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_22_25_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_34_22_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_54_00_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 10_56_19_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_01_44_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_02_55_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_04_03_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_05_10_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_06_05_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_07_00_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_07_40_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_12_12_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_13_16_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_15_25_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_17_05_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_18_08_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_20_56_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_23_41_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_25_11_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_26_16_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_27_50_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_42_44_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_45_53_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_47_09_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_50_28_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_51_06_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_52_00_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 11_59_03_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 13_24_36_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/report/2017-12-29 13_26_31_result.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" afterPath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py" afterPath="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_spec.py" afterPath="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_spec.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/setting/contact/contact_page.py" afterPath="$PROJECT_DIR$/test_case/setting/contact/contact_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/setting/contact/contact_spec.py" afterPath="$PROJECT_DIR$/test_case/setting/contact/contact_spec.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_page.py" afterPath="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_page.py" />
+      <change beforePath="$PROJECT_DIR$/util/read_excel.py" afterPath="$PROJECT_DIR$/util/read_excel.py" />
     </list>
+    <ignored mask=".pyc" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,176 +67,115 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Cvs2Configuration">
+    <option name="SHOW_OUTPUT" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="smoke_test_runner.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="250">
-                <caret line="81" column="8" lean-forward="true" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
-                <folding />
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
+      <file leaf-file-name="contact_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/setting/contact/contact_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2010">
+              <caret line="134" column="4" lean-forward="false" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="call_account_token_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/call_api/call_account_token_api.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding>
-                  <element signature="e#0#15#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
+      <file leaf-file-name="contact_spec.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/setting/contact/contact_spec.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-541">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="call_accountbook_search_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/call_api/call_accountbook_search_api.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding>
-                  <element signature="e#0#15#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
+      <file leaf-file-name="partner_set_elem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/setting/partner_set/partner_set_elem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="call_journalEntry_search_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/call_api/call_journalEntry_search_api.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding>
-                  <element signature="e#0#15#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_elem.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/login/login_elem.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="120">
-                <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="55" />
-                <folding />
-              </first_editor>
-              <second_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
+      <file leaf-file-name="partner_set_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/setting/partner_set/partner_set_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="31" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="login_page.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_case/login/login_page.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="210">
-                <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-149">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="login_spec.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="1164">
-                <caret line="136" column="20" lean-forward="true" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
-                <folding>
-                  <element signature="e#0#10#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1050">
+              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comp_billing_elem.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_elem.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="247">
-                <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="22" />
-                <folding />
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
+      <file leaf-file-name="setting_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/setting/setting_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comp_billing_page.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="record_invoice_elem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_elem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comp_billing_page.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="489">
-                <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-                <folding>
-                  <element signature="e#0#11#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="125" column="15" lean-forward="true" selection-start-line="125" selection-start-column="15" selection-end-line="125" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comp_billing_spec.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_spec.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="361">
-                <caret line="96" column="35" lean-forward="false" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-                <folding>
-                  <element signature="e#0#30#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
+      <file leaf-file-name="record_invoice_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="60" column="75" lean-forward="false" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -225,7 +196,11 @@
       <find>accept_next_alert</find>
       <find>部门</find>
       <find>income</find>
+      <find>logging.</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -234,7 +209,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test_case/login/login_page.py" />
-        <option value="$PROJECT_DIR$/util/read_excel.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
         <option value="$PROJECT_DIR$/test_case/login/login_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
@@ -245,20 +219,26 @@
         <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_elem.py" />
         <option value="$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_spec.py" />
         <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py" />
-        <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" />
         <option value="$PROJECT_DIR$/test_case/transaction/record_transaction/income_outcome_elem.py" />
         <option value="$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_page.py" />
         <option value="$PROJECT_DIR$/comp_info.py" />
         <option value="$PROJECT_DIR$/smoke_test_runner.py" />
-        <option value="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_elem.py" />
-        <option value="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py" />
         <option value="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_spec.py" />
+        <option value="$PROJECT_DIR$/util/read_excel.py" />
+        <option value="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/setting/contact/contact_page.py" />
+        <option value="$PROJECT_DIR$/test_case/setting/contact/contact_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_page.py" />
+        <option value="$PROJECT_DIR$/test_case/setting/setting_page.py" />
+        <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" />
+        <option value="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -297,6 +277,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,31 +295,30 @@
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
               <item name="test_case" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
+              <item name="invoice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
               <item name="test_case" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
-              <item name="comp_billing" type="462c0819:PsiDirectoryNode" />
+              <item name="invoice" type="462c0819:PsiDirectoryNode" />
+              <item name="record_invoice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="test_case" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/usr/local/bin/python3.6" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="SearchEverywhereHistoryKey" value="if __name__ == '__main__':&#9;null&#9;null&#10;get_value_in_order&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
@@ -358,6 +339,42 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.smoke_test_runner">
+    <configuration name="comp_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="e2e-test" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/comp_info.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="smoke_test_runner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="e2e-test" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/smoke_test_runner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Unittests for login.login_spec.LoginSpec" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -400,40 +417,6 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/util/read_excel.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="comp_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="e2e-test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/comp_info.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="smoke_test_runner" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="e2e-test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/smoke_test_runner.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in login_spec.py" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in read_excel.py" />
@@ -455,7 +438,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -500,12 +483,12 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1283" height="738" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="810" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33671084" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3361111" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -513,14 +496,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.256" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -556,39 +538,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/login/login_spec.py</url>
-          <line>82</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/login/login_spec.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/login/login_spec.py</url>
-          <line>78</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/login/login_spec.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py</url>
           <line>45</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
-          <line>234</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
-          <line>222</line>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/smoke_test_runner.py</url>
@@ -629,191 +581,36 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="660">
-            <caret line="53" column="45" lean-forward="false" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="435">
-            <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          </first_editor>
-          <second_editor relative-caret-position="-75">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/read_excel.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1245">
-            <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          </first_editor>
-          <second_editor relative-caret-position="-15">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="225">
-            <caret line="32" column="66" lean-forward="false" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="210">
-            <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
+    <entry file="file://$PROJECT_DIR$/util/read_excel.py" />
+    <entry file="file://$PROJECT_DIR$/smoke_test_runner.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/login/login_page.py" />
     <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/read_excel.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1245">
-            <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          </first_editor>
-          <second_editor relative-caret-position="-15">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="210">
-            <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="225">
-            <caret line="32" column="66" lean-forward="true" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py" />
+    <entry file="file://$PROJECT_DIR$/util/read_excel.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/login/login_page.py" />
+    <entry file="file://$PROJECT_DIR$/smoke_test_runner.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py" />
     <entry file="file://$PROJECT_DIR$/debug.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -821,381 +618,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/suite.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1117">
-            <caret line="131" column="42" lean-forward="true" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="141">
-            <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/suite.py" />
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py" />
     <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
     <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
-    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_elem.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="240">
-            <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="403">
-            <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          </first_editor>
-          <second_editor relative-caret-position="-62">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/public_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="276">
-            <caret line="63" column="16" lean-forward="true" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="343">
-            <caret line="198" column="11" lean-forward="true" selection-start-line="198" selection-start-column="11" selection-end-line="198" selection-end-column="11" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/read_excel.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1169">
-            <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-76">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="390">
-            <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#30#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_cash_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="282">
-            <caret line="22" column="79" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="79" />
-            <folding>
-              <element signature="e#0#30#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-48">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_elem.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="272">
-            <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/transaction/record_transaction/income_outcome_elem.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1415">
-            <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#30#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="371">
-            <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#30#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="236">
-            <caret line="81" column="51" lean-forward="true" selection-start-line="81" selection-start-column="51" selection-end-line="81" selection-end-column="51" />
-            <folding>
-              <element signature="e#0#30#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comp_info.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="360">
-            <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_elem.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
+    <entry file="file://$PROJECT_DIR$/util/public_page.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_cash_spec.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/transaction/record_transaction/income_outcome_elem.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_spec.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_page.py" />
+    <entry file="file://$PROJECT_DIR$/comp_info.py" />
     <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="250">
-            <caret line="81" column="8" lean-forward="true" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/call_api/call_account_token_api.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#15#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/call_api/call_accountbook_search_api.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#15#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/call_api/call_journalEntry_search_api.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#15#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/login/login_elem.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="55" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="210">
-            <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1164">
-            <caret line="136" column="20" lean-forward="true" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_elem.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="247">
-            <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="22" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="489">
-            <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#11#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="361">
-            <caret line="96" column="35" lean-forward="false" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-            <folding>
-              <element signature="e#0#30#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/read_excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/contact/contact_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/contact/contact_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="134" column="4" lean-forward="false" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/contact/contact_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-541">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/partner_set/partner_set_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/setting_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/login/login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/partner_set/partner_set_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="31" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="60" column="75" lean-forward="false" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="125" column="15" lean-forward="true" selection-start-line="125" selection-start-column="15" selection-end-line="125" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
