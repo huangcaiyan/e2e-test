@@ -10,8 +10,8 @@ class CompInfo(object):
     # # stage
     BASE_URL = 'https://web-gyz-stage.guanplus.com'
     LOGIN_DATA = ['13683139989', '1qazxcvbnm']
-    COMP_NAME = '北京搜狐新时代信息技术有限公司'
-    # COMP_NAME = '跨年测试1月启用yb'
+    COMP_NAME = '北京有序云创技术有限公司'
+    # COMP_NAME = '固定yk'
 
     # ------------------------------------------------
     # pro

@@ -3,14 +3,15 @@ import unittest
 import time
 import sys
 import os
+
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../../'))
 from .add_stuff_page import AddStuffPage
 from util.enter_comp_page import EnterCompPage
 from comp_info import CompInfo
-from test_case.salary.salary_page import SalaryPage
-from test_data.cai.add_stuff_data import *
 from util.read_excel import ReadExcel
-from util.danger_page import DangerPage
+from util.base_class import BaseClass
+
+
 # 添加员工
 # 创建于2017-10-11-三
 # caicai
@@ -26,8 +27,9 @@ class AddStuffSpec(unittest.TestCase):
         self.driver = webdriver.Chrome()
         # self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(30)
-        self.driver.maximize_window()
 
+        if BaseClass.get_system_name() == 'Windows':
+            self.driver.maximize_window()
 
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
@@ -59,6 +61,7 @@ class AddStuffSpec(unittest.TestCase):
         page_url = self.driver.current_url
         print('page_url=>', page_url)
         self.assertIn('stuff-list', page_url)
+
     # 必填项为空 校验
     def test_name_empty(self):
         """添加员工－员工名称为空－红框警示，保存失败"""
@@ -99,17 +102,16 @@ class AddStuffSpec(unittest.TestCase):
         result = page.has_danger_is_show()
         self.assertEqual(result, 1)
 
-    # def test_add_multiple_employees(self):
-    #     """添加员工－天假多条员工"""
-    #     page = AddStuffPage(self.driver)
-    #     readExcel = ReadExcel(self.file_dir)
-    #     excel_data = readExcel.get_value_by_row(0, 5)
-    #     page.add_stuff_base(excel_data)
-    #     time.sleep(5)
-    #     page_url = self.driver.current_url
-    #     print('page_url=>', page_url)
-    #     self.assertIn('stuff-list', page_url)
-        
+        # def test_add_multiple_employees(self):
+        #     """添加员工－天假多条员工"""
+        #     page = AddStuffPage(self.driver)
+        #     readExcel = ReadExcel(self.file_dir)
+        #     excel_data = readExcel.get_value_by_row(0, 5)
+        #     page.add_stuff_base(excel_data)
+        #     time.sleep(5)
+        #     page_url = self.driver.current_url
+        #     print('page_url=>', page_url)
+        #     self.assertIn('stuff-list', page_url)
 
 
 if __name__ == '_main_':

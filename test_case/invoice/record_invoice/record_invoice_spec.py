@@ -1,15 +1,15 @@
 from selenium import webdriver
 import unittest
 import time
+import platform
+
 from util.enter_comp_page import EnterCompPage
 from comp_info import CompInfo
 from util.read_excel import ReadExcel
 from .record_invoice_page import RecordInvoicePage
-from util.public_page import PublicPage
 from util.danger_page import DangerPage
 from util.alert_page import AlertPage
-from selenium.webdriver.support.ui import WebDriverWait
-from .record_invoice_elem import *
+from util.base_class import BaseClass
 
 
 # 记发票测试
@@ -28,7 +28,10 @@ class RecordInvoiceSpec(unittest.TestCase):
         # self.driver = webdriver.PhantomJS()
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
-        # self.driver.maximize_window()
+
+        # 只有当windows环境下运行时，才使用窗口最大化函数
+        if BaseClass.get_system_name() == 'Windows':
+            self.driver.maximize_window()
 
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)

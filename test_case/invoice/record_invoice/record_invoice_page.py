@@ -13,7 +13,6 @@ from .record_invoice_elem import *
 
 class RecordInvoicePage:
 	"""记发票测试"""
-	
 	def __init__(self, driver, base_url, invoice_io):
 		"""
 		:param driver:
@@ -276,6 +275,9 @@ class RecordInvoicePage:
 		self.select_tax_rate(invoice_data[6])
 		self.set_total(invoice_data[7])
 		self.set_attachment(invoice_data[8])
+
+	# def create_account(self):
+
 	
 	def category_index(self, category):
 		"""
