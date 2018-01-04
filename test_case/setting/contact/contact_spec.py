@@ -12,13 +12,17 @@ from util.alert_page import AlertPage
 from util.enter_comp_page import EnterCompPage
 from comp_info import CompInfo
 from ..setting_page import SettingPage
-# 往来信息
-# 创建于 2017-09-28-四
-# caicai
+
+"""
+往来信息
+创建于 2017-09-28-四
+更新于 2018-01-3-三
+caicai
+"""
 
 
 class ContactSpec(unittest.TestCase):
-    ''' 添加往来测试'''
+    """ 添加往来测试"""
 
     # 添加往来测试数据
     add_contact_data_dir = './test_data/cai/contact_test_data.xlsx'
@@ -46,20 +50,19 @@ class ContactSpec(unittest.TestCase):
 
         page.click_add_btn()
         time.sleep(2)
-        if publicPage.wait_until_loader_disapeared() == False:
+        if not publicPage.wait_until_loader_disapeared():
             elem_loc = self.driver.find_element_by_xpath(contact_property_elem)
             result = elem_loc.is_displayed()
-            print('result=>', result)            
+            print('result=>', result)
             self.assertEqual(result, 1)
         else:
             print('往来信息－测试点击添加按钮显示添加modal框---失败！')
-            self.assertEqual(1,0)
+            self.assertEqual(1, 0)
 
     def test_name_empty(self):
         """2.往来信息－测试往来名称为空，保存失败"""
         settingPage = SettingPage(self.driver, CompInfo.BASE_URL)
         page = ContactPage(self.driver)
-        publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
         dangerPage = DangerPage(self.driver)
 
@@ -76,7 +79,6 @@ class ContactSpec(unittest.TestCase):
         """3.往来信息－手机号格式不正确，提示‘手机格式不正确’，保存失败"""
         settingPage = SettingPage(self.driver, CompInfo.BASE_URL)
         page = ContactPage(self.driver)
-        publicPage = PublicPage(self.driver)
         dangerPage = DangerPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
 
@@ -111,7 +113,6 @@ class ContactSpec(unittest.TestCase):
         settingPage = SettingPage(self.driver, CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         alertPage = AlertPage(self.driver)
-        publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
 
         settingPage.go_to_contact_page()
@@ -128,7 +129,6 @@ class ContactSpec(unittest.TestCase):
         settingPage = SettingPage(self.driver, CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         alertPage = AlertPage(self.driver)
-        publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
 
         settingPage.go_to_contact_page()
@@ -145,7 +145,6 @@ class ContactSpec(unittest.TestCase):
         settingPage = SettingPage(self.driver, CompInfo.BASE_URL)
         page = ContactPage(self.driver)
         alertPage = AlertPage(self.driver)
-        publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
 
         settingPage.go_to_contact_page()
@@ -161,7 +160,6 @@ class ContactSpec(unittest.TestCase):
         """8.往来信息－测试往来名称重复，保存失败"""
         settingPage = SettingPage(self.driver, CompInfo.BASE_URL)
         page = ContactPage(self.driver)
-        publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.add_contact_data_dir)
         alertPage = AlertPage(self.driver)
 

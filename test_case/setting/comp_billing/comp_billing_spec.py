@@ -17,7 +17,6 @@ from ..setting_page import SettingPage
 from .comp_billing_elem import *
 
 
-
 # 帐套信息
 # 于2017-09-06-三
 # caicai
@@ -92,10 +91,9 @@ class CompBillingSpec(unittest.TestCase):
             next_comp_name = page.get_comp_name()
             self.assertEqual(next_comp_name, accounting_book_info_data[0])
         except NoSuchElementException as e:
-            logging.error('查找的页面元素不存在，异常堆栈信息:'+str(traceback.format_exc()))
+            logging.error('查找的页面元素不存在，异常堆栈信息:' + str(traceback.format_exc()))
         except AssertionError as e:
             logging.info('编辑帐套信息失败，')
-
 
     def tearDown(self):
         page = CompBillingPage(self.driver)
