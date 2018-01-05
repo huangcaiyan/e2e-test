@@ -1,7 +1,6 @@
 from selenium import webdriver
 import unittest
 import time
-import platform
 
 from util.enter_comp_page import EnterCompPage
 from comp_info import CompInfo

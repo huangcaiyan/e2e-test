@@ -11,13 +11,9 @@ class BaseClass:
         print("system=>", running_system)
         if running_system == 'Darwin':
             current_system_name = 'Mac'
-            return current_system_name
         elif running_system == 'Windows':
             current_system_name = 'Windows'
-            return current_system_name
         else:
             current_system_name = 'others'
-            return current_system_name
-
-    def get_accounting_book_property(self):
-
+            print('自动化测试程序在 非Mac 或 windows 机器上运行！')
+        return current_system_name

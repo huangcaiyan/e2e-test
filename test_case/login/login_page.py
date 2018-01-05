@@ -1,4 +1,5 @@
 import time
+
 from .login_elem import *
 from util.public_page import PublicPage
 
@@ -14,7 +15,6 @@ class LoginPage(object):
         username_text = self.driver.find_element_by_id(username_elem)
         username_text.clear()
         username_text.send_keys(username)
-
 
     # 输入密码
     def type_password(self, password):
