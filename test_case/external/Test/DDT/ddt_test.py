@@ -1,7 +1,7 @@
 from selenium import webdriver
 import unittest
 import time
-import logging
+import logging,traceback
 import ddt
 from selenium.common.exceptions import NoSuchElementException
 import sys,os

@@ -9,6 +9,7 @@ from .record_invoice_page import RecordInvoicePage
 from util.danger_page import DangerPage
 from util.alert_page import AlertPage
 from util.base_class import BaseClass
+from util.public_page import PublicPage
 
 
 # 记发票测试
@@ -26,11 +27,9 @@ class RecordInvoiceSpec(unittest.TestCase):
         # def setUp(self):
         # self.driver = webdriver.PhantomJS()
         self.driver = webdriver.Chrome()
+        PublicPage(self.driver).max_window()
         self.driver.implicitly_wait(30)
 
-        # 只有当windows环境下运行时，才使用窗口最大化函数
-        if BaseClass.get_system_name() == 'Windows':
-            self.driver.maximize_window()
 
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)

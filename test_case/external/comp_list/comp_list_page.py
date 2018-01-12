@@ -1,7 +1,5 @@
 from selenium import webdriver
-import unittest
-from  xml
-from lxml import etree
+import unittest, time
 
 from util.public_page import PublicPage
 from .comp_list_elem import *
@@ -12,15 +10,45 @@ from test_case.login.login_page import LoginPage
 class CompListPage(object):
     def __init__(self, driver):
         self.driver = driver
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+
+    def go_create_ways_page(self):
+        """
+        页面跳转至创建帐套方式页面
+        """
+        publicPage = PublicPage(self.driver)
+        self.driver.get(CompInfo.BASE_URL + '/create-ways')
+        if not publicPage.wait_until_loader_disapeared():
+            if '/create-ways' in self.driver.current_url:
+                print('创建帐套方式页面now')
+            else:
+                print('－－去创建帐套方式页面 失败！')
+                exit()
+        else:
+            print('－－加载效果未消失，请求超时！')
+
+    def go_to_create_comp_page(self):
+        """
+        页面跳转至创建帐套页面
+        """
+        publicPage = PublicPage(self.driver)
+        self.driver.get(CompInfo.BASE_URL + '/create-company')
+        if not publicPage.wait_until_loader_disapeared():
+            if '/create-company' in self.driver.current_url:
+                print('创建帐套页面now')
+            else:
+                print('－－去创建帐套页面失败！')
+                exit()
+        else:
+            print('－－加载效果未消失，请求超时！')
+            exit()
 
     # 点击创建帐套按钮
     def click_create_comp_btn(self):
         try:
             public_page = PublicPage(self.driver)
             btn_loc = self.driver.find_element_by_xpath(create_comp_btn_elem)
-            # public_page.click_elem(btn_loc)
-            html = etree.HTML()
+            public_page.click_elem(btn_loc)
         except Exception as e:
             print('[CompListPage]点击创建帐套按钮失败=>', str(e))
 
@@ -49,8 +77,11 @@ class CompListPage(object):
         print('accounting_book_property=>', accounting_book_property)
         return accounting_book_property
 
-    # 进入帐套
     def enter_comp(self, comp_name):
+        """
+        :param comp_name: 帐套名称
+        :return: 点击帐套名称进入帐套
+        """
         try:
             public_page = PublicPage(self.driver)
             comp_loc = self.driver.find_element_by_link_text(comp_name)
@@ -67,16 +98,31 @@ class Test(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-    # def test_get_accounting_book_property(self):
-    #     page = CompListPage(self.driver)
-    #     p = page.get_accounting_book_property(CompInfo.COMP_NAME)
-    #     self.assertEqual(p,'小规模纳税人')
-
     def test_click_create_comp_btn(self):
         loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
         loginPage.login(CompInfo.LOGIN_DATA)
         page = CompListPage(self.driver)
         page.click_create_comp_btn()
+
+    def test_go_to_create_ways_page(self):
+        publicPage = PublicPage(self.driver)
+        loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
+        loginPage.login(CompInfo.LOGIN_DATA)
+        page = CompListPage(self.driver)
+        if not publicPage.wait_until_loader_disapeared():
+            page.go_create_ways_page()
+        time.sleep(2)
+        self.assertIn('create-ways', self.driver.current_url)
+
+    def test_go_to_create_company_page(self):
+        publicPage = PublicPage(self.driver)
+        loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
+        loginPage.login(CompInfo.LOGIN_DATA)
+        page = CompListPage(self.driver)
+        if not publicPage.wait_until_loader_disapeared():
+            page.go_to_create_comp_page()
+        time.sleep(2)
+        self.assertIn('create-company', self.driver.current_url)
 
 
 if __name__ == '__main__':
