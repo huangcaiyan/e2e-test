@@ -14,18 +14,18 @@ caicai
 
 
 class CreateCompPage(object):
-    def __init__(self, driver):
+    def __init__( self, driver ):
         self.driver = driver
         # self.driver = webdriver.Chrome()
 
     # 创建帐套
-    def set_comp_base_info(self, create_comp_info):
+    def set_comp_base_info( self, create_comp_info ):
         """
         :param create_comp_info: 创建帐套数据
         """
-        compListPage = CompListPage(self.driver)
-        compListPage.go_to_create_comp_page()
-
+        # compListPage = CompListPage(self.driver)
+        # compListPage.go_to_create_comp_page()
+        print('create_comp_info=>', create_comp_info)
         self.set_comp_num(create_comp_info[0])
         self.set_comp_name(create_comp_info[1])
         self.select_accounting_standard(create_comp_info[2])
@@ -34,11 +34,11 @@ class CreateCompPage(object):
         self.select_enable_date(create_comp_info[5])
         # self.submit(create_comp_info[17])
 
-    def set_comp_detail_info(self, create_comp_info):
+    def set_comp_detail_info( self, create_comp_info ):
         """
         :param create_comp_info:创建帐套数据
         """
-        if self.get_search_failed_text() == '未查找到详细信息':
+        if '未查找到详细信息' in self.get_search_failed_text():
             self.driver.find_element_by_link_text('填写').click()
             time.sleep(2)
             if self.driver.find_element_by_xpath(legal_person_name_elem).is_displayed():
@@ -56,7 +56,7 @@ class CreateCompPage(object):
             print('名为' + create_comp_info[1] + '的公司已认证，不需要填写帐套信息！')
 
     # －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
-    def set_comp_num(self, comp_num):
+    def set_comp_num( self, comp_num ):
         """
         设置帐套编号
         :param comp_num: 帐套编号
@@ -67,26 +67,28 @@ class CreateCompPage(object):
         if comp_num == '' or comp_num == '空校验':
             num = ''
         else:
-            num = random_num + comp_num
-        publicPage.set_value(comp_num_loc,str(num))
+            num = comp_num + str(random_num)
+        print('comp_num=', comp_num)
+        print('num=>', num)
+        publicPage.set_value(comp_num_loc, num)
 
-    def set_comp_name(self, comp_namde):
+    def set_comp_name( self, comp_name ):
         """
         设置帐套名称
         :param comp_name:帐套名称（⚠️当帐套名称为'北京有序科技有限公司'时，用来测试公司已认证的情况）
         """
         public_page = PublicPage(self.driver)
-        input_loc = self.driver.find_element_by_name(comp_name_elem)
-        random_num = public_page.random_num(1000)
+        input_loc = self.driver.find_element_by_xpath(comp_name_elem)
+        random_num = public_page.random_num(10000)
         if comp_name == '' or comp_name == '空校验':
             name = ''
         elif comp_name == '北京有序科技有限公司':
             name = comp_name
         else:
-            name = comp_name + random_num
+            name = comp_name + str(random_num)
         public_page.set_value(input_loc, str(name))
 
-    def select_accounting_standard(self, accounting_standard):
+    def select_accounting_standard( self, accounting_standard ):
         """
         选择会计制度
         :param accounting_standard:可选值（2013小企业会计准则、村集体经济组织会计制度）
@@ -95,7 +97,7 @@ class CreateCompPage(object):
         drop_loc = self.driver.find_element_by_name(accounting_standard_elem)
         publicPage.select_dropdown_item(drop_loc, accounting_standard)
 
-    def select_property(self, account_property):
+    def select_property( self, account_property ):
         """
         选择帐套性质
         :param account_property: 可选值（一般纳税人、小规模纳税人）
@@ -104,7 +106,7 @@ class CreateCompPage(object):
         drop_loc = self.driver.find_element_by_name(property_elem)
         public_page.select_dropdown_item(drop_loc, account_property)
 
-    def select_enable_date(self, begin_date):
+    def select_enable_date( self, begin_date ):
         """
         :param begin_date: 启用帐套日期，eg：一月、二月...
         """
@@ -115,7 +117,7 @@ class CreateCompPage(object):
     # ------------------------------------------------------------------------------------------------------------------
     # 设置帐套信息弹窗
 
-    def select_setup_date(self, year, month, day):
+    def select_setup_date( self, year, month, day ):
         """
         :param year: 年份，eg：2017
         :param month: 月份，eg：一月
@@ -126,7 +128,7 @@ class CreateCompPage(object):
         drop_loc = self.driver.find_element_by_id(setup_date_elem)
         public_page.select_date_by_ymd(drop_loc, year, month, day)
 
-    def set_legal_person_name(self, legal_person_name):
+    def set_legal_person_name( self, legal_person_name ):
         """
         :param legal_person_name: 法人代表名字
         """
@@ -136,10 +138,10 @@ class CreateCompPage(object):
         if legal_person_name == '' or legal_person_name == '空校验':
             name = ''
         else:
-            name = random_num + legal_person_name
+            name = legal_person_name + str(random_num)
         public_page.set_value(input_loc, str(name))
 
-    def set_registered_capital(self, registered_capital):
+    def set_registered_capital( self, registered_capital ):
         """
         :param registered_capital: 注册资本（string）
         """
@@ -149,10 +151,10 @@ class CreateCompPage(object):
         if registered_capital == '' or registered_capital == '空校验':
             capital = ''
         else:
-            capital = random_num + registered_capital
+            capital = registered_capital + str(random_num)
         public_page.set_value(input_loc, str(capital))
 
-    def set_tax_num(self, tax_num):
+    def set_tax_num( self, tax_num ):
         """
         :param tax_num: 税号（string）
         """
@@ -162,10 +164,10 @@ class CreateCompPage(object):
         if tax_num == '' or tax_num == '空校验':
             num = ''
         else:
-            num = tax_num + random_num
+            num = tax_num + str(random_num)
         public_page.set_value(input_loc, str(num))
 
-    def select_industry(self, industry):
+    def select_industry( self, industry ):
         """
         :param industry:行业性质
         """
@@ -173,7 +175,7 @@ class CreateCompPage(object):
         drop_loc = self.driver.find_element_by_name(indust_drop_elem)
         public_page.select_dropdown_item(drop_loc, industry)
 
-    def select_comp_address(self, province, city, district):
+    def select_comp_address( self, province, city, district ):
         """
         :param province: 省份
         :param city: 市
@@ -186,7 +188,7 @@ class CreateCompPage(object):
     # －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
     # 提交／验证
 
-    def submit(self, btn_name):
+    def submit( self, btn_name ):
         """
         保存／取消
         :param btn_name: 按钮名称，可选值：保存、取消；
@@ -213,10 +215,12 @@ class CreateCompPage(object):
         else:
             return '无操作'
 
-    def get_search_failed_text(self):
+    def get_search_failed_text( self ):
         """
         :return:未查找到详细信息
         """
         publicPage = PublicPage(self.driver)
         text_loc = self.driver.find_element_by_xpath(search_failed_elem)
-        publicPage.get_value(text_loc)
+        text = publicPage.get_value(text_loc)
+        print('text=>', text)
+        return text

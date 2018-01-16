@@ -8,11 +8,11 @@ from test_case.login.login_page import LoginPage
 
 
 class CompListPage(object):
-    def __init__(self, driver):
+    def __init__( self, driver ):
         self.driver = driver
         # self.driver = webdriver.Chrome()
 
-    def go_create_ways_page(self):
+    def go_create_ways_page( self ):
         """
         页面跳转至创建帐套方式页面
         """
@@ -27,7 +27,7 @@ class CompListPage(object):
         else:
             print('－－加载效果未消失，请求超时！')
 
-    def go_to_create_comp_page(self):
+    def go_to_create_comp_page( self ):
         """
         页面跳转至创建帐套页面
         """
@@ -44,7 +44,7 @@ class CompListPage(object):
             exit()
 
     # 点击创建帐套按钮
-    def click_create_comp_btn(self):
+    def click_create_comp_btn( self ):
         try:
             public_page = PublicPage(self.driver)
             btn_loc = self.driver.find_element_by_xpath(create_comp_btn_elem)
@@ -52,7 +52,7 @@ class CompListPage(object):
         except Exception as e:
             print('[CompListPage]点击创建帐套按钮失败=>', str(e))
 
-    def get_accounting_book_property(self, accounting_book_name):
+    def get_accounting_book_property( self, accounting_book_name ):
         table = self.driver.find_element_by_tag_name('table')
         trList = table.find_elements_by_tag_name('tr')
         print('trList=>', trList)
@@ -77,7 +77,7 @@ class CompListPage(object):
         print('accounting_book_property=>', accounting_book_property)
         return accounting_book_property
 
-    def enter_comp(self, comp_name):
+    def enter_comp( self, comp_name ):
         """
         :param comp_name: 帐套名称
         :return: 点击帐套名称进入帐套
@@ -91,20 +91,20 @@ class CompListPage(object):
 
 
 class Test(unittest.TestCase):
-    def setUp(self):
+    def setUp( self ):
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
 
-    def tearDown(self):
+    def tearDown( self ):
         self.driver.quit()
 
-    def test_click_create_comp_btn(self):
+    def test_click_create_comp_btn( self ):
         loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
         loginPage.login(CompInfo.LOGIN_DATA)
         page = CompListPage(self.driver)
         page.click_create_comp_btn()
 
-    def test_go_to_create_ways_page(self):
+    def test_go_to_create_ways_page( self ):
         publicPage = PublicPage(self.driver)
         loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
         loginPage.login(CompInfo.LOGIN_DATA)
@@ -114,7 +114,7 @@ class Test(unittest.TestCase):
         time.sleep(2)
         self.assertIn('create-ways', self.driver.current_url)
 
-    def test_go_to_create_company_page(self):
+    def test_go_to_create_company_page( self ):
         publicPage = PublicPage(self.driver)
         loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
         loginPage.login(CompInfo.LOGIN_DATA)

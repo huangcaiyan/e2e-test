@@ -2,6 +2,8 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.support.expected_conditions import *
+
 import time
 import random
 import logging, traceback
@@ -21,13 +23,13 @@ class PublicPage:
     # 日期 月下拉 class
     datepicker_month_drop_elem = 'ui-datepicker-month'
 
-    def __init__(self, driver):
+    def __init__( self, driver ):
         self.driver = driver
         # self.driver = webdriver.Chrome()
 
     # 判断元素是否显示
     @staticmethod
-    def is_element_present(elem_loc):
+    def is_element_present( elem_loc ):
         try:
             elem_loc
         except NoSuchElementException as e:
@@ -36,7 +38,7 @@ class PublicPage:
         else:
             return True
 
-    def wait_until_loader_disapeared(self):
+    def wait_until_loader_disapeared( self ):
         """
         等待直到加载蒙板消失
         :return: 返回蒙板状态，is_disapeared = False时，表示蒙板消失
@@ -46,7 +48,16 @@ class PublicPage:
         print('is_disapeared=>', is_disapeared)
         return is_disapeared
 
-    def is_alert_present(self):
+    def wait_until_svg_disapeared( self ):
+        """
+        等待黑色logo svg矢量图蒙板消失
+        :return:返回蒙板状态，is_disapeared = False时，表示svg图消失；
+        """
+        is_dispeared = WebDriverWait(self.driver, 30, 1).until_not(
+            lambda x: self.driver.find_element_by_css_selector('.splash').is_displayed())
+        print('is_dispeared=>', is_dispeared)
+
+    def is_alert_present( self ):
         """
         判断alert框是否出现
         :return:False，True
@@ -58,7 +69,7 @@ class PublicPage:
             return False
         return True
 
-    def close_alert_and_get_its_text(self):
+    def close_alert_and_get_its_text( self ):
         """
         关闭alert框，且获取alert内容
         :return: alert 内容
@@ -75,7 +86,7 @@ class PublicPage:
             self.accept_next_alert = True
 
     # 日历
-    def select_date(self, calen_xpath, day):
+    def select_date( self, calen_xpath, day ):
         """
         :param calen_xpath: 日历位置xpath
         :param day:日期（1、2、3...）
@@ -91,7 +102,7 @@ class PublicPage:
         else:
             return False
 
-    def select_date_by_ymd(self, calen_drop_loc, year, month, day):
+    def select_date_by_ymd( self, calen_drop_loc, year, month, day ):
         """
         :param calen_drop_loc: 日历下拉元素
         :param year: 年（2012、2017、2018...）
@@ -114,26 +125,28 @@ class PublicPage:
         except Exception as e:
             print('[PublicPage]select_date_by_ymd－－选择年月日失败,错误原因=>', str(e))
 
-    def select_month(self, calen_drop_loc, month):
+    def select_month( self, calen_drop_loc, month ):
         """
         :param calen_drop_loc: 日历展开元素定位
-        :param month: 月（一月、二月...）
+        :param month: 月（1,2,3...）
         :return: 月份选择插件
         """
+        month_index = int(month) - 1
+        print('inti(month)', month_index)
         try:
             self.click_elem(calen_drop_loc)
             pre_btn = self.driver.find_element_by_css_selector('.pull-left')
             time.sleep(2)
             if pre_btn:
-                return self.driver.find_elements_by_css_selector('.month-button')[month].click()
+                return self.driver.find_elements_by_css_selector('.month-button')[month_index].click()
             else:
                 return False
         except NoSuchElementException as e:
             logging.error('[PublicPage]select_month－－查找元素不存在，异常堆栈信息：', str(traceback.format_exc()))
         except Exception as e:
-            print('[PublicPage]select_date_by_ymd－－选择月份失败,错误原因=>', str(e))
+            print('[PublicPage]select_month－－选择月份失败,错误原因=>', str(e))
 
-    def delete_date(self, elem_xpath):
+    def delete_date( self, elem_xpath ):
         """
         :param elem_xpath: 删除日历日期按钮xpath
         :return:清除日历日期
@@ -143,7 +156,7 @@ class PublicPage:
         return del_loc.click()
 
     @staticmethod
-    def random_num(num):
+    def random_num( num ):
         """
         :param num: 随机数范围（10，表示0到10的随机数；100：表示0到100的随机数；）
         :return: 返回0 到 num范围内的随机数
@@ -173,14 +186,14 @@ class PublicPage:
             print('自动化测试程序在 非Mac 或 windows 机器上运行！')
         return current_system_name
 
-    def max_window(self):
+    def max_window( self ):
         """
         :return: windows系统下浏览器最大化
         """
         if self.get_system_name() == 'Windows':
             self.driver.max_winddows()
 
-    def click_elem(self, elem_loc):
+    def click_elem( self, elem_loc ):
         """
         :param elem_loc: 单击元素的元素定位
         :return: 点击元素
@@ -198,7 +211,7 @@ class PublicPage:
         except Exception as e:
             print('[PublicPage]click_elem--未知错误，错误信息是：', str(e))
 
-    def double_click_elem(self, elem_loc):
+    def double_click_elem( self, elem_loc ):
         """
         :param elem_loc: 双击元素元素定位
         :return: 双击元素elem_loc
@@ -214,7 +227,7 @@ class PublicPage:
         except Exception as e:
             print('There was an exception when double_click_elem %s', str(e))
 
-    def set_value(self, elem_loc, input_value):
+    def set_value( self, elem_loc, input_value ):
         """
         :param elem_loc: input框元素定位
         :param input_value: input框输入值
@@ -233,7 +246,7 @@ class PublicPage:
             logging.error('[PublicPage]set_value--未知错误，错误信息是：', str(traceback.format_exc()))
 
     @staticmethod
-    def keys_enter(elem_loc):
+    def keys_enter( elem_loc ):
         """
         :param elem_loc: 需要摁回车键的元素定位
         :return:键盘输入enter
@@ -245,7 +258,7 @@ class PublicPage:
         except Exception as e:
             logging.error('[PublicPage]keys_enter--未知错误，错误信息：', str(e))
 
-    def click_backspace_btn(self, elem_loc):
+    def click_backspace_btn( self, elem_loc ):
         """
         :param elem_loc: delete键元素定位
         :return: 点击delete键
@@ -259,7 +272,7 @@ class PublicPage:
         except Exception as e:
             print('There was an exception when click_backspace_btn=>', str(e))
 
-    def scroll_to_set_value(self, elem_loc, input_value):
+    def scroll_to_set_value( self, elem_loc, input_value ):
         """
         :param elem_loc:输入框元素定位
         :param input_value: 输入框输入值
@@ -273,7 +286,7 @@ class PublicPage:
         except Exception as e:
             print('There was an exception when scroll_to_set_value=>', str(e))
 
-    def get_value(self, elem_loc):
+    def get_value( self, elem_loc ):
         """
         :param elem_loc: 文本位置元素定位
         :return:获取文本的内容text
@@ -287,7 +300,7 @@ class PublicPage:
             logging.error('[PublicPage]get_value--未知错误，错误信息是', str(traceback.format_exc()))
 
     # 光标移动到元素为止并做点击操作
-    def move_to_element_to_click(self, elem_loc):
+    def move_to_element_to_click( self, elem_loc ):
         """
         :param elem_loc:
         :return:
@@ -296,7 +309,7 @@ class PublicPage:
         action.move_to_element(elem_loc).click().perform()
 
     # 移动到元素element对象的“底端”与当前窗口的“底部”对齐
-    def scroll_to_elem(self, elem_loc):
+    def scroll_to_elem( self, elem_loc ):
         try:
             return self.driver.execute_script("arguments[0].scrollIntoView(false);", elem_loc)
             time.sleep(1)
@@ -305,24 +318,24 @@ class PublicPage:
             time.sleep(2)
 
     # 移动到页面到中部
-    def scroll_to_page_center(self):
+    def scroll_to_page_center( self ):
         return self.driver.execute_script("window.scrollTo(0, 1000)")
 
     # 将光标定位到页面顶部
-    def scroll_to_top(self):
+    def scroll_to_top( self ):
         return self.driver.execute_script('scroll(250,0)')
 
     # 将光标定位到页面底部
-    def scroll_to_bottom(self):
+    def scroll_to_bottom( self ):
         return self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
 
     # 跳转至modal框
-    def switch_to_add_contact_modal_dialog(self):
+    def switch_to_add_contact_modal_dialog( self ):
         self.driver.switch_to_active_element()
 
     # 获取元素位置坐标
     @staticmethod
-    def get_elem_location(elem_loc):
+    def get_elem_location( elem_loc ):
         try:
             location = elem_loc.location
             size = elem_loc.size
@@ -331,7 +344,7 @@ class PublicPage:
         except Exception as e:
             print('[PublicPage]There was an exception when get_elem_location=>', str(e))
 
-    def select_dropdown_item(self, drop_loc, item_name):
+    def select_dropdown_item( self, drop_loc, item_name ):
         """
         :param drop_loc: 下拉元素定位
         :param item_name:下拉可选值text
@@ -353,13 +366,13 @@ class PublicPage:
             self.driver.quit()
 
     # 必填项红框警示
-    def has_danger_is_show(self):
+    def has_danger_is_show( self ):
         publicPage = PublicPage(self.driver)
         ui_loc = self.driver.find_element_by_css_selector('.has-danger')
         print('publicPage.is_element_present(ui_loc)=>', publicPage.is_element_present(ui_loc))
         return publicPage.is_element_present(ui_loc)
 
-    def click_operation_btn(self, name_td_index, item_name, btn_td_index, btn_name):
+    def click_operation_btn( self, name_td_index, item_name, btn_td_index, btn_name ):
         """
         :param name_td_index: 名称的td索引（表格行中任意唯一值，如收支表里的单号td索引，股东表里股东名称的索引）
         :param item_name: 名称（表格行中的任意唯一值，如收支里的单号，股东里的股东名）
@@ -391,4 +404,5 @@ class PublicPage:
         btn_loc = self.driver.find_elements_by_tag_name('tr')[index].find_elements_by_tag_name('td')[
             btn_td_index].find_elements_by_tag_name('button')[btn_index]
         return btn_loc.click()
+
 # ----------------------------------------------------------------------------------------------------------------------

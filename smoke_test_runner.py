@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
     # # 记发票
     # # # 记所有类别发票
-    testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
+    # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
     # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
     #
     # 报表
@@ -96,13 +96,14 @@ if __name__ == '__main__':
     # external
     # 记录完全部收入、支出、互转，手指列表本月收入为42,650.92，支出为70,584.30
     # testSuite.addTest(EnterCompSpec('test_enter_comp'))
+    testSuite.addTest(CreateCompSpec('test_confirm_create_account_book'))
     # testSuite.addTest(CreateCompSpec('test_create_account_book_empty_comp_name'))
     # testSuite.addTest(UserSettingSpec('test_go_to_comp_billing_page'))
     # testSuite.addTest(SidebarSpec('test_get_current_account_period'))
     # testSuite.addTest(CreateWaysSpec('test_input_comp_name_jump_to_create_page'))
 
     now = time.strftime('%Y-%m-%d %H_%M_%S')
-    report_dir = './report'
+    report_dir = './report/cai_test'
     filename = report_dir + '/' + now + '_result.html'
     testReport = open(filename, 'wb')
     runner = HTMLTestRunner(
