@@ -7,6 +7,7 @@ from comp_info import CompInfo
 from test_case.login.login_page import LoginPage
 
 
+
 class CompListPage(object):
     def __init__( self, driver ):
         self.driver = driver
@@ -89,40 +90,110 @@ class CompListPage(object):
         except Exception as e:
             print('[CompListPage]enter_comp：进入帐套失败，失败原因=>', str(e))
 
+    def click_distribute_btn( self, comp_name, role ):
+        """
+        :param comp_name:帐套名称
+        :param role:要分配的角色，可选值（客户联系人，会计，助理）
+        :return:点击填写／分配按钮
+        """
+        publicPage = PublicPage(self.driver)
+        row_locs = self.driver.find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')
+        names = []
+        for tr_index in range(len(row_locs)):
+            a_loc = self.driver.find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')[
+                tr_index].find_element_by_tag_name('td').find_elements_by_tag_name('a')
+            if len(a_loc) == 1:
+                name_loc = a_loc[0]
+            elif len(a_loc) == 2:
+                name_loc = a_loc[1]
+
+            name = name_loc.text
+            names.append(name)
+        # 获取当前帐套名称所在行索引
+        index = names.index(comp_name) + 1
+        if role == '客户联系人':
+            distribute_td_index = 4
+        elif role == '会计':
+            distribute_td_index = 5
+        elif role == '助理':
+            distribute_td_index = 6
+        distribute_elem = 'tr[' + str(index) + ']/td[' + str(distribute_td_index) + ']/div/div'
+        distribute_loc = self.driver.find_element_by_tag_name('tbody').find_element_by_xpath(distribute_elem)
+        publicPage.click_elem(distribute_loc)
+
+    # －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+    def get_account_company_name( self ):
+        """
+        :return:代帐公司名称
+        """
+        publicPage = PublicPage(self.driver)
+        name_loc = self.driver.find_element_by_xpath(account_company_name_elem)
+        return publicPage.get_value(name_loc)
+
+    def get_login_user_name( self ):
+        """
+        :return:登陆用户用户名称
+        """
+        publicPage = PublicPage(self.driver)
+        name_loc = self.driver.find_element_by_xpath(login_user_name_elem)
+        return publicPage.get_value(name_loc)
+
+    def click_modify_password_link( self ):
+        """
+        :return:点击修改密码链接
+        """
+        publicPage = PublicPage(self.driver)
+        name = self.get_login_user_name()
+        open_list_loc = self.driver.find_element_by_link_text(name)
+        publicPage.click_elem(open_list_loc)
+        link_loc = self.driver.find_element_by_link_text('修改密码')
+        publicPage.click_elem(link_loc)
+        time.sleep(2)
+
 
 class Test(unittest.TestCase):
     def setUp( self ):
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
 
+        loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
+        loginPage.login(CompInfo.LOGIN_DATA)
+
     def tearDown( self ):
         self.driver.quit()
 
-    def test_click_create_comp_btn( self ):
-        loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
-        loginPage.login(CompInfo.LOGIN_DATA)
-        page = CompListPage(self.driver)
-        page.click_create_comp_btn()
+    # def test_click_create_comp_btn(self):
+    #     loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
+    #     loginPage.login(CompInfo.LOGIN_DATA)
+    #     page = CompListPage(self.driver)
+    #     page.click_create_comp_btn()
+    #
+    # def test_go_to_create_ways_page(self):
+    #     publicPage = PublicPage(self.driver)
+    #     loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
+    #     loginPage.login(CompInfo.LOGIN_DATA)
+    #     page = CompListPage(self.driver)
+    #     if not publicPage.wait_until_loader_disapeared():
+    #         page.go_create_ways_page()
+    #     time.sleep(2)
+    #     self.assertIn('create-ways', self.driver.current_url)
+    #
+    # def test_go_to_create_company_page(self):
+    #     publicPage = PublicPage(self.driver)
+    #     loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
+    #     loginPage.login(CompInfo.LOGIN_DATA)
+    #     page = CompListPage(self.driver)
+    #     if not publicPage.wait_until_loader_disapeared():
+    #         page.go_to_create_comp_page()
+    #     time.sleep(2)
+    #     self.assertIn('create-company', self.driver.current_url)
 
-    def test_go_to_create_ways_page( self ):
+    def test_verify_distribute_btn( self ):
         publicPage = PublicPage(self.driver)
-        loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
-        loginPage.login(CompInfo.LOGIN_DATA)
         page = CompListPage(self.driver)
         if not publicPage.wait_until_loader_disapeared():
-            page.go_create_ways_page()
-        time.sleep(2)
-        self.assertIn('create-ways', self.driver.current_url)
-
-    def test_go_to_create_company_page( self ):
-        publicPage = PublicPage(self.driver)
-        loginPage = LoginPage(CompInfo.BASE_URL, self.driver)
-        loginPage.login(CompInfo.LOGIN_DATA)
-        page = CompListPage(self.driver)
-        if not publicPage.wait_until_loader_disapeared():
-            page.go_to_create_comp_page()
-        time.sleep(2)
-        self.assertIn('create-company', self.driver.current_url)
+            page.click_distribute_btn('固定yk', '会计')
+            time.sleep(3)
 
 
 if __name__ == '__main__':

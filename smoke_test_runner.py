@@ -9,14 +9,18 @@ from test_case.setting.comp_billing.comp_billing_spec import CompBillingSpec
 from test_case.setting.contact.contact_spec import ContactSpec
 from test_case.setting.partner_set.partner_set_spec import PartnersetSpec
 from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec
+
 from test_case.external.enter_comp_spec import EnterCompSpec
+from test_case.external.create_ways.create_ways_spec import CreateWaysSpec
+from test_case.external.comp_list.distribute_modal.distribute_modal_spec import DistributeModalSpec
 from test_case.external.create_company.create_comp_spec import CreateCompSpec
 from test_case.external.user_setting.user_setting_spec import UserSettingSpec
+
 from test_case.transaction.record_transaction.record_transaction_spec import RecordTransactionSpec
 from test_case.invoice.record_invoice.record_invoice_spec import RecordInvoiceSpec
 from test_case.external.sidebar.sidebar_spec import SidebarSpec
 from test_case.reports.reports_data.reports_data_ready_spec import ReportDataReadySpec
-from test_case.external.create_ways.create_ways_spec import CreateWaysSpec
+
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
 
@@ -79,6 +83,7 @@ if __name__ == '__main__':
     # # # 记所有类别发票
     # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
     # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
+    testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice_xgm'))
     #
     # 报表
     # 
@@ -88,16 +93,17 @@ if __name__ == '__main__':
     # testSuite.addTest(ReportDataReadySpec('test_record_input_invoice'))
     # testSuite.addTest(ReportDataReadySpec('test_record_output_invoice'))
 
-
-
-
-    
-
     # external
     # 记录完全部收入、支出、互转，手指列表本月收入为42,650.92，支出为70,584.30
     # testSuite.addTest(EnterCompSpec('test_enter_comp'))
-    testSuite.addTest(CreateCompSpec('test_confirm_create_account_book'))
-    # testSuite.addTest(CreateCompSpec('test_create_account_book_empty_comp_name'))
+    # 创建帐套
+    # testSuite.addTest(CreateCompSpec('test_verify_create_comp'))
+    # testSuite.addTest(CreateCompSpec('test_create_comp_empty_comp_name'))
+    # testSuite.addTest(CreateCompSpec('test_create_comp_empty_legal_person'))
+    # 帐套列表
+    # 分配会计／助理／客服联系人
+    # testSuite.addTest(DistributeModalSpec('test_distribute_accounting'))
+
     # testSuite.addTest(UserSettingSpec('test_go_to_comp_billing_page'))
     # testSuite.addTest(SidebarSpec('test_get_current_account_period'))
     # testSuite.addTest(CreateWaysSpec('test_input_comp_name_jump_to_create_page'))

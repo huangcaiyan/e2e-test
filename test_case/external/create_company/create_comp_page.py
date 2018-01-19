@@ -4,7 +4,6 @@ import time
 from util.public_page import PublicPage
 from .create_comp_elem import *
 from util.select_address_page import SelectAddressPage
-from ..comp_list.comp_list_page import CompListPage
 
 """
 进入帐套
@@ -38,7 +37,9 @@ class CreateCompPage(object):
         """
         :param create_comp_info:创建帐套数据
         """
-        if '未查找到详细信息' in self.get_search_failed_text():
+        text = '未查到详细信息 填写'
+        alert_text = self.get_search_failed_text()
+        if text == alert_text:
             self.driver.find_element_by_link_text('填写').click()
             time.sleep(2)
             if self.driver.find_element_by_xpath(legal_person_name_elem).is_displayed():
@@ -50,10 +51,12 @@ class CreateCompPage(object):
                 self.select_comp_address(create_comp_info[13], create_comp_info[14], create_comp_info[15])
                 self.submit(create_comp_info[16])
                 time.sleep(1)
+
             else:
                 print('－－点击填写按钮失败，填写帐套信息窗口未打开！！')
         else:
             print('名为' + create_comp_info[1] + '的公司已认证，不需要填写帐套信息！')
+        self.submit(create_comp_info[17])
 
     # －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
     def set_comp_num( self, comp_num ):
@@ -64,6 +67,7 @@ class CreateCompPage(object):
         publicPage = PublicPage(self.driver)
         random_num = publicPage.random_num(10000)
         comp_num_loc = self.driver.find_element_by_xpath(comp_num_elem)
+        print('comp_num_loc=>', comp_num_loc)
         if comp_num == '' or comp_num == '空校验':
             num = ''
         else:
@@ -116,25 +120,36 @@ class CreateCompPage(object):
 
     # ------------------------------------------------------------------------------------------------------------------
     # 设置帐套信息弹窗
-
     def select_setup_date( self, year, month, day ):
         """
-        :param year: 年份，eg：2017
-        :param month: 月份，eg：一月
-        :param day: 日期，eg：1
-        :return:成立日期
+        :param year:年（2017，2018...）
+        :param month:月（1，2，3...)
+        :param day:日(1,2,3...)
+        :return:选择帐套成立日期
         """
-        public_page = PublicPage(self.driver)
-        drop_loc = self.driver.find_element_by_id(setup_date_elem)
-        public_page.select_date_by_ymd(drop_loc, year, month, day)
+        publicPage = PublicPage(self.driver)
+        calen_drop_loc = self.driver.find_element_by_id(setup_date_elem)
+        publicPage.click_elem(calen_drop_loc)
+
+        year_select_loc = self.driver.find_element_by_css_selector('.ui-datepicker-year')
+        year_drop_loc = year_select_loc
+        publicPage.select_option(year_select_loc, year, year_drop_loc)
+
+        month_select_loc = self.driver.find_element_by_css_selector('.ui-datepicker-month')
+        month_drop_loc = month_select_loc
+        month_value = int(month) - 1
+        publicPage.select_option(month_select_loc, month_value, month_drop_loc)
+
+        day_loc = self.driver.find_element_by_link_text(day)
+        publicPage.click_elem(day_loc)
 
     def set_legal_person_name( self, legal_person_name ):
         """
-        :param legal_person_name: 法人代表名字
+        :param legal_person_name: 9,法人代表名字
         """
         public_page = PublicPage(self.driver)
         random_num = public_page.random_num(10000)
-        input_loc = self.driver.find_element_by_name(legal_person_name_elem)
+        input_loc = self.driver.find_element_by_xpath(legal_person_name_elem)
         if legal_person_name == '' or legal_person_name == '空校验':
             name = ''
         else:
@@ -159,7 +174,7 @@ class CreateCompPage(object):
         :param tax_num: 税号（string）
         """
         public_page = PublicPage(self.driver)
-        input_loc = self.driver.find_element_by_name(tax_num_elem)
+        input_loc = self.driver.find_element_by_xpath(tax_num_elem)
         random_num = public_page.random_num(1000000)
         if tax_num == '' or tax_num == '空校验':
             num = ''
@@ -172,7 +187,7 @@ class CreateCompPage(object):
         :param industry:行业性质
         """
         public_page = PublicPage(self.driver)
-        drop_loc = self.driver.find_element_by_name(indust_drop_elem)
+        drop_loc = self.driver.find_element_by_name(industry_drop_elem)
         public_page.select_dropdown_item(drop_loc, industry)
 
     def select_comp_address( self, province, city, district ):
@@ -182,8 +197,12 @@ class CreateCompPage(object):
         :param district: 区
         :return: 帐套信息 住所
         """
+        prov_drop_loc = self.driver.find_element_by_name(prov_drop_elem)
+        city_drop_loc = self.driver.find_element_by_name(city_drop_elem)
+        distr_drop_loc = self.driver.find_element_by_name(dist_drop_elem)
+
         selectAddressPage = SelectAddressPage(self.driver)
-        selectAddressPage.select_address(province, city, district)
+        selectAddressPage.select_address(prov_drop_loc, province, city_drop_loc, city, distr_drop_loc, district)
 
     # －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
     # 提交／验证
@@ -195,20 +214,22 @@ class CreateCompPage(object):
         :return:点击按钮；
         """
         if None != btn_name:
-            if btn_name == 'msg_save':
-                btn_elem = msg_save_btn_elem
-                operation_name = '帐套信息保存'
-            elif btn_name == 'msg_cancel':
-                btn_elem = msg_cancel_btn_elem
-                operation_name = '帐套信息取消'
-            elif btn_name == 'create_save':
-                btn_elem = create_btn_elem
-                operation_name = '保存创建'
-            elif btn_name == 'create_cancel':
-                btn_elem = cancel_btn_elem
-                operation_name = '取消创建'
-
-            btn_loc = self.driver.find_element_by_xpath(btn_elem)
+            if 'msg' in btn_name:
+                if btn_name == 'msg_save':
+                    btn_elem = msg_save_btn_elem
+                    operation_name = '帐套信息保存'
+                elif btn_name == 'msg_cancel':
+                    btn_elem = msg_cancel_btn_elem
+                    operation_name = '帐套信息取消'
+                btn_loc = self.driver.find_element_by_id(btn_elem)
+            elif 'create' in btn_name:
+                if btn_name == 'create_save':
+                    btn_elem = create_btn_elem
+                    operation_name = '保存创建'
+                elif btn_name == 'create_cancel':
+                    btn_elem = cancel_btn_elem
+                    operation_name = '取消创建'
+                btn_loc = self.driver.find_element_by_xpath(btn_elem)
             public_page = PublicPage(self.driver)
             print('按钮名称：', operation_name)
             public_page.click_elem(btn_loc)

@@ -1,9 +1,7 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import WebDriverException
-from selenium.webdriver.support import expected_conditions as EC
-# from selenium.webdriver.support.expected_conditions import *
-
+from selenium.webdriver.support.select import Select
 import time
 import random
 import logging, traceback
@@ -85,6 +83,31 @@ class PublicPage:
         finally:
             self.accept_next_alert = True
 
+    def select_option( self, select_loc, option_value, drop_loc=None ):
+        """
+        :param drop_loc: 展开下拉元素定位 webelement
+        :param select_loc: <select>元素定位 webelement
+        :param option_value: 选择方式（value／index），可以是options里的value值，也可以是options的索引
+        :return: 选择option
+        """
+        try:
+            if drop_loc is not None:
+                drop_loc.click()
+                time.sleep(1)
+            select = Select(select_loc)
+            if type(option_value) == str:
+                selected = select.select_by_value(option_value)
+            elif type(option_value) == int:
+                selected = select.select_by_index(option_value)
+            else:
+                print('输入的option_value值有误，应该是string或integer类型！')
+                selected = None
+            return selected
+        except NoSuchElementException as e:
+            logging.error('查找元素失败，异常堆栈信息是＝>', str(traceback.format_exc(e)))
+        except Exception as e:
+            logging.error('发生未知错误，错误信息是=>', str(e))
+
     # 日历
     def select_date( self, calen_xpath, day ):
         """
@@ -132,7 +155,7 @@ class PublicPage:
         :return: 月份选择插件
         """
         month_index = int(month) - 1
-        print('inti(month)', month_index)
+        print('month_index=>', month_index)
         try:
             self.click_elem(calen_drop_loc)
             pre_btn = self.driver.find_element_by_css_selector('.pull-left')
@@ -199,12 +222,16 @@ class PublicPage:
         :return: 点击元素
         """
         try:
+            # count = 1
             if not self.wait_until_loader_disapeared():
                 self.scroll_to_elem(elem_loc)
+                # WebDriverWait(self.driver, 30, 1).until(lambda driver: elem_loc)
                 return elem_loc.click()
             else:
-                print('[PublicPage]－－加载蒙板未消失－－点击失败！')
-                time.sleep(5)
+                # count = count + 1
+                # print('[PublicPage]－－加载蒙板未消失－－点击失败！，继续第' + count + '次点击：')
+                time.sleep(1)
+                self.scroll_to_elem(elem_loc)
                 return elem_loc.click()
         except NoSuchElementException as e:
             logging.error('[PublicPage]click_elem--查找元素不存在，异常堆栈信息是：', str(traceback.format_exc()))
@@ -241,9 +268,9 @@ class PublicPage:
             elem_loc.clear()
             elem_loc.send_keys(input_value)
         except NoSuchElementException as e:
-            logging.error('[PublicPage]set_value--查找元素不存在，堆栈异常信息是：', str(traceback.format_exc()))
+            logging.error('[PublicPage]set_value--查找元素不存在，堆栈异常信息是：', str(traceback.format_exc(e)))
         except Exception as e:
-            logging.error('[PublicPage]set_value--未知错误，错误信息是：', str(traceback.format_exc()))
+            logging.error('[PublicPage]set_value--未知错误，错误信息是：', str(e))
 
     @staticmethod
     def keys_enter( elem_loc ):
@@ -374,7 +401,7 @@ class PublicPage:
 
     def click_operation_btn( self, name_td_index, item_name, btn_td_index, btn_name ):
         """
-        :param name_td_index: 名称的td索引（表格行中任意唯一值，如收支表里的单号td索引，股东表里股东名称的索引）
+        :param name_td_index: 名称的td索引（表格行中任意唯一值，如收支表里的单号td索引，股东表里股东名称的索引,即唯一值在一行中第几列）
         :param item_name: 名称（表格行中的任意唯一值，如收支里的单号，股东里的股东名）
         :param btn_td_index: 操作按钮索引（表格中‘操作’列的td索引，如收支列表中操作列的td索引是‘5’
         :param btn_name: 操作按钮名称（可选值'edit'、'delete')
@@ -383,9 +410,9 @@ class PublicPage:
         row_elems = self.driver.find_elements_by_tag_name('tr')
         # 获取列表中所有行的名称（唯一值）
         names = []
-        for tr_index in range(len(row_elems)):
-            if tr_index == 0:
-                tr_index = tr_index + 1
+        for tr_index in range(1, len(row_elems)):
+            # if tr_index == 0:
+            #     tr_index = tr_index + 1
             name_loc = self.driver.find_elements_by_tag_name('tr')[tr_index].find_elements_by_tag_name('td')[
                 name_td_index].find_element_by_tag_name('span')
             name = name_loc.text
@@ -405,4 +432,4 @@ class PublicPage:
             btn_td_index].find_elements_by_tag_name('button')[btn_index]
         return btn_loc.click()
 
-# ----------------------------------------------------------------------------------------------------------------------
+    # ----------------------------------------------------------------------------------------------------------------------

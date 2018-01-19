@@ -1,6 +1,5 @@
 from selenium import webdriver
-import unittest
-import traceback, logging
+import unittest, time
 from .create_comp_page import CreateCompPage
 from util.read_excel import ReadExcel
 from util.public_page import PublicPage
@@ -34,36 +33,43 @@ class CreateCompSpec(unittest.TestCase):
     def tearDownClass( self ):
         self.driver.quit()
 
-    def test_confirm_create_account_book( self ):
+    def test_verify_create_comp( self ):
         """确认创建帐套功能，创建成功"""
         page = CreateCompPage(self.driver)
-        publicPage = PublicPage(self.driver)
         readExcel = ReadExcel(self.create_comp_data_dir)
-        comp_data= readExcel.get_value_by_row('创建帐套测试数据', 1)
+        comp_data = readExcel.get_value_by_row('创建帐套测试数据', 1)
         compLisPage = CompListPage(self.driver)
         compLisPage.go_to_create_comp_page()
         if 'create-company' in self.driver.current_url:
             page.set_comp_base_info(comp_data)
             page.set_comp_detail_info(comp_data)
-            result = publicPage.has_danger_is_show()
-            print('result=>',result)
-            self.assertEqual(result, 1)
+            time.sleep(2)
+            self.assertIn('company-list', self.driver.current_url)
+        else:
+            print('去创建帐套失败！')
+            self.assertEqual(0, 1)
+
+    def test_create_comp_empty_comp_name( self ):
+        """创建帐套-帐套名称为空,红框提醒保存失败"""
+        page = CreateCompPage(self.driver)
+        dangerPage = DangerPage(self.driver)
+        compLisPage = CompListPage(self.driver)
+        readExcel = ReadExcel(self.create_comp_data_dir)
+
+        comp_data = readExcel.get_value_by_row('创建帐套测试数据', 2)
+        compLisPage.go_to_create_comp_page()
+        if 'create-company' in self.driver.current_url:
+            page.set_comp_base_info(comp_data)
+            page.submit(comp_data[17])
+            alert_danger_msg = dangerPage.get_alert_danger_msg()
+            self.assertEqual(alert_danger_msg, comp_data[19])
+            time.sleep(2)
             self.assertNotIn('company-list', self.driver.current_url)
         else:
             print('去创建帐套失败！')
+            self.assertEqual(0, 1)
 
-    def test_create_account_book_empty_comp_name( self ):
-        """创建帐套-帐套名称为空,红框提醒保存失败"""
-        page = CreateCompPage(self.driver)
-        readExcel = ReadExcel(self.create_comp_data_dir)
-        comp_data = readExcel.get_value_by_row('创建帐套测试数据', 2)
-        page.set_comp_base_info(comp_data)
-        dangerPage = DangerPage(self.driver)
-        alert_danger_msg = dangerPage.get_alert_danger_msg()
-        self.assertEqual(alert_danger_msg, comp_data[19])
-        self.assertNotIn('company-list', self.driver.current_url)
-
-    def test_create_account_book_empty_legal_person( self ):
+    def test_create_comp_empty_legal_person( self ):
         """创建帐套－公司性质为空，红框提醒，保存失败"""
         page = CreateCompPage(self.driver)
         publicPage = PublicPage(self.driver)
@@ -75,7 +81,7 @@ class CreateCompSpec(unittest.TestCase):
         self.assertEqual(result, 1)
         self.assertNotIn('company-list', self.driver.current_url)
 
-    def test_not_type_comp_detail_info( self ):
+    def test_create_comp_not_type_comp_detail_info( self ):
         """创建帐套－帐套详细信息不填写，保存失败，红框提醒"""
         page = CreateCompPage(self.driver)
         publicPage = PublicPage(self.driver)
@@ -88,7 +94,7 @@ class CreateCompSpec(unittest.TestCase):
         self.assertEqual(result, 1)
         self.assertNotIn('company-list', self.driver.current_url)
 
-    def test_create_account_book_empty_legal_person( self ):
+    def test_create_comp_empty_legal_person( self ):
         """创建帐套－成立日期为空，红框提醒，保存失败"""
         page = CreateCompPage(self.driver)
         publicPage = PublicPage(self.driver)

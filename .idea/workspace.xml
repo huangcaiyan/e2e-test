@@ -2,40 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="557e64a7-8c95-4c45-80c0-71e9b6e4e0ee" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/2018-01-12 17_57_44_result.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/2018-01-12 17_58_40_result.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/2018-01-12 18_00_06_result.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/2018-01-12 18_01_20_result.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/add_contact.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/add_stuff_data.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/add_stuff_data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/comp_billing_data.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/contact_test_data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/create_comp_data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/input_invoice_data.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/login_data.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/login_test_data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/modify_accounting_book_info_data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/partnerset_test_data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/record_invoice_data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/record_transaction_data.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/导入员工－yb.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/导入开票－yb.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/导入期初账－yb.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/帐套信息.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/期初分配－银行.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/登录.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/记固定资产－yb.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data/cai/记收票－yb.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smoke_test_runner.py" afterPath="$PROJECT_DIR$/smoke_test_runner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" afterPath="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" afterPath="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/external/sidebar/sidebar_page.py" afterPath="$PROJECT_DIR$/test_case/external/sidebar/sidebar_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_case/login/login_spec.py" afterPath="$PROJECT_DIR$/test_case/login/login_spec.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/enter_company_util.py.orig" afterPath="$PROJECT_DIR$/util/enter_company_util.py.orig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/public_page.py" afterPath="$PROJECT_DIR$/util/public_page.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_elem.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/comp_list/x.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_elem.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_spec.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/util/x.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/huangcaiyan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/huangcaiyan.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/e2e-test.iml" afterPath="$PROJECT_DIR$/.idea/e2e-test.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/comp_info.py" afterPath="$PROJECT_DIR$/comp_info.py" />
+      <change beforePath="$PROJECT_DIR$/smoke_test_runner.py" afterPath="$PROJECT_DIR$/smoke_test_runner.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/create_company/create_comp_elem.py" afterPath="$PROJECT_DIR$/test_case/external/create_company/create_comp_elem.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" afterPath="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" afterPath="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/user_setting/user_setting_page.py" afterPath="$PROJECT_DIR$/test_case/external/user_setting/user_setting_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" afterPath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py" afterPath="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_spec.py" afterPath="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_spec.py" />
+      <change beforePath="$PROJECT_DIR$/test_data/cai/external/~$创建帐套测试数据.xlsx" afterPath="$PROJECT_DIR$/test_data/cai/invoice/~$记发票测试数据.xlsx" />
+      <change beforePath="$PROJECT_DIR$/test_data/cai/external/创建帐套测试数据.xlsx" afterPath="$PROJECT_DIR$/test_data/cai/external/创建帐套测试数据.xlsx" />
+      <change beforePath="$PROJECT_DIR$/test_data/cai/invoice/记发票测试数据.xlsx" afterPath="$PROJECT_DIR$/test_data/cai/invoice/记发票测试数据.xlsx" />
+      <change beforePath="$PROJECT_DIR$/util/create_company_util.py" afterPath="$PROJECT_DIR$/util/create_company_util.py" />
+      <change beforePath="$PROJECT_DIR$/util/public_page.py" afterPath="$PROJECT_DIR$/util/public_page.py" />
+      <change beforePath="$PROJECT_DIR$/util/select_address_page.py" afterPath="$PROJECT_DIR$/util/select_address_page.py" />
     </list>
     <ignored mask=".pyc" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,112 +45,68 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="smoke_test_runner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="1090">
-                <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-                <folding>
-                  <element signature="e#0#15#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="read_excel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/read_excel.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="322">
-                <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_comp_spec.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="201">
-                <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-                <folding>
-                  <element signature="e#0#30#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_comp_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="256">
-                <caret line="114" column="26" lean-forward="false" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-                <folding>
-                  <element signature="e#0#30#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comp_list_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="416">
-                <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor relative-caret-position="-19">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="public_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/public_page.py">
-          <provider selected="true" editor-type-id="live-pycharm">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="262">
-                <caret line="134" column="41" lean-forward="true" selection-start-line="134" selection-start-column="41" selection-end-line="134" selection-end-column="41" />
-                <folding />
-              </first_editor>
-              <second_editor relative-caret-position="-105">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2018-01-16 18_11_49_result.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 18_11_49_result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="203">
+              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comp_info.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comp_info.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="record_invoice_spec.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enter_comp_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/enter_comp_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="public_page.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/util/public_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="232" column="28" lean-forward="false" selection-start-line="232" selection-start-column="28" selection-end-line="232" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="record_invoice_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+              <folding>
+                <element signature="e#9306#12351#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,9 +122,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get_value_by_row</find>
       <find>error</find>
-      <find>accept_next_alert</find>
       <find>部门</find>
       <find>income</find>
       <find>mac</find>
@@ -184,7 +134,6 @@
       <find>select</find>
       <find>month</find>
       <find>成立日期</find>
-      <find>分配</find>
       <find>createCompany</find>
       <find>sheet_index</find>
       <find>self</find>
@@ -194,10 +143,15 @@
       <find>except ass</find>
       <find>AssertionError</find>
       <find>random_num</find>
-      <find>random_num</find>
       <find>str(random_num)</find>
       <find>已认证，不需要填写帐套信息！</find>
       <find>选择月份失败，</find>
+      <find>accept_next_alert</find>
+      <find>time.sleep(</find>
+      <find>分配</find>
+      <find>is_disapeared=&gt;</find>
+      <find>setRole</find>
+      <find>click_operation_btn</find>
     </findStrings>
     <replaceStrings>
       <replace>sheet_name</replace>
@@ -215,13 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
-        <option value="$PROJECT_DIR$/test_case/external/user_setting/test.py" />
-        <option value="$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_spec.py" />
-        <option value="$PROJECT_DIR$/test_case/transaction/record_transaction/record_transaction_page.py" />
-        <option value="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_spec.py" />
-        <option value="$PROJECT_DIR$/util/read_excel.py" />
-        <option value="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_elem.py" />
         <option value="$PROJECT_DIR$/test_case/setting/contact/contact_page.py" />
         <option value="$PROJECT_DIR$/test_case/setting/contact/contact_spec.py" />
         <option value="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_page.py" />
@@ -229,36 +176,58 @@
         <option value="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py" />
         <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_elem.py" />
         <option value="$PROJECT_DIR$/test_case/transaction/record_transaction/income_outcome_elem.py" />
-        <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" />
         <option value="$PROJECT_DIR$/test_case/salary/add_stuff/add_stuff_spec.py" />
         <option value="$PROJECT_DIR$/test_case/login/login_page.py" />
-        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/test_case/external/Test/DDT/ddt_test.py" />
         <option value="$PROJECT_DIR$/test_case/external/create_ways/create_ways_elem.py" />
-        <option value="$PROJECT_DIR$/comp_info.py" />
         <option value="$PROJECT_DIR$/util/base_class.py" />
         <option value="$PROJECT_DIR$/test_case/invoice/invoice_list/invoice_list_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/create_ways/create_ways_page.py" />
-        <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py" />
-        <option value="$PROJECT_DIR$/util/select_address_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/create_ways/create_ways_spec.py" />
         <option value="$PROJECT_DIR$/test_case/login/login_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/sidebar/sidebar_spec.py" />
-        <option value="$PROJECT_DIR$/test_case/external/sidebar/sidebar_page.py" />
         <option value="$PROJECT_DIR$/report/cai_test/2018-01-16 16_46_28_result.html" />
-        <option value="$PROJECT_DIR$/smoke_test_runner.py" />
         <option value="$PROJECT_DIR$/test_case/external/create_company/create_comp_elem.py" />
-        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
-        <option value="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" />
+        <option value="$PROJECT_DIR$/util/select_address_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" />
+        <option value="$PROJECT_DIR$/util/create_company_util.py" />
+        <option value="$PROJECT_DIR$/util/x.PY" />
+        <option value="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" />
+        <option value="$PROJECT_DIR$/util/x.html" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/x.html" />
+        <option value="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/external/user_setting/user_setting_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/sidebar/sidebar_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/user_info/user_info_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/external/user_info/user_info_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/user_info/user_info_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/user_info_modal/user_info_modal_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/user_info_modal/user_info_modal_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/user_info_modal/user_info_modal_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" />
+        <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py" />
+        <option value="$PROJECT_DIR$/util/enter_comp_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" />
+        <option value="$PROJECT_DIR$/comp_info.py" />
+        <option value="$PROJECT_DIR$/smoke_test_runner.py" />
         <option value="$PROJECT_DIR$/util/public_page.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="-196" />
+    <option name="y" value="-1050" />
+    <option name="width" value="1400" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -283,7 +252,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,12 +263,6 @@
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
               <item name="report" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
-              <item name="cai_test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
@@ -325,7 +287,8 @@
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
               <item name="test_case" type="462c0819:PsiDirectoryNode" />
               <item name="external" type="462c0819:PsiDirectoryNode" />
-              <item name="create_company" type="462c0819:PsiDirectoryNode" />
+              <item name="comp_list" type="462c0819:PsiDirectoryNode" />
+              <item name="distribute_modal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
@@ -344,12 +307,6 @@
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
               <item name="test_case" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_case" type="462c0819:PsiDirectoryNode" />
               <item name="setting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -357,25 +314,12 @@
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
               <item name="test_case" type="462c0819:PsiDirectoryNode" />
               <item name="setting" type="462c0819:PsiDirectoryNode" />
-              <item name="contact" type="462c0819:PsiDirectoryNode" />
+              <item name="partner_set" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
               <item name="test_data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_data" type="462c0819:PsiDirectoryNode" />
-              <item name="cai" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_data" type="462c0819:PsiDirectoryNode" />
-              <item name="cai" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
@@ -386,13 +330,19 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="SearchEverywhereHistoryKey" value="if __name__ == '__main__':&#9;null&#9;null&#10;get_value_in_order&#9;null&#9;null" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test_case/external/comp_list" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -407,89 +357,59 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.smoke_test_runner">
-    <configuration name="Unittests for comp_list.comp_list_page.Test.test_go_to_create_company_page" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="comp_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="e2e-test" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;comp_list.comp_list_page.Test.test_go_to_create_company_page&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/comp_info.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Unittests for create_company.create_comp_spec.CreateCompSpec" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="distribute_modal_page" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="e2e-test" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;create_company.create_comp_spec.CreateCompSpec&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Unittests for create_ways.create_ways_spec.CreateWaysSpec" type="tests" factoryName="Unittests" nameIsGenerated="true">
+    <configuration name="smoke_test_runner" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="e2e-test" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;create_ways.create_ways_spec.CreateWaysSpec&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
-    <configuration name="Unittests in comp_list_page.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="e2e-test" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration name="Unittests in create_comp_spec.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="e2e-test" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration name="Unittests in login_spec.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="e2e-test" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/login/login_spec.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/smoke_test_runner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -535,39 +455,78 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="smoke_test_runner" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="Unittests for create_ways.create_ways_spec.CreateWaysSpec" type="tests" factoryName="Unittests" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="e2e-test" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;create_ways.create_ways_spec.CreateWaysSpec&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="e2e-test" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests for test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="e2e-test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/smoke_test_runner.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests in distribute_modal_spec.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="e2e-test" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.smoke_test_runner" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for create_ways.create_ways_spec.CreateWaysSpec" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for comp_list.comp_list_page.Test.test_go_to_create_company_page" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in comp_list_page.py" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in create_comp_spec.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in login_spec.py" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests for create_company.create_comp_spec.CreateCompSpec" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in distribute_modal_spec.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec" />
+      <item index="4" class="java.lang.String" itemvalue="Python.distribute_modal_page" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" />
+      <item index="6" class="java.lang.String" itemvalue="Python.comp_info" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for create_company.create_comp_spec.CreateCompSpec" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in login_spec.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in create_comp_spec.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in comp_list_page.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for comp_list.comp_list_page.Test.test_go_to_create_company_page" />
+        <item index="0" class="java.lang.String" itemvalue="Python.comp_info" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in distribute_modal_spec.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python.distribute_modal_page" />
       </list>
     </recent_temporary>
   </component>
@@ -588,82 +547,60 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_comp_list_comp_list_page_Test_test_go_to_create_company_page - 2018.01.12 at 11h 25m 55s.xml">
-      <configuration name="Unittests for comp_list.comp_list_page.Test.test_go_to_create_company_page" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 52m 21s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_create_company_create_comp_spec_CreateCompSpec - 2018.01.16 at 13h 42m 30s.xml">
-      <configuration name="Unittests for create_company.create_comp_spec.CreateCompSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 53m 07s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_comp_list_page_py - 2018.01.12 at 11h 25m 14s.xml">
-      <configuration name="Unittests in comp_list_page.py" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 54m 32s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_comp_list_page_py - 2018.01.12 at 11h 27m 02s.xml">
-      <configuration name="Unittests in comp_list_page.py" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 57m 06s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_create_comp_spec_py - 2018.01.16 at 10h 23m 20s.xml">
-      <configuration name="Unittests in create_comp_spec.py" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 58m 30s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_create_comp_spec_py - 2018.01.16 at 10h 24m 07s.xml">
-      <configuration name="Unittests in create_comp_spec.py" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 58m 47s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_create_comp_spec_py - 2018.01.16 at 10h 26m 05s.xml">
-      <configuration name="Unittests in create_comp_spec.py" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 59m 43s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_create_comp_spec_py - 2018.01.16 at 10h 27m 13s.xml">
-      <configuration name="Unittests in create_comp_spec.py" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 15h 00m 09s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_login_spec_py - 2018.01.16 at 13h 11m 43s.xml">
-      <configuration name="Unittests in login_spec.py" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 15h 02m 55s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_login_spec_py - 2018.01.16 at 13h 13m 13s.xml">
-      <configuration name="Unittests in login_spec.py" configurationId="tests" />
+    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 15h 03m 13s.xml">
+      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="-196" y="-1050" width="1400" height="1050" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3546875" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2607143" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15466666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39066666" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.033333335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3546875" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -748,84 +685,9 @@
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/util/read_excel.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py</url>
           <line>58</line>
           <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>26</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>88</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>74</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>58</line>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>72</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>42</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>80</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/util/read_excel.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/read_excel.py</url>
@@ -833,289 +695,256 @@
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/util/read_excel.py</url>
-          <line>45</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/util/read_excel.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/util/read_excel.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/util/read_excel.py</url>
-          <line>54</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py</url>
-          <line>46</line>
+          <line>44</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="97" />
+          <url>file://$PROJECT_DIR$/util/select_address_page.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <url>file://$PROJECT_DIR$/util/select_address_page.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
+          <line>200</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
+          <line>101</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
+          <line>102</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
+          <line>104</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
+          <line>194</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/setting/partner_set/partner_set_spec.py</url>
           <line>140</line>
-          <option name="timeStamp" value="99" />
+          <option name="timeStamp" value="125" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>141</line>
-          <option name="timeStamp" value="100" />
+          <line>412</line>
+          <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py</url>
-          <line>45</line>
-          <option name="timeStamp" value="101" />
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>415</line>
+          <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>419</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>267</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>269</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>263</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>265</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>268</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/enter_comp_page.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/enter_comp_page.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>218</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/enter_comp_page.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>225</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>229</line>
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
+          <line>267</line>
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
+          <line>268</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>373</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>379</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>380</line>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>383</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>385</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>388</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/enter_comp_page.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>228</line>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py</url>
           <line>33</line>
-          <option name="timeStamp" value="102" />
+          <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>112</line>
-          <option name="timeStamp" value="103" />
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>237</line>
+          <option name="timeStamp" value="177" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>113</line>
-          <option name="timeStamp" value="104" />
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py</url>
-          <line>114</line>
-          <option name="timeStamp" value="105" />
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py</url>
+          <line>282</line>
+          <option name="timeStamp" value="180" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="106" />
+      <option name="time" value="181" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/report/2018-01-11 18_01_55_result.html" />
-    <entry file="file://$PROJECT_DIR$/report/2018-01-12 17_57_44_result.html" />
-    <entry file="file://$PROJECT_DIR$/report/2018-01-12 18_00_06_result.html" />
-    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/xlrd/sheet.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="241">
-            <caret line="486" column="8" lean-forward="false" selection-start-line="486" selection-start-column="8" selection-end-line="486" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2017.2/python_stubs/-1199943127/builtins.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="314">
-            <caret line="5722" column="6" lean-forward="false" selection-start-line="5722" selection-start-column="6" selection-end-line="5722" selection-end-column="6" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/business_flow/positive_flow_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="49">
-            <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="60" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/set_date_util.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="45">
-            <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/create_company_util.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="316">
-            <caret line="57" column="11" lean-forward="false" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/business_flow/positive_flow_specb.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1062">
-            <caret line="72" column="77" lean-forward="false" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="77" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-18">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_input_invoice_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-91">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-91">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/create_ways/create_ways_elem.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="91" lean-forward="false" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/sidebar/sidebar_elem.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/sidebar/sidebar_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/sidebar/sidebar_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="300">
-            <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/create_ways/create_ways_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="277">
-            <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-23">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webelement.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="2412">
-            <caret line="354" column="8" lean-forward="false" selection-start-line="354" selection-start-column="8" selection-end-line="354" selection-end-column="8" />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/common/exceptions.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="233">
-            <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          </first_editor>
-          <second_editor relative-caret-position="-97">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="623">
-            <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-          </first_editor>
-          <second_editor relative-caret-position="-7">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 14_26_03_result.html">
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-17 11_33_59_result.html" />
+    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py" />
+    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/business_flow/positive_flow_specb.py" />
+    <entry file="file://$PROJECT_DIR$/util/x.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="150">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 13_41_11_result.html">
+    <entry file="file://$PROJECT_DIR$/util/read_excel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1123,55 +952,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/HTMLTestRunner.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="219">
-            <caret line="631" column="0" lean-forward="false" selection-start-line="631" selection-start-column="0" selection-end-line="631" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/suite.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="152">
-            <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 16_44_53_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 16_46_28_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#8016#8022#1" expanded="false" />
-            <element signature="e#8061#8067#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 16_47_41_result.html">
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec" />
+    <entry file="file://$PROJECT_DIR$/util/select_address_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1179,75 +961,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 16_49_23_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 16_56_03_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="72" lean-forward="true" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 17_00_21_result.html">
+    <entry file="file://$PROJECT_DIR$/test_case/external/enter_comp_spec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 17_17_35_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comp_info.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 17_09_56_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="309">
-            <caret line="614" column="0" lean-forward="false" selection-start-line="614" selection-start-column="0" selection-end-line="614" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 17_25_41_result.html">
+    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1256,279 +977,290 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_elem.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 17_27_40_result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#6219#6223#0" expanded="false" />
-            <element signature="e#6257#6261#0" expanded="false" />
-            <element signature="e#6285#6289#0" expanded="false" />
-            <element signature="e#6309#6313#0" expanded="false" />
-            <element signature="e#8437#8441#0" expanded="false" />
-            <element signature="e#8447#8451#0" expanded="false" />
-            <element signature="e#11255#11259#0" expanded="false" />
-            <element signature="e#11310#11314#0" expanded="false" />
-            <element signature="e#11402#11406#0" expanded="false" />
-            <element signature="e#11434#11438#0" expanded="false" />
-            <element signature="e#11459#11463#0" expanded="false" />
-            <element signature="e#13587#13591#0" expanded="false" />
-            <element signature="e#13597#13601#0" expanded="false" />
-            <element signature="e#16405#16409#0" expanded="false" />
-            <element signature="e#16460#16464#0" expanded="false" />
-            <element signature="e#16552#16556#0" expanded="false" />
-            <element signature="e#16585#16589#0" expanded="false" />
-            <element signature="e#16610#16614#0" expanded="false" />
-            <element signature="e#18738#18742#0" expanded="false" />
-            <element signature="e#18748#18752#0" expanded="false" />
-            <element signature="e#21556#21560#0" expanded="false" />
-            <element signature="e#21611#21615#0" expanded="false" />
-            <element signature="e#21703#21707#0" expanded="false" />
-            <element signature="e#21730#21734#0" expanded="false" />
-            <element signature="e#21755#21759#0" expanded="false" />
-            <element signature="e#23883#23887#0" expanded="false" />
-            <element signature="e#23893#23897#0" expanded="false" />
-            <element signature="e#27300#27306#1" expanded="false" />
-            <element signature="e#27345#27351#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-191">
-            <caret line="53" column="60" lean-forward="false" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="60" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/login/login_spec.py">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="393">
-            <caret line="129" column="40" lean-forward="false" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="40" />
-            <folding>
-              <element signature="e#0#10#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/setting/contact/contact_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="294">
-            <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="41" />
-            <folding>
-              <element signature="e#0#30#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
-      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1090">
-            <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#15#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-327">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <element signature="e#0#11#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 17_46_19_result.html">
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/x.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/create_company_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="115" column="22" lean-forward="true" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/business_flow/positive_flow_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2017.3/python_stubs/1437855905/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="4161" column="8" lean-forward="false" selection-start-line="4161" selection-start-column="8" selection-end-line="4161" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 17_49_06_result.html">
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="196">
+          <caret line="609" column="0" lean-forward="false" selection-start-line="609" selection-start-column="0" selection-end-line="609" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 17_51_56_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/traceback.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="203">
-            <caret line="160" column="4" lean-forward="false" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 17_55_46_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/read_excel.py">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="322">
-            <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="201">
-            <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-            <folding>
-              <element signature="e#0#30#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="113" column="32" lean-forward="false" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/setting/partner_set/partner_set_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-509">
+          <caret line="105" column="41" lean-forward="false" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/webdriver/chrome/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/user_setting/user_setting_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/user_setting/user_setting_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/sidebar/sidebar_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/user_info/user_info_page.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/external/user_info/user_info_spec.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/external/user_info/user_info_modal_elem.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/setting/partner_set/partner_set_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/create_ways/create_ways_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/webdriver/phantomjs/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webelement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="354" column="20" lean-forward="false" selection-start-line="354" selection-start-column="8" selection-end-line="354" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="416">
-            <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-19">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2130">
+          <caret line="142" column="24" lean-forward="true" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="256">
-            <caret line="114" column="26" lean-forward="false" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-            <folding>
-              <element signature="e#0#30#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
+    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/public_page.py">
-      <provider selected="true" editor-type-id="live-pycharm">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="262">
-            <caret line="134" column="41" lean-forward="true" selection-start-line="134" selection-start-column="41" selection-end-line="134" selection-end-column="41" />
-            <folding />
-          </first_editor>
-          <second_editor relative-caret-position="-105">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-16 18_11_49_result.html">
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 16_23_54_result.html" />
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 16_26_03_result.html" />
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 16_28_30_result.html" />
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 16_45_37_result.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 17_18_08_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 17_21_56_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comp_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/enter_comp_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+          <folding>
+            <element signature="e#9306#12351#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/public_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="232" column="28" lean-forward="false" selection-start-line="232" selection-start-column="28" selection-end-line="232" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

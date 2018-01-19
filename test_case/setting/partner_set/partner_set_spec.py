@@ -12,6 +12,8 @@ from util.alert_page import AlertPage
 from util.enter_comp_page import EnterCompPage
 from comp_info import CompInfo
 from ..setting_page import SettingPage
+
+
 # 往来信息
 # 创建于 2017-10-24-二
 # caicai
@@ -101,7 +103,7 @@ class PartnersetSpec(unittest.TestCase):
         page = PartnersetPage(self.driver)
         alertPage = AlertPage(self.driver)
         readExcel = ReadExcel(self.partnerset_test_data_dir)
-        settingPage = SettingPage(self.driver,CompInfo.BASE_URL)
+        settingPage = SettingPage(self.driver, CompInfo.BASE_URL)
         settingPage.go_to_partnerset_page()
         time.sleep(2)
 
@@ -126,7 +128,7 @@ class PartnersetSpec(unittest.TestCase):
         time.sleep(1)
 
         result = alertPage.get_alert_msg()
-        self.assertEqual(result, partnerset_test_data[3])
+        self.assertEqual(result, partnerset_edit_test_data[3])
 
     def test(self):
         settingPage = SettingPage(self.driver, CompInfo.BASE_URL)
@@ -136,10 +138,14 @@ class PartnersetSpec(unittest.TestCase):
         settingPage.go_to_partnerset_page()
         # time.sleep(2)
         # page.click_operation_btn(0, '张三56513', 2, 'edit')
-        publicPage.click_operation_btn(0, '张三56513', 2, 'edit')
+        publicPage.click_operation_btn(0, '张三48698', 2, 'edit')
 
         time.sleep(5)
 
 
 if __name__ == '_main_':
-    unittest.main()
+    # unittest.main()
+    suite = unittest.TestSuite()
+    suite.addTest(PartnersetPage('test'))
+    runner = unittest.TextTestRunner()
+    runner.run(suite)

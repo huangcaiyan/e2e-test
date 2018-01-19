@@ -20,7 +20,7 @@ search_failed_elem = '//*[@id="createCompany"]/div[3]/div/table/new-company/div/
 detail_edit_btn_elem = '//*[@id="createCompany"]/div[3]/div/table/new-company/div/tbody/tr/td[7]/label'
 # 帐套信息弹窗标题
 detail_title_elem = '/html/body/guanplus-app/create-company/companyinfo/div/div/div/div[1]/h4'
-
+# //*[@id="createCompany"]/div[3]/div/table/new-company/div/tbody/tr/td[7]/div/label/a
 # -------------------------------------------------------------------------------------------------------------
 # －－帐套信息弹窗
 # 成立日期展开id
