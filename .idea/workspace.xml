@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="557e64a7-8c95-4c45-80c0-71e9b6e4e0ee" name="Default" comment="" />
+    <list default="true" id="557e64a7-8c95-4c45-80c0-71e9b6e4e0ee" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_elem.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_page.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_spec.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_elem.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_page.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_spec.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/comp_info.py" afterPath="$PROJECT_DIR$/comp_info.py" />
+      <change beforePath="$PROJECT_DIR$/smoke_test_runner.py" afterPath="$PROJECT_DIR$/smoke_test_runner.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/sidebar/sidebar_elem.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/sidebar/sidebar_page.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/sidebar/sidebar_spec.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/util/public_page.py" afterPath="$PROJECT_DIR$/util/public_page.py" />
+    </list>
     <ignored mask=".pyc" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,33 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="smoke_test_runner.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
+      <file leaf-file-name="statue_modal_elem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_elem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comp_info.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comp_info.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="record_invoice_spec.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py">
+      <file leaf-file-name="statue_modal_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="615">
+              <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -46,35 +52,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enter_comp_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/enter_comp_page.py">
+      <file leaf-file-name="topbar_elem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_elem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="public_page.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/util/public_page.py">
+      <file leaf-file-name="topbar_spec.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_spec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="232" column="28" lean-forward="false" selection-start-line="232" selection-start-column="28" selection-end-line="232" selection-end-column="28" />
+            <state relative-caret-position="197">
+              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statue_modal_spec.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_spec.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
               <folding>
-                <element signature="e#0#61#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="record_invoice_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py">
+      <file leaf-file-name="topbar_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+            <state relative-caret-position="70">
+              <caret line="101" column="35" lean-forward="false" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="43" />
               <folding>
-                <element signature="e#9306#12351#0" expanded="false" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,7 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>error</find>
       <find>部门</find>
       <find>income</find>
       <find>mac</find>
@@ -121,6 +136,7 @@
       <find>is_disapeared=&gt;</find>
       <find>setRole</find>
       <find>click_operation_btn</find>
+      <find>name</find>
     </findStrings>
     <replaceStrings>
       <replace>sheet_name</replace>
@@ -138,21 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_case/setting/contact/contact_page.py" />
-        <option value="$PROJECT_DIR$/test_case/setting/contact/contact_spec.py" />
-        <option value="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_page.py" />
-        <option value="$PROJECT_DIR$/test_case/setting/setting_page.py" />
-        <option value="$PROJECT_DIR$/test_case/setting/comp_billing/comp_billing_page.py" />
-        <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_elem.py" />
-        <option value="$PROJECT_DIR$/test_case/transaction/record_transaction/income_outcome_elem.py" />
-        <option value="$PROJECT_DIR$/test_case/salary/add_stuff/add_stuff_spec.py" />
-        <option value="$PROJECT_DIR$/test_case/login/login_page.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/test_case/external/Test/DDT/ddt_test.py" />
-        <option value="$PROJECT_DIR$/test_case/external/create_ways/create_ways_elem.py" />
-        <option value="$PROJECT_DIR$/util/base_class.py" />
-        <option value="$PROJECT_DIR$/test_case/invoice/invoice_list/invoice_list_spec.py" />
-        <option value="$PROJECT_DIR$/test_case/external/create_ways/create_ways_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/create_ways/create_ways_spec.py" />
         <option value="$PROJECT_DIR$/test_case/login/login_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/sidebar/sidebar_spec.py" />
@@ -164,7 +165,6 @@
         <option value="$PROJECT_DIR$/util/x.PY" />
         <option value="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" />
         <option value="$PROJECT_DIR$/util/x.html" />
-        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/x.html" />
         <option value="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_elem.py" />
@@ -179,24 +179,38 @@
         <option value="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_elem.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py" />
         <option value="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py" />
-        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_spec.py" />
-        <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py" />
         <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py" />
         <option value="$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py" />
         <option value="$PROJECT_DIR$/util/enter_comp_page.py" />
-        <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" />
-        <option value="$PROJECT_DIR$/comp_info.py" />
         <option value="$PROJECT_DIR$/smoke_test_runner.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/topbar/topbar_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/topbar/topbar_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/external/topbar/topbar_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_elem.py" />
+        <option value="$PROJECT_DIR$/comp_info.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_spec.py" />
         <option value="$PROJECT_DIR$/util/public_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/submit_audit/submit_audit_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/submit_audit/submit_audit_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/submit_audit/submit_audit_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_spec.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_elem.py" />
+        <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_page.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-196" />
-    <option name="y" value="-1050" />
-    <option name="width" value="1400" />
-    <option name="height" value="1050" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -221,6 +235,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,27 +252,6 @@
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
               <item name="test_case" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_case" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_case" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
-              <item name="comp_list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_case" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
-              <item name="comp_list" type="462c0819:PsiDirectoryNode" />
-              <item name="distribute_modal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
@@ -299,7 +293,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -309,6 +302,10 @@
     <property name="SearchEverywhereHistoryKey" value="if __name__ == '__main__':&#9;null&#9;null&#10;get_value_in_order&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test_case/external/navigation" />
+      <recent name="$PROJECT_DIR$/test_case/external" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test_case/external/comp_list" />
     </key>
@@ -325,7 +322,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.smoke_test_runner">
+  <component name="RunManager" selected="Python tests.Unittests for posting_modal.posting_modal_spec.PostingModalSpec">
     <configuration name="comp_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -339,24 +336,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="e2e-test" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/comp_info.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="distribute_modal_page" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="e2e-test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -452,6 +431,20 @@
       <option name="_new_target" value="&quot;personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
+    <configuration name="Unittests for posting_modal.posting_modal_spec.PostingModalSpec" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external/navigation/topbar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="e2e-test" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;posting_modal.posting_modal_spec.PostingModalSpec&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
     <configuration name="Unittests for test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -466,36 +459,36 @@
       <option name="_new_target" value="&quot;test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests in distribute_modal_spec.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for topbar.topbar_spec.TopBarSpec" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external/navigation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="e2e-test" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;topbar.topbar_spec.TopBarSpec&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.smoke_test_runner" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for create_ways.create_ways_spec.CreateWaysSpec" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in distribute_modal_spec.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec" />
-      <item index="4" class="java.lang.String" itemvalue="Python.distribute_modal_page" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" />
-      <item index="6" class="java.lang.String" itemvalue="Python.comp_info" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" />
+      <item index="4" class="java.lang.String" itemvalue="Python.comp_info" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for topbar.topbar_spec.TopBarSpec" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests for posting_modal.posting_modal_spec.PostingModalSpec" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.comp_info" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in distribute_modal_spec.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python.distribute_modal_page" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for posting_modal.posting_modal_spec.PostingModalSpec" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for topbar.topbar_spec.TopBarSpec" />
+        <item index="2" class="java.lang.String" itemvalue="Python.comp_info" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.comp_list.distribute_modal.distribute_modal_spec.DistributeModalSpec" />
       </list>
     </recent_temporary>
   </component>
@@ -516,44 +509,45 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 52m 21s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_posting_modal_posting_modal_spec_PostingModalSpec - 2018.01.22 at 16h 13m 51s.xml">
+      <configuration name="Unittests for posting_modal.posting_modal_spec.PostingModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 53m 07s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_posting_modal_posting_modal_spec_PostingModalSpec - 2018.01.22 at 16h 15m 01s.xml">
+      <configuration name="Unittests for posting_modal.posting_modal_spec.PostingModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 54m 32s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_posting_modal_posting_modal_spec_PostingModalSpec - 2018.01.22 at 16h 16m 19s.xml">
+      <configuration name="Unittests for posting_modal.posting_modal_spec.PostingModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 57m 06s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_posting_modal_posting_modal_spec_PostingModalSpec - 2018.01.22 at 16h 18m 23s.xml">
+      <configuration name="Unittests for posting_modal.posting_modal_spec.PostingModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 58m 30s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_posting_modal_posting_modal_spec_PostingModalSpec - 2018.01.22 at 16h 19m 45s.xml">
+      <configuration name="Unittests for posting_modal.posting_modal_spec.PostingModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 58m 47s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_posting_modal_posting_modal_spec_PostingModalSpec - 2018.01.22 at 16h 21m 35s.xml">
+      <configuration name="Unittests for posting_modal.posting_modal_spec.PostingModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 14h 59m 43s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_posting_modal_posting_modal_spec_PostingModalSpec - 2018.01.22 at 16h 22m 03s.xml">
+      <configuration name="Unittests for posting_modal.posting_modal_spec.PostingModalSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 15h 00m 09s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_topbar_topbar_spec_TopBarSpec - 2018.01.22 at 15h 48m 22s.xml">
+      <configuration name="Unittests for topbar.topbar_spec.TopBarSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 15h 02m 55s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_topbar_topbar_spec_TopBarSpec - 2018.01.22 at 15h 49m 59s.xml">
+      <configuration name="Unittests for topbar.topbar_spec.TopBarSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_personal_info_modal_personal_info_modal_spec_PersonalInfoModalSpec - 2018.01.19 at 15h 03m 13s.xml">
-      <configuration name="Unittests for personal_info_modal.personal_info_modal_spec.PersonalInfoModalSpec" configurationId="tests" />
+    <history-entry file="Unittests_for_topbar_topbar_spec_TopBarSpec - 2018.01.22 at 16h 02m 29s.xml">
+      <configuration name="Unittests for topbar.topbar_spec.TopBarSpec" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-196" y="-1050" width="1400" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2607143" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28515625" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.024" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -566,7 +560,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -685,22 +678,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>101</line>
+          <line>105</line>
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>102</line>
+          <line>106</line>
           <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>104</line>
+          <line>108</line>
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>194</line>
+          <line>172</line>
           <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -710,17 +703,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>412</line>
+          <line>414</line>
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>415</line>
+          <line>417</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>419</line>
+          <line>421</line>
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -830,32 +823,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>373</line>
+          <line>375</line>
           <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>379</line>
+          <line>381</line>
           <option name="timeStamp" value="169" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>380</line>
+          <line>382</line>
           <option name="timeStamp" value="170" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>383</line>
+          <line>385</line>
           <option name="timeStamp" value="171" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>385</line>
+          <line>387</line>
           <option name="timeStamp" value="172" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>388</line>
+          <line>390</line>
           <option name="timeStamp" value="173" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -893,94 +886,25 @@
           <line>282</line>
           <option name="timeStamp" value="180" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="181" />
+      <option name="time" value="183" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-17 11_33_59_result.html" />
-    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py" />
-    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py" />
-    <entry file="file://$PROJECT_DIR$/test_case/business_flow/positive_flow_specb.py" />
-    <entry file="file://$PROJECT_DIR$/util/x.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/read_excel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec" />
-    <entry file="file://$PROJECT_DIR$/util/select_address_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/enter_comp_spec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_elem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/x.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/create_company_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="115" column="22" lean-forward="true" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/business_flow/positive_flow_spec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2017.3/python_stubs/1437855905/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="4161" column="8" lean-forward="false" selection-start-line="4161" selection-start-column="8" selection-end-line="4161" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -1011,35 +935,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_elem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/user_setting/user_setting_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/user_setting/user_setting_spec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/sidebar/sidebar_page.py">
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/sidebar/sidebar_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
@@ -1083,115 +979,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_elem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2130">
-          <caret line="142" column="24" lean-forward="true" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_spec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 16_23_54_result.html" />
     <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 16_26_03_result.html" />
     <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 16_28_30_result.html" />
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 16_45_37_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 17_18_08_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 17_21_56_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comp_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 16_45_37_result.html" />
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 17_18_08_result.html" />
+    <entry file="file://$PROJECT_DIR$/report/cai_test/2018-01-19 17_21_56_result.html" />
     <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="795">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1205,17 +1002,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="1665">
           <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
+        <state relative-caret-position="4170">
           <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
           <folding>
             <element signature="e#9306#12351#0" expanded="false" />
@@ -1223,13 +1020,248 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#30#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/user_setting/user_setting_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/user_setting/user_setting_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/user_setting/user_setting_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="67" column="30" lean-forward="false" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/alert_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comp_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/danger_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-292">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2385">
+          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#30#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/util/public_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="232" column="28" lean-forward="false" selection-start-line="232" selection-start-column="28" selection-end-line="232" selection-end-column="28" />
+        <state relative-caret-position="670">
+          <caret line="336" column="42" lean-forward="true" selection-start-line="336" selection-start-column="42" selection-end-line="336" selection-end-column="42" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/submit_audit/submit_audit_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/submit_audit/submit_audit_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/submit_audit/submit_audit_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="59" column="38" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="59" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/statue_modal/statue_modal_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="101" column="35" lean-forward="false" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

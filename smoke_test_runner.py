@@ -1,25 +1,8 @@
 import unittest
 import time
-import os
-import smtplib
 from HTMLTestRunner import HTMLTestRunner
-from test_case.login.login_spec import LoginSpec
-from test_case.setting.setting_spec import SettingSpec
-from test_case.setting.comp_billing.comp_billing_spec import CompBillingSpec
-from test_case.setting.contact.contact_spec import ContactSpec
-from test_case.setting.partner_set.partner_set_spec import PartnersetSpec
-from test_case.salary.add_stuff.add_stuff_spec import AddStuffSpec
 
-from test_case.external.enter_comp_spec import EnterCompSpec
-from test_case.external.create_ways.create_ways_spec import CreateWaysSpec
-from test_case.external.comp_list.distribute_modal.distribute_modal_spec import DistributeModalSpec
-from test_case.external.create_company.create_comp_spec import CreateCompSpec
-from test_case.external.user_setting.user_setting_spec import UserSettingSpec
-
-from test_case.transaction.record_transaction.record_transaction_spec import RecordTransactionSpec
 from test_case.invoice.record_invoice.record_invoice_spec import RecordInvoiceSpec
-from test_case.external.sidebar.sidebar_spec import SidebarSpec
-from test_case.reports.reports_data.reports_data_ready_spec import ReportDataReadySpec
 
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()

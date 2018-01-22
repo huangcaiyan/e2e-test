@@ -1,5 +1,5 @@
 from selenium import webdriver
-import unittest,time
+import unittest, time
 
 from .distribute_modal_page import DistributeModalPage
 from comp_info import CompInfo
@@ -9,8 +9,12 @@ from ....login.login_page import LoginPage
 from ..comp_list_page import CompListPage
 
 
+# @Time :18/1/19 上午11:46
+# @Author :huangcaiyan
+# @File : distribute_modal_spec
+# @Software : PyCharm
 class DistributeModalSpec(unittest.TestCase):
-    user_info = ['huangcaiyan0714','13683139989',]
+    user_info = ['huangcaiyan0714', '13683139989', ]
 
     @classmethod
     def setUpClass( self ):
@@ -38,13 +42,8 @@ class DistributeModalSpec(unittest.TestCase):
     def test_distribute_current_user_accounting( self ):
         compListPage = CompListPage(self.driver)
         page = DistributeModalPage(self.driver)
-        compListPage.click_distribute_btn('北京第一村','会计')
+        compListPage.click_distribute_btn('北京第一村', '会计')
         page.distribute_user()
-
-
-
-
-
 
 
 if __name__ == '__main__':

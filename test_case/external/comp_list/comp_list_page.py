@@ -7,6 +7,10 @@ from comp_info import CompInfo
 from test_case.login.login_page import LoginPage
 
 
+# @Time :18/1/19 上午11:46
+# @Author :huangcaiyan
+# @File : comp_list_page
+# @Software : PyCharm
 
 class CompListPage(object):
     def __init__( self, driver ):
@@ -122,33 +126,7 @@ class CompListPage(object):
         publicPage.click_elem(distribute_loc)
 
     # －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
-    def get_account_company_name( self ):
-        """
-        :return:代帐公司名称
-        """
-        publicPage = PublicPage(self.driver)
-        name_loc = self.driver.find_element_by_xpath(account_company_name_elem)
-        return publicPage.get_value(name_loc)
 
-    def get_login_user_name( self ):
-        """
-        :return:登陆用户用户名称
-        """
-        publicPage = PublicPage(self.driver)
-        name_loc = self.driver.find_element_by_xpath(login_user_name_elem)
-        return publicPage.get_value(name_loc)
-
-    def click_modify_password_link( self ):
-        """
-        :return:点击修改密码链接
-        """
-        publicPage = PublicPage(self.driver)
-        name = self.get_login_user_name()
-        open_list_loc = self.driver.find_element_by_link_text(name)
-        publicPage.click_elem(open_list_loc)
-        link_loc = self.driver.find_element_by_link_text('修改密码')
-        publicPage.click_elem(link_loc)
-        time.sleep(2)
 
 
 class Test(unittest.TestCase):

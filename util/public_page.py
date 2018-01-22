@@ -320,7 +320,9 @@ class PublicPage:
         """
         try:
             self.scroll_to_elem(elem_loc)
-            return elem_loc.text
+            text_value = elem_loc.text
+            print(text_value)
+            return text_value
         except NoSuchElementException as e:
             logging.error('[PublicPage]get_value--查找元素不存在，异常堆栈信息是：', str(traceback.format_exc()))
         except Exception as e:

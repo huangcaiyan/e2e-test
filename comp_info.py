@@ -1,9 +1,9 @@
 class CompInfo(object):
     # # dev
-    BASE_URL = 'http://web-gyz-dev.guanplus.com'
-    LOGIN_DATA = ['18612198503', 'qq123456']
-    # # COMP_NAME = '增值税测试'
-    COMP_NAME = '峰测试'
+    # BASE_URL = 'http://web-gyz-dev.guanplus.com'
+    # LOGIN_DATA = ['18612198503', 'qq123456']
+    # # # COMP_NAME = '增值税测试'
+    # COMP_NAME = '峰测试'
     # COMP_NAME ='北京科技大学'
 
     # ------------------------------------------------
@@ -15,9 +15,9 @@ class CompInfo(object):
 
     # ------------------------------------------------
     # pro
-    # BASE_URL = 'https://firms.guanplus.com'
-    # LOGIN_DATA = ['13683139989', 'qq123456']
-    # COMP_NAME = '成立启用同月测试yb'  # yb规模
+    BASE_URL = 'https://firms.guanplus.com'
+    LOGIN_DATA = ['13683139989', 'qq123456']
+    COMP_NAME = '成立启用同月测试yb'  # yb规模
     # COMP_NAME = '跨年测试11月启用yb'  # 一般纳税人
 
     ENTER_COMP_INFO = [BASE_URL, LOGIN_DATA, COMP_NAME]
