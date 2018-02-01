@@ -3,6 +3,7 @@ import time
 from HTMLTestRunner import HTMLTestRunner
 
 from test_case.invoice.record_invoice.record_invoice_spec import RecordInvoiceSpec
+from test_case.external.create_company.create_comp_spec import CreateCompSpec
 
 if __name__ == '__main__':
     testSuite = unittest.TestSuite()
@@ -66,7 +67,7 @@ if __name__ == '__main__':
     # # # 记所有类别发票
     # testSuite.addTest(RecordInvoiceSpec('test_record_input_invoice'))
     # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice'))
-    testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice_xgm'))
+    # testSuite.addTest(RecordInvoiceSpec('test_record_output_invoice_xgm'))
     #
     # 报表
     # 
@@ -80,7 +81,7 @@ if __name__ == '__main__':
     # 记录完全部收入、支出、互转，手指列表本月收入为42,650.92，支出为70,584.30
     # testSuite.addTest(EnterCompSpec('test_enter_comp'))
     # 创建帐套
-    # testSuite.addTest(CreateCompSpec('test_verify_create_comp'))
+    testSuite.addTest(CreateCompSpec('test_verify_create_comp'))
     # testSuite.addTest(CreateCompSpec('test_create_comp_empty_comp_name'))
     # testSuite.addTest(CreateCompSpec('test_create_comp_empty_legal_person'))
     # 帐套列表

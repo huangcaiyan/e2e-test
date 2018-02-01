@@ -43,7 +43,6 @@ class PublicPage:
         """
         is_disapeared = WebDriverWait(self.driver, 30, 1).until_not(
             lambda x: self.driver.find_element_by_css_selector('.loader').is_displayed())
-        print('is_disapeared=>', is_disapeared)
         return is_disapeared
 
     def wait_until_svg_disapeared( self ):
@@ -222,14 +221,10 @@ class PublicPage:
         :return: 点击元素
         """
         try:
-            # count = 1
             if not self.wait_until_loader_disapeared():
                 self.scroll_to_elem(elem_loc)
-                # WebDriverWait(self.driver, 30, 1).until(lambda driver: elem_loc)
                 return elem_loc.click()
             else:
-                # count = count + 1
-                # print('[PublicPage]－－加载蒙板未消失－－点击失败！，继续第' + count + '次点击：')
                 time.sleep(1)
                 self.scroll_to_elem(elem_loc)
                 return elem_loc.click()
@@ -321,7 +316,6 @@ class PublicPage:
         try:
             self.scroll_to_elem(elem_loc)
             text_value = elem_loc.text
-            print(text_value)
             return text_value
         except NoSuchElementException as e:
             logging.error('[PublicPage]get_value--查找元素不存在，异常堆栈信息是：', str(traceback.format_exc()))

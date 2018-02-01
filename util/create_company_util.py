@@ -188,7 +188,6 @@ class CreateCompay(object):
             self.driver.quit()
             logging.exception(e)
             sys.exit()
-    # //*[@id="body"]/company-list/gyz-inviteuser/div/div/div/div[2]/div[2]/table/tbody/tr/td[1]/input
 
     #进入创建账户页面
     def goToCreateAccountPage(self,baseUrl):

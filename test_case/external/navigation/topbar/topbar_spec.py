@@ -29,24 +29,26 @@ class TopBarSpec(unittest.TestCase):
     @classmethod
     def tearDownClass( self ):
         self.driver.quit()
+    #
+    # def test_get_current_period( self ):
+    #     """测试 获取当前会计期间"""
+    #     page = TopBarPage(self.driver)
+    #     current_accounting_period = page.get_current_accounting_period('period')
+    #     self.assertIn('2017-12', current_accounting_period)
+    #
+    # def test_get_current_comp_statue( self ):
+    #     """测试 获取当前帐套状态"""
+    #     page = TopBarPage(self.driver)
+    #     current_accounting_period = page.get_current_accounting_period('statue')
+    #     self.assertIn('进行中', current_accounting_period)
+    #     time.sleep()
+    #
+    # def test_get_operation_item( self ):
+    #     """测试 获取操作按钮下拉可选值"""
+    #     page = TopBarPage(self.driver)
+    #     page.click_operation_btn('过帐')
 
-    def test_get_current_period( self ):
-        """测试 获取当前会计期间"""
-        page = TopBarPage(self.driver)
-        current_accounting_period = page.get_current_accounting_period('period')
-        self.assertIn('2017-12', current_accounting_period)
 
-    def test_get_current_comp_statue( self ):
-        """测试 获取当前帐套状态"""
-        page = TopBarPage(self.driver)
-        current_accounting_period = page.get_current_accounting_period('statue')
-        self.assertIn('进行中', current_accounting_period)
-        time.sleep()
-
-    def test_get_operation_item( self ):
-        """测试 获取操作按钮下拉可选值"""
-        page = TopBarPage(self.driver)
-        page.click_operation_btn('过帐')
 
 
 if __name__ == '__main__':

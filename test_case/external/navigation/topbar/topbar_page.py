@@ -1,6 +1,9 @@
 from selenium import webdriver
 import unittest
-import time
+import time, xlwt, xlrd
+from xlutils.copy import copy
+from xlwt import Style
+from openpyxl import load_workbook
 
 from util.public_page import PublicPage
 from .topbar_elem import *
@@ -55,6 +58,29 @@ class TopBarPage:
         publicPage = PublicPage(self.driver)
         link_loc = self.driver.find_element_by_link_text('退出')
         publicPage.click_elem(link_loc)
+
+    @staticmethod
+    def write_data( data, file_name ):
+        # file_dir = './test_data/cai/external/external_data.xlsx'
+        work_book = load_workbook(file_name)
+        work_sheet = work_book.get_sheet_by_name('会计分配')
+        work_sheet['A2'] = data
+        work_book.save(file_name)
+
+    @staticmethod
+    def write_excel( row, col, string, style=Style.default_style ):
+        """
+        :param row:行索引
+        :param col:列索引
+        :param string:写入的内容
+        :param style:样式
+        :return:将数据写入指定的excel中
+        """
+        rb = xlrd.open_workbook('./test_data/cai/external/external_data.xlsx')
+        work_book = copy(rb)
+        work_sheet = work_book.get_sheet(1)
+        work_sheet.write(row, col, string, style)
+        work_book.save('./test_data/cai/external/external_data.xlsx')
 
     # －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
     # 进入帐套页面

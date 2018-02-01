@@ -51,7 +51,6 @@ class CreateCompPage(object):
                 self.select_comp_address(create_comp_info[13], create_comp_info[14], create_comp_info[15])
                 self.submit(create_comp_info[16])
                 time.sleep(1)
-
             else:
                 print('－－点击填写按钮失败，填写帐套信息窗口未打开！！')
         else:
