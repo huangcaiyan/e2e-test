@@ -170,7 +170,6 @@ class CreateCompay(object):
             self.driver.quit()
             logging.exception(e)
             sys.exit()
-            
 
     #分配会计/助理
     def setRole(self,roleInfo):
@@ -189,8 +188,6 @@ class CreateCompay(object):
             self.driver.quit()
             logging.exception(e)
             sys.exit()
-            
-
 
     #进入创建账户页面
     def goToCreateAccountPage(self,baseUrl):

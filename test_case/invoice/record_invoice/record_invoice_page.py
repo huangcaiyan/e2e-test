@@ -261,7 +261,7 @@ class RecordInvoicePage:
 	
 	def record_output_invoice(self, invoice_data):
 		"""
-		:param invoice_data: 记开票信息
+		:param invoice_data: 记开票信息（只适用于一般纳税人）
 		"""
 		publicPage = PublicPage(self.driver)
 		invoice_num = str(publicPage.eight_random_nums())
@@ -276,9 +276,20 @@ class RecordInvoicePage:
 		self.set_total(invoice_data[7])
 		self.set_attachment(invoice_data[8])
 
-	# def create_account(self):
+	def record_output_invoice_xgm( self, invoice_data ):
+		"""
+		:param invoice_data: 记开票信息(只适用于小规模）
+		"""
+		self.select_invoice_type(invoice_data[0])
+		self.select_invoice_status(invoice_data[1])
+		self.select_contact(invoice_data[2])
+		self.select_category(invoice_data[3])
+		self.select_department(invoice_data[4])
+		self.select_tax_rate(invoice_data[5])
+		self.set_total(invoice_data[6])
+		self.set_attachment(invoice_data[7])
 
-	
+
 	def category_index(self, category):
 		"""
 		类别转义

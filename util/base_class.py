@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import platform
+=======
+import unittest
+>>>>>>> f0d2c843669e5d27aaaabf803bdbe17b8112a2b2
 from selenium import webdriver
 
+from util.public_page import PublicPage
+from util.enter_comp_page import EnterCompPage
+from comp_info import CompInfo
 
+<<<<<<< HEAD
 class BaseClass:
 	def __init__(self,driver):
 		self.driver = driver
@@ -23,3 +31,21 @@ class BaseClass:
 	def max_window(self):
 		if self.get_system_name() == 'Windows':
 			self.driver.maximize_window()
+=======
+
+class BaseClass(unittest.TestCase):
+    def setUpClass(self):
+        self.driver = webdriver.Chrome()
+        publicPage = PublicPage(self.driver)
+        publicPage.max_window()
+
+        self.driver.implicitly_wait(30)
+
+        enterCompPage = EnterCompPage(self.driver)
+        enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
+
+    def tearDownClass(self):
+        print('测试用例运行结束！')
+        self.driver.quit()
+
+>>>>>>> f0d2c843669e5d27aaaabf803bdbe17b8112a2b2
