@@ -28,9 +28,8 @@ class RecordInvoiceSpec(unittest.TestCase):
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
 
-        # 只有当windows环境下运行时，才使用窗口最大化函数
-        if BaseClass.get_system_name() == 'Windows':
-            self.driver.maximize_window()
+        # 屏幕最大化
+        BaseClass(self.driver).max_window()
 
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
