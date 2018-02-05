@@ -30,6 +30,12 @@ class RecordInvoiceSpec(unittest.TestCase):
         PublicPage(self.driver).max_window()
         self.driver.implicitly_wait(30)
 
+<<<<<<< HEAD
+        # 屏幕最大化
+        BaseClass(self.driver).max_window()
+
+=======
+>>>>>>> f0d2c843669e5d27aaaabf803bdbe17b8112a2b2
         enterCompPage = EnterCompPage(self.driver)
         enterCompPage.enter_comp(CompInfo.ENTER_COMP_INFO)
 

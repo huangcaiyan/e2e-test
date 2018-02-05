@@ -1,7 +1,8 @@
-import sys
-import os
+# import sys
+# import os
 from selenium import webdriver
 import unittest
+from util.base_class import BaseClass
 
 # sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 from .login_page import LoginPage
@@ -17,12 +18,12 @@ caicai
 
 
 class LoginSpec(unittest.TestCase):
-    login_test_data_dir = './test_data/cai/login_test_data.xlsx'
+    login_test_data_dir = '../test_data/cai/login_test_data.xlsx'
 
     @classmethod
     def setUpClass( self ):
         self.driver = webdriver.Chrome()
-        self.driver.maximize_window()
+        BaseClass(self.driver).max_window()
         self.driver.implicitly_wait(30)
 
     @classmethod
