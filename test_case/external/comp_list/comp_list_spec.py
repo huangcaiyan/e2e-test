@@ -1,5 +1,5 @@
 from selenium import webdriver
-import unittest
+import unittest,time
 
 from .comp_list_page import CompListPage
 from util.public_page import PublicPage
@@ -12,6 +12,8 @@ from comp_info import CompInfo
 # @File : comp_list_page
 # @Software : PyCharm
 class CompListSpec( unittest.TestCase ):
+    comp_info = [ None ]
+    
     @classmethod
     def setUpClass( self ):
         self.driver = webdriver.Chrome()
@@ -29,12 +31,13 @@ class CompListSpec( unittest.TestCase ):
     # def test_distribute_accounting( self ):
     #     page = CompListPage( self.driver )
     #     page.distribute_accounting( '固定yk' )
+    #
+    # name_list()
     
-    def test_get_comp_name_list( self ):
+    def test_enter_comp( self ):
         page = CompListPage( self.driver )
-        page.get_comp_name_list()
-        
-        
+        page.enter_comp()
+        time.sleep(5)
 
 
 if __name__ == '__main__':

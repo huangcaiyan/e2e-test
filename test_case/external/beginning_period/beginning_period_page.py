@@ -24,26 +24,26 @@ class BeginningPeriodPage:
     # 按钮
     def click_btn( self , btn_name ):
         """
-        :param btn_name: 按钮名称，可选值（start,edit,import)
+        :param btn_name: 按钮名称，可选值（启用期初帐,编辑,导入)
         :return: 点击 '启用帐套''编辑'、'导入'按钮
         """
         publicPage = PublicPage( self.driver )
-        if btn_name == 'start':
+        if btn_name == '启用期初帐':
             btn_elem = start_btn_elem
-        elif btn_name == 'edit':
+        elif btn_name == '编辑':
             btn_elem = edit_btn_elem
-        elif btn_name == 'import':
+        elif btn_name == '导入':
             btn_elem = import_btn_elem
-        publicPage.click_elem( btn_elem )
+        btn_loc = self.driver.find_element_by_xpath( btn_elem )
+        publicPage.click_elem( btn_loc )
     
     def import_initial_account( self , file_path ):
         """
         :param file_path:
         :return:
         """
-        publicPage = PublicPage( self.driver )
-        self.click_btn( 'edit' )
-        WebDriverWait( self.driver , 30 , 1 ).until_not(
-            lambda x: self.driver.find_element_by_id( 'fileUploadBtn' ).is_displayed() )
-        uploadFilePage = UploadFilePage( self.driver , file_path )
-        uploadFilePage.upload_file()
+        self.click_btn( '导入' )
+        # WebDriverWait( self.driver , 30 , 1 ).until_not(
+        #     lambda x: self.driver.find_element_by_id( 'fileUploadBtn' ).is_displayed() )
+        uploadFilePage = UploadFilePage( self.driver )
+        uploadFilePage.upload_file( file_path )

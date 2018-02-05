@@ -128,14 +128,15 @@ class CompListPage( object ):
                 index = int( self.get_comp_num() ) - 1
                 print( 'index=' , index )
                 if len( tr_locs[ index ].find_elements_by_tag_name( 'a' ) ) == 2:
+                    print( '1' )
                     name_xpath = 'td[1]/div/div/a[2]'
                 else:
+                    print( '2' )
                     name_xpath = 'td[1]/div/div/a'
                 name_loc = tr_locs[ index ].find_element_by_xpath( name_xpath )
                 comp_name = publicPage.get_value( name_loc )
                 print( 'comp_name=' , comp_name )
-            
-            comp_loc = self.driver.find_element_by_link_text( comp_name )
+            comp_loc = self.driver.find_element_by_partial_link_text( comp_name )
             publicPage.click_elem( comp_loc )
         except Exception as e:
             print( '[CompListPage]enter_comp：进入帐套失败，失败原因=>' , str( e ) )
@@ -160,8 +161,9 @@ class CompListPage( object ):
             name = name_loc.text
             names.append( name )
         # 获取当前帐套名称所在行索引
-        if comp_name == '':
-            index = int( self.get_comp_num() ) - 1
+        if comp_name is None:
+            print( 'kong ' )
+            index = self.get_comp_num()
         else:
             index = names.index( comp_name ) + 1
         if role == '客户联系人':
@@ -170,10 +172,16 @@ class CompListPage( object ):
             distribute_td_index = 5
         elif role == '助理':
             distribute_td_index = 6
-        distribute_elem = 'tr[' + str( index ) + ']/td[' + str( distribute_td_index ) + ']/div/div'
+        distribute_elem = 'tr[' + str( index ) + ']/td[' + str( distribute_td_index ) + ']/div'
         distribute_loc = self.driver.find_element_by_tag_name( 'tbody' ).find_element_by_xpath( distribute_elem )
-        if distribute_loc.text == '':
-            publicPage.click_elem( distribute_loc )
+        class1 = distribute_loc.find_element_by_tag_name( 'div' ).get_attribute( 'class' )
+        print( 'class1=' , class1 )
+        
+        # if 'unassign' in class1:
+        publicPage.click_elem( distribute_loc )
         time.sleep( 2 )
     
     # －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+
+'//*[@id="company-table"]/tbody/tr[95]/td[1]/div/div/a[2]'

@@ -2,29 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="557e64a7-8c95-4c45-80c0-71e9b6e4e0ee" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/data.xlsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_elem.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_spec.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_data/cai/external/external_data.xlsx" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/huangcaiyan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/huangcaiyan.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/comp_info.py" afterPath="$PROJECT_DIR$/comp_info.py" />
       <change beforePath="$PROJECT_DIR$/smoke_test_runner.py" afterPath="$PROJECT_DIR$/smoke_test_runner.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py" afterPath="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py" />
+      <change beforePath="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_spec.py" afterPath="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_spec.py" />
       <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
       <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_elem.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_elem.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py" afterPath="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" afterPath="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" afterPath="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_page.py" afterPath="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_page.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_spec.py" afterPath="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_spec.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py" afterPath="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py" />
-      <change beforePath="$PROJECT_DIR$/test_case/setting/contact/_init_.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/util/create_company_util.py" afterPath="$PROJECT_DIR$/util/create_company_util.py" />
       <change beforePath="$PROJECT_DIR$/util/public_page.py" afterPath="$PROJECT_DIR$/util/public_page.py" />
+      <change beforePath="$PROJECT_DIR$/util/upload_file_page.py" afterPath="$PROJECT_DIR$/util/upload_file_page.py" />
+      <change beforePath="$PROJECT_DIR$/~$写入数据.xlsx" afterPath="" />
     </list>
     <ignored mask=".pyc" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,35 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="distribute_modal_page.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="public_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/public_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="369" column="49" lean-forward="true" selection-start-line="369" selection-start-column="49" selection-end-line="369" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="beginning_period_page.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="630">
+              <caret line="42" column="16" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -75,8 +39,8 @@
       <file leaf-file-name="beginning_period_spec.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_spec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+            <state relative-caret-position="239">
+              <caret line="47" column="56" lean-forward="true" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -84,56 +48,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comp_list_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py">
+      <file leaf-file-name="comp_info.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/comp_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comp_list_spec.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="distribute_modal_spec.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="39" column="24" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comp_list_elem.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_comp_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -149,8 +69,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>x</find>
-      <find>trac</find>
       <find>logging.</find>
       <find>get_value</find>
       <find>max</find>
@@ -179,6 +97,8 @@
       <find>分配</find>
       <find>.index</find>
       <find>upload</find>
+      <find>test_import_initial_account</find>
+      <find>index=</find>
     </findStrings>
     <replaceStrings>
       <replace>sheet_name</replace>
@@ -196,7 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_case/external/comp_list/x.html" />
         <option value="$PROJECT_DIR$/test_case/setting/partner_set/partner_set_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/user_setting/user_setting_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/sidebar/sidebar_page.py" />
@@ -214,7 +133,6 @@
         <option value="$PROJECT_DIR$/test_case/external/topbar/topbar_elem.py" />
         <option value="$PROJECT_DIR$/test_case/external/topbar/topbar_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/topbar_elem.py" />
-        <option value="$PROJECT_DIR$/comp_info.py" />
         <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_elem.py" />
         <option value="$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_page.py" />
@@ -232,29 +150,29 @@
         <option value="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_elem.py" />
         <option value="$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_elem.py" />
-        <option value="$PROJECT_DIR$/smoke_test_runner.py" />
         <option value="$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/create_company/create_comp_spec.py" />
-        <option value="$PROJECT_DIR$/util/public_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_elem.py" />
         <option value="$PROJECT_DIR$/test_case/external/beginning_period/import_initial_account/import_initial_account_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/beginning_period/import_initial_account/import_initial_account_elem.py" />
         <option value="$PROJECT_DIR$/test_case/external/beginning_period/import_initial_account/import_initial_account_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py" />
-        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py" />
-        <option value="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py" />
         <option value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
+        <option value="$PROJECT_DIR$/util/public_page.py" />
+        <option value="$PROJECT_DIR$/util/upload_file_page.py" />
+        <option value="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py" />
+        <option value="$PROJECT_DIR$/smoke_test_runner.py" />
         <option value="$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_spec.py" />
+        <option value="$PROJECT_DIR$/comp_info.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-196" />
-    <option name="y" value="-1050" />
-    <option name="width" value="1400" />
-    <option name="height" value="1050" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -279,14 +197,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+              <item name="cai_test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
@@ -309,29 +238,20 @@
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_case" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
-              <item name="comp_list" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_case" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
-              <item name="comp_list" type="462c0819:PsiDirectoryNode" />
-              <item name="distribute_modal" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
+              <item name="cai" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_case" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
+              <item name="cai" type="462c0819:PsiDirectoryNode" />
               <item name="external" type="462c0819:PsiDirectoryNode" />
-              <item name="create_company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e2e-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e2e-test" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -367,25 +287,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec">
-    <configuration name="comp_list_page" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case/external/comp_list" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="e2e-test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.smoke_test_runner">
     <configuration name="smoke_test_runner" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -462,20 +364,6 @@
       <option name="_new_target" value="&quot;create_ways.create_ways_spec.CreateWaysSpec&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for external.create_company.create_comp_spec.CreateCompSpec.test_verify_create_comp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="e2e-test" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;external.create_company.create_comp_spec.CreateCompSpec.test_verify_create_comp&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
     <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -504,6 +392,20 @@
       <option name="_new_target" value="&quot;test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec.test_import_initial_account&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
+    <configuration name="Unittests for test_case.external.comp_list.comp_list_spec.CompListSpec.test_enter_comp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="e2e-test" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_case.external.comp_list.comp_list_spec.CompListSpec.test_enter_comp&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
     <configuration name="Unittests in beginning_period_spec.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -518,22 +420,36 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_spec.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <configuration name="Unittests in comp_list_spec.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="e2e-test" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.smoke_test_runner" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for create_ways.create_ways_spec.CreateWaysSpec" />
-      <item index="2" class="java.lang.String" itemvalue="Python.comp_list_page" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for external.create_company.create_comp_spec.CreateCompSpec.test_verify_create_comp" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in beginning_period_spec.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec.test_import_initial_account" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in beginning_period_spec.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec.test_import_initial_account" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in comp_list_spec.py" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.comp_list.comp_list_spec.CompListSpec.test_enter_comp" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec.test_import_initial_account" />
         <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in beginning_period_spec.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec.test_import_initial_account" />
-        <item index="3" class="java.lang.String" itemvalue="Python.comp_list_page" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for external.create_company.create_comp_spec.CreateCompSpec.test_verify_create_comp" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in comp_list_spec.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_case.external.comp_list.comp_list_spec.CompListSpec.test_enter_comp" />
       </list>
     </recent_temporary>
   </component>
@@ -554,61 +470,82 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec - 2018.02.01 at 18h 56m 07s.xml">
+    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec - 2018.02.02 at 15h 36m 28s.xml">
       <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec - 2018.02.01 at 18h 56m 50s.xml">
-      <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec - 2018.02.01 at 19h 32m 07s.xml">
-      <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec - 2018.02.01 at 19h 50m 51s.xml">
-      <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec - 2018.02.01 at 20h 10m 34s.xml">
-      <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec - 2018.02.01 at 20h 12m 51s.xml">
-      <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec - 2018.02.01 at 20h 19m 26s.xml">
-      <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec_test_import_initial_account - 2018.02.01 at 19h 30m 53s.xml">
+    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec_test_import_initial_account - 2018.02.02 at 15h 38m 30s.xml">
       <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec.test_import_initial_account" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_beginning_period_spec_py - 2018.02.01 at 19h 22m 22s.xml">
+    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec_test_import_initial_account - 2018.02.02 at 15h 41m 11s.xml">
+      <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec.test_import_initial_account" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec_test_import_initial_account - 2018.02.02 at 15h 47m 43s.xml">
+      <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec.test_import_initial_account" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_case_external_beginning_period_beginning_period_spec_BeginningPeriodSpec_test_import_initial_account - 2018.02.02 at 15h 57m 12s.xml">
+      <configuration name="Unittests for test_case.external.beginning_period.beginning_period_spec.BeginningPeriodSpec.test_import_initial_account" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_beginning_period_spec_py - 2018.02.02 at 15h 36m 25s.xml">
       <configuration name="Unittests in beginning_period_spec.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_beginning_period_spec_py - 2018.02.01 at 19h 46m 45s.xml">
+    <history-entry file="Unittests_in_beginning_period_spec_py - 2018.02.02 at 15h 45m 47s.xml">
+      <configuration name="Unittests in beginning_period_spec.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_beginning_period_spec_py - 2018.02.02 at 15h 50m 45s.xml">
+      <configuration name="Unittests in beginning_period_spec.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_beginning_period_spec_py - 2018.02.02 at 15h 54m 46s.xml">
+      <configuration name="Unittests in beginning_period_spec.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_beginning_period_spec_py - 2018.02.02 at 15h 55m 12s.xml">
       <configuration name="Unittests in beginning_period_spec.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-196" y="-1050" width="1400" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2607143" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28515625" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.219" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37866667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.219" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2607143" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -729,17 +666,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>408</line>
+          <line>407</line>
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>411</line>
+          <line>410</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>415</line>
+          <line>414</line>
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -759,27 +696,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>262</line>
+          <line>261</line>
           <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>264</line>
+          <line>263</line>
           <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>258</line>
+          <line>257</line>
           <option name="timeStamp" value="134" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>260</line>
+          <line>259</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>263</line>
+          <line>262</line>
           <option name="timeStamp" value="136" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -833,16 +770,6 @@
           <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>369</line>
-          <option name="timeStamp" value="168" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/util/public_page.py</url>
-          <line>384</line>
-          <option name="timeStamp" value="173" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/util/enter_comp_page.py</url>
           <line>36</line>
           <option name="timeStamp" value="174" />
@@ -868,102 +795,54 @@
           <option name="timeStamp" value="180" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>106</line>
-          <option name="timeStamp" value="192" />
+          <url>file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_spec.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="228" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>107</line>
-          <option name="timeStamp" value="193" />
+          <url>file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="229" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>112</line>
-          <option name="timeStamp" value="194" />
+          <url>file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="230" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>113</line>
-          <option name="timeStamp" value="195" />
+          <url>file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="231" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py</url>
-          <line>115</line>
-          <option name="timeStamp" value="196" />
+          <url>file://$PROJECT_DIR$/util/public_page.py</url>
+          <line>225</line>
+          <option name="timeStamp" value="232" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="197" />
+          <url>file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="233" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="198" />
+          <url>file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="234" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py</url>
-          <line>32</line>
-          <option name="timeStamp" value="199" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="200" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="201" />
+          <url>file://$PROJECT_DIR$/util/upload_file_page.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="235" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="202" />
+      <option name="time" value="236" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_case/external/personal_info_modal/personal_info_modal_spec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/alert_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comp_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/danger_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-292">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
-          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/submit_audit/submit_audit_elem.py" />
-    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/submit_audit/submit_audit_page.py" />
-    <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/submit_audit/submit_audit_spec.py" />
     <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_elem.py" />
     <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_page.py" />
     <entry file="file://$PROJECT_DIR$/test_case/external/navigation/topbar/posting_modal/posting_modal_spec.py" />
@@ -1044,19 +923,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report/cai_test/TEST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/report/cai_test/TEST.py" />
     <entry file="file:///usr/local/lib/python3.6/site-packages/openpyxl/workbook/workbook.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="199" column="0" lean-forward="false" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1064,9 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1074,7 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1082,15 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="596" column="12" lean-forward="true" selection-start-line="596" selection-start-column="12" selection-end-line="596" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,7 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="486" column="8" lean-forward="false" selection-start-line="486" selection-start-column="8" selection-end-line="486" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1106,7 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1114,7 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,7 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,79 +992,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/enter_comp_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/import_initial_account/import_initial_account_spec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/import_initial_account/import_initial_account_elem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="96" lean-forward="true" selection-start-line="3" selection-start-column="96" selection-end-line="3" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/import_initial_account/import_initial_account_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/upload_file_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_elem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="103" lean-forward="true" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/import_initial_account/import_initial_account_spec.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/import_initial_account/import_initial_account_elem.py" />
+    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/import_initial_account/import_initial_account_page.py" />
     <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_elem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/external/create_company/create_comp_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="1785">
           <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
@@ -1220,9 +1017,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_spec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="450">
           <caret line="39" column="24" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1236,38 +1032,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py">
+    <entry file="file://$PROJECT_DIR$/util/enter_comp_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="227">
+          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py">
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_spec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        <state relative-caret-position="308">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/invoice/record_invoice/record_invoice_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/comp_list_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_spec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        <state relative-caret-position="-706">
+          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -1276,21 +1098,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util/public_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="369" column="49" lean-forward="true" selection-start-line="369" selection-start-column="49" selection-end-line="369" selection-end-column="49" />
+        <state relative-caret-position="173">
+          <caret line="225" column="31" lean-forward="false" selection-start-line="225" selection-start-column="23" selection-end-line="225" selection-end-column="31" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_case/external/comp_list/distribute_modal/distribute_modal_page.py">
+    <entry file="file://$PROJECT_DIR$/test_case/salary/import_stuff/import_stuff_spec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="-11">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smoke_test_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/salary/import_stuff/import_stuff_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/salary/stuff_list/stuff_list_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/salary/stuff_list/stuff_list_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/salary/stuff_list/stuff_list_elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/salary/add_stuff/add_stuff_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/upload_file_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="16" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_case/external/beginning_period/beginning_period_spec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="47" column="56" lean-forward="true" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comp_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

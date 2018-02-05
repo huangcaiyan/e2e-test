@@ -232,7 +232,6 @@ class PublicPage:
             logging.error('[PublicPage]click_elem--查找元素不存在，异常堆栈信息是：', str(traceback.format_exc()))
         except Exception as e:
             print('[PublicPage]click_elem--未知错误，错误信息是：', str(e))
-
     def double_click_elem( self, elem_loc ):
         """
         :param elem_loc: 双击元素元素定位
