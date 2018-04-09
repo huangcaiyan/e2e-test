@@ -5,7 +5,7 @@ from util.public_page import PublicPage
 
 
 class UploadFilePage(object):
-	def __init__(self, driver, file_dir):
+    	def __init__(self, driver, file_dir):
 		# self.driver = webdriver.Chrome()
 		self.driver = driver
 		self.file_dir = file_dir
