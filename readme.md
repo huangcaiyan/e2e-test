@@ -33,3 +33,16 @@ pip命令使用配置:   将python安装文件目录下Scripts配置到系统环
 # variable name(变量名)：
 # # 字母小写，单词之间用下划线 _ 连接
 # # eg：login_btn_elem
+
+# 包版本
+# # chromedriver2.37
+# # python3.6.5
+# # Selenium
+# # pip10.0.0b2
+# # requests2.18.4
+# # selenium3.11.0
+# # setuptools9.0.1
+# # urllib31.22
+# # wheel0.31.0
+# # xlrd1.1.0
+

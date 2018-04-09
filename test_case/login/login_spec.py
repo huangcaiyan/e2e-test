@@ -1,10 +1,9 @@
-# import sys
-# import os
+import sys
+import os
 from selenium import webdriver
 import unittest
-from util.base_class import BaseClass
 
-# sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
+sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 from .login_page import LoginPage
 from comp_info import CompInfo
 from util.danger_page import DangerPage
@@ -17,9 +16,11 @@ from util.public_page import PublicPage
 caicai
 """
 
+base_dir = os.path.abspath(os.path.dirname(__file__) + '/../..')
+
 
 class LoginSpec(unittest.TestCase):
-	login_test_data_dir = '../test_data/cai/login_test_data.xlsx'
+	login_test_data_dir = base_dir + '/test_data/cai/login/login_test_data.xlsx'
 	
 	@classmethod
 	def setUpClass(self):
